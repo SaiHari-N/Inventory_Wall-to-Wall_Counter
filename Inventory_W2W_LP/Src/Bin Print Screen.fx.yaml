@@ -1,0 +1,56 @@
+"'Bin Print Screen' As screen.'phoneDetailViewLayout_ver3.0'":
+    Height: =150
+    OnVisible: =If(varPrintTriggered3, Print())
+    Width: =640
+
+    Icon4_2 As icon.ChevronLeft:
+        AccessibleLabel: ="Back"
+        AutoDisableOnSelect: =false
+        Color: =RGBA(0, 0, 0, 0)
+        Height: =150
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Print()
+        PaddingBottom: =10
+        PaddingLeft: =50
+        PaddingRight: =50
+        PaddingTop: =150
+        TabIndex: =
+        Width: =640
+        ZIndex: =1
+
+    Label7 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =50
+        OnSelect: =Back()
+        Size: =24
+        Text: =TextInput4_1.Text
+        Width: =160
+        X: =40
+        Y: =50
+        ZIndex: =2
+
+    Label7_43 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =50
+        OnSelect: =Back()
+        Size: =24
+        Text: =TextInput4_1.Text
+        Width: =160
+        X: =240
+        Y: =50
+        ZIndex: =3
+
+    Label7_44 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =50
+        OnSelect: =Back()
+        Size: =24
+        Text: =TextInput4_1.Text
+        Width: =160
+        X: =440
+        Y: =50
+        ZIndex: =4
+

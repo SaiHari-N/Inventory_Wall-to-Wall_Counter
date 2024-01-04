@@ -1,0 +1,2631 @@
+App_Details As screen:
+    OnVisible: =Set(Close1,false);Set(ContextPopup1,false);Set(AI1,false);Set(HN1,true);Set(HN2,false);Set(Navigation,false);Set(Navigation,false);Set(Header,"About");Set(AboutVisible, true);Set(I1V,false);Set(I2V,false);Set(I3V,false);Set(I4V,false);Set(I5V,false);Set(I6V,false);Set(I7V,false);Set(I8V,false);Set(I9V,false);Set(C1V,false);Set(C2V,false);Set(C3V,false);Set(H1V,false);Set(H2V,false);Set(H3V,false);Set(H4V,false);Set(H5V,false);Set(H6V,false);Set(H7V,false);Set(H8V,false);Set(G1V,false);Set(G2V,false);Set(G3V,false);Set(G4V,false);Set(G5V,false);Set(G6V,false);Set(G7V,false);Set(G8V,false);Set(G9V,false);Set(G10V,false);Set(G11V,false);Set(G12V,false);Set(G13V,false);Set(G14V,false);Set(G15V,false);Set(G16V,false);Set(U1V,false);Set(DisplayPopup1,false);Set(BGWhite,false);Set(QueryMail2,true);Set(QueryMail3,false);Reset(TextInput6_1);Set(BGWhite,false)
+
+    App_Details_Header As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =12
+
+        Rectangle4_2 As rectangle:
+            Fill: =RGBA(0, 94, 146, 1)
+            Height: =80
+            Width: =640
+            ZIndex: =16
+
+        LblAppName2_2 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =27
+            Text: =Header
+            Width: =480
+            Wrap: =false
+            X: =80
+            ZIndex: =17
+
+    Menu_Navigation As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =13
+
+        IconBackarrow1_2 As icon.ChevronLeft:
+            AccessibleLabel: =Self.Tooltip
+            AutoDisableOnSelect: =false
+            Height: =80
+            Icon: =Icon.Hamburger
+            OnSelect: =Set(Navigation,true);Set(HN1,false);Set(HN2,true);Set(HN3,true)
+            PaddingBottom: =15
+            PaddingLeft: =15
+            PaddingRight: =15
+            PaddingTop: =15
+            Tooltip: ="Navigation"
+            Visible: =HN1
+            Width: =80
+            ZIndex: =180
+
+        IconBackarrow1_3 As icon.ChevronLeft:
+            AccessibleLabel: =Self.Tooltip
+            AutoDisableOnSelect: =false
+            Color: =RGBA(0, 94, 146, 1)
+            Height: =80
+            Icon: =Icon.Cancel
+            OnSelect: =Set(Navigation,false);Set(HN2,false);Set(HN1,true);Set(HN3,false)
+            PaddingBottom: =15
+            PaddingLeft: =15
+            PaddingRight: =15
+            PaddingTop: =15
+            Rotation: =90
+            Tooltip: ="Navigation"
+            Visible: =HN2
+            Width: =80
+            ZIndex: =181
+
+    Menu As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =18
+
+        Rectangle7 As rectangle:
+            BorderColor: =RGBA(0, 94, 146, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =560
+            Visible: =Navigation
+            Width: =300
+            ZIndex: =173
+
+        Label7_1 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            HoverColor: =RGBA(255,255,255,1)
+            HoverFill: =RGBA(102, 102, 102, 1)
+            OnSelect: =Set(AboutVisible,true);Set(Header,"About");Set(Navigation,false);Set(HN2,false);Set(HN1,true);Set(HN3,false);Set(I1V,false);Set(I2V,false);Set(I3V,false);Set(I4V,false);Set(I5V,false);Set(I6V,false);Set(I7V,false);Set(I8V,false);Set(I9V,false);Set(C1V,false);Set(C2V,false);Set(C3V,false);Set(H1V,false);Set(H2V,false);Set(H3V,false);Set(H4V,false);Set(H5V,false);Set(H6V,false);Set(H7V,false);Set(H8V,false);Set(G1V,false);Set(G2V,false);Set(G3V,false);Set(G4V,false);Set(G5V,false);Set(G6V,false);Set(G7V,false);Set(G8V,false);Set(G9V,false);Set(G10V,false);Set(G11V,false);Set(G12V,false);Set(G13V,false);Set(G14V,false);Set(G15V,false);Set(G16V,false);Set(U1V,false);Set(DisplayPopup1,false)
+            PaddingLeft: =40
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 94, 146, 1)
+            Size: =24
+            Text: ="About"
+            Visible: =HN3
+            Width: =300
+            Y: =80
+            ZIndex: =174
+
+        Label7_2 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            HoverColor: =RGBA(255,255,255,1)
+            HoverFill: =RGBA(102, 102, 102, 1)
+            OnSelect: =Set(AboutVisible,false);Set(Header,"Instructions");Set(Navigation,false);Set(HN2,false);Set(HN1,true);Set(HN3,false);Set(I1V,true);Set(I2V,false);Set(I3V,false);Set(I4V,false);Set(I5V,false);Set(I6V,false);Set(I7V,false);Set(I8V,false);Set(I9V,false);Set(C1V,false);Set(C2V,false);Set(C3V,false);Set(H1V,false);Set(H2V,false);Set(H3V,false);Set(H4V,false);Set(H5V,false);Set(H6V,false);Set(H7V,false);Set(H8V,false);Set(G1V,false);Set(G2V,false);Set(G3V,false);Set(G4V,false);Set(G5V,false);Set(G6V,false);Set(G7V,false);Set(G8V,false);Set(G9V,false);Set(G10V,false);Set(G11V,false);Set(G12V,false);Set(G13V,false);Set(G14V,false);Set(G15V,false);Set(G16V,false);Set(U1V,false);Set(Close1,false);Set(ContextPopup1,false);Set(AI1,false);Set(DisplayPopup1,false)
+            PaddingLeft: =40
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 94, 146, 1)
+            Size: =24
+            Text: ="Instructions"
+            Visible: =HN3
+            Width: =300
+            Y: =160
+            ZIndex: =175
+
+        Label7_3 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            HoverColor: =RGBA(255,255,255,1)
+            HoverFill: =RGBA(102, 102, 102, 1)
+            OnSelect: =Set(AboutVisible,false);Set(Header,"Configuration");Set(Navigation,false);Set(HN2,false);Set(HN1,true);Set(HN3,false);Set(C1V,true);Set(I1V,false);Set(I2V,false);Set(I3V,false);Set(I4V,false);Set(I5V,false);Set(I6V,false);Set(I7V,false);Set(I8V,false);Set(I9V,false);Set(C2V,false);Set(C3V,false);Set(H1V,false);Set(H2V,false);Set(H3V,false);Set(H4V,false);Set(H5V,false);Set(H6V,false);Set(H7V,false);Set(H8V,false);Set(G1V,false);Set(G2V,false);Set(G3V,false);Set(G4V,false);Set(G5V,false);Set(G6V,false);Set(G7V,false);Set(G8V,false);Set(G9V,false);Set(G10V,false);Set(G11V,false);Set(G12V,false);Set(G13V,false);Set(G14V,false);Set(G15V,false);Set(G16V,false);Set(U1V,false);Set(Close1,false);Set(ContextPopup1,false);Set(AI1,false);Set(DisplayPopup1,false)
+            PaddingLeft: =40
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 94, 146, 1)
+            Size: =24
+            Text: ="Configuration"
+            Visible: =HN3
+            Width: =300
+            Y: =240
+            ZIndex: =176
+
+        Label7_4 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            HoverColor: =RGBA(255,255,255,1)
+            HoverFill: =RGBA(102, 102, 102, 1)
+            OnSelect: =Set(AboutVisible,false);Set(Header,"Connectivity");Set(Navigation,false);Set(HN2,false);Set(HN1,true);Set(HN3,false);Set(I1V,false);Set(I2V,false);Set(I3V,false);Set(I4V,false);Set(I5V,false);Set(I6V,false);Set(I7V,false);Set(I8V,false);Set(I9V,false);Set(C1V,false);Set(C2V,false);Set(C3V,false);Set(H1V,true);Set(H2V,false);Set(H3V,false);Set(H4V,false);Set(H5V,false);Set(H6V,false);Set(H7V,false);Set(H8V,false);Set(G1V,false);Set(G2V,false);Set(G3V,false);Set(G4V,false);Set(G5V,false);Set(G6V,false);Set(G7V,false);Set(G8V,false);Set(G9V,false);Set(G10V,false);Set(G11V,false);Set(G12V,false);Set(G13V,false);Set(G14V,false);Set(G15V,false);Set(G16V,false);Set(U1V,false);Set(Close1,false);Set(ContextPopup1,false);Set(AI1,false);Set(DisplayPopup1,false)
+            PaddingLeft: =40
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 94, 146, 1)
+            Size: =24
+            Text: ="Connectivity"
+            Visible: =HN3
+            Width: =300
+            Y: =320
+            ZIndex: =177
+
+        Label7_5 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            HoverColor: =RGBA(255,255,255,1)
+            HoverFill: =RGBA(102, 102, 102, 1)
+            OnSelect: =Set(AboutVisible,false);Set(Header,"Guide");Set(Navigation,false);Set(HN2,false);Set(HN1,true);Set(HN3,false);Set(I1V,false);Set(I2V,false);Set(I3V,false);Set(I4V,false);Set(I5V,false);Set(I6V,false);Set(I7V,false);Set(I8V,false);Set(I9V,false);Set(C1V,false);Set(C2V,false);Set(C3V,false);Set(H1V,false);Set(H2V,false);Set(H3V,false);Set(H4V,false);Set(H5V,false);Set(H6V,false);Set(H7V,false);Set(H8V,false);Set(G1V,true);Set(G2V,false);Set(G3V,false);Set(G4V,false);Set(G5V,false);Set(G6V,false);Set(G7V,false);Set(G8V,false);Set(G9V,false);Set(G10V,false);Set(G11V,false);Set(G12V,false);Set(G13V,false);Set(G14V,false);Set(G15V,false);Set(G16V,false);Set(U1V,false);Set(Close1,false);Set(ContextPopup1,false);Set(AI1,false);Set(DisplayPopup1,false)
+            PaddingLeft: =40
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 94, 146, 1)
+            Size: =24
+            Text: ="Guide"
+            Visible: =HN3
+            Width: =300
+            Y: =400
+            ZIndex: =178
+
+        Label7_6 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            HoverColor: =RGBA(255,255,255,1)
+            HoverFill: =RGBA(102, 102, 102, 1)
+            OnSelect: =Navigate(Screen2);Set(AboutVisible,false);Set(Navigation,false);Set(HN2,false);Set(HN1,true);Set(HN3,false);
+            PaddingLeft: =40
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 94, 146, 1)
+            Size: =24
+            Text: ="Login"
+            Visible: =HN3
+            Width: =300
+            Y: =480
+            ZIndex: =179
+
+    "'AI Indicator' As group":
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =37
+
+        Icon13_1 As icon.Help:
+            Color: =RGBA(0, 94, 146, 1)
+            Height: =60
+            Icon: =Icon.Help
+            OnSelect: |-
+                =Launch("https://flowgpt.com/p/sem0"); Set(ContextPopup1,true); Set(Close1,true)
+            Rotation: =360
+            Visible: =AI1
+            Width: =60
+            X: =540
+            Y: =1036
+            ZIndex: =165
+
+        Label8_1 As label:
+            Align: =Align.Right
+            Height: =80
+            OnSelect: |-
+                =Launch("https://flowgpt.com/p/sem0")
+            Size: =16
+            Text: ="GPT Copilot to support accessing Inventory W2W_LP Application"
+            Visible: =ContextPopup1
+            Width: =485
+            X: =40
+            Y: =1026
+            ZIndex: =166
+
+        Icon15_1 As icon.Cancel:
+            Height: =30
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =Set(
+                    ContextPopup1,
+                    false
+                ); Set(Close1,false)
+            Visible: =Close1
+            Width: =25
+            X: =515
+            Y: =1010
+            ZIndex: =167
+
+        Timer2_3 As timer:
+            AutoStart: =AboutVisible
+            Color: =RGBA(0, 0, 0, 0)
+            Duration: =1500
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =11
+            OnTimerEnd: =Set(AI1,true);
+            Visible: =AboutVisible
+            Width: =9
+            X: =562
+            Y: =84
+            ZIndex: =168
+
+        Timer2_4 As timer:
+            AutoStart: =AboutVisible
+            Color: =RGBA(0, 0, 0, 0)
+            Duration: =3000
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =11
+            OnTimerEnd: =Set(ContextPopup1,true)
+            Visible: =AboutVisible
+            Width: =9
+            X: =565
+            Y: =89
+            ZIndex: =169
+
+        Timer2_5 As timer:
+            AutoStart: =AboutVisible
+            Color: =RGBA(0, 0, 0, 0)
+            Duration: =5000
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =11
+            OnTimerEnd: =Set(Close1,true)
+            Visible: =AboutVisible
+            Width: =9
+            X: =631
+            Y: =20
+            ZIndex: =170
+
+    "'Instruction 1' As group":
+        Height: =5
+        Width: =5
+        X: =100
+        Y: =100
+        ZIndex: =42
+
+        Label10 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Exclusive Browser Access"
+            Visible: =I1V
+            Width: =480
+            X: =80
+            Y: =120
+            ZIndex: =18
+
+        Image1 As image:
+            Height: =700
+            Image: =Instruction1
+            Visible: =I1V
+            Width: =400
+            X: =120
+            Y: =240
+            ZIndex: =19
+
+        Label10_1 As label:
+            Align: =Align.Justify
+            Height: =170
+            Size: =18
+            Text: ="       The application is functional only through a browser logged in with the designated Onedrive account. Notably, the print function is inaccessible within the PowerApps mobile application."
+            Visible: =I1V
+            Width: =520
+            X: =60
+            Y: =880
+            ZIndex: =20
+
+        Icon14 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(I2V,true);Set(I1V,false)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =I1V
+            Width: =120
+            X: =520
+            Y: =548
+            ZIndex: =21
+
+    "'Instruction 2' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =60
+        ZIndex: =47
+
+        Label10_2 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Essential Database Access"
+            Visible: =I2V
+            Width: =480
+            X: =80
+            Y: =120
+            ZIndex: =22
+
+        Image1_1 As image:
+            Height: =700
+            Image: =Instruction2
+            Visible: =I2V
+            Width: =400
+            X: =120
+            Y: =240
+            ZIndex: =23
+
+        Label10_3 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="      Proper user account permissions to access the SharePoint database are imperative for the application's seamless operation. Insufficient access may hinder functionalities."
+            Visible: =I2V
+            Width: =522
+            X: =59
+            Y: =881
+            ZIndex: =24
+
+        Icon14_3 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(I2V,false);Set(I3V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =I2V
+            Width: =120
+            X: =520
+            Y: =548
+            ZIndex: =25
+
+        Icon14_2 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(I2V,false);Set(I1V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =I2V
+            Width: =120
+            Y: =548
+            ZIndex: =26
+
+    "'Instruction 3' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =140
+        ZIndex: =64
+
+        Label10_4 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Submission Database State"
+            Visible: =I3V
+            Width: =480
+            X: =80
+            Y: =120
+            ZIndex: =27
+
+        Image1_2 As image:
+            Height: =600
+            Image: =Instruction3
+            Visible: =I3V
+            Width: =400
+            X: =120
+            Y: =240
+            ZIndex: =28
+
+        Label10_5 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="       Form submissions are restricted when the SharePoint database remains in an open condition."
+            Visible: =I3V
+            Width: =522
+            X: =59
+            Y: =881
+            ZIndex: =29
+
+        Icon14_5 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(I3V,false);Set(I4V,true);
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =I3V
+            Width: =120
+            X: =520
+            Y: =548
+            ZIndex: =30
+
+        Icon14_4 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(I3V,false);Set(I2V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =I3V
+            Width: =120
+            Y: =548
+            ZIndex: =31
+
+    "'Instruction 4' As group":
+        Height: =5
+        Width: =5
+        X: =140
+        Y: =140
+        ZIndex: =72
+
+        Label10_6 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Distinct Scanning Function"
+            Visible: =I4V
+            Width: =480
+            X: =80
+            Y: =121
+            ZIndex: =32
+
+        Image1_3 As image:
+            Height: =600
+            Image: ='Instruction 4_gif'
+            Visible: =I4V
+            Width: =400
+            X: =120
+            Y: =241
+            ZIndex: =33
+
+        Label10_7 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="       The application necessitates barcode and QR code scanning in two distinct areas for optimal functionality."
+            Visible: =I4V
+            Width: =522
+            X: =59
+            Y: =882
+            ZIndex: =34
+
+        Icon14_6 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(I4V,false);Set(I5V,true);
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =I4V
+            Width: =120
+            X: =520
+            Y: =548
+            ZIndex: =35
+
+        Icon14_7 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(I4V,false);Set(I3V,true);
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =I4V
+            Width: =120
+            Y: =548
+            ZIndex: =36
+
+    "'Instruction 5' As group":
+        Height: =5
+        Width: =5
+        X: =140
+        Y: =20
+        ZIndex: =74
+
+        Label10_8 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Complete Input Compulsion"
+            Visible: =I5V
+            Width: =480
+            X: =80
+            Y: =121
+            ZIndex: =37
+
+        Image1_4 As image:
+            Height: =600
+            Image: =Instruction5
+            Visible: =I5V
+            Width: =400
+            X: =120
+            Y: =241
+            ZIndex: =38
+
+        Label10_9 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="       The application requires all input fields within forms to be filled. Form submission is not possible with any open inputs."
+            Visible: =I5V
+            Width: =522
+            X: =59
+            Y: =882
+            ZIndex: =39
+
+        Icon14_8 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(I5V,false);Set(I6V,true);
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =I5V
+            Width: =120
+            X: =520
+            Y: =548
+            ZIndex: =40
+
+        Icon14_9 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(I5V,false);Set(I4V,true);
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =I5V
+            Width: =120
+            Y: =548
+            ZIndex: =41
+
+    "'Instruction 6' As group":
+        Height: =5
+        Width: =5
+        X: =140
+        Y: =20
+        ZIndex: =79
+
+        Label10_10 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Automated Reporting"
+            Visible: =I6V
+            Width: =480
+            X: =80
+            Y: =121
+            ZIndex: =42
+
+        Image1_5 As image:
+            Height: =600
+            Image: =Instruction6
+            Visible: =I6V
+            Width: =400
+            X: =120
+            Y: =241
+            ZIndex: =43
+
+        Label10_11 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="       The application is programmed to automatically generate counting reports and dispatch them via email every 4 hours."
+            Visible: =I6V
+            Width: =522
+            X: =59
+            Y: =882
+            ZIndex: =44
+
+        Icon14_10 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(I6V,false);Set(I7V,true);
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =I6V
+            Width: =120
+            X: =520
+            Y: =548
+            ZIndex: =45
+
+        Icon14_11 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(I6V,false);Set(I5V,true);
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =I6V
+            Width: =120
+            Y: =548
+            ZIndex: =46
+
+    "'Instruction 7' As group":
+        Height: =5
+        Width: =5
+        X: =140
+        Y: =20
+        ZIndex: =84
+
+        Label10_12 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Label Printing Timing Constraints"
+            Visible: =I7V
+            Width: =490
+            X: =75
+            Y: =121
+            ZIndex: =47
+
+        Image1_6 As image:
+            Height: =600
+            Image: =Instruction7
+            Visible: =I7V
+            Width: =400
+            X: =120
+            Y: =241
+            ZIndex: =48
+
+        Label10_13 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="       To avoid reverting to the detail screen, labels must be printed within 5 seconds of generation."
+            Visible: =I7V
+            Width: =522
+            X: =59
+            Y: =882
+            ZIndex: =49
+
+        Icon14_12 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(I7V,false);Set(I8V,true);
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =I7V
+            Width: =120
+            X: =520
+            Y: =548
+            ZIndex: =50
+
+        Icon14_13 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(I7V,false);Set(I6V,true);
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =I7V
+            Width: =120
+            Y: =548
+            ZIndex: =51
+
+    "'Configuration 1' As group":
+        Height: =5
+        Width: =5
+        X: =100
+        Y: =86
+        ZIndex: =84
+
+        Label10_18 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="RawBT Application"
+            Visible: =C1V
+            Width: =480
+            X: =80
+            Y: =120
+            ZIndex: =61
+
+        Image1_9 As image:
+            Height: =600
+            Image: ='Configuration 1_1'
+            Visible: =C1V
+            Width: =400
+            X: =120
+            Y: =240
+            ZIndex: =62
+
+        Label10_19 As label:
+            Align: =Align.Justify
+            Height: =170
+            Size: =18
+            Text: ="       Utilize the RawBT application and Bluetooth settings to establish a connection between the Zebra device and the XPrinter/MTP-25 printer."
+            Visible: =C1V
+            Width: =520
+            X: =60
+            Y: =880
+            ZIndex: =63
+
+        Icon14_1 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(C2V,true);Set(C1V,false)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =C1V
+            Width: =120
+            X: =520
+            Y: =548
+            ZIndex: =64
+
+    "'Instruction 8' As group":
+        Height: =5
+        Width: =5
+        X: =140
+        Y: =20
+        ZIndex: =89
+
+        Label10_14 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Browse Page Verification"
+            Visible: =I8V
+            Width: =490
+            X: =75
+            Y: =121
+            ZIndex: =52
+
+        Image1_7 As image:
+            Height: =600
+            Image: =Instruction8
+            Visible: =I8V
+            Width: =400
+            X: =120
+            Y: =241
+            ZIndex: =53
+
+        Label10_15 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="       If the browse screen displays no prior data, users are advised to verify their Onedrive login activity for potential issues."
+            Visible: =I8V
+            Width: =522
+            X: =59
+            Y: =882
+            ZIndex: =54
+
+        Icon14_14 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(I8V,false);Set(I9V,true);
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =I8V
+            Width: =120
+            X: =520
+            Y: =548
+            ZIndex: =55
+
+        Icon14_15 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(I8V,false);Set(I7V,true);
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =I8V
+            Width: =120
+            Y: =548
+            ZIndex: =56
+
+    "'Configuration 2' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =89
+
+        Label10_20 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Bluetooth Pairing Password"
+            Visible: =C2V
+            Width: =480
+            X: =80
+            Y: =120
+            ZIndex: =65
+
+        Image1_10 As image:
+            Height: =600
+            Image: ='Configuration 2_1'
+            Visible: =C2V
+            Width: =400
+            X: =120
+            Y: =240
+            ZIndex: =66
+
+        Label10_21 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="      Access the XPrinter/MTP-25 printer's Bluetooth connectivity password by pressing the 'Func' button on the printer itself."
+            Visible: =C2V
+            Width: =522
+            X: =59
+            Y: =881
+            ZIndex: =67
+
+        Icon14_18 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(C2V,false);Set(C3V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =C2V
+            Width: =120
+            X: =520
+            Y: =548
+            ZIndex: =68
+
+        Icon14_16 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(C2V,false);Set(C1V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =C2V
+            Width: =120
+            Y: =548
+            ZIndex: =69
+
+    "'Instruction 9' As group":
+        Height: =5
+        Width: =5
+        X: =140
+        Y: =20
+        ZIndex: =94
+
+        Label10_16 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Login credentials"
+            Visible: =I9V
+            Width: =490
+            X: =75
+            Y: =121
+            ZIndex: =57
+
+        Image1_8 As image:
+            Height: =600
+            Image: =Instruction9
+            Visible: =I9V
+            Width: =400
+            X: =120
+            Y: =241
+            ZIndex: =58
+
+        Label10_17 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="       If wrong/unfilled field in login page, application cannot be accessed and the screen will be only retained back to the login page."
+            Visible: =I9V
+            Width: =522
+            X: =59
+            Y: =882
+            ZIndex: =59
+
+        Icon14_17 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(I9V,false);Set(I8V,true);
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =I9V
+            Width: =120
+            Y: =548
+            ZIndex: =60
+
+    "'Configuration 3' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =94
+
+        Label10_22 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Onedrive Account Login"
+            Visible: =C3V
+            Width: =480
+            X: =80
+            Y: =120
+            ZIndex: =70
+
+        Image1_11 As image:
+            Height: =600
+            Image: =Configuration3
+            Visible: =C3V
+            Width: =400
+            X: =120
+            Y: =240
+            ZIndex: =71
+
+        Label10_23 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: |-
+                ="      Login to the application's browser interface using the specific Onedrive account: ems.planning@syrmasgs.com."
+            Visible: =C3V
+            Width: =522
+            X: =59
+            Y: =881
+            ZIndex: =72
+
+        Icon14_19 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(C3V,false);Set(C2V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =C3V
+            Width: =120
+            Y: =548
+            ZIndex: =73
+
+    "'Handshake 1' As group":
+        Height: =5
+        Width: =5
+        X: =100
+        Y: =86
+        ZIndex: =98
+
+        Label10_24 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Bluetooth Activation"
+            Visible: =H1V
+            Width: =480
+            X: =80
+            Y: =120
+            ZIndex: =74
+
+        Image1_12 As image:
+            Height: =600
+            Image: =Handshake1
+            Visible: =H1V
+            Width: =400
+            X: =120
+            Y: =240
+            ZIndex: =75
+
+        Label10_25 As label:
+            Align: =Align.Justify
+            Height: =170
+            Size: =18
+            Text: ="       Turn on Bluetooth functionality on both the Zebra TC21/TC26 Android Device and the XPrinter/MTP-25 printer for initiating the pairing process."
+            Visible: =H1V
+            Width: =520
+            X: =60
+            Y: =880
+            ZIndex: =76
+
+        Icon14_20 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(H2V,true);Set(H1V,false)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =H1V
+            Width: =120
+            X: =520
+            Y: =548
+            ZIndex: =77
+
+    "'Handshake 2' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =103
+
+        Label10_26 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="RawBT Settings Access"
+            Visible: =H2V
+            Width: =480
+            X: =80
+            Y: =120
+            ZIndex: =78
+
+        Image1_13 As image:
+            Height: =600
+            Image: =Handshake2
+            Visible: =H2V
+            Width: =400
+            X: =120
+            Y: =240
+            ZIndex: =79
+
+        Label10_27 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="      Open the RawBT application and access the settings by clicking on the 'Gear' symbol"
+            Visible: =H2V
+            Width: =522
+            X: =59
+            Y: =881
+            ZIndex: =80
+
+        Icon14_22 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(H2V,false);Set(H3V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =H2V
+            Width: =120
+            X: =520
+            Y: =548
+            ZIndex: =81
+
+        Icon14_21 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(H2V,false);Set(H1V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =H2V
+            Width: =120
+            Y: =548
+            ZIndex: =82
+
+    "'Handshake 3' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =108
+
+        Label10_28 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Printer Addition"
+            Visible: =H3V
+            Width: =480
+            X: =80
+            Y: =120
+            ZIndex: =83
+
+        Image1_14 As image:
+            Height: =600
+            Image: ='Handshake3-6'
+            Visible: =H3V
+            Width: =400
+            X: =120
+            Y: =240
+            ZIndex: =84
+
+        Label10_29 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="      Select 'Add printer' > 'Bluetooth' > 'Not selected' > 'XPrinter/MTP-25' within the RawBT application."
+            Visible: =H3V
+            Width: =522
+            X: =59
+            Y: =881
+            ZIndex: =85
+
+        Icon14_24 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(H3V,false);Set(H4V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =H3V
+            Width: =120
+            X: =520
+            Y: =548
+            ZIndex: =86
+
+        Icon14_23 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(H3V,false);Set(H2V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =H3V
+            Width: =120
+            Y: =548
+            ZIndex: =87
+
+    "'Handshake 4' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =113
+
+        Label10_30 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Printer Protocol"
+            Visible: =H4V
+            Width: =480
+            X: =80
+            Y: =120
+            ZIndex: =88
+
+        Image1_15 As image:
+            Height: =600
+            Image: =Handshake7
+            Visible: =H4V
+            Width: =400
+            X: =120
+            Y: =240
+            ZIndex: =89
+
+        Label10_31 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="      Opt for the 'ESC/POS General' option and proceed to establish the connection by clicking 'Connect'"
+            Visible: =H4V
+            Width: =522
+            X: =59
+            Y: =881
+            ZIndex: =90
+
+        Icon14_26 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(H4V,false);Set(H5V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =H4V
+            Width: =120
+            X: =520
+            Y: =548
+            ZIndex: =91
+
+        Icon14_25 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(H4V,false);Set(H3V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =H4V
+            Width: =120
+            Y: =548
+            ZIndex: =92
+
+    "'Handshake 5' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =118
+
+        Label10_32 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Pairing Confirmation"
+            Visible: =H5V
+            Width: =480
+            X: =80
+            Y: =119
+            ZIndex: =93
+
+        Image1_16 As image:
+            Height: =600
+            Image: =Handshake8
+            Visible: =H5V
+            Width: =400
+            X: =120
+            Y: =239
+            ZIndex: =94
+
+        Label10_33 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="      Upon connection initiation, a dialogue box prompts the entry of the pairing password. Fill in the obtained XPrinter/MTP-25 printer's Bluetooth connectivity password in this dialogue box."
+            Visible: =H5V
+            Width: =522
+            X: =59
+            Y: =880
+            ZIndex: =95
+
+        Icon14_27 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(H5V,false);Set(H4V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =H5V
+            Width: =120
+            Y: =547
+            ZIndex: =96
+
+    "'Guide 1' As group":
+        Height: =5
+        Width: =5
+        X: =100
+        Y: =86
+        ZIndex: =121
+
+        Label10_34 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Application Login"
+            Visible: =G1V
+            Width: =480
+            X: =80
+            Y: =120
+            ZIndex: =97
+
+        Image1_17 As image:
+            Height: =600
+            Image: =Guide1
+            Visible: =G1V
+            Width: =400
+            X: =120
+            Y: =240
+            ZIndex: =98
+
+        Label10_35 As label:
+            Align: =Align.Justify
+            Height: =170
+            Size: =18
+            Text: ="       The application opens directly to the login screen, for credentials verification. Upon successful login, screen will be automatically navigated to browse page, allowing users to review and find previously registered data easily."
+            Visible: =G1V
+            Width: =520
+            X: =60
+            Y: =880
+            ZIndex: =99
+
+        Icon14_28 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(G2V,true);Set(G1V,false)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G1V
+            Width: =120
+            X: =520
+            Y: =548
+            ZIndex: =100
+
+    "'Guide 2' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =126
+
+        Label10_36 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Data History"
+            Visible: =G2V
+            Width: =480
+            X: =80
+            Y: =119
+            ZIndex: =101
+
+        Image1_18 As image:
+            Height: =600
+            Image: =Guide2
+            Visible: =G2V
+            Width: =400
+            X: =120
+            Y: =239
+            ZIndex: =102
+
+        Label10_37 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="      Utilize the browse screen's search functionality to locate any required data from previous entries."
+            Visible: =G2V
+            Width: =522
+            X: =59
+            Y: =880
+            ZIndex: =103
+
+        Icon14_30 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(G2V,false);Set(G3V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G2V
+            Width: =120
+            X: =520
+            Y: =547
+            ZIndex: =104
+
+        Icon14_29 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(G2V,false);Set(G1V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G2V
+            Width: =120
+            Y: =547
+            ZIndex: =105
+
+    "'Guide 3' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =131
+
+        Label10_38 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Label Printing Calibration"
+            Visible: =G3V
+            Width: =480
+            X: =80
+            Y: =119
+            ZIndex: =106
+
+        Image1_19 As image:
+            Height: =600
+            Image: =Guide4
+            Visible: =G3V
+            Width: =400
+            X: =120
+            Y: =239
+            ZIndex: =107
+
+        Label10_39 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="      Upon starting the application or resuming progress, use the 'Print Screen' button at the bottom to transition to the Detail screen and click 'Print' button for label printing calibration."
+            Visible: =G3V
+            Width: =522
+            X: =59
+            Y: =880
+            ZIndex: =108
+
+        Icon14_32 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(G3V,false);Set(G4V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G3V
+            Width: =120
+            X: =520
+            Y: =547
+            ZIndex: =109
+
+        Icon14_31 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(G3V,false);Set(G2V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G3V
+            Width: =120
+            Y: =547
+            ZIndex: =110
+
+    "'Guide 4' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =136
+
+        Label10_40 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="First Level Progress"
+            Visible: =G4V
+            Width: =480
+            X: =80
+            Y: =119
+            ZIndex: =111
+
+        Image1_20 As image:
+            Height: =600
+            Image: =Guide5
+            Visible: =G4V
+            Width: =400
+            X: =120
+            Y: =239
+            ZIndex: =112
+
+        Label10_41 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="      Click the '+' icon to commence the first level of progress, initiating the Bin entry form."
+            Visible: =G4V
+            Width: =522
+            X: =59
+            Y: =880
+            ZIndex: =113
+
+        Icon14_34 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(G4V,false);Set(G5V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G4V
+            Width: =120
+            X: =520
+            Y: =547
+            ZIndex: =114
+
+        Icon14_33 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(G4V,false);Set(G3V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G4V
+            Width: =120
+            Y: =547
+            ZIndex: =115
+
+    "'Guide 5' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =141
+
+        Label10_42 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Bin Entry Submission"
+            Visible: =G5V
+            Width: =480
+            X: =80
+            Y: =119
+            ZIndex: =116
+
+        Image1_21 As image:
+            Height: =600
+            Image: =Guide6
+            Visible: =G5V
+            Width: =400
+            X: =120
+            Y: =239
+            ZIndex: =117
+
+        Label10_43 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="      After scanning the Bin Barcode, submit the Bin entry form. The application will then switch to the Tag entry screen based on the toggle switch."
+            Visible: =G5V
+            Width: =522
+            X: =59
+            Y: =880
+            ZIndex: =118
+
+        Icon14_36 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(G5V,false);Set(G6V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G5V
+            Width: =120
+            X: =520
+            Y: =547
+            ZIndex: =119
+
+        Icon14_35 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(G5V,false);Set(G4V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G5V
+            Width: =120
+            Y: =547
+            ZIndex: =120
+
+    "'Guide 6' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =146
+
+        Label10_44 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Tag Entry Submission"
+            Visible: =G6V
+            Width: =480
+            X: =80
+            Y: =119
+            ZIndex: =121
+
+        Image1_22 As image:
+            Height: =600
+            Image: =Guide7
+            Visible: =G6V
+            Width: =400
+            X: =120
+            Y: =239
+            ZIndex: =122
+
+        Label10_45 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="      In the Tag entry screen, perform QR code scanning. Scan the Green Label for Reels and the White Label for Boxes."
+            Visible: =G6V
+            Width: =522
+            X: =59
+            Y: =880
+            ZIndex: =123
+
+        Icon14_38 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(G6V,false);Set(G7V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G6V
+            Width: =120
+            X: =520
+            Y: =547
+            ZIndex: =124
+
+        Icon14_37 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(G6V,false);Set(G5V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G6V
+            Width: =120
+            Y: =547
+            ZIndex: =125
+
+    "'Guide 7' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =151
+
+        Label10_46 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Automatic Data Fetching"
+            Visible: =G7V
+            Width: =480
+            X: =80
+            Y: =119
+            ZIndex: =126
+
+        Image1_23 As image:
+            Height: =600
+            Image: =Guide8
+            Visible: =G7V
+            Width: =400
+            X: =120
+            Y: =239
+            ZIndex: =127
+
+        Label10_47 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="      Part number and Batch details are automatically fetched from the QR code scanning. Quantity can be manually entered, with automatic quantity fetching for green labels."
+            Visible: =G7V
+            Width: =522
+            X: =59
+            Y: =880
+            ZIndex: =128
+
+        Icon14_40 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(G7V,false);Set(G8V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G7V
+            Width: =120
+            X: =520
+            Y: =547
+            ZIndex: =129
+
+        Icon14_39 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(G7V,false);Set(G6V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G7V
+            Width: =120
+            Y: =547
+            ZIndex: =130
+
+    "'Guide 8' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =156
+
+        Label10_48 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Switch to Detail Screen"
+            Visible: =G8V
+            Width: =480
+            X: =80
+            Y: =119
+            ZIndex: =131
+
+        Image1_24 As image:
+            Height: =600
+            Image: =Guide9
+            Visible: =G8V
+            Width: =400
+            X: =120
+            Y: =239
+            ZIndex: =132
+
+        Label10_49 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="      Click the '✓' icon in the top right corner to submit the form. The application will switch tabs to the detail screen."
+            Visible: =G8V
+            Width: =522
+            X: =59
+            Y: =880
+            ZIndex: =133
+
+        Icon14_42 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(G8V,false);Set(G9V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G8V
+            Width: =120
+            X: =520
+            Y: =547
+            ZIndex: =134
+
+        Icon14_41 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(G8V,false);Set(G7V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G8V
+            Width: =120
+            Y: =547
+            ZIndex: =135
+
+    "'Guide 9' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =161
+
+        Label10_50 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Label Printing"
+            Visible: =G9V
+            Width: =480
+            X: =80
+            Y: =119
+            ZIndex: =136
+
+        Image1_25 As image:
+            Height: =600
+            Image: =Guide10
+            Visible: =G9V
+            Width: =400
+            X: =120
+            Y: =239
+            ZIndex: =137
+
+        Label10_51 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="      Click the 'Print' icon at the top to print the label. Ensure the label is printed within 5 seconds of generation to prevent fallback to the detail screen."
+            Visible: =G9V
+            Width: =522
+            X: =59
+            Y: =880
+            ZIndex: =138
+
+        Icon14_44 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(G9V,false);Set(G10V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G9V
+            Width: =120
+            X: =520
+            Y: =547
+            ZIndex: =139
+
+        Icon14_43 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(G9V,false);Set(G8V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G9V
+            Width: =120
+            Y: =547
+            ZIndex: =140
+
+    "'Guide 10' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =166
+
+        Label10_52 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="New Tag Entry"
+            Visible: =G10V
+            Width: =480
+            X: =80
+            Y: =119
+            ZIndex: =141
+
+        Image1_26 As image:
+            Height: =600
+            Image: =Guide11
+            Visible: =G10V
+            Width: =400
+            X: =120
+            Y: =239
+            ZIndex: =142
+
+        Label10_53 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="      Click the '+' icon to return to the Tag entry screen, retaining the User ID and Bin number from the filled Bin entry form. Repeat steps 5 to 9 until the bin is completed."
+            Visible: =G10V
+            Width: =522
+            X: =59
+            Y: =880
+            ZIndex: =143
+
+        Icon14_46 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(G10V,false);Set(G11V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G10V
+            Width: =120
+            X: =520
+            Y: =547
+            ZIndex: =144
+
+        Icon14_45 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(G10V,false);Set(G9V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G10V
+            Width: =120
+            Y: =547
+            ZIndex: =145
+
+    "'Guide 11' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =171
+
+        Label10_54 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="New Bin Entry"
+            Visible: =G11V
+            Width: =480
+            X: =80
+            Y: =119
+            ZIndex: =146
+
+        Image1_27 As image:
+            Height: =600
+            Image: =Guide12
+            Visible: =G11V
+            Width: =400
+            X: =120
+            Y: =239
+            ZIndex: =147
+
+        Label10_55 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="      To move back to the Bin entry screen for a new bin, click the 'Edit' icon in the top right corner of the Detail screen."
+            Visible: =G11V
+            Width: =522
+            X: =59
+            Y: =880
+            ZIndex: =148
+
+        Icon14_48 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(G11V,false);Set(G12V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G11V
+            Width: =120
+            X: =520
+            Y: =547
+            ZIndex: =149
+
+        Icon14_47 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(G11V,false);Set(G10V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G11V
+            Width: =120
+            Y: =547
+            ZIndex: =150
+
+    "'Guide 12' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =176
+
+        Label10_56 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Undo Functionality"
+            Visible: =G12V
+            Width: =480
+            X: =80
+            Y: =119
+            ZIndex: =151
+
+        Image1_28 As image:
+            Height: =600
+            Image: =Guide13
+            Visible: =G12V
+            Width: =400
+            X: =120
+            Y: =239
+            ZIndex: =152
+
+        Label10_57 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="      If there's any incorrect data filled in the Bin entry form or Tag entry screen, use the 'Undo' button to rectify the error."
+            Visible: =G12V
+            Width: =522
+            X: =59
+            Y: =880
+            ZIndex: =153
+
+        Icon14_50 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(G12V,false);Set(G13V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G12V
+            Width: =120
+            X: =520
+            Y: =547
+            ZIndex: =154
+
+        Icon14_49 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(G12V,false);Set(G11V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G12V
+            Width: =120
+            Y: =547
+            ZIndex: =155
+
+    "'Guide 13' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =181
+
+        Label10_58 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="New User Entry"
+            Visible: =G13V
+            Width: =480
+            X: =80
+            Y: =119
+            ZIndex: =156
+
+        Image1_29 As image:
+            Height: =600
+            Image: =Guide14
+            Visible: =G13V
+            Width: =400
+            X: =120
+            Y: =239
+            ZIndex: =157
+
+        Label10_59 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="      To switch to another user, click the 'Add user' icon in the bottom left corner for another user to login."
+            Visible: =G13V
+            Width: =522
+            X: =59
+            Y: =880
+            ZIndex: =158
+
+        Icon14_52 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(G13V,false);Set(G14V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G13V
+            Width: =120
+            X: =520
+            Y: =547
+            ZIndex: =159
+
+        Icon14_51 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(G13V,false);Set(G12V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G13V
+            Width: =120
+            Y: =547
+            ZIndex: =160
+
+    AboutGroup As group:
+        Height: =5
+        Width: =5
+        X: =100
+        Y: =100
+        ZIndex: =185
+
+        Label9 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            PaddingLeft: =15
+            Size: =21
+            Text: |-
+                ="Application:"
+            Visible: =AboutVisible
+            Width: =560
+            X: =40
+            Y: =110
+            ZIndex: =1
+
+        Label9_1 As label:
+            Height: =80
+            PaddingLeft: =15
+            Size: =21
+            Text: ="Inventory W2W_LP"
+            Visible: =AboutVisible
+            Width: =350
+            X: =210
+            Y: =110
+            ZIndex: =2
+
+        Label9_2 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            PaddingLeft: =15
+            Size: =21
+            Text: |-
+                ="Date:"
+            Visible: =AboutVisible
+            Width: =560
+            X: =40
+            Y: =190
+            ZIndex: =3
+
+        Label9_3 As label:
+            Height: =80
+            PaddingLeft: =15
+            Size: =21
+            Text: ="December 29, 2023"
+            Visible: =AboutVisible
+            Width: =350
+            X: =120
+            Y: =190
+            ZIndex: =4
+
+        DatePicker3 As datepicker:
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Format: =DateTimeFormat.LongDateTime
+            Height: =20
+            InputTextPlaceholder: =If(IsBlank(Self.SelectedDate), Text(Date(2001,12,31), DateTimeFormat.LongDate, Self.Language))
+            Italic: =true
+            Size: =24
+            Visible: =AboutVisible
+            Width: =7
+            X: =600
+            Y: =1078
+            ZIndex: =5
+
+        Label9_4 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            PaddingLeft: =15
+            Size: =21
+            Text: |-
+                ="Version:"
+            Visible: =AboutVisible
+            Width: =560
+            X: =40
+            Y: =270
+            ZIndex: =6
+
+        Label9_5 As label:
+            Height: =80
+            PaddingLeft: =15
+            Size: =21
+            Text: ="4.17.95"
+            Visible: =AboutVisible
+            Width: =350
+            X: =160
+            Y: =270
+            ZIndex: =7
+
+        Label9_12 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            PaddingLeft: =15
+            Size: =21
+            Text: |-
+                ="Hardware:"
+            Visible: =AboutVisible
+            Width: =560
+            X: =40
+            Y: =350
+            ZIndex: =8
+
+        Label9_13 As label:
+            Height: =200
+            PaddingLeft: =17
+            PaddingTop: =22
+            Size: =21
+            Text: |-
+                ="1. Zebra TC21/TC26 Android Device
+                2. XPrinter/MTP-25 Bluetooth Thermal Printer
+                3. 20x58 Peel-off Label"
+            VerticalAlign: =VerticalAlign.Top
+            Visible: =AboutVisible
+            Width: =374
+            X: =185
+            Y: =350
+            ZIndex: =9
+
+        Label9_8 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            PaddingLeft: =15
+            Size: =21
+            Text: |-
+                ="Release:"
+            Visible: =AboutVisible
+            Width: =560
+            X: =40
+            Y: =550
+            ZIndex: =10
+
+        Label9_9 As label:
+            Height: =80
+            PaddingLeft: =15
+            Size: =21
+            Text: ="3.23122.17"
+            Visible: =AboutVisible
+            Width: =350
+            X: =160
+            Y: =550
+            ZIndex: =11
+
+        Label9_10 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            PaddingLeft: =15
+            Size: =21
+            Text: |-
+                ="Account:"
+            Visible: =AboutVisible
+            Width: =560
+            X: =40
+            Y: =850
+            ZIndex: =12
+
+        Label9_11 As label:
+            Height: =80
+            OnSelect: =
+            PaddingLeft: =10
+            Size: =21
+            Text: ="ems.planning@syrmasgs.com"
+            Visible: =AboutVisible
+            Width: =410
+            X: =170
+            Y: =850
+            ZIndex: =13
+
+        Label9_16 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            PaddingLeft: =15
+            Size: =21
+            Text: |-
+                ="GPT Copilot:"
+            Visible: =AboutVisible
+            Width: =560
+            X: =40
+            Y: =930
+            ZIndex: =14
+
+        Label9_17 As label:
+            Height: =80
+            OnSelect: |-
+                =Launch("https://flowgpt.com/p/sem0")
+            PaddingLeft: =15
+            Size: =21
+            Text: ="SEM.0"
+            Visible: =AboutVisible
+            Width: =300
+            X: =210
+            Y: =930
+            ZIndex: =15
+
+        Image3 As image:
+            Height: =220
+            Image: ='download (1)'
+            OnSelect: |-
+                =Launch("https://t.ly/yGXEb?r=qr")
+            Visible: =AboutVisible
+            Width: =220
+            X: =210
+            Y: =630
+            ZIndex: =171
+
+    "'Guide 14' As group":
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =186
+
+        Label10_60 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="Data Entry Login"
+            Visible: =G14V
+            Width: =480
+            X: =80
+            Y: =119
+            ZIndex: =161
+
+        Image1_30 As image:
+            Height: =600
+            Image: =Guide16
+            Visible: =G14V
+            Width: =400
+            X: =120
+            Y: =239
+            ZIndex: =162
+
+        Label10_61 As label:
+            Align: =Align.Justify
+            Height: =168
+            Size: =18
+            Text: ="      To check the data entry, click the 'Download' symbol in the Browse Screen Page and enter the password."
+            Visible: =G14V
+            Width: =522
+            X: =59
+            Y: =880
+            ZIndex: =163
+
+        Icon14_53 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(G14V,false);Set(G13V,true)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =G14V
+            Width: =120
+            Y: =547
+            ZIndex: =164
+
+    Icon5 As icon.Link:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =80
+        Icon: =Icon.Link
+        OnSelect: |-
+            =Launch("https://syrmatech-my.sharepoint.com/:u:/g/personal/saiharivignesh_n_syrmasgs_com/EcyUVB_foy9GgvH29B8N4K4BgInd88rp2WMk9K_8Ilq_Lw?e=dihdZs")
+        PaddingBottom: =15
+        PaddingLeft: =15
+        PaddingRight: =15
+        PaddingTop: =15
+        Visible: =AboutVisible
+        Width: =80
+        X: =480
+        ZIndex: =189
+
+    Query_Mail As group:
+        Height: =5
+        Width: =5
+        X: =100
+        Y: =100
+        ZIndex: =189
+
+        Rectangle9 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =1056
+            Visible: =BGWhite
+            Width: =640
+            Y: =80
+            ZIndex: =172
+
+        Rectangle6_1 As rectangle:
+            BorderColor: =RGBA(0, 94, 146, 1)
+            BorderThickness: =0.25
+            Fill: =RGBA(0, 94, 146, 1)
+            Height: =312
+            TabIndex: =
+            Visible: =DisplayPopup1
+            Width: =572
+            X: =34
+            Y: =411
+            ZIndex: =182
+
+        Label5_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =46
+            Size: =24
+            TabIndex: =
+            Text: ="Query"
+            Visible: =DisplayPopup1
+            Width: =560
+            X: =40
+            Y: =419
+            ZIndex: =183
+
+        TextInput6_1 As text:
+            AccessibleLabel: ="Body of the mail"
+            Align: =Align.Justify
+            BorderColor: =RGBA(0, 94, 146, 1)
+            Clear: =true
+            Default: =
+            Height: =198
+            HintText: ="Click here"
+            Mode: =TextMode.MultiLine
+            PaddingLeft: =5
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Size: =21
+            TabIndex: =
+            Visible: =DisplayPopup1
+            Width: =560
+            X: =40
+            Y: =474
+            ZIndex: =184
+
+        Button1_1 As button:
+            BorderThickness: =0
+            Color: =RGBA(0, 94, 146, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Normal
+            OnSelect: |-
+                =If(IsBlank(TextInput6_1),SetFocus(TextInput6_1),(Office365Outlook.SendEmailV2(
+                    "saiharivignesh.n@syrmasgs.com",
+                    "Inventory W2W_LP: Query",TextInput6_1.Text))&(Set(DisplayPopup1,false)&Set(QueryMail2,true)&Set(QueryMail3,false)&Set(BGWhite,false)
+                ));
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =16
+            Text: ="Send"
+            Visible: =DisplayPopup1
+            Width: =120
+            X: =480
+            Y: =677
+            ZIndex: =185
+
+        Icon5_1 As icon.Cancel:
+            AccessibleLabel: ="Close"
+            AutoDisableOnSelect: =false
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =60
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =Reset(TextInput6_1);
+                Set(
+                    DisplayPopup1,
+                    false
+                );SetFocus(TextInput6_1);Set(QueryMail2,true);Set(QueryMail3,false);Set(BGWhite,false)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Visible: =DisplayPopup1
+            Width: =60
+            X: =540
+            Y: =412
+            ZIndex: =186
+
+        Icon7_3 As icon.Mail:
+            AccessibleLabel: ="Mail"
+            AutoDisableOnSelect: =false
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =80
+            Icon: =Icon.Mail
+            OnSelect: |-
+                =Reset(TextInput6_1);
+                Set(
+                    DisplayPopup1,
+                    false
+                ); SetFocus(TextInput6_1);Set(QueryMail2,true);Set(QueryMail3,false);Set(BGWhite,false)
+            PaddingBottom: =15
+            PaddingLeft: =15
+            PaddingRight: =15
+            PaddingTop: =15
+            TabIndex: =
+            Visible: =QueryMail3
+            Width: =80
+            X: =560
+            ZIndex: =187
+
+        Icon7_2 As icon.Mail:
+            AccessibleLabel: ="Mail"
+            AutoDisableOnSelect: =false
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =80
+            Icon: =Icon.Mail
+            OnSelect: |-
+                =Reset(TextInput6_1);
+                Set(
+                    DisplayPopup1,
+                    true
+                ); SetFocus(TextInput6_1);Set(QueryMail2,false);Set(QueryMail3,true);Set(BGWhite,true)
+            PaddingBottom: =15
+            PaddingLeft: =15
+            PaddingRight: =15
+            PaddingTop: =15
+            TabIndex: =
+            Visible: =QueryMail2
+            Width: =80
+            X: =560
+            ZIndex: =188
+

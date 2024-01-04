@@ -1,0 +1,679 @@
+"DetailScreen1 As screen.'phoneDetailViewLayout_ver3.0'":
+    OnVisible: =Reset(TextInput6_6);Set(BGWhite,false)
+
+    Rectangle4 As rectangle:
+        Fill: =RGBA(0, 94, 146, 1)
+        Height: =80
+        Width: =640
+        ZIndex: =1
+
+    LblAppName2 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =80
+        Size: =27
+        Text: ="Print Screen"
+        Width: =280
+        Wrap: =false
+        X: =80
+        ZIndex: =2
+
+    IconEdit1 As icon.Edit:
+        AccessibleLabel: =Self.Tooltip
+        DisplayMode: =If(DataSourceInfo([@Table1], DataSourceInfo.EditPermission), DisplayMode.Edit, DisplayMode.Disabled)
+        Height: =50
+        Icon: =Icon.Edit
+        OnSelect: =Navigate(Bin_Edit,ScreenTransition.None);Reset(TextInput5);Reset(TextInput4);Reset(TextInput4_1);NewForm(EditForm1)
+        TabIndex: =0
+        Tooltip: ="Edit this item"
+        Width: =50
+        X: =570
+        Y: =15
+        ZIndex: =3
+
+    IconDelete1 As icon.Trash:
+        AccessibleLabel: =Self.Tooltip
+        DisplayMode: =If(!IsBlank(BrowseGallery1.Selected) && DataSourceInfo([@Table1], DataSourceInfo.DeletePermission), DisplayMode.Edit, DisplayMode.Disabled)
+        Height: =50
+        Icon: =Icon.Trash
+        OnSelect: =Remove([@Table1], BrowseGallery1.Selected); If (IsEmpty(Errors([@Table1], BrowseGallery1.Selected)), Back())
+        TabIndex: =0
+        Tooltip: ="Delete this item"
+        Width: =50
+        X: =500
+        Y: =15
+        ZIndex: =4
+
+    DetailForm1 As formViewer:
+        DataSource: =[@Table1]
+        Height: =879
+        Item: =BrowseGallery1.Selected
+        Width: =Parent.Width
+        Y: =150
+        ZIndex: =5
+
+        "'Operator ID_DataCard1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Operator_x0020_ID"
+            Default: =ThisItem.'Operator ID'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Operator_x0020_ID")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Required: =false
+            Width: =292
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey4 As label:
+                Color: =RGBA(0, 94, 146, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =53
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =200
+                Wrap: =false
+                X: =27
+                ZIndex: =1
+
+            DataCardValue4 As label:
+                DisplayMode: =Parent.DisplayMode
+                Height: =44
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =25
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =36
+                Y: =56
+                ZIndex: =2
+
+        "'Inventory count date_DataCard1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Inventory_x0020_count_x0020_date"
+            Default: =ThisItem.'Inventory count date'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Inventory_x0020_count_x0020_date")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =148
+            Required: =false
+            Width: =312
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey3 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Visible: =false
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue3 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =25
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =35
+                Y: =53
+                ZIndex: =2
+
+            Label1 As label:
+                Color: =RGBA(0, 94, 146, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =58
+                Size: =21
+                Text: ="Count Date"
+                Width: =240
+                X: =26
+                ZIndex: =3
+
+        Batch_DataCard1 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Batch"
+            Default: =ThisItem.Batch
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Batch")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =165
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey1 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 94, 146, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =25
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =2
+                ZIndex: =1
+
+            DataCardValue1 As label:
+                DisplayMode: =Parent.DisplayMode
+                Height: =51
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =25
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =37
+                Y: =62
+                ZIndex: =2
+
+        "'Part number _DataCard1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Part_x0020_number_x0020_"
+            Default: =ThisItem.'Part number '
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Part_x0020_number_x0020_")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =184
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey6 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 94, 146, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =25
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue6 As label:
+                DisplayMode: =Parent.DisplayMode
+                Height: =81
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =25
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =38
+                Y: =58
+                ZIndex: =2
+
+        "'Storage location_DataCard1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Storage_x0020_location"
+            Default: =ThisItem.'Storage location'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Storage_x0020_location")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =182
+            Required: =false
+            Visible: =true
+            Width: =640
+            WidthFit: =false
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey8 As label:
+                Color: =RGBA(0, 94, 146, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =61
+                Size: =25
+                Text: =Parent.DisplayName
+                Width: =362
+                Wrap: =false
+                X: =31
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue8 As label:
+                DisplayMode: =Parent.DisplayMode
+                Height: =80
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =25
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =39
+                Y: =55
+                ZIndex: =2
+
+        "'Count Quantity_DataCard1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Count_x0020_Quantity"
+            Default: =ThisItem.'Count Quantity'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Count_x0020_Quantity")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =175
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey2 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 94, 146, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =25
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue2 As label:
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =25
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =40
+                Y: =58
+                ZIndex: =2
+
+    Icon1 As icon.Print:
+        AccessibleLabel: ="Print"
+        BorderColor: =RGBA(255, 255, 255, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =50
+        Icon: =Icon.Print
+        OnSelect: |-
+            =Navigate(DetailScreen1_1, ScreenTransition.None);
+            Set(varPrintTriggered, true);
+        TabIndex: =
+        Width: =50
+        X: =430
+        Y: =15
+        ZIndex: =6
+
+    Icon3 As icon.Save:
+        AccessibleLabel: ="New Tag"
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =50
+        Icon: =Icon.Add
+        OnSelect: =Navigate(EditScreen1,ScreenTransition.None); NewForm(EditForm1)
+        TabIndex: =
+        Width: =50
+        X: =360
+        Y: =15
+        ZIndex: =7
+
+    Rectangle2_1 As rectangle:
+        Fill: =RGBA(0, 94, 146, 1)
+        Height: =80
+        Width: =640
+        Y: =1060
+        ZIndex: =9
+
+    Icon8_1 As icon.Home:
+        AccessibleLabel: ="Home"
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =56
+        Icon: =Icon.AddUser
+        OnSelect: =Navigate(Screen2,ScreenTransition.Fade)
+        TabIndex: =
+        Width: =56
+        X: =60
+        Y: =1073
+        ZIndex: =10
+
+    Icon9_1 As icon.Tray:
+        AccessibleLabel: ="Bin"
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =56
+        Icon: =Icon.Tag
+        OnSelect: =Navigate(BrowseScreen1,ScreenTransition.None)
+        TabIndex: =
+        Width: =56
+        X: =176
+        Y: =1073
+        ZIndex: =11
+
+    Icon10_1 As icon.DocumentwithContent:
+        AccessibleLabel: ="Tag"
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =56
+        Icon: =Icon.Tray
+        OnSelect: =Navigate(Bin_Edit,ScreenTransition.None)
+        TabIndex: =
+        Width: =56
+        X: =292
+        Y: =1073
+        ZIndex: =12
+
+    Icon11_1 As icon.Print:
+        AccessibleLabel: ="Detail"
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =56
+        Icon: =Icon.ColorPicker
+        OnSelect: =Navigate(EditScreen1,ScreenTransition.None);
+        TabIndex: =
+        Width: =56
+        X: =408
+        Y: =1073
+        ZIndex: =13
+
+    Query_Mail_5 As group:
+        Height: =5
+        Width: =5
+        X: =100
+        Y: =7
+        ZIndex: =22
+
+        Rectangle9_5 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =980
+            Visible: =BGWhite
+            Width: =640
+            Y: =80
+            ZIndex: =14
+
+        Rectangle6_6 As rectangle:
+            BorderColor: =RGBA(0, 94, 146, 1)
+            BorderThickness: =0.25
+            Fill: =RGBA(0, 94, 146, 1)
+            Height: =312
+            TabIndex: =
+            Visible: =DisplayPopup1
+            Width: =572
+            X: =34
+            Y: =424
+            ZIndex: =15
+
+        Label5_6 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =46
+            Size: =24
+            TabIndex: =
+            Text: ="Query"
+            Visible: =DisplayPopup1
+            Width: =560
+            X: =40
+            Y: =432
+            ZIndex: =16
+
+        TextInput6_6 As text:
+            AccessibleLabel: ="Body of the mail"
+            Align: =Align.Justify
+            BorderColor: =RGBA(0, 94, 146, 1)
+            Clear: =true
+            Default: =
+            Height: =198
+            HintText: ="Click here"
+            Mode: =TextMode.MultiLine
+            PaddingLeft: =5
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Size: =21
+            TabIndex: =
+            Visible: =DisplayPopup1
+            Width: =560
+            X: =40
+            Y: =487
+            ZIndex: =17
+
+        Button1_6 As button:
+            BorderThickness: =0
+            Color: =RGBA(0, 94, 146, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Normal
+            OnSelect: |-
+                =If(IsBlank(TextInput6_6),SetFocus(TextInput6_6),(Office365Outlook.SendEmailV2(
+                    "saiharivignesh.n@syrmasgs.com",
+                    "Inventory W2W_LP: Query",TextInput6_6.Text))&(Set(DisplayPopup1,false)&Set(QueryMail2,true)&Set(QueryMail3,false)&Set(BGWhite,false)));
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =16
+            Text: ="Send"
+            Visible: =DisplayPopup1
+            Width: =120
+            X: =480
+            Y: =690
+            ZIndex: =18
+
+        Icon5_6 As icon.Cancel:
+            AccessibleLabel: ="Close"
+            AutoDisableOnSelect: =false
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =60
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =Reset(TextInput6_6);
+                Set(
+                    DisplayPopup1,
+                    false
+                ); SetFocus(TextInput6_6);Set(QueryMail2,true);Set(QueryMail3,false);Set(BGWhite,false)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Visible: =DisplayPopup1
+            Width: =60
+            X: =540
+            Y: =425
+            ZIndex: =19
+
+        Icon7_13 As icon.Mail:
+            AccessibleLabel: ="Mail"
+            AutoDisableOnSelect: =false
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =56
+            Icon: =Icon.Mail
+            OnSelect: |-
+                =Reset(TextInput6_6);
+                Set(
+                    DisplayPopup1,
+                    false
+                ); SetFocus(TextInput6_6);Set(QueryMail2,true);Set(QueryMail3,false);Set(BGWhite,false)
+            TabIndex: =
+            Visible: =QueryMail3
+            Width: =56
+            X: =524
+            Y: =1073
+            ZIndex: =20
+
+        Icon7_12 As icon.Mail:
+            AccessibleLabel: ="Mail"
+            AutoDisableOnSelect: =false
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =56
+            Icon: =Icon.Mail
+            OnSelect: |-
+                =Reset(TextInput6_6);
+                Set(
+                    DisplayPopup1,
+                    true
+                ); SetFocus(TextInput6_6);Set(QueryMail2,false);Set(QueryMail3,true);Set(BGWhite,true)
+            TabIndex: =
+            Visible: =QueryMail2
+            Width: =56
+            X: =524
+            Y: =1073
+            ZIndex: =21
+
+    Menu_Navigation_5 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =23
+
+        IconBackarrow1_13 As icon.ChevronLeft:
+            AccessibleLabel: =Self.Tooltip
+            AutoDisableOnSelect: =false
+            Height: =80
+            Icon: =Icon.Hamburger
+            OnSelect: =Set(Navigation,true);Set(HN1,false);Set(HN2,true);Set(HN3,true)
+            PaddingBottom: =15
+            PaddingLeft: =15
+            PaddingRight: =15
+            PaddingTop: =15
+            Tooltip: ="Navigation"
+            Visible: =HN1
+            Width: =80
+            ZIndex: =31
+
+        IconBackarrow1_12 As icon.ChevronLeft:
+            AccessibleLabel: =Self.Tooltip
+            AutoDisableOnSelect: =false
+            Color: =RGBA(0, 94, 146, 1)
+            Height: =80
+            Icon: =Icon.Cancel
+            OnSelect: =Set(Navigation,false);Set(HN2,false);Set(HN1,true);Set(HN3,false)
+            PaddingBottom: =15
+            PaddingLeft: =15
+            PaddingRight: =15
+            PaddingTop: =15
+            Rotation: =90
+            Tooltip: ="Navigation"
+            Visible: =HN2
+            Width: =80
+            ZIndex: =32
+
+    Menu_5 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =25
+
+        Rectangle7_5 As rectangle:
+            BorderColor: =RGBA(0, 94, 146, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =560
+            OnSelect: =Navigate(App_Details)
+            Visible: =Navigation
+            Width: =300
+            ZIndex: =22
+
+        Label7_31 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            HoverColor: =RGBA(255,255,255,1)
+            HoverFill: =RGBA(102, 102, 102, 1)
+            OnSelect: =Set(AboutVisible,true);Set(Header,"About");Set(Navigation,false);Set(HN2,false);Set(HN1,true);Set(HN3,false);Set(I1V,false);Set(I2V,false);Set(I3V,false);Set(I4V,false);Set(I5V,false);Set(I6V,false);Set(I7V,false);Set(I8V,false);Set(I9V,false);Set(C1V,false);Set(C2V,false);Set(C3V,false);Set(H1V,false);Set(H2V,false);Set(H3V,false);Set(H4V,false);Set(H5V,false);Set(H6V,false);Set(H7V,false);Set(H8V,false);Set(G1V,false);Set(G2V,false);Set(G3V,false);Set(G4V,false);Set(G5V,false);Set(G6V,false);Set(G7V,false);Set(G8V,false);Set(G9V,false);Set(G10V,false);Set(G11V,false);Set(G12V,false);Set(G13V,false);Set(G14V,false);Set(G15V,false);Set(G16V,false);Set(U1V,false);Set(DisplayPopup1,false);Navigate(App_Details)
+            PaddingLeft: =40
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 94, 146, 1)
+            Size: =24
+            Text: ="About"
+            Visible: =HN3
+            Width: =300
+            Y: =80
+            ZIndex: =24
+
+        Label7_32 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            HoverColor: =RGBA(255,255,255,1)
+            HoverFill: =RGBA(102, 102, 102, 1)
+            OnSelect: =Set(AboutVisible,false);Set(Header,"Instructions");Set(Navigation,false);Set(HN2,false);Set(HN1,true);Set(HN3,false);Set(I1V,true);Set(I2V,false);Set(I3V,false);Set(I4V,false);Set(I5V,false);Set(I6V,false);Set(I7V,false);Set(I8V,false);Set(I9V,false);Set(C1V,false);Set(C2V,false);Set(C3V,false);Set(H1V,false);Set(H2V,false);Set(H3V,false);Set(H4V,false);Set(H5V,false);Set(H6V,false);Set(H7V,false);Set(H8V,false);Set(G1V,false);Set(G2V,false);Set(G3V,false);Set(G4V,false);Set(G5V,false);Set(G6V,false);Set(G7V,false);Set(G8V,false);Set(G9V,false);Set(G10V,false);Set(G11V,false);Set(G12V,false);Set(G13V,false);Set(G14V,false);Set(G15V,false);Set(G16V,false);Set(U1V,false);Set(Close1,false);Set(ContextPopup1,false);Set(AI1,false);Set(DisplayPopup1,false);Navigate(App_Details)
+            PaddingLeft: =40
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 94, 146, 1)
+            Size: =24
+            Text: ="Instructions"
+            Visible: =HN3
+            Width: =300
+            Y: =160
+            ZIndex: =26
+
+        Label7_33 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            HoverColor: =RGBA(255,255,255,1)
+            HoverFill: =RGBA(102, 102, 102, 1)
+            OnSelect: =Navigate(App_Details);Set(AboutVisible,false);Set(Header,"Configuration");Set(Navigation,false);Set(HN2,false);Set(HN1,true);Set(HN3,false);Set(C1V,true);Set(I1V,false);Set(I2V,false);Set(I3V,false);Set(I4V,false);Set(I5V,false);Set(I6V,false);Set(I7V,false);Set(I8V,false);Set(I9V,false);Set(C2V,false);Set(C3V,false);Set(H1V,false);Set(H2V,false);Set(H3V,false);Set(H4V,false);Set(H5V,false);Set(H6V,false);Set(H7V,false);Set(H8V,false);Set(G1V,false);Set(G2V,false);Set(G3V,false);Set(G4V,false);Set(G5V,false);Set(G6V,false);Set(G7V,false);Set(G8V,false);Set(G9V,false);Set(G10V,false);Set(G11V,false);Set(G12V,false);Set(G13V,false);Set(G14V,false);Set(G15V,false);Set(G16V,false);Set(U1V,false);Set(Close1,false);Set(ContextPopup1,false);Set(AI1,false);Set(DisplayPopup1,false)
+            PaddingLeft: =40
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 94, 146, 1)
+            Size: =24
+            Text: ="Configuration"
+            Visible: =HN3
+            Width: =300
+            Y: =240
+            ZIndex: =27
+
+        Label7_34 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            HoverColor: =RGBA(255,255,255,1)
+            HoverFill: =RGBA(102, 102, 102, 1)
+            OnSelect: =Navigate(App_Details);Set(AboutVisible,false);Set(Header,"Connectivity");Set(Navigation,false);Set(HN2,false);Set(HN1,true);Set(HN3,false);Set(I1V,false);Set(I2V,false);Set(I3V,false);Set(I4V,false);Set(I5V,false);Set(I6V,false);Set(I7V,false);Set(I8V,false);Set(I9V,false);Set(C1V,false);Set(C2V,false);Set(C3V,false);Set(H1V,true);Set(H2V,false);Set(H3V,false);Set(H4V,false);Set(H5V,false);Set(H6V,false);Set(H7V,false);Set(H8V,false);Set(G1V,false);Set(G2V,false);Set(G3V,false);Set(G4V,false);Set(G5V,false);Set(G6V,false);Set(G7V,false);Set(G8V,false);Set(G9V,false);Set(G10V,false);Set(G11V,false);Set(G12V,false);Set(G13V,false);Set(G14V,false);Set(G15V,false);Set(G16V,false);Set(U1V,false);Set(Close1,false);Set(ContextPopup1,false);Set(AI1,false);Set(DisplayPopup1,false)
+            PaddingLeft: =40
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 94, 146, 1)
+            Size: =24
+            Text: ="Connectivity"
+            Visible: =HN3
+            Width: =300
+            Y: =320
+            ZIndex: =28
+
+        Label7_35 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            HoverColor: =RGBA(255,255,255,1)
+            HoverFill: =RGBA(102, 102, 102, 1)
+            OnSelect: =Navigate(App_Details);Set(AboutVisible,false);Set(Header,"Guide");Set(Navigation,false);Set(HN2,false);Set(HN1,true);Set(HN3,false);Set(I1V,false);Set(I2V,false);Set(I3V,false);Set(I4V,false);Set(I5V,false);Set(I6V,false);Set(I7V,false);Set(I8V,false);Set(I9V,false);Set(C1V,false);Set(C2V,false);Set(C3V,false);Set(H1V,false);Set(H2V,false);Set(H3V,false);Set(H4V,false);Set(H5V,false);Set(H6V,false);Set(H7V,false);Set(H8V,false);Set(G1V,true);Set(G2V,false);Set(G3V,false);Set(G4V,false);Set(G5V,false);Set(G6V,false);Set(G7V,false);Set(G8V,false);Set(G9V,false);Set(G10V,false);Set(G11V,false);Set(G12V,false);Set(G13V,false);Set(G14V,false);Set(G15V,false);Set(G16V,false);Set(U1V,false);Set(Close1,false);Set(ContextPopup1,false);Set(AI1,false);Set(DisplayPopup1,false)
+            PaddingLeft: =40
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 94, 146, 1)
+            Size: =24
+            Text: ="Guide"
+            Visible: =HN3
+            Width: =300
+            Y: =400
+            ZIndex: =29
+
+        Label7_36 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            HoverColor: =RGBA(255,255,255,1)
+            HoverFill: =RGBA(102, 102, 102, 1)
+            OnSelect: =Navigate(Screen2);Set(AboutVisible,false);Set(Navigation,false);Set(HN2,false);Set(HN1,true);Set(HN3,false);
+            PaddingLeft: =40
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 94, 146, 1)
+            Size: =24
+            Text: ="Login"
+            Visible: =HN3
+            Width: =300
+            Y: =480
+            ZIndex: =30
+
