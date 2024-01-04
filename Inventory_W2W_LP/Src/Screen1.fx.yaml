@@ -1,0 +1,35 @@
+Screen1 As screen:
+    OnVisible: =Timer1.AutoStart=true
+
+    Image2 As image:
+        DisplayMode: =DisplayMode.View
+        Height: =484
+        Image: ='SYRMA.NS_BIG-b83dd874'
+        Width: =557
+        X: =44
+        Y: =224
+        ZIndex: =1
+
+    Timer1_1 As timer:
+        AutoStart: =true
+        Color: =RGBA(0, 0, 0, 0)
+        Duration: =4000
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =16
+        OnTimerEnd: =Navigate(Screen2,ScreenTransition.Fade);
+        Start: =true
+        Width: =7
+        ZIndex: =3
+
+    Label5 As label:
+        Align: =Align.Center
+        Color: =RGBA(102, 102, 102, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =112
+        Size: =28
+        Text: ="Inventory Wall-To-Wall Counter"
+        Width: =560
+        X: =40
+        Y: =684
+        ZIndex: =4
+

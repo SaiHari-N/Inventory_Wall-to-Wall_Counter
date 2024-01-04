@@ -1,0 +1,26 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_excel",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2023-11-07T18:39:20.7270000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "__PowerAppsId__": "Row id",
+      "Batch": "Batch",
+      "Count_x0020_Quantity": "Count Quantity",
+      "Inventory_x0020_count_x0020_date": "Inventory count date",
+      "Operator_x0020_ID": "Operator ID",
+      "Part_x0020_Description": "Part Description",
+      "Part_x0020_number_x0020_": "Part number ",
+      "Storage_x0020_location": "Storage location"
+    },
+    "DatasetName": "b!4zsqBVIGgUuHrVI10uWeYYJmJHW2nk9MibZ0JHUj8AyZhE-rkOK8RqYawv02KpVr.01Y542QFLSSZEU33FR4NALKZVNMEDWWYTC",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "Table1",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]
