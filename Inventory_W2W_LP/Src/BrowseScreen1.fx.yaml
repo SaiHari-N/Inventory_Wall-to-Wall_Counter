@@ -283,6 +283,7 @@
             Default: =
             Height: =70
             HintText: ="Password to Launch Database"
+            Mode: =TextMode.Password
             PaddingLeft: =5
             Size: =21
             Visible: =DBPW

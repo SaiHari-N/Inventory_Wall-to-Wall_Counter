@@ -1,5 +1,5 @@
 Bin_Edit As screen:
-    OnVisible: =SetFocus(TextInput4_1); If(IsBlank(TextInput4_1),IconAccept1_1.Visible=false); Reset(TextInput4_1);Reset(TextInput6_4);Set(BGWhite,false)
+    OnVisible: =SetFocus(TextInput4_1); If(IsBlank(TextInput4_1),IconAccept1_1.Visible=false); Reset(TextInput4_1);Reset(TextInput6_4);Set(BGWhite,false);Set(BinPrint,true)
 
     RectQuickActionBar3_1 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
@@ -11,7 +11,7 @@ Bin_Edit As screen:
         AccessibleLabel: =Self.Tooltip
         Height: =50
         Icon: =Icon.Check
-        OnSelect: =Navigate(EditScreen1,ScreenTransition.None); NewForm(EditForm1); Reset(TextInput5)
+        OnSelect: =If(IsBlank(TextInput4_1),SetFocus(TextInput4_1),Navigate(EditScreen1,ScreenTransition.None)); NewForm(EditForm1); Reset(TextInput5)
         TabIndex: =0
         Tooltip: ="Submit item"
         Width: =50
@@ -103,6 +103,7 @@ Bin_Edit As screen:
         Default: =
         Height: =70
         HintText: ="Scan Bin Barcode"
+        OnChange: =
         Size: =21
         Width: =270
         X: =240
@@ -296,7 +297,7 @@ Bin_Edit As screen:
                 Set(
                     DisplayPopup1,
                     false
-                ); SetFocus(TextInput6_4);Set(QueryMail2,true);Set(QueryMail3,false);Set(BGWhite,false)
+                ); SetFocus(TextInput6_4);Set(QueryMail2,true);Set(QueryMail3,false);Set(BGWhite,false);Set(BinPrint,true)
             TabIndex: =
             Visible: =QueryMail3
             Width: =56
@@ -315,7 +316,7 @@ Bin_Edit As screen:
                 Set(
                     DisplayPopup1,
                     true
-                ); SetFocus(TextInput6_4);Set(QueryMail2,false);Set(QueryMail3,true);Set(BGWhite,true)
+                ); SetFocus(TextInput6_4);Set(QueryMail2,false);Set(QueryMail3,true);Set(BGWhite,true);Set(BinPrint,false)
             TabIndex: =
             Visible: =QueryMail2
             Width: =56
@@ -480,40 +481,9 @@ Bin_Edit As screen:
         Height: =60
         Icon: =Icon.Print
         OnSelect: =If(IsBlank(TextInput4_1),SetFocus(TextInput4_1),Navigate('Bin Print Screen', ScreenTransition.None)&Set(varPrintTriggered3, true));
+        Visible: =BinPrint
         Width: =60
         X: =530
         Y: =345
         ZIndex: =41
-
-    CompositeLineChart1 As group:
-        Height: =5
-        Width: =5
-        X: =100
-        Y: =100
-        ZIndex: =42
-
-        Title2 As label:
-            Align: =Align.Center
-            Height: =25
-            Text: ="Chart Title"
-            Width: =400
-            X: =100
-            Y: =100
-            ZIndex: =43
-
-        LineChart1 As lineChart:
-            Items: =Table1
-            X: =100
-            Y: =130
-            ZIndex: =44
-
-        Legend1 As legend:
-            Height: =80
-            ItemColorSet: =LineChart1.ItemColorSet
-            Items: =LineChart1.SeriesLabels
-            Size: =18
-            Width: =320
-            X: =140
-            Y: =540
-            ZIndex: =45
 

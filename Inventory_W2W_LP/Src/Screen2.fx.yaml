@@ -327,6 +327,7 @@ Screen2 As screen:
             Default: =""
             Height: =70
             HintText: ="Enter Password"
+            Mode: =TextMode.Password
             PaddingLeft: =210
             PaddingRight: =50
             Size: =21
