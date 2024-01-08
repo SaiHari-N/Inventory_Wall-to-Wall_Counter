@@ -675,7 +675,7 @@ App_Details As screen:
 
         Image1_6 As image:
             Height: =600
-            Image: =Instruction7
+            Image: =IMG_20240108_123206
             Visible: =I7V
             Width: =400
             X: =120
@@ -865,7 +865,7 @@ App_Details As screen:
 
         Image1_10 As image:
             Height: =600
-            Image: ='Configuration 2_1'
+            Image: ='Screenshot_2024-01-05-13-16-12-18_8ecb18ff21726a42693957ff5a148085'
             Visible: =C2V
             Width: =400
             X: =120
@@ -1298,7 +1298,7 @@ App_Details As screen:
 
         Image1_16 As image:
             Height: =600
-            Image: =Handshake8
+            Image: ='Screenshot_2024-01-05-13-16-12-18_8ecb18ff21726a42693957ff5a148085'
             Visible: =H5V
             Width: =400
             X: =120
