@@ -98,7 +98,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 0,
+    "BindingErrorCount": 1,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "Phone",
@@ -142,6 +142,7 @@
     "DetailScreen1_1",
     "DetailScreen1_2",
     "DetailScreen1_3",
-    "Bin Print Screen"
+    "Bin Print Screen",
+    "MailQuery"
   ]
 }

@@ -449,12 +449,7 @@
             Color: =RGBA(255, 255, 255, 1)
             Height: =56
             Icon: =Icon.Mail
-            OnSelect: |-
-                =Reset(TextInput6_3);
-                Set(
-                    DisplayPopup1,
-                    true
-                ); SetFocus(TextInput6_3);Set(QueryMail2,false);Set(QueryMail3,true);Set(BGWhite,true)
+            OnSelect: =Navigate(MailQuery)
             TabIndex: =
             Visible: =QueryMail2
             Width: =56

@@ -1,5 +1,5 @@
 Bin_Edit As screen:
-    OnVisible: =SetFocus(TextInput4_1); If(IsBlank(TextInput4_1),IconAccept1_1.Visible=false); Reset(TextInput4_1);Reset(TextInput6_4);Set(BGWhite,false);Set(BinPrint,true)
+    OnVisible: =SetFocus(TextInput4_1); If(IsBlank(TextInput4_1),IconAccept1_1.Visible=false); Reset(TextInput4_1);Reset(TextInput6_4);Set(BGWhite,false);Set(BinPrint,true);
 
     RectQuickActionBar3_1 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
@@ -103,7 +103,7 @@ Bin_Edit As screen:
         Default: =
         Height: =70
         HintText: ="Scan Bin Barcode"
-        OnChange: =
+        OnChange: =Refresh(PieChart1)
         Size: =21
         Width: =270
         X: =240
@@ -311,12 +311,7 @@ Bin_Edit As screen:
             Color: =RGBA(255, 255, 255, 1)
             Height: =56
             Icon: =Icon.Mail
-            OnSelect: |-
-                =Reset(TextInput6_4);
-                Set(
-                    DisplayPopup1,
-                    true
-                ); SetFocus(TextInput6_4);Set(QueryMail2,false);Set(QueryMail3,true);Set(BGWhite,true);Set(BinPrint,false)
+            OnSelect: =Navigate(MailQuery)
             TabIndex: =
             Visible: =QueryMail2
             Width: =56
@@ -486,4 +481,31 @@ Bin_Edit As screen:
         X: =530
         Y: =345
         ZIndex: =41
+
+    PieChart1 As pieChart:
+        BorderColor: =RGBA(0, 94, 146, 1)
+        Height: =525
+        ItemBorderColor: =RGBA(0, 94, 146, 1)
+        ItemColorSet: =[RGBA(255,255,255,1),RGBA(0,94,146,1)]
+        Items: |-
+            =Table(
+                 {Value: CountRows(Filter(Table1, TextInput4_1.Text = 'Storage location')), Label:"Bin Count: " & CountRows(Table1)-(CountRows(Table1) - CountRows(Filter(Table1, TextInput4_1.Text = 'Storage location')))},
+                 {Value: (CountRows(Table1) - CountRows(Filter(Table1, TextInput4_1.Text = 'Storage location'))), Label: "Other Bins: " & (CountRows(Table1) - CountRows(Filter(Table1, TextInput4_1.Text = 'Storage location')))})
+        Size: =20
+        Visible: =If(IsBlank(TextInput4_1),false,true)
+        Width: =640
+        Y: =392
+        ZIndex: =44
+
+    HtmlText1 As htmlViewer:
+        DisplayMode: =DisplayMode.View
+        Height: =167
+        HtmlText: |-
+            ="<img src=""https://barcode.tec-it.com/barcode.ashx?data=" &
+            TextInput4_1.Text & "
+            &type=C128B&width=100&height=35&xres=1&font=3""/>"
+        Width: =400
+        X: =120
+        Y: =886
+        ZIndex: =45
 

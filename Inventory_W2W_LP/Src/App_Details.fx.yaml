@@ -2613,12 +2613,7 @@ App_Details As screen:
             Color: =RGBA(255, 255, 255, 1)
             Height: =80
             Icon: =Icon.Mail
-            OnSelect: |-
-                =Reset(TextInput6_1);
-                Set(
-                    DisplayPopup1,
-                    true
-                ); SetFocus(TextInput6_1);Set(QueryMail2,false);Set(QueryMail3,true);Set(BGWhite,true)
+            OnSelect: =Navigate(MailQuery)
             PaddingBottom: =15
             PaddingLeft: =15
             PaddingRight: =15
