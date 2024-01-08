@@ -466,7 +466,7 @@
         Default: =
         Height: =66
         HintText: ="Click here to scan"
-        OnChange: =
+        OnChange: =If(LookUp(Table1,'Part number '=TextInput1.Text,Batch=DataCardValue15.Text),Notify("Same part number already scanned in this batch",NotificationType.Warning)&ResetForm(EditForm1))
         Size: =21
         TabIndex: =-1
         Width: =255
