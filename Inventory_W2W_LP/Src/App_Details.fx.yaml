@@ -1,5 +1,5 @@
 App_Details As screen:
-    OnVisible: =Set(Close1,false);Set(ContextPopup1,false);Set(AI1,false);Set(HN1,true);Set(HN2,false);Set(Navigation,false);Set(Navigation,false);Set(Header,"About");Set(AboutVisible, true);Set(I1V,false);Set(I2V,false);Set(I3V,false);Set(I4V,false);Set(I5V,false);Set(I6V,false);Set(I7V,false);Set(I8V,false);Set(I9V,false);Set(C1V,false);Set(C2V,false);Set(C3V,false);Set(H1V,false);Set(H2V,false);Set(H3V,false);Set(H4V,false);Set(H5V,false);Set(H6V,false);Set(H7V,false);Set(H8V,false);Set(G1V,false);Set(G2V,false);Set(G3V,false);Set(G4V,false);Set(G5V,false);Set(G6V,false);Set(G7V,false);Set(G8V,false);Set(G9V,false);Set(G10V,false);Set(G11V,false);Set(G12V,false);Set(G13V,false);Set(G14V,false);Set(G15V,false);Set(G16V,false);Set(U1V,false);Set(DisplayPopup1,false);Set(BGWhite,false);Set(QueryMail2,true);Set(QueryMail3,false);Reset(TextInput6_1);Set(BGWhite,false)
+    OnVisible: =Set(Close1,false);Set(ContextPopup1,false);Set(AI1,false);Set(HN1,true);Set(HN2,false);Set(Navigation,false);Set(DisplayPopup1,false);Set(BGWhite,false);Set(QueryMail2,true);Set(QueryMail3,false);Reset(TextInput6_1);Set(BGWhite,false)
 
     App_Details_Header As group:
         Height: =5

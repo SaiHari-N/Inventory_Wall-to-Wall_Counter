@@ -103,7 +103,7 @@ Bin_Edit As screen:
         Default: =
         Height: =70
         HintText: ="Scan Bin Barcode"
-        OnChange: =Refresh(PieChart1)
+        OnChange: =Refresh(PieChart1.SeriesLabels)
         Size: =21
         Width: =270
         X: =240
