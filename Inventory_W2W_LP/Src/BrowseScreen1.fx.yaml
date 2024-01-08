@@ -12,7 +12,7 @@
         FontWeight: =FontWeight.Semibold
         Height: =80
         Size: =27
-        Text: ="Data History"
+        Text: ="Data Log"
         Width: =280
         Wrap: =false
         X: =80
