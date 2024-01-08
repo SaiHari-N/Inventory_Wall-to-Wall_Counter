@@ -504,6 +504,7 @@ Bin_Edit As screen:
             ="<img src=""https://barcode.tec-it.com/barcode.ashx?data=" &
             TextInput4_1.Text & "
             &type=C128B&width=100&height=35&xres=1&font=3""/>"
+        Visible: =If(IsBlank(TextInput4_1),false,true)
         Width: =400
         X: =120
         Y: =886
