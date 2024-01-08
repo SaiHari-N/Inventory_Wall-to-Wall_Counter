@@ -98,7 +98,7 @@
         AccessibleLabel: ="Browse Gallery"
         DelayItemLoading: =true
         Height: =816
-        Items: =SortByColumns(Search([@Table1], TextSearchBox1.Text, "Count_x0020_Quantity","Inventory_x0020_count_x0020_date"), If(SortDescending1, SortOrder.Descending))
+        Items: =SortByColumns(Search([@Table1], TextSearchBox1.Text, "Inventory_x0020_count_x0020_date"),"Inventory_x0020_count_x0020_date", If(SortDescending1, SortOrder.Descending,SortOrder.Ascending))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =Navigate(DetailScreen1, ScreenTransition.None);
