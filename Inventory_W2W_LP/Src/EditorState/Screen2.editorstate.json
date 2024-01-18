@@ -6559,7 +6559,7 @@
       "MetaDataIDKey": "",
       "Name": "Menu_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 34,
+      "ParentIndex": 35,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6611,7 +6611,7 @@
       "MetaDataIDKey": "",
       "Name": "Menu_Navigation_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 35,
+      "ParentIndex": 34,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
