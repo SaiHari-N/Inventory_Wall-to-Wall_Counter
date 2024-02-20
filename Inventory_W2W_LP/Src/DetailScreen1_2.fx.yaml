@@ -306,7 +306,7 @@
         Height: =50
         Icon: =Icon.Print
         OnSelect: |-
-            =Navigate(DetailScreen1_3, ScreenTransition.None);
+            =Navigate(DetailScreen1_4, ScreenTransition.None);
             Set(varPrintTriggered1, true);
         TabIndex: =
         Width: =50
