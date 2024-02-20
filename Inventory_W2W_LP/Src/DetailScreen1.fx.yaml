@@ -450,7 +450,7 @@
             Fill: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Normal
             OnSelect: |-
-                =If(IsBlank(TextInput6_6),SetFocus(TextInput6_6),(Office365Outlook.SendEmailV2(
+                =If(IsBlank(TextInput6_6.Text),SetFocus(TextInput6_6),(Office365Outlook.SendEmailV2(
                     "saiharivignesh.n@syrmasgs.com",
                     "Inventory W2W_LP: Query",TextInput6_6.Text))&(Set(DisplayPopup1,false)&Set(QueryMail2,true)&Set(QueryMail3,false)&Set(BGWhite,false)));
             RadiusBottomLeft: =5

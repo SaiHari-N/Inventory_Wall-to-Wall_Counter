@@ -1,5 +1,5 @@
 Bin_Edit As screen:
-    OnVisible: =SetFocus(TextInput4_1); If(IsBlank(TextInput4_1),IconAccept1_1.Visible=false); Reset(TextInput4_1);Reset(TextInput6_4);Set(BGWhite,false);Set(BinPrint,true);
+    OnVisible: =SetFocus(TextInput4_1); If(IsBlank(TextInput4_1.Text),IconAccept1_1.Visible=false); Reset(TextInput4_1);Reset(TextInput6_4);Set(BGWhite,false);Set(BinPrint,true);
 
     RectQuickActionBar3_1 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
@@ -11,7 +11,7 @@ Bin_Edit As screen:
         AccessibleLabel: =Self.Tooltip
         Height: =50
         Icon: =Icon.Check
-        OnSelect: =If(IsBlank(TextInput4_1),SetFocus(TextInput4_1),Navigate(EditScreen1,ScreenTransition.None)); NewForm(EditForm1); Reset(TextInput5)
+        OnSelect: =If(IsBlank(TextInput4_1.Text),SetFocus(TextInput4_1),Navigate(EditScreen1,ScreenTransition.None)); NewForm(EditForm1); Reset(TextInput5)
         TabIndex: =0
         Tooltip: ="Submit item"
         Width: =50
@@ -76,7 +76,7 @@ Bin_Edit As screen:
 
     TextInput4 As text:
         AccessibleLabel: ="User ID"
-        Default: =TextInput2
+        Default: =TextInput2.Text
         DisabledColor: =RGBA(77, 77, 77, 1)
         DisplayMode: =DisplayMode.Disabled
         Height: =70
@@ -248,7 +248,7 @@ Bin_Edit As screen:
             Fill: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Normal
             OnSelect: |-
-                =If(IsBlank(TextInput6_4),SetFocus(TextInput6_4),(Office365Outlook.SendEmailV2(
+                =If(IsBlank(TextInput6_4.Text),SetFocus(TextInput6_4),(Office365Outlook.SendEmailV2(
                     "saiharivignesh.n@syrmasgs.com",
                     "Inventory W2W_LP: Query",TextInput6_4.Text))&(Set(DisplayPopup1,false)&Set(QueryMail2,true)&Set(QueryMail3,false)&Set(BGWhite,false)));
             RadiusBottomLeft: =5
@@ -475,7 +475,7 @@ Bin_Edit As screen:
         FocusedBorderThickness: =0
         Height: =60
         Icon: =Icon.Print
-        OnSelect: =If(IsBlank(TextInput4_1),SetFocus(TextInput4_1),Navigate('Bin Print Screen', ScreenTransition.None)&Set(varPrintTriggered3, true));
+        OnSelect: =If(IsBlank(TextInput4_1.Text),SetFocus(TextInput4_1),Navigate('Bin Print Screen', ScreenTransition.None)&Set(varPrintTriggered3, true));
         Visible: =BinPrint
         Width: =60
         X: =530
@@ -492,7 +492,7 @@ Bin_Edit As screen:
                  {Value: CountRows(Filter(Table1, TextInput4_1.Text = 'Storage location')), Label:"Bin Count: " & CountRows(Table1)-(CountRows(Table1) - CountRows(Filter(Table1, TextInput4_1.Text = 'Storage location')))},
                  {Value: (CountRows(Table1) - CountRows(Filter(Table1, TextInput4_1.Text = 'Storage location'))), Label: "Other Bins: " & (CountRows(Table1) - CountRows(Filter(Table1, TextInput4_1.Text = 'Storage location')))})
         Size: =20
-        Visible: =If(IsBlank(TextInput4_1),false,true)
+        Visible: =If(IsBlank(TextInput4_1.Text),false,true)
         Width: =640
         Y: =392
         ZIndex: =44
@@ -504,7 +504,7 @@ Bin_Edit As screen:
             ="<img src=""https://barcode.tec-it.com/barcode.ashx?data=" &
             TextInput4_1.Text & "
             &type=C128B&width=100&height=35&xres=1&font=3""/>"
-        Visible: =If(IsBlank(TextInput4_1),false,true)
+        Visible: =If(IsBlank(TextInput4_1.Text),false,true)
         Width: =400
         X: =120
         Y: =886

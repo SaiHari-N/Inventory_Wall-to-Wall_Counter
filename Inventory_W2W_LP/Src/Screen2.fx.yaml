@@ -221,7 +221,7 @@ Screen2 As screen:
             Fill: =RGBA(255, 255, 255, 1)
             FontWeight: =FontWeight.Normal
             OnSelect: |-
-                =If(IsBlank(TextInput6_2),SetFocus(TextInput6_2),(Office365Outlook.SendEmailV2(
+                =If(IsBlank(TextInput6_2.Text),SetFocus(TextInput6_2),(Office365Outlook.SendEmailV2(
                     "saiharivignesh.n@syrmasgs.com",
                     "Inventory W2W_LP: Query",TextInput6_2.Text))&(Set(DisplayPopup1,false)&Set(QueryMail2,true)&Set(QueryMail3,false)&Set(BGWhite,false)));
             RadiusBottomLeft: =5
@@ -405,7 +405,7 @@ Screen2 As screen:
             Color: =RGBA(255, 255, 255, 1)
             Height: =70
             Icon: =Icon.Check
-            OnSelect: =If(IsBlank(TextInput2),SetFocus(TextInput2),If(TextInput2_1.Text="ISadmin@123",Navigate(BrowseScreen1,ScreenTransition.Fade),Substitute(TextInput2_1.HintText, "Enter Password", "Incorrect Password")&Reset(TextInput2_1)))
+            OnSelect: =If(IsBlank(TextInput2.Text),SetFocus(TextInput2),If(TextInput2_1.Text="ISadmin@123",Navigate(BrowseScreen1,ScreenTransition.Fade),Substitute(TextInput2_1.HintText, "Enter Password", "Incorrect Password")&Reset(TextInput2_1)))
             PaddingBottom: =15
             PaddingLeft: =15
             PaddingRight: =15
