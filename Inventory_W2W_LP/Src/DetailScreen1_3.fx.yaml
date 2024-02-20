@@ -276,6 +276,7 @@
         PaddingTop: =150
         TabIndex: =
         Width: =640
+        Y: =8
         ZIndex: =11
 
     Timer1_2 As timer:
