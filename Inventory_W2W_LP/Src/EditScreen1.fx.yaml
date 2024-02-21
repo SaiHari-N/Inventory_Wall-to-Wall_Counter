@@ -12,7 +12,7 @@
         AccessibleLabel: =Self.Tooltip
         Height: =50
         Icon: =Icon.Check
-        OnSelect: =If(LookUp(Table1,'Part number '=TextInput1.Text,Batch=DataCardValue15.Text),Notify("Same part number already scanned in this batch",NotificationType.Warning),SubmitForm(EditForm1))
+        OnSelect: =If(LookUp(Table1,'Part number '=TextInput1.Text,Batch=DataCardValue15.Text),Notify("Same part number already scanned in this batch",NotificationType.Warning)&SubmitForm(EditForm1),SubmitForm(EditForm1))
         TabIndex: =0
         Tooltip: ="Submit item"
         Width: =50
