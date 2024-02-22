@@ -1,0 +1,22 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_excel",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-02-14T17:17:41.6390000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "__PowerAppsId__": "Row id",
+      "Burn_x0020_In": "Burn In",
+      "Driver_x0020_Installation": "Driver Installation",
+      "OS_x0020_Installation": "OS Installation"
+    },
+    "DatasetName": "b!3kXZQstSb0ayVfpn3eMZt4mCcGsrdMZPq5FX09timC4_mcJRcZVvS6alUOED2dtG.01SRKD7XKPKR5YLLMQXRGZNADNFIXY7NFI",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "Table2",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]
