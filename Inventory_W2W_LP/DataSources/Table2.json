@@ -9,6 +9,7 @@
     "ConnectedDataSourceInfoNameMapping": {
       "__PowerAppsId__": "Row id",
       "Burn_x0020_In": "Burn In",
+      "Column1": "Column1",
       "Driver_x0020_Installation": "Driver Installation",
       "OS_x0020_Installation": "OS Installation"
     },
