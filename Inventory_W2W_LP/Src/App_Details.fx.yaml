@@ -1,5 +1,5 @@
 App_Details As screen:
-    OnVisible: =Set(Close1,false);Set(ContextPopup1,false);Set(AI1,false);Set(HN1,true);Set(HN2,false);Set(Navigation,false);Set(DisplayPopup1,false);Set(BGWhite,false);Set(QueryMail2,true);Set(QueryMail3,false);Reset(TextInput6_1);Set(BGWhite,false)
+    OnVisible: =Set(Close1,false);Set(ContextPopup1,false);Set(AI1,false);Set(HN1,true);Set(HN2,false);Set(Navigation,false);Set(DisplayPopup1,false);Set(BGWhite,false);Set(QueryMail2,true);Set(QueryMail3,false);Reset(TextInput6_1);Set(BGWhite,false);Set(PresentDate,Text(Today(), DateTimeFormat.LongDate))
 
     App_Details_Header As group:
         Height: =5
@@ -654,6 +654,60 @@ App_Details As screen:
             Y: =548
             ZIndex: =46
 
+    "'Configuration 1' As group":
+        Height: =5
+        Width: =5
+        X: =100
+        Y: =86
+        ZIndex: =84
+
+        Label10_18 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="RawBT Application"
+            Visible: =C1V
+            Width: =480
+            X: =80
+            Y: =120
+            ZIndex: =61
+
+        Image1_9 As image:
+            Height: =600
+            Image: ='Configuration 1_1'
+            Visible: =C1V
+            Width: =400
+            X: =120
+            Y: =240
+            ZIndex: =62
+
+        Label10_19 As label:
+            Align: =Align.Justify
+            Height: =170
+            Size: =18
+            Text: ="       Utilize the RawBT application and Bluetooth settings to establish a connection between the Zebra device and the XP-P323B/MTP-25 printer."
+            Visible: =C1V
+            Width: =520
+            X: =60
+            Y: =880
+            ZIndex: =63
+
+        Icon14_1 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(C2V,true);Set(C1V,false)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =C1V
+            Width: =120
+            X: =520
+            Y: =548
+            ZIndex: =64
+
     "'Instruction 7' As group":
         Height: =5
         Width: =5
@@ -722,60 +776,6 @@ App_Details As screen:
             Y: =548
             ZIndex: =51
 
-    "'Configuration 1' As group":
-        Height: =5
-        Width: =5
-        X: =100
-        Y: =86
-        ZIndex: =84
-
-        Label10_18 As label:
-            Align: =Align.Center
-            FontWeight: =FontWeight.Semibold
-            Height: =80
-            Size: =22
-            Text: ="RawBT Application"
-            Visible: =C1V
-            Width: =480
-            X: =80
-            Y: =120
-            ZIndex: =61
-
-        Image1_9 As image:
-            Height: =600
-            Image: ='Configuration 1_1'
-            Visible: =C1V
-            Width: =400
-            X: =120
-            Y: =240
-            ZIndex: =62
-
-        Label10_19 As label:
-            Align: =Align.Justify
-            Height: =170
-            Size: =18
-            Text: ="       Utilize the RawBT application and Bluetooth settings to establish a connection between the Zebra device and the XPrinter/MTP-25 printer."
-            Visible: =C1V
-            Width: =520
-            X: =60
-            Y: =880
-            ZIndex: =63
-
-        Icon14_1 As icon.ChevronRight:
-            Color: =RGBA(102, 102, 102, 1)
-            Height: =120
-            Icon: =Icon.ChevronRight
-            OnSelect: =Set(C2V,true);Set(C1V,false)
-            PaddingBottom: =40
-            PaddingLeft: =40
-            PaddingRight: =40
-            PaddingTop: =40
-            Visible: =C1V
-            Width: =120
-            X: =520
-            Y: =548
-            ZIndex: =64
-
     "'Configuration 2' As group":
         Height: =5
         Width: =5
@@ -808,7 +808,7 @@ App_Details As screen:
             Align: =Align.Justify
             Height: =168
             Size: =18
-            Text: ="      Access the XPrinter/MTP-25 printer's Bluetooth connectivity password by pressing the 'Func' button on the printer itself."
+            Text: ="      Access the XP-P323B/MTP-25 printer's Bluetooth connectivity password by pressing the 'Func' button on the printer itself."
             Visible: =C2V
             Width: =522
             X: =59
@@ -1051,7 +1051,7 @@ App_Details As screen:
             Align: =Align.Justify
             Height: =170
             Size: =18
-            Text: ="       Turn on Bluetooth functionality on both the Zebra TC21/TC26 Android Device and the XPrinter/MTP-25 printer for initiating the pairing process."
+            Text: ="       Turn on Bluetooth functionality on both the Zebra TC21/TC26 Android Device and the XP-P323B/MTP-25 printer for initiating the pairing process."
             Visible: =H1V
             Width: =520
             X: =60
@@ -1173,7 +1173,7 @@ App_Details As screen:
             Align: =Align.Justify
             Height: =168
             Size: =18
-            Text: ="      Select 'Add printer' > 'Bluetooth' > 'Not selected' > 'XPrinter/MTP-25' within the RawBT application."
+            Text: ="      Select 'Add printer' > 'Bluetooth' > 'Not selected' > 'XP-P323B/MTP-25' within the RawBT application."
             Visible: =H3V
             Width: =522
             X: =59
@@ -1309,7 +1309,7 @@ App_Details As screen:
             Align: =Align.Justify
             Height: =168
             Size: =18
-            Text: ="      Upon connection initiation, a dialogue box prompts the entry of the pairing password. Fill in the obtained XPrinter/MTP-25 printer's Bluetooth connectivity password in this dialogue box."
+            Text: ="      Upon connection initiation, a dialogue box prompts the entry of the pairing password. Fill in the obtained XP-P323B/MTP-25 printer's Bluetooth connectivity password in this dialogue box."
             Visible: =H5V
             Width: =522
             X: =59
@@ -2248,7 +2248,7 @@ App_Details As screen:
             Height: =80
             PaddingLeft: =15
             Size: =21
-            Text: ="December 29, 2023"
+            Text: =Mid(PresentDate,Find(",",PresentDate)+2)
             Visible: =AboutVisible
             Width: =350
             X: =120
@@ -2314,7 +2314,7 @@ App_Details As screen:
             Size: =21
             Text: |-
                 ="1. Zebra TC21/TC26 Android Device
-                2. XPrinter/MTP-25 Bluetooth Thermal Printer
+                2. XP-P323B/MTP-25 Bluetooth Thermal Printer
                 3. 20x58 Peel-off Label"
             VerticalAlign: =VerticalAlign.Top
             Visible: =AboutVisible
@@ -2340,7 +2340,7 @@ App_Details As screen:
             Height: =80
             PaddingLeft: =15
             Size: =21
-            Text: ="3.23122.17"
+            Text: ="3.24022.11"
             Visible: =AboutVisible
             Width: =350
             X: =160
@@ -2400,9 +2400,9 @@ App_Details As screen:
 
         Image3 As image:
             Height: =220
-            Image: ='download (1)'
+            Image: ='QR Code-t.ly_nw38g (1)'
             OnSelect: |-
-                =Launch("https://t.ly/yGXEb?r=qr")
+                =Launch("https://t.ly/nw38g")
             Visible: =AboutVisible
             Width: =220
             X: =210
