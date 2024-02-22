@@ -245,7 +245,7 @@
     Timer1_3 As timer:
         AutoStart: =If(varPrintTriggered1=true,Timer1_2.Start)
         Color: =RGBA(0, 0, 0, 0)
-        Duration: =5000
+        Duration: =15000
         Fill: =RGBA(0, 0, 0, 0)
         Height: =14
         OnTimerEnd: =Back()
