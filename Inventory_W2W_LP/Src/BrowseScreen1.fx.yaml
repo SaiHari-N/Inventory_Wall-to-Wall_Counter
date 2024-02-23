@@ -414,7 +414,7 @@
             Height: =70
             Icon: =Icon.Check
             OnSelect: |-
-                =If(TextInput7.Text="DBadmin@123",Launch("https://syrmatech-my.sharepoint.com/:x:/g/personal/selvakumar_m_syrmasgs_com/EXKWSU3sseNAtWatYQdrYmIBEgbpf5cADj2N2bJg6g6nTQ?e=YcLdEV")&Set(DBPW,false);Set(BGvisible,true),SetFocus(TextInput7)&Reset(TextInput7))
+                =If(TextInput7.Text="DBadmin@123", Launch("https://syrmatech-my.sharepoint.com/personal/selvakumar_m_syrmasgs_com/Documents/Inventory%20Count_power%20app%20v2.xlsx")&Set(DBPW, false); Set(BGvisible, true); SetFocus (TextInput7) & Reset (TextInput7))
             PaddingBottom: =10
             PaddingLeft: =10
             PaddingRight: =10
