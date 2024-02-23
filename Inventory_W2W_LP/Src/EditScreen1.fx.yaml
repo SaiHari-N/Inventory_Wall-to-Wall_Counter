@@ -1,6 +1,7 @@
 "EditScreen1 As screen.'phoneDetailEditLayout_ver3.0'":
     Fill: =RGBA(255, 255, 255, 1)
-    OnVisible: =SetFocus(TextInput5); Reset(TextInput5);Reset(TextInput6_5);Set(BGWhite,false);
+    OnVisible: |-
+        =SetFocus(TextInput5); Reset(TextInput5);Reset(TextInput6_5);Set(BGWhite,false);UpdateContext({ currentTime: Text(Now(), DateTimeFormat.ShortTime24&"ss") })
 
     RectQuickActionBar3 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
@@ -913,7 +914,7 @@
         Duration: =600
         Height: =65
         OnTimerEnd: |-
-            =UpdateContext({ currentTime: Text(Now(), "hh:mm:ss AM/PM") })
+            =UpdateContext({ currentTime: Text(Now(), DateTimeFormat.ShortTime24&"ss") })
         Repeat: =true
         Visible: =false
         Width: =58
