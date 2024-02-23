@@ -1,7 +1,7 @@
 "EditScreen1 As screen.'phoneDetailEditLayout_ver3.0'":
     Fill: =RGBA(255, 255, 255, 1)
     OnVisible: |-
-        =SetFocus(TextInput5); Reset(TextInput5);Reset(TextInput6_5);Set(BGWhite,false);UpdateContext({ currentTime: Text(Now(), DateTimeFormat.ShortTime24&"ss") })
+        =SetFocus(TextInput5); Reset(TextInput5);Reset(TextInput6_5);Set(BGWhite,false);UpdateContext({ currentTime: Text(Now(), DateTimeFormat.ShortTime24&"ss") });
 
     RectQuickActionBar3 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
