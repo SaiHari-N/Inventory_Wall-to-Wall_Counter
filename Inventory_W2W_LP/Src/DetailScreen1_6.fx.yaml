@@ -310,7 +310,7 @@
         HtmlText: |-
             ="<img src=""https://barcode.tec-it.com/barcode.ashx?data=" &
             If(IsBlank(LastSubmittedRecord.'Part Description'),"No Data Found",LastSubmittedRecord.'Part Description') & "
-            &type=C128B&showhrt=yes&rotation=90&width=40&height=15&xres=96&font=3""/>"
+            &type=C128B&showhrt=no&rotation=90&width=40&height=10&xres=96&font=3""/>"
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingRight: =0
@@ -319,4 +319,26 @@
         X: =563
         Y: =24
         ZIndex: =18
+
+    HtmlText4_1 As htmlViewer:
+        Height: =160
+        HtmlText: |-
+            ="<div
+                style='"&
+                "white-space: nowrap;"& //Comment out this line to allow word wrap
+                "text-align:center;"& //[left, right] to move the text up or down
+                "position: absolute;"&
+                "left: 50%;"& //Better centering using relative values
+                "top:  50%;"& //Better centering using relative values
+                "transform: translate(-50%, -50%) rotate(270deg);"&
+                "font-size: 16px;" &
+            "'>"&
+            
+            If(IsBlank(LastSubmittedRecord.'Part Description'),"No Data Found",LastSubmittedRecord.'Part Description')
+            
+            &"</div>"
+        Width: =20
+        X: =605
+        Y: =20
+        ZIndex: =19
 
