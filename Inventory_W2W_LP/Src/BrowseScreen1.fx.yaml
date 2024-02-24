@@ -734,3 +734,69 @@
         Y: =120
         ZIndex: =52
 
+    Table3 As Table.pcfdataset:
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =20
+        HeaderFontSize: =25
+        Height: =640
+        Items: =Table1
+        onCellValueChange: =false
+        onFilter: =false
+        onNavigate: =false
+        onRowSelect: =false
+        onSave: =false
+        OnSelect: =false
+        ShowAvatar: ="no"
+        Width: =640
+        X: =0
+        Y: =210
+        ZIndex: =53
+
+        Batch1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Batch"
+            FieldName: ="Batch"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =4
+            ZIndex: =17
+
+        "'Count Quantity1' As pcfDataField.textualColumn":
+            FieldDisplayName: ="Count Quantity"
+            FieldName: ="Count_x0020_Quantity"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =5
+            ZIndex: =18
+
+        "'Inventory count date1' As pcfDataField.textualColumn":
+            FieldDisplayName: ="Inventory count date"
+            FieldName: ="Inventory_x0020_count_x0020_date"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =19
+
+        "'Operator ID1' As pcfDataField.textualColumn":
+            FieldDisplayName: ="Operator ID"
+            FieldName: ="Operator_x0020_ID"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =2
+            ZIndex: =20
+
+        "'Part number 1' As pcfDataField.textualColumn":
+            FieldDisplayName: ="Part number "
+            FieldName: ="Part_x0020_number_x0020_"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =3
+            ZIndex: =22
+
+        "'Storage location1' As pcfDataField.textualColumn":
+            FieldDisplayName: ="Storage location"
+            FieldName: ="Storage_x0020_location"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =6
+            ZIndex: =23
+
