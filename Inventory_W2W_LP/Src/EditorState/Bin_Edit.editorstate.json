@@ -8075,7 +8075,7 @@
       "MetaDataIDKey": "",
       "Name": "Menu_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 37,
+      "ParentIndex": 39,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8377,7 +8377,7 @@
       "MetaDataIDKey": "",
       "Name": "Query_Mail_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 39,
+      "ParentIndex": 37,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

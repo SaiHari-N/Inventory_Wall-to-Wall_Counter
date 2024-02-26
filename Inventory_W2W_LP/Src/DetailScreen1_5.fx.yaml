@@ -36,7 +36,7 @@
                 Size: =16
                 Text: =Parent.Default
                 Width: =120
-                X: =216
+                X: =200
                 Y: =1
                 ZIndex: =2
 
@@ -64,7 +64,7 @@
                 Size: =16
                 Text: =Parent.Default
                 Width: =100
-                X: =35
+                X: =8
                 Y: =1
                 ZIndex: =2
 
@@ -92,7 +92,7 @@
                 Size: =16
                 Text: =Parent.Default
                 Width: =250
-                X: =302
+                X: =282
                 ZIndex: =2
 
         Batch_DataCard3_2 As typedDataCard.textualViewCard:
@@ -119,7 +119,7 @@
                 Size: =16
                 Text: =Parent.Default
                 Width: =290
-                X: =228
+                X: =208
                 Y: =
                 ZIndex: =2
 
@@ -146,7 +146,7 @@
                 Size: =16
                 Text: =Parent.Default
                 Width: =110
-                X: =260
+                X: =240
                 Y: =1
                 ZIndex: =2
 
@@ -174,8 +174,8 @@
                 PaddingTop: =0
                 Size: =16
                 Text: =Parent.Default
-                Width: =100
-                X: =55
+                Width: =125
+                X: =30
                 Y: =1
                 ZIndex: =2
 
@@ -186,7 +186,7 @@
         Text: |-
             ="User ID:"
         Width: =100
-        X: =344
+        X: =320
         Y: =54
         ZIndex: =2
 
@@ -197,7 +197,7 @@
         Text: |-
             ="Part Number:"
         Width: =160
-        X: =155
+        X: =138
         Y: =88
         ZIndex: =3
 
@@ -208,7 +208,7 @@
         Text: |-
             ="Quantity:"
         Width: =120
-        X: =155
+        X: =138
         Y: =156
         ZIndex: =4
 
@@ -219,7 +219,7 @@
         Text: |-
             ="Location:"
         Width: =110
-        X: =344
+        X: =320
         Y: =156
         ZIndex: =5
 
@@ -232,7 +232,7 @@
         Text: |-
             ="Date:"
         Width: =80
-        X: =155
+        X: =138
         Y: =54
         ZIndex: =6
 
@@ -256,7 +256,7 @@
         Text: |-
             ="Batch:"
         Width: =100
-        X: =155
+        X: =138
         Y: =122
         ZIndex: =8
 
@@ -279,7 +279,7 @@
         HtmlText: |-
             ="<img src=""https://qrcode.tec-it.com/API/QRCode?data="&DataCardValue3_5.Text&", "&DataCardValue4_5.Text&", "&DataCardValue6_5.Text&", "&DataCardValue5_2.Text&", "&DataCardValue2_5.Text&", "&DataCardValue8_5.Text&"code=MobileQRCode&unit=Min&imagetype=Png&eclevel=L&backcolor=%23ffffff&&istransparent=True&dpi=105&size=Small"" />"
         Width: =120
-        X: =22
+        X: =18
         Y: =68
         ZIndex: =10
 
