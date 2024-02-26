@@ -4074,7 +4074,14 @@
         "EndYear",
         "StartOfWeek",
         "IconFill",
-        "IconBackground",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(56, 96, 178, 1)",
+          "InvariantPropertyName": "IconBackground",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "SelectedDateFill",
         "HoverDateFill",
         "CurrentDateFill",
@@ -4082,7 +4089,14 @@
         "MonthColor",
         "WeekColor",
         "DayColor",
-        "BorderColor",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(0, 18, 107, 1)",
+          "InvariantPropertyName": "BorderColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DisabledFill",
         "PressedFill",
         "HoverFill",
@@ -17392,7 +17406,14 @@
         "Format",
         "VirtualKeyboardMode",
         "DelayOutput",
-        "BorderColor",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(0, 18, 107, 1)",
+          "InvariantPropertyName": "BorderColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DisabledBorderColor",
         "PressedBorderColor",
         "HoverBorderColor",

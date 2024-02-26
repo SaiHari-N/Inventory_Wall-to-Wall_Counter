@@ -219,6 +219,8 @@ Bin_Edit As screen:
         ZIndex: =19
 
     Dropdown2 As dropdown:
+        BorderColor: =RGBA(0, 94, 146, 1)
+        ChevronBackground: =RGBA(0, 94, 146, 1)
         Default: =
         Height: =63
         Items: =["Simple","UID"]

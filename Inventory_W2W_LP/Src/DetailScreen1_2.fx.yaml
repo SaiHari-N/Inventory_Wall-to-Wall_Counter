@@ -660,6 +660,8 @@
             ZIndex: =30
 
     Dropdown4_1 As dropdown:
+        BorderColor: =RGBA(0, 94, 146, 1)
+        ChevronBackground: =RGBA(0, 94, 146, 1)
         Default: ="UID"
         Height: =61
         Items: =["Simple","UID"]
