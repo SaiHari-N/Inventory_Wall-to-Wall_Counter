@@ -737,7 +737,7 @@
                     Size: =16
                     Text: =Parent.Default
                     Width: =90
-                    X: =50
+                    X: =35
                     Y: =1
                     ZIndex: =2
 
@@ -847,8 +847,8 @@
                     PaddingTop: =0
                     Size: =16
                     Text: =Parent.Default
-                    Width: =85
-                    X: =70
+                    Width: =100
+                    X: =55
                     Y: =1
                     ZIndex: =2
 
@@ -860,7 +860,7 @@
                 ="User ID:"
             Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
             Width: =100
-            X: =360
+            X: =344
             Y: =853
             ZIndex: =31
 
@@ -896,7 +896,7 @@
                 ="Location:"
             Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
             Width: =110
-            X: =360
+            X: =344
             Y: =955
             ZIndex: =34
 
