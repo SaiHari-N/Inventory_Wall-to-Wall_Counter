@@ -354,6 +354,7 @@
     "TextInputCanvas1 As 'Text input'":
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         FontSize: =25
         FontWeight: =FontWeight.Semibold
         Height: =80

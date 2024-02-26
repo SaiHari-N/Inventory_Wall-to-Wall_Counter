@@ -35,7 +35,9 @@ Screen1 As screen:
 
     Spinner1 As Spinner:
         Appearance: ='Spinner.Appearance'.Primary
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =350
         Label: =""
         SpinnerSize: ='Spinner.SpinnerSize'.Huge
