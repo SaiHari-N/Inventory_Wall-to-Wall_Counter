@@ -1,8 +1,8 @@
 "DetailScreen1_6 As screen.'phoneDetailViewLayout_ver3.0'":
     Height: =Max(DetailForm1_6.Height,197)
     OnVisible: |-
-        =//If(varPrintTriggered1, Print());
-        //If(varPrintTriggered1, Icon4_5.Visible=false,Icon4_5.Visible=true);
+        =If(varPrintTriggered1, Print()&Set(TIC1Visible1,false));
+        If(varPrintTriggered1, Icon4_5.Visible=false,Icon4_5.Visible=true);Reset(TextInputCanvas1_1)
 
     DetailForm1_6 As formViewer:
         DataSource: =[@Table1]
@@ -252,7 +252,7 @@
     Timer1_5 As timer:
         AutoStart: =If(varPrintTriggered=true,Timer1_5.Start)
         Color: =RGBA(0, 0, 0, 0)
-        Duration: =15000
+        Duration: =5000
         Fill: =RGBA(0, 0, 0, 0)
         Height: =14
         OnTimerEnd: =Back()
@@ -310,13 +310,13 @@
         HtmlText: |-
             ="<img src=""https://barcode.tec-it.com/barcode.ashx?data=" &
             If(IsBlank(LastSubmittedRecord.'Part Description'),"No Data Found",LastSubmittedRecord.'Part Description') & "
-            &type=C128B&showhrt=no&rotation=90&width=40&height=10&xres=96&font=3""/>"
+            &type=C128B&showhrt=no&rotation=90&width=40&height=6&xres=96&font=3""/>"
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingRight: =0
         PaddingTop: =0
         Width: =70
-        X: =563
+        X: =555
         Y: =24
         ZIndex: =18
 
@@ -338,7 +338,30 @@
             
             &"</div>"
         Width: =20
-        X: =605
+        X: =578
         Y: =20
         ZIndex: =19
+
+    Rectangle6_8 As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =197
+        Visible: =TIC1Visible1
+        Width: =640
+        ZIndex: =20
+
+    "TextInputCanvas1_1 As 'Text input'":
+        AccessibleLabel: =""
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        FontSize: =25
+        FontWeight: =FontWeight.Semibold
+        Height: =80
+        OnChange: =If(TextInputCanvas1_1.Value = If(IsBlank(LastSubmittedRecord.'Part Description'),"No Data Found",LastSubmittedRecord.'Part Description'), Back(), Notify("Wrong Count ID")&Reset(TextInputCanvas1_1))
+        Placeholder: ="Scan Count ID"
+        Visible: =TIC1Visible1
+        Width: =360
+        X: =140
+        Y: =58
+        ZIndex: =21
 

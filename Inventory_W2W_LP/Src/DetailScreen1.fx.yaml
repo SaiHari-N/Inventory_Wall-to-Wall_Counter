@@ -22,7 +22,7 @@
         DisplayMode: =If(DataSourceInfo([@Table1], DataSourceInfo.EditPermission), DisplayMode.Edit, DisplayMode.Disabled)
         Height: =50
         Icon: =Icon.Edit
-        OnSelect: =Navigate(Bin_Edit,ScreenTransition.None);Reset(TextInput5);Reset(TextInput4);Reset(TextInput4_1);NewForm(EditForm1)
+        OnSelect: =Navigate(Bin_Edit,ScreenTransition.None);Reset(TextInput5);Reset(TextInput4_1);NewForm(EditForm1)
         TabIndex: =0
         Tooltip: ="Edit this item"
         Width: =50
@@ -306,8 +306,8 @@
         Height: =50
         Icon: =Icon.Print
         OnSelect: |-
-            =Navigate(DetailScreen1_1, ScreenTransition.None);
-            Set(varPrintTriggered, true);
+            =If(Dropdown2.Selected.Value = "Simple",Navigate(DetailScreen1_1, ScreenTransition.None),Navigate(DetailScreen1_5, ScreenTransition.None));
+            Set(varPrintTriggered, true);Set(TIC1Visible,false)
         TabIndex: =
         Width: =50
         X: =430

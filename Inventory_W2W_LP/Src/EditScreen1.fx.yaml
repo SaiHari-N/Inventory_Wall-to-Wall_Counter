@@ -13,7 +13,7 @@
         AccessibleLabel: =Self.Tooltip
         Height: =50
         Icon: =Icon.Check
-        OnSelect: =If(LookUp(Table1,'Part number '=TextInput1.Text,Batch=DataCardValue15.Text),Notify("Same part number already scanned in this batch",NotificationType.Warning)&SubmitForm(EditForm1),SubmitForm(EditForm1))
+        OnSelect: =SubmitForm(EditForm1)
         TabIndex: =0
         Tooltip: ="Submit item"
         Width: =50
@@ -136,7 +136,7 @@
             DataCardValue12 As text:
                 AccessibleLabel: ="User ID"
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =TextInput4.Text
+                Default: =TextInput2.Text
                 DelayOutput: =true
                 DisabledColor: =RGBA(77, 77, 77, 1)
                 DisplayMode: =DisplayMode.Disabled
@@ -305,7 +305,7 @@
             TextInput1 As text:
                 AccessibleLabel: ="Part Number"
                 Default: =If(IsBlank(TextInput5.Text),"", Left(TextInput5.Text,Find(",", TextInput5.Text)-1))
-                DisplayMode: =DisplayMode.Disabled
+                DisplayMode: =If(RadioGroupCanvas1.Selected.Value = "RM", DisplayMode.Disabled, DisplayMode.Edit)
                 Height: =70
                 Size: =21
                 Width: =569
@@ -345,8 +345,8 @@
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Mid(TextInput5.Text, Find(",", TextInput5.Text) + 19 ,10)
                 DelayOutput: =true
-                DisplayMode: =DisplayMode.Disabled
-                FontWeight: =FontWeight.Lighter
+                DisplayMode: =If(RadioGroupCanvas1.Selected.Value = "RM", DisplayMode.Disabled, DisplayMode.Edit)
+                FontWeight: =FontWeight.Semibold
                 Height: =70
                 MaxLength: =10
                 OnChange: =If(Right(DataCardValue15.Text, 1) = ",", Substitute(DataCardValue15.Text, ",", ""));
@@ -532,7 +532,7 @@
         Color: =RGBA(9, 33, 98, 1)
         Height: =70
         Size: =21
-        Text: ="Scan QR Code"
+        Text: ="QR Code"
         Width: =195
         X: =344
         Y: =288
@@ -540,13 +540,13 @@
 
     TextInput5 As text:
         AccessibleLabel: ="Scan QR Code"
-        Default: =
+        Default: =Barcode1_1.Text
         Height: =66
-        HintText: ="Click here to scan"
-        OnChange: =If(LookUp(Table1,'Part number '=TextInput1.Text,Batch=DataCardValue15.Text),Notify("Same part number already scanned in this batch",NotificationType.Warning)&ResetForm(EditForm1))
+        HintText: ="Scan here"
+        OnChange: =If(LookUp(Table1,'Part number '=TextInput1.Text,Batch=DataCardValue15.Text),Notify("Same part number already scanned in this batch",NotificationType.Warning)&ResetForm(EditForm1));
         Size: =21
         TabIndex: =-1
-        Width: =255
+        Width: =196
         X: =344
         Y: =350
         ZIndex: =9
@@ -921,4 +921,18 @@
         X: =360
         Y: =15
         ZIndex: =35
+
+    Icon18 As icon.OpenInNewWindow:
+        Color: =RGBA(0, 94, 146, 1)
+        Height: =66
+        Icon: =Icon.OpenInNewWindow
+        OnSelect: =Navigate(Screen6);Set(Barcode1_1visible,true)
+        PaddingBottom: =12
+        PaddingLeft: =12
+        PaddingRight: =12
+        PaddingTop: =12
+        Width: =66
+        X: =540
+        Y: =350
+        ZIndex: =36
 

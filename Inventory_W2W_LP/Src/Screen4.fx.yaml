@@ -249,47 +249,27 @@ Screen4 As screen:
         Y: =1073
         ZIndex: =18
 
-    CompositeLineChart2 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =19
+    PieChart1_1 As pieChart:
+        BorderColor: =RGBA(0, 94, 146, 1)
+        Height: =525
+        ItemBorderColor: =RGBA(0, 94, 146, 1)
+        ItemColorSet: =[RGBA(255,255,255,1),RGBA(0,94,146,1)]
+        Items: |-
+            =Table(
+                 {Value: CountRows(Filter(Table1, Dropdown1.Selected.'Storage location' = 'Storage location')), Label:"Bin Count: " & CountRows(Table1)-(CountRows(Table1) - CountRows(Filter(Table1, Dropdown1.Selected.'Storage location' = 'Storage location')))},
+                 {Value: (CountRows(Table1) - CountRows(Filter(Table1, Dropdown1.Selected.'Storage location' = 'Storage location'))), Label: "Other Bins: " & (CountRows(Table1) - CountRows(Filter(Table1, Dropdown1.Selected.'Storage location' = 'Storage location')))})
+        Size: =20
+        Visible: =If(IsBlank(TextInput4_1.Text),false,true)
+        Width: =640
+        Y: =412
+        ZIndex: =24
 
-        Title4 As label:
-            Align: =Align.Center
-            Height: =25
-            Text: ="Chart Title"
-            Width: =400
-            X: =80
-            Y: =300
-            ZIndex: =20
-
-        LineChart2 As lineChart:
-            Items: |-
-                =Table(
-                     {Value: CountRows(Filter(Table1, TextInput6.Text = 'Part number ')), Label:"Bin Count: " & CountRows(Table1)-(CountRows(Table1) - CountRows(Filter(Table1, TextInput6.Text = 'Part number ')))},
-                     {Value: (CountRows(Table1) - CountRows(Filter(Table1, TextInput6.Text ='Part number '))), Label: "Other Bins: " & (CountRows(Table1) - CountRows(Filter(Table1, TextInput6.Text = 'Part number ')))})
-            X: =80
-            Y: =330
-            ZIndex: =21
-
-        Legend3 As legend:
-            Height: =80
-            ItemColorSet: =LineChart2.ItemColorSet
-            Items: =LineChart2.SeriesLabels
-            Size: =18
-            Width: =320
-            X: =120
-            Y: =740
-            ZIndex: =22
-
-    TextInput6 As text:
-        Default: ="Text input"
+    Dropdown1 As dropdown:
         Height: =70
+        Items: =Table1
         Size: =21
-        Width: =560
-        X: =40
+        Width: =575
+        X: =32
         Y: =157
-        ZIndex: =23
+        ZIndex: =25
 

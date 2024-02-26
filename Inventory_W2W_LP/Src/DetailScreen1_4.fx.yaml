@@ -2,7 +2,7 @@
     Height: =Max(DetailForm1_4.Height,197)
     OnVisible: |-
         =If(varPrintTriggered1, Print());
-        If(varPrintTriggered1, Icon4_1.Visible=false,Icon4_1.Visible=true);
+        If(varPrintTriggered1, Icon4_3.Visible=false,Icon4_3.Visible=true);
 
     DetailForm1_4 As formViewer:
         DataSource: =[@Table1]
@@ -243,7 +243,7 @@
         ZIndex: =11
 
     Timer1_3 As timer:
-        AutoStart: =If(varPrintTriggered1=true,Timer1_2.Start)
+        AutoStart: =If(varPrintTriggered1=true,Timer1_3.Start)
         Color: =RGBA(0, 0, 0, 0)
         Duration: =15000
         Fill: =RGBA(0, 0, 0, 0)

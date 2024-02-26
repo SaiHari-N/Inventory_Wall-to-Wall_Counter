@@ -1,5 +1,5 @@
 "BrowseScreen1 As screen.'phoneBrowseLayout_ver3.0'":
-    OnVisible: =Set(BGvisible,true);Set(DisplayPopup,false);Set(DBPW,false);Set(DBLaunch,true);Set(DBLaunch1, false);Set(QueryMail,true);Set(QueryMail1,false);Reset(TextInput6_3);Set(BGWhite,false)
+    OnVisible: =Set(BGvisible,true);Set(DisplayPopup,false);Set(DBPW,false);Set(DBLaunch,true);Set(DBLaunch1, false);Set(QueryMail,true);Set(QueryMail1,false);Reset(TextInput6_3);Set(BGWhite,false);Set(Table3Visible, false)
 
     RectQuickActionBar1 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
@@ -48,7 +48,7 @@
         DisplayMode: =If(DataSourceInfo([@Table1], DataSourceInfo.CreatePermission), DisplayMode.Edit, DisplayMode.Disabled)
         Height: =50
         Icon: =Icon.Add
-        OnSelect: =NewForm(EditForm1);Navigate(Bin_Edit, ScreenTransition.None);Reset(TextInput4_1);Reset(TextInput4)
+        OnSelect: =NewForm(EditForm1);Navigate(Bin_Edit, ScreenTransition.None);Reset(TextInput4_1);
         TabIndex: =0
         Tooltip: ="Create new item"
         Width: =50
@@ -374,7 +374,7 @@
     IconRefresh1_2 As icon.Reload:
         AccessibleLabel: =Self.Tooltip
         Height: =50
-        Icon: =Icon.Download
+        Icon: =Icon.Cancel
         OnSelect: =Reset(TextInput7);Set(DBPW,false);Set(BGvisible,true);SetFocus(TextInput7);Set(DBLaunch,true);Set(DBLaunch1,false)
         TabIndex: =0
         Tooltip: ="Refresh list"
@@ -722,31 +722,42 @@
             ZIndex: =49
 
     "TabList1 As 'Tab list'.pcfdataset":
+        Alignment: ='TabList.Alignment'.Horizontal
         BasePaletteColor: =RGBA(0, 94, 146, 1)
+        DefaultSelectedItems: =
         DisplayMode: =DisplayMode.Edit
         FontSize: =25
         FontWeight: =""
         Height: =55
         Items: =["Log", "Report"]
-        OnSelect: =If(TabList1.Selected.Value = "Log", Set(BGvisible, true), Set(BGvisible, false))
+        OnSelect: =If(TabList1.Selected.Value = "Log", Set(BGvisible, true), Set(BGvisible, false));If(TabList1.Selected.Value = "Report", Set(Table3Visible, true), Set(Table3Visible, false))
         Width: =210
         X: =440
         Y: =120
         ZIndex: =52
 
+        Value1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Value"
+            FieldName: ="Value"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =24
+
     Table3 As Table.pcfdataset:
         DisplayMode: =DisplayMode.Edit
         FontSize: =20
         HeaderFontSize: =25
-        Height: =640
+        Height: =816
         Items: =Table1
         onCellValueChange: =false
         onFilter: =false
         onNavigate: =false
         onRowSelect: =false
         onSave: =false
-        OnSelect: =false
+        OnSelect: =Navigate(DetailScreen1, ScreenTransition.None);
         ShowAvatar: ="no"
+        Visible: =Table3Visible
         Width: =640
         X: =0
         Y: =210
@@ -761,7 +772,7 @@
             ZIndex: =17
 
         "'Count Quantity1' As pcfDataField.textualColumn":
-            FieldDisplayName: ="Count Quantity"
+            FieldDisplayName: ="Quantity"
             FieldName: ="Count_x0020_Quantity"
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
@@ -769,7 +780,7 @@
             ZIndex: =18
 
         "'Inventory count date1' As pcfDataField.textualColumn":
-            FieldDisplayName: ="Inventory count date"
+            FieldDisplayName: ="Date"
             FieldName: ="Inventory_x0020_count_x0020_date"
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
@@ -777,7 +788,7 @@
             ZIndex: =19
 
         "'Operator ID1' As pcfDataField.textualColumn":
-            FieldDisplayName: ="Operator ID"
+            FieldDisplayName: ="User"
             FieldName: ="Operator_x0020_ID"
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
@@ -785,7 +796,7 @@
             ZIndex: =20
 
         "'Part number 1' As pcfDataField.textualColumn":
-            FieldDisplayName: ="Part number "
+            FieldDisplayName: ="Part Number"
             FieldName: ="Part_x0020_number_x0020_"
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
@@ -793,7 +804,7 @@
             ZIndex: =22
 
         "'Storage location1' As pcfDataField.textualColumn":
-            FieldDisplayName: ="Storage location"
+            FieldDisplayName: ="Location"
             FieldName: ="Storage_x0020_location"
             FieldType: ="s"
             FieldVariantName: ="textualColumn"

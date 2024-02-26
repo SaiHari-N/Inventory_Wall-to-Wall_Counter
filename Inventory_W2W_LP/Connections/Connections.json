@@ -22,6 +22,16 @@
       }
     },
     "datasets": {
+      "b!3kXZQstSb0ayVfpn3eMZt4mCcGsrdMZPq5FX09timC4_mcJRcZVvS6alUOED2dtG.01SRKD7XITEQABBB5HEBBLOBO7CDFSYGSE": {
+        "dataSources": {
+          "Inventory_W2W_LP_Data": {
+            "tableName": "Inventory_W2W_LP_Data"
+          },
+          "Part_Description": {
+            "tableName": "Part_Description"
+          }
+        }
+      },
       "b!3kXZQstSb0ayVfpn3eMZt4mCcGsrdMZPq5FX09timC4_mcJRcZVvS6alUOED2dtG.01SRKD7XKPKR5YLLMQXRGZNADNFIXY7NFI": {
         "dataSources": {
           "Table2": {
@@ -39,7 +49,9 @@
     },
     "dataSources": [
       "Table1",
-      "Table2"
+      "Table2",
+      "Inventory_W2W_LP_Data",
+      "Part_Description"
     ],
     "dependencies": {
       "fileSource": "6d34e21b-fa37-43aa-852d-da7a7b48aa8f"
@@ -84,6 +96,20 @@
       "12decc00-2546-4355-91bc-406e8510ecf7"
     ],
     "id": "6d34e21b-fa37-43aa-852d-da7a7b48aa8f"
+  },
+  "8f9506db-707a-46a6-83f9-d4d4298f75fc": {
+    "connectionRef": {
+      "displayName": "Power Apps for Makers",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1669/1.0.1669.3520/powerappsforappmakers/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_powerappsforappmakers"
+    },
+    "datasets": {},
+    "dataSources": [
+      "PowerAppsforMakers"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "8f9506db-707a-46a6-83f9-d4d4298f75fc"
   },
   "b5f5d847-1d68-485a-a5ad-1f9fad3737c1": {
     "connectionRef": {

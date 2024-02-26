@@ -1,5 +1,5 @@
 Bin_Edit As screen:
-    OnVisible: =SetFocus(TextInput4_1); If(IsBlank(TextInput4_1.Text),IconAccept1_1.Visible=false); Reset(TextInput4_1);Reset(TextInput6_4);Set(BGWhite,false);Set(BinPrint,true);
+    OnVisible: =SetFocus(TextInput4_1); If(IsBlank(TextInput4_1.Text),IconAccept1_1.Visible=false); Reset(TextInput4_1);Reset(TextInput6_4);Set(BGWhite,false);Set(BinPrint,true);Set(BP,false)
 
     RectQuickActionBar3_1 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
@@ -17,7 +17,7 @@ Bin_Edit As screen:
         Width: =50
         X: =570
         Y: =15
-        ZIndex: =3
+        ZIndex: =2
 
     LblAppName3_1 As label:
         Fill: =RGBA(58, 58, 58, 0)
@@ -28,64 +28,39 @@ Bin_Edit As screen:
         Width: =280
         Wrap: =false
         X: =80
-        ZIndex: =4
+        ZIndex: =3
 
     Icon2_1 As icon.Reset:
         AccessibleLabel: ="Undo"
         Color: =RGBA(255, 255, 255, 1)
         Height: =50
         Icon: =Icon.Undo
-        OnSelect: =Reset(TextInput4_1);Reset(TextInput4)
+        OnSelect: =Reset(TextInput4_1);
         TabIndex: =
         Width: =50
         X: =500
         Y: =15
-        ZIndex: =5
+        ZIndex: =4
 
     Label3 As label:
         FontWeight: =FontWeight.Bold
         Height: =70
         Size: =21
-        Text: ="Date"
+        Text: ="Label Template"
         Width: =240
         X: =50
         Y: =110
-        ZIndex: =7
-
-    DatePicker2 As datepicker:
-        AccessibleLabel: ="Date"
-        BorderColor: =RGBA(0, 94, 146, 1)
-        DisabledFill: =RGBA(0, 94, 146, 1)
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =70
-        Size: =24
-        Width: =240
-        X: =50
-        Y: =170
-        ZIndex: =8
+        ZIndex: =5
 
     Label3_1 As label:
         FontWeight: =FontWeight.Bold
         Height: =70
         Size: =21
-        Text: ="User ID"
+        Text: ="Format"
         Width: =240
-        X: =350
+        X: =390
         Y: =110
-        ZIndex: =9
-
-    TextInput4 As text:
-        AccessibleLabel: ="User ID"
-        Default: =TextInput2.Text
-        DisabledColor: =RGBA(77, 77, 77, 1)
-        DisplayMode: =DisplayMode.Disabled
-        Height: =70
-        HintText: ="Enter Emp ID"
-        Size: =21
-        Width: =240
-        X: =350
-        Y: =170
-        ZIndex: =10
+        ZIndex: =6
 
     Label3_2 As label:
         FontWeight: =FontWeight.Bold
@@ -95,20 +70,20 @@ Bin_Edit As screen:
         Width: =240
         X: =240
         Y: =280
-        ZIndex: =11
+        ZIndex: =7
 
     TextInput4_1 As text:
         AccessibleLabel: ="Bin Number"
         BorderColor: =RGBA(0, 94, 146, 1)
-        Default: =
+        Default: =Barcode1.Text
         Height: =70
         HintText: ="Scan Bin Barcode"
-        OnChange: =Refresh(PieChart1.SeriesLabels)
+        OnChange: =Refresh(PieChart1.SeriesLabels);Set(BP,true)
         Size: =21
         Width: =270
         X: =240
         Y: =340
-        ZIndex: =12
+        ZIndex: =8
 
     Toggle1 As toggleSwitch:
         AccessibleLabel: ="Reel/Box"
@@ -122,14 +97,14 @@ Bin_Edit As screen:
         Width: =150
         X: =50
         Y: =350
-        ZIndex: =15
+        ZIndex: =9
 
     Rectangle2_3 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
         Height: =80
         Width: =640
         Y: =1060
-        ZIndex: =16
+        ZIndex: =10
 
     Icon8_3 As icon.Home:
         AccessibleLabel: ="Home"
@@ -141,7 +116,7 @@ Bin_Edit As screen:
         Width: =56
         X: =60
         Y: =1073
-        ZIndex: =17
+        ZIndex: =11
 
     Icon9_3 As icon.Tray:
         AccessibleLabel: ="Bin"
@@ -153,7 +128,7 @@ Bin_Edit As screen:
         Width: =56
         X: =176
         Y: =1073
-        ZIndex: =18
+        ZIndex: =12
 
     Icon10_3 As icon.DocumentwithContent:
         AccessibleLabel: ="Tag"
@@ -165,7 +140,7 @@ Bin_Edit As screen:
         Width: =56
         X: =292
         Y: =1073
-        ZIndex: =19
+        ZIndex: =13
 
     Icon11_3 As icon.Print:
         AccessibleLabel: ="Detail"
@@ -177,6 +152,80 @@ Bin_Edit As screen:
         Width: =56
         X: =408
         Y: =1073
+        ZIndex: =14
+
+    Icon17 As icon.Print:
+        Color: =RGBA(0, 94, 146, 1)
+        FocusedBorderThickness: =0
+        Height: =60
+        Icon: =Icon.OpenInNewWindow
+        OnSelect: =Navigate(Screen6);Set(Barcode1visible, true)
+        Visible: =BinPrint
+        Width: =60
+        X: =530
+        Y: =345
+        ZIndex: =15
+
+    PieChart1 As pieChart:
+        BorderColor: =RGBA(0, 94, 146, 1)
+        Height: =476
+        ItemBorderColor: =RGBA(0, 94, 146, 1)
+        ItemColorSet: =[RGBA(255,255,255,1),RGBA(0,94,146,1)]
+        Items: |-
+            =Table(
+                 {Value: CountRows(Filter(Table1, TextInput4_1.Text = 'Storage location')), Label:"Bin Count: " & CountRows(Table1)-(CountRows(Table1) - CountRows(Filter(Table1, TextInput4_1.Text = 'Storage location')))},
+                 {Value: (CountRows(Table1) - CountRows(Filter(Table1, TextInput4_1.Text = 'Storage location'))), Label: "Other Bins: " & (CountRows(Table1) - CountRows(Filter(Table1, TextInput4_1.Text = 'Storage location')))})
+        Size: =20
+        Visible: =If(IsBlank(TextInput4_1.Text),false,true)
+        Width: =640
+        Y: =410
+        ZIndex: =16
+
+    HtmlText1 As htmlViewer:
+        DisplayMode: =DisplayMode.View
+        Height: =167
+        HtmlText: |-
+            ="<img src=""https://barcode.tec-it.com/barcode.ashx?data=" &
+            TextInput4_1.Text & "
+            &type=C128B&width=100&height=35&xres=1&font=3""/>"
+        Visible: =If(IsBlank(TextInput4_1.Text),false,true)
+        Width: =400
+        X: =120
+        Y: =886
+        ZIndex: =17
+
+    Icon20 As icon.Print:
+        Color: =RGBA(0, 94, 146, 1)
+        Icon: =Icon.Print
+        OnSelect: =If(IsBlank(TextInput4_1.Text),SetFocus(TextInput4_1),Navigate('Bin Print Screen', ScreenTransition.None)&Set(varPrintTriggered3, true));
+        Visible: =BP
+        X: =528
+        Y: =914
+        ZIndex: =18
+
+    RadioGroupCanvas1 As Radio.pcfdataset:
+        DefaultSelectedItems: =["RM"]
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =25
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Items: =["RM", "FG"]
+        Layout: ="Horizontal"
+        OnSelect: =If(RadioGroupCanvas1.Selected.Value = "RM", Set(PNDM, DisplayMode.Disabled)&Set(BDM, DisplayMode.Disabled), Set(PNDM, DisplayMode.Edit)&Set(BDM, DisplayMode.Edit))
+        Required: =true
+        Width: =190
+        X: =390
+        Y: =180
+        ZIndex: =19
+
+    Dropdown2 As dropdown:
+        Default: =
+        Height: =63
+        Items: =["Simple","UID"]
+        Size: =21
+        Width: =268
+        X: =48
+        Y: =177
         ZIndex: =20
 
     Query_Mail_3 As group:
@@ -339,7 +388,7 @@ Bin_Edit As screen:
             Tooltip: ="Navigation"
             Visible: =HN1
             Width: =80
-            ZIndex: =38
+            ZIndex: =36
 
         IconBackarrow1_8 As icon.ChevronLeft:
             AccessibleLabel: =Self.Tooltip
@@ -356,7 +405,7 @@ Bin_Edit As screen:
             Tooltip: ="Navigation"
             Visible: =HN2
             Width: =80
-            ZIndex: =39
+            ZIndex: =37
 
     Menu_3 As group:
         Height: =5
@@ -388,7 +437,7 @@ Bin_Edit As screen:
             Visible: =HN3
             Width: =300
             Y: =80
-            ZIndex: =31
+            ZIndex: =30
 
         Label7_20 As label:
             FontWeight: =FontWeight.Semibold
@@ -404,7 +453,7 @@ Bin_Edit As screen:
             Visible: =HN3
             Width: =300
             Y: =160
-            ZIndex: =33
+            ZIndex: =31
 
         Label7_21 As label:
             FontWeight: =FontWeight.Semibold
@@ -420,7 +469,7 @@ Bin_Edit As screen:
             Visible: =HN3
             Width: =300
             Y: =240
-            ZIndex: =34
+            ZIndex: =32
 
         Label7_22 As label:
             FontWeight: =FontWeight.Semibold
@@ -436,7 +485,7 @@ Bin_Edit As screen:
             Visible: =HN3
             Width: =300
             Y: =320
-            ZIndex: =35
+            ZIndex: =33
 
         Label7_23 As label:
             FontWeight: =FontWeight.Semibold
@@ -452,7 +501,7 @@ Bin_Edit As screen:
             Visible: =HN3
             Width: =300
             Y: =400
-            ZIndex: =36
+            ZIndex: =34
 
         Label7_24 As label:
             FontWeight: =FontWeight.Semibold
@@ -468,45 +517,5 @@ Bin_Edit As screen:
             Visible: =HN3
             Width: =300
             Y: =480
-            ZIndex: =37
-
-    Icon17 As icon.Print:
-        Color: =RGBA(0, 94, 146, 1)
-        FocusedBorderThickness: =0
-        Height: =60
-        Icon: =Icon.Print
-        OnSelect: =If(IsBlank(TextInput4_1.Text),SetFocus(TextInput4_1),Navigate('Bin Print Screen', ScreenTransition.None)&Set(varPrintTriggered3, true));
-        Visible: =BinPrint
-        Width: =60
-        X: =530
-        Y: =345
-        ZIndex: =41
-
-    PieChart1 As pieChart:
-        BorderColor: =RGBA(0, 94, 146, 1)
-        Height: =525
-        ItemBorderColor: =RGBA(0, 94, 146, 1)
-        ItemColorSet: =[RGBA(255,255,255,1),RGBA(0,94,146,1)]
-        Items: |-
-            =Table(
-                 {Value: CountRows(Filter(Table1, TextInput4_1.Text = 'Storage location')), Label:"Bin Count: " & CountRows(Table1)-(CountRows(Table1) - CountRows(Filter(Table1, TextInput4_1.Text = 'Storage location')))},
-                 {Value: (CountRows(Table1) - CountRows(Filter(Table1, TextInput4_1.Text = 'Storage location'))), Label: "Other Bins: " & (CountRows(Table1) - CountRows(Filter(Table1, TextInput4_1.Text = 'Storage location')))})
-        Size: =20
-        Visible: =If(IsBlank(TextInput4_1.Text),false,true)
-        Width: =640
-        Y: =392
-        ZIndex: =44
-
-    HtmlText1 As htmlViewer:
-        DisplayMode: =DisplayMode.View
-        Height: =167
-        HtmlText: |-
-            ="<img src=""https://barcode.tec-it.com/barcode.ashx?data=" &
-            TextInput4_1.Text & "
-            &type=C128B&width=100&height=35&xres=1&font=3""/>"
-        Visible: =If(IsBlank(TextInput4_1.Text),false,true)
-        Width: =400
-        X: =120
-        Y: =886
-        ZIndex: =45
+            ZIndex: =35
 

@@ -1,0 +1,27 @@
+Screen6 As screen:
+    OnHidden: =Set(Barcode1_1visible, false);Set(Barcode1visible, false)
+
+    Barcode1 As barcode:
+        BarcodeType: =BarcodeType.Auto
+        Height: =1136
+        Visible: =Barcode1visible
+        ZIndex: =1
+
+    Barcode1_1 As barcode:
+        BarcodeType: =BarcodeType.Auto
+        Height: =1136
+        Visible: =Barcode1_1visible
+        ZIndex: =2
+
+    Icon19 As icon.BackArrow:
+        Color: =RGBA(0, 94, 146, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Back()
+        PaddingBottom: =5
+        PaddingLeft: =5
+        PaddingRight: =5
+        PaddingTop: =5
+        X: =566
+        Y: =1062
+        ZIndex: =3
+

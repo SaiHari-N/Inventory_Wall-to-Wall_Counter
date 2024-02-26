@@ -1,8 +1,8 @@
 "DetailScreen1_5 As screen.'phoneDetailViewLayout_ver3.0'":
     Height: =Max(DetailForm1_5.Height,197)
     OnVisible: |-
-        =//If(varPrintTriggered, Print());
-        //If(varPrintTriggered, Icon4_4.Visible=false,Icon4_4.Visible=true);
+        =If(varPrintTriggered, Print()&Set(TIC1Visible,false));
+        If(varPrintTriggered, Icon4_4.Visible=false,Icon4_4.Visible=true);Reset(TextInputCanvas1)
 
     DetailForm1_5 As formViewer:
         DataSource: =[@Table1]
@@ -36,7 +36,7 @@
                 Size: =16
                 Text: =Parent.Default
                 Width: =120
-                X: =215
+                X: =216
                 Y: =1
                 ZIndex: =2
 
@@ -64,7 +64,7 @@
                 Size: =16
                 Text: =Parent.Default
                 Width: =140
-                X: =63
+                X: =64
                 Y: =1
                 ZIndex: =2
 
@@ -119,7 +119,7 @@
                 Size: =16
                 Text: =Parent.Default
                 Width: =290
-                X: =230
+                X: =228
                 Y: =
                 ZIndex: =2
 
@@ -147,6 +147,7 @@
                 Text: =Parent.Default
                 Width: =110
                 X: =260
+                Y: =1
                 ZIndex: =2
 
         "'Storage location_DataCard1_5' As typedDataCard.textualViewCard":
@@ -175,6 +176,7 @@
                 Text: =Parent.Default
                 Width: =204
                 X: =33
+                Y: =1
                 ZIndex: =2
 
     Label2_18 As label:
@@ -237,7 +239,7 @@
     Timer1_4 As timer:
         AutoStart: =If(varPrintTriggered=true,Timer1_4.Start)
         Color: =RGBA(0, 0, 0, 0)
-        Duration: =15000
+        Duration: =5000
         Fill: =RGBA(0, 0, 0, 0)
         Height: =14
         OnTimerEnd: =Back()
@@ -295,13 +297,13 @@
         HtmlText: |-
             ="<img src=""https://barcode.tec-it.com/barcode.ashx?data=" &
             If(IsBlank(BrowseGallery1.Selected.'Part Description'),"No Data Found",BrowseGallery1.Selected.'Part Description') & "
-            &type=C128B&showhrt=no&rotation=90&width=40&height=10&xres=96&font=3""/>"
+            &type=C128B&showhrt=no&rotation=90&width=40&height=6&xres=96&font=3""/>"
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingRight: =0
         PaddingTop: =0
         Width: =70
-        X: =563
+        X: =555
         Y: =24
         ZIndex: =12
 
@@ -323,7 +325,7 @@
             
             &"</div>"
         Width: =20
-        X: =605
+        X: =578
         Y: =20
         ZIndex: =13
 
@@ -341,4 +343,25 @@
         TabIndex: =
         Width: =640
         ZIndex: =14
+
+    Rectangle6 As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =197
+        Visible: =TIC1Visible
+        Width: =640
+        ZIndex: =15
+
+    "TextInputCanvas1 As 'Text input'":
+        BasePaletteColor: =
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =25
+        FontWeight: =FontWeight.Semibold
+        Height: =80
+        OnChange: =If(TextInputCanvas1.Value = If(IsBlank(BrowseGallery1.Selected.'Part Description'),"No Data Found",BrowseGallery1.Selected.'Part Description'), Back(), Notify("Wrong Count ID"))
+        Placeholder: ="Scan Count ID"
+        Visible: =TIC1Visible
+        Width: =360
+        X: =140
+        Y: =58
+        ZIndex: =16
 

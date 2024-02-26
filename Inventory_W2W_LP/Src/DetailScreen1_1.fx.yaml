@@ -1,8 +1,6 @@
 "DetailScreen1_1 As screen.'phoneDetailViewLayout_ver3.0'":
     Height: =Max(DetailForm1_1.Height,197)
-    OnVisible: |-
-        =If(varPrintTriggered, Print());
-        If(varPrintTriggered, Icon4.Visible=false,Icon4.Visible=true);
+    OnVisible: =If(varPrintTriggered, Print());If(varPrintTriggered,Icon4.Visible=false,Icon4.Visible=true)
 
     DetailForm1_1 As formViewer:
         DataSource: =[@Table1]

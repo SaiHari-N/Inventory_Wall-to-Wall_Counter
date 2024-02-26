@@ -1,0 +1,31 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_excel",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-02-14T17:17:41.6390000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "__PowerAppsId__": "Row id",
+      "Batch": "Batch",
+      "Count_x0020_ID": "Count ID",
+      "Description": "Description",
+      "Location": "Location",
+      "Part_x0020_Number": "Part Number",
+      "Print_Flag": "Print_Flag",
+      "Quantity": "Quantity",
+      "S_x002e__x0020_No_x002e_": "S. No.",
+      "Scan_Flag": "Scan_Flag",
+      "Stock_x0020_ID": "Stock ID",
+      "Time_Stamp": "Time_Stamp",
+      "User_x0020_ID": "User ID"
+    },
+    "DatasetName": "b!3kXZQstSb0ayVfpn3eMZt4mCcGsrdMZPq5FX09timC4_mcJRcZVvS6alUOED2dtG.01SRKD7XITEQABBB5HEBBLOBO7CDFSYGSE",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "Inventory_W2W_LP_Data",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]
