@@ -64,7 +64,7 @@
                 Size: =16
                 Text: =Parent.Default
                 Width: =140
-                X: =63
+                X: =49
                 Y: =1
                 ZIndex: =2
 
@@ -147,6 +147,7 @@
                 Text: =Parent.Default
                 Width: =110
                 X: =260
+                Y: =1
                 ZIndex: =2
 
         "'Storage location_DataCard1_6' As typedDataCard.textualViewCard":
@@ -173,8 +174,9 @@
                 PaddingTop: =0
                 Size: =16
                 Text: =Parent.Default
-                Width: =204
-                X: =33
+                Width: =90
+                X: =70
+                Y: =1
                 ZIndex: =2
 
     Label2_25 As label:
@@ -184,7 +186,7 @@
         Text: |-
             ="User ID:"
         Width: =100
-        X: =375
+        X: =360
         Y: =54
         ZIndex: =6
 
@@ -215,9 +217,9 @@
         Height: =30
         Size: =16
         Text: |-
-            ="Bin:"
-        Width: =76
-        X: =375
+            ="Location:"
+        Width: =110
+        X: =360
         Y: =156
         ZIndex: =9
 

@@ -1,5 +1,5 @@
 "DetailScreen1 As screen.'phoneDetailViewLayout_ver3.0'":
-    OnVisible: =Reset(TextInput6_6);Set(BGWhite,false)
+    OnVisible: =Reset(TextInput6_6);Set(BGWhite,false); Set(varGroup4Visible, false);Set(varGroup5Visible, false)
 
     Rectangle4 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
@@ -32,10 +32,11 @@
 
     IconDelete1 As icon.Trash:
         AccessibleLabel: =Self.Tooltip
+        AutoDisableOnSelect: =false
         DisplayMode: =If(!IsBlank(BrowseGallery1.Selected) && DataSourceInfo([@Table1], DataSourceInfo.DeletePermission), DisplayMode.Edit, DisplayMode.Disabled)
         Height: =50
         Icon: =Icon.Trash
-        OnSelect: =Remove([@Table1], BrowseGallery1.Selected); If (IsEmpty(Errors([@Table1], BrowseGallery1.Selected)), Back())
+        OnSelect: =Set(varGroup5Visible, true)
         TabIndex: =0
         Tooltip: ="Delete this item"
         Width: =50
@@ -45,10 +46,10 @@
 
     DetailForm1 As formViewer:
         DataSource: =[@Table1]
-        Height: =879
+        Height: =514
         Item: =If(TabList1.Selected.Value = "Log",BrowseGallery1.Selected,Table3.Selected)
         Width: =Parent.Width
-        Y: =150
+        Y: =127
         ZIndex: =5
 
         "'Operator ID_DataCard1' As typedDataCard.textualViewCard":
@@ -58,7 +59,7 @@
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Operator_x0020_ID")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =100
+            Height: =120
             Required: =false
             Width: =292
             X: =0
@@ -70,7 +71,7 @@
                 FontWeight: =FontWeight.Bold
                 Height: =53
                 Size: =21
-                Text: =Parent.DisplayName
+                Text: ="User ID"
                 Width: =200
                 Wrap: =false
                 X: =27
@@ -96,7 +97,7 @@
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Inventory_x0020_count_x0020_date")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =148
+            Height: =120
             Required: =false
             Width: =312
             X: =0
@@ -133,19 +134,19 @@
                 FontWeight: =FontWeight.Bold
                 Height: =58
                 Size: =21
-                Text: ="Count Date"
+                Text: ="Date"
                 Width: =240
                 X: =26
                 ZIndex: =3
 
         Batch_DataCard1 As typedDataCard.textualViewCard:
             BorderStyle: =BorderStyle.Solid
-            DataField: ="Batch"
-            Default: =ThisItem.Batch
+            DataField: ="Part_x0020_number_x0020_"
+            Default: =ThisItem.'Part number '
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Batch")
+            DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Part_x0020_number_x0020_")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =165
+            Height: =120
             Required: =false
             Width: =640
             X: =0
@@ -158,7 +159,7 @@
                 FontWeight: =FontWeight.Bold
                 Height: =48
                 Size: =25
-                Text: =Parent.DisplayName
+                Text: ="Part Number"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
@@ -180,12 +181,12 @@
 
         "'Part number _DataCard1' As typedDataCard.textualViewCard":
             BorderStyle: =BorderStyle.Solid
-            DataField: ="Part_x0020_number_x0020_"
-            Default: =ThisItem.'Part number '
+            DataField: ="Batch"
+            Default: =ThisItem.Batch
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Part_x0020_number_x0020_")
+            DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Batch")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =184
+            Height: =120
             Required: =false
             Width: =640
             X: =0
@@ -225,10 +226,10 @@
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Storage_x0020_location")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =182
+            Height: =120
             Required: =false
             Visible: =true
-            Width: =640
+            Width: =320
             WidthFit: =false
             X: =0
             Y: =2
@@ -239,8 +240,8 @@
                 FontWeight: =FontWeight.Bold
                 Height: =61
                 Size: =25
-                Text: =Parent.DisplayName
-                Width: =362
+                Text: ="Location"
+                Width: =180
                 Wrap: =false
                 X: =31
                 Y: =10
@@ -266,11 +267,11 @@
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Count_x0020_Quantity")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =175
+            Height: =128
             Required: =false
-            Width: =640
+            Width: =320
             X: =0
-            Y: =3
+            Y: =2
             ZIndex: =1
 
             DataCardKey2 As label:
@@ -279,7 +280,7 @@
                 FontWeight: =FontWeight.Bold
                 Height: =48
                 Size: =25
-                Text: =Parent.DisplayName
+                Text: ="Quantity"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
@@ -331,7 +332,7 @@
         Height: =80
         Width: =640
         Y: =1060
-        ZIndex: =9
+        ZIndex: =8
 
     Icon8_1 As icon.Home:
         AccessibleLabel: ="Home"
@@ -343,7 +344,7 @@
         Width: =56
         X: =60
         Y: =1073
-        ZIndex: =10
+        ZIndex: =9
 
     Icon9_1 As icon.Tray:
         AccessibleLabel: ="Bin"
@@ -355,7 +356,7 @@
         Width: =56
         X: =176
         Y: =1073
-        ZIndex: =11
+        ZIndex: =10
 
     Icon10_1 As icon.DocumentwithContent:
         AccessibleLabel: ="Tag"
@@ -367,7 +368,7 @@
         Width: =56
         X: =292
         Y: =1073
-        ZIndex: =12
+        ZIndex: =11
 
     Icon11_1 As icon.Print:
         AccessibleLabel: ="Detail"
@@ -379,7 +380,7 @@
         Width: =56
         X: =408
         Y: =1073
-        ZIndex: =13
+        ZIndex: =12
 
     Query_Mail_5 As group:
         Height: =5
@@ -394,7 +395,7 @@
             Visible: =BGWhite
             Width: =640
             Y: =80
-            ZIndex: =14
+            ZIndex: =13
 
         Rectangle6_6 As rectangle:
             BorderColor: =RGBA(0, 94, 146, 1)
@@ -406,7 +407,7 @@
             Width: =572
             X: =34
             Y: =424
-            ZIndex: =15
+            ZIndex: =14
 
         Label5_6 As label:
             Align: =Align.Center
@@ -420,7 +421,7 @@
             Width: =560
             X: =40
             Y: =432
-            ZIndex: =16
+            ZIndex: =15
 
         TextInput6_6 As text:
             AccessibleLabel: ="Body of the mail"
@@ -442,7 +443,7 @@
             Width: =560
             X: =40
             Y: =487
-            ZIndex: =17
+            ZIndex: =16
 
         Button1_6 As button:
             BorderThickness: =0
@@ -463,7 +464,7 @@
             Width: =120
             X: =480
             Y: =690
-            ZIndex: =18
+            ZIndex: =17
 
         Icon5_6 As icon.Cancel:
             AccessibleLabel: ="Close"
@@ -486,7 +487,7 @@
             Width: =60
             X: =540
             Y: =425
-            ZIndex: =19
+            ZIndex: =18
 
         Icon7_13 As icon.Mail:
             AccessibleLabel: ="Mail"
@@ -505,7 +506,7 @@
             Width: =56
             X: =524
             Y: =1073
-            ZIndex: =20
+            ZIndex: =19
 
         Icon7_12 As icon.Mail:
             AccessibleLabel: ="Mail"
@@ -519,7 +520,7 @@
             Width: =56
             X: =524
             Y: =1073
-            ZIndex: =21
+            ZIndex: =20
 
     Menu_Navigation_5 As group:
         Height: =5
@@ -541,7 +542,7 @@
             Tooltip: ="Navigation"
             Visible: =HN1
             Width: =80
-            ZIndex: =31
+            ZIndex: =28
 
         IconBackarrow1_12 As icon.ChevronLeft:
             AccessibleLabel: =Self.Tooltip
@@ -558,7 +559,7 @@
             Tooltip: ="Navigation"
             Visible: =HN2
             Width: =80
-            ZIndex: =32
+            ZIndex: =29
 
     Menu_5 As group:
         Height: =5
@@ -574,7 +575,7 @@
             OnSelect: =Navigate(App_Details)
             Visible: =Navigation
             Width: =300
-            ZIndex: =22
+            ZIndex: =21
 
         Label7_31 As label:
             FontWeight: =FontWeight.Semibold
@@ -590,7 +591,7 @@
             Visible: =HN3
             Width: =300
             Y: =80
-            ZIndex: =24
+            ZIndex: =22
 
         Label7_32 As label:
             FontWeight: =FontWeight.Semibold
@@ -606,7 +607,7 @@
             Visible: =HN3
             Width: =300
             Y: =160
-            ZIndex: =26
+            ZIndex: =23
 
         Label7_33 As label:
             FontWeight: =FontWeight.Semibold
@@ -622,7 +623,7 @@
             Visible: =HN3
             Width: =300
             Y: =240
-            ZIndex: =27
+            ZIndex: =24
 
         Label7_34 As label:
             FontWeight: =FontWeight.Semibold
@@ -638,7 +639,7 @@
             Visible: =HN3
             Width: =300
             Y: =320
-            ZIndex: =28
+            ZIndex: =25
 
         Label7_35 As label:
             FontWeight: =FontWeight.Semibold
@@ -654,7 +655,7 @@
             Visible: =HN3
             Width: =300
             Y: =400
-            ZIndex: =29
+            ZIndex: =26
 
         Label7_36 As label:
             FontWeight: =FontWeight.Semibold
@@ -670,5 +671,716 @@
             Visible: =HN3
             Width: =300
             Y: =480
+            ZIndex: =27
+
+    Dropdown4 As dropdown:
+        Default: ="UID"
+        Height: =61
+        Items: =["Simple","UID"]
+        Size: =21
+        Width: =160
+        X: =437
+        Y: =715
+        ZIndex: =42
+
+    Group2 As group:
+        Height: =5
+        Width: =5
+        X: =100
+        Y: =100
+        ZIndex: =45
+
+        DetailForm1_7 As formViewer:
+            DataSource: =[@Table1]
+            Height: =137
+            Item: =If(TabList1.Selected.Value = "Log",BrowseGallery1.Selected,Table3.Selected)
+            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Width: =Parent.Width
+            Y: =857
             ZIndex: =30
+
+            "'Inventory count date_DataCard1_7' As typedDataCard.textualViewCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Inventory_x0020_count_x0020_date"
+                Default: =ThisItem.'Inventory count date'
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Inventory_x0020_count_x0020_date")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =35
+                Required: =false
+                Width: =400
+                X: =200
+                Y: =0
+                ZIndex: =1
+
+                DataCardValue3_7 As label:
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =20
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =16
+                    Text: =Parent.Default
+                    Width: =120
+                    X: =216
+                    Y: =1
+                    ZIndex: =2
+
+            "'Operator ID_DataCard1_7' As typedDataCard.textualViewCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Operator_x0020_ID"
+                Default: =ThisItem.'Operator ID'
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Operator_x0020_ID")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =30
+                Required: =false
+                Width: =200
+                X: =320
+                Y: =0
+                ZIndex: =1
+
+                DataCardValue4_7 As label:
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =20
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =16
+                    Text: =Parent.Default
+                    Width: =90
+                    X: =50
+                    Y: =1
+                    ZIndex: =2
+
+            "'Part number _DataCard1_7' As typedDataCard.textualViewCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Part_x0020_number_x0020_"
+                Default: =ThisItem.'Part number '
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Part_x0020_number_x0020_")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =35
+                Required: =false
+                Width: =640
+                X: =0
+                Y: =1
+                ZIndex: =1
+
+                DataCardValue6_7 As label:
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =20
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =16
+                    Text: =Parent.Default
+                    Width: =250
+                    X: =302
+                    ZIndex: =2
+
+            Batch_DataCard3_4 As typedDataCard.textualViewCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Batch"
+                Default: =ThisItem.Batch
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Batch")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =35
+                Required: =false
+                Width: =620
+                X: =0
+                Y: =2
+                ZIndex: =1
+
+                DataCardValue5_4 As label:
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =20
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =16
+                    Text: =Parent.Default
+                    Width: =290
+                    X: =228
+                    Y: =
+                    ZIndex: =2
+
+            "'Count Quantity_DataCard1_7' As typedDataCard.textualViewCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Count_x0020_Quantity"
+                Default: =ThisItem.'Count Quantity'
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Count_x0020_Quantity")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =30
+                Required: =false
+                Width: =390
+                X: =0
+                Y: =110
+                ZIndex: =1
+
+                DataCardValue2_7 As label:
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =20
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =16
+                    Text: =Parent.Default
+                    Width: =110
+                    X: =260
+                    Y: =1
+                    ZIndex: =2
+
+            "'Storage location_DataCard1_7' As typedDataCard.textualViewCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Storage_x0020_location"
+                Default: =ThisItem.'Storage location'
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Storage_x0020_location")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =30
+                Required: =false
+                Visible: =true
+                Width: =250
+                WidthFit: =false
+                X: =320
+                Y: =110
+                ZIndex: =1
+
+                DataCardValue8_7 As label:
+                    DisplayMode: =Parent.DisplayMode
+                    Height: =20
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =16
+                    Text: =Parent.Default
+                    Width: =85
+                    X: =70
+                    Y: =1
+                    ZIndex: =2
+
+        Label2_31 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            Size: =16
+            Text: |-
+                ="User ID:"
+            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Width: =100
+            X: =360
+            Y: =853
+            ZIndex: =31
+
+        Label2_32 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            Size: =16
+            Text: |-
+                ="Part Number:"
+            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Width: =160
+            X: =155
+            Y: =887
+            ZIndex: =32
+
+        Label2_33 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            Size: =16
+            Text: |-
+                ="Quantity:"
+            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Width: =120
+            X: =155
+            Y: =955
+            ZIndex: =33
+
+        Label2_34 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            Size: =16
+            Text: |-
+                ="Location:"
+            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Width: =110
+            X: =360
+            Y: =955
+            ZIndex: =34
+
+        Label2_35 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            PaddingBottom: =0
+            PaddingTop: =0
+            Size: =16
+            Text: |-
+                ="Date:"
+            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Width: =80
+            X: =155
+            Y: =853
+            ZIndex: =35
+
+        Label2_36 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            Size: =16
+            Text: |-
+                ="Batch:"
+            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Width: =100
+            X: =155
+            Y: =921
+            ZIndex: =36
+
+        Label2_37 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Bold
+            Height: =30
+            PaddingBottom: =0
+            PaddingTop: =0
+            Size: =18
+            Text: ="Inventory W2W-LP"
+            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Width: =240
+            X: =200
+            Y: =808
+            ZIndex: =37
+
+        HtmlText2_2 As htmlViewer:
+            AutoHeight: =true
+            Height: =100
+            HtmlText: |-
+                ="<img src=""https://qrcode.tec-it.com/API/QRCode?data="&DataCardValue3_7.Text&", "&DataCardValue4_7.Text&", "&DataCardValue6_7.Text&", "&DataCardValue5_4.Text&", "&DataCardValue2_7.Text&", "&DataCardValue8_7.Text&"code=MobileQRCode&unit=Min&imagetype=Png&eclevel=L&backcolor=%23ffffff&&istransparent=True&dpi=105&size=Small"" />"
+            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Width: =120
+            X: =22
+            Y: =867
+            ZIndex: =38
+
+        Image4_2 As image:
+            Height: =45
+            Image: ='SYRMA.NS_BIG-b83dd874'
+            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Width: =145
+            X: =12
+            Y: =811
+            ZIndex: =39
+
+        HtmlText3_2 As htmlViewer:
+            AutoHeight: =true
+            Height: =197
+            HtmlText: |-
+                ="<img src=""https://barcode.tec-it.com/barcode.ashx?data=" &
+                If(IsBlank(BrowseGallery1.Selected.'Part Description'),"No Data Found",BrowseGallery1.Selected.'Part Description') & "
+                &type=C128B&showhrt=no&rotation=90&width=40&height=6&xres=96&font=3""/>"
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Width: =70
+            X: =555
+            Y: =823
+            ZIndex: =40
+
+        HtmlText4_2 As htmlViewer:
+            Height: =160
+            HtmlText: |-
+                ="<div
+                    style='"&
+                    "white-space: nowrap;"& //Comment out this line to allow word wrap
+                    "text-align:center;"& //[left, right] to move the text up or down
+                    "position: absolute;"&
+                    "left: 50%;"& //Better centering using relative values
+                    "top:  50%;"& //Better centering using relative values
+                    "transform: translate(-50%, -50%) rotate(270deg);"&
+                    "font-size: 16px;" &
+                "'>"&
+                
+                If(IsBlank(BrowseGallery1.Selected.'Part Description'),"No Data Found",BrowseGallery1.Selected.'Part Description')
+                
+                &"</div>"
+            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Width: =20
+            X: =578
+            Y: =819
+            ZIndex: =41
+
+    Rectangle10 As rectangle:
+        BorderColor: =RGBA(0, 94, 146, 1)
+        BorderThickness: =2
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =198
+        OnSelect: |-
+            =If(Dropdown4.Selected.Value = "Simple",Navigate(DetailScreen1_1, ScreenTransition.None),Navigate(DetailScreen1_5, ScreenTransition.None));
+            Set(varPrintTriggered, true);Set(TIC1Visible,false)
+        Width: =636
+        X: =2
+        Y: =800
+        ZIndex: =50
+
+    Label12 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =60
+        Size: =21
+        Text: ="Label Template"
+        Width: =285
+        X: =203
+        Y: =715
+        ZIndex: =51
+
+    Group3 As group:
+        Height: =5
+        Width: =5
+        X: =100
+        Y: =100
+        ZIndex: =53
+
+        DetailForm1_3 As formViewer:
+            DataSource: =[@Table1]
+            Height: =197
+            Item: =If(TabList1.Selected.Value = "Log",BrowseGallery1.Selected,Table3.Selected)
+            Visible: =If(Dropdown4.Selected.Value = "Simple", true,false)
+            Width: =Parent.Width
+            Y: =800
+            ZIndex: =43
+
+            "'Inventory count date_DataCard1_3' As typedDataCard.textualViewCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Inventory_x0020_count_x0020_date"
+                Default: =ThisItem.'Inventory count date'
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Inventory_x0020_count_x0020_date")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =false
+                Width: =319
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+                DataCardValue3_3 As label:
+                    DisplayMode: =Parent.DisplayMode
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =25
+                    Text: =Parent.Default
+                    Width: =178
+                    X: =119
+                    Y: =4
+                    ZIndex: =2
+
+            "'Operator ID_DataCard1_3' As typedDataCard.textualViewCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Operator_x0020_ID"
+                Default: =ThisItem.'Operator ID'
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Operator_x0020_ID")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =40
+                Required: =false
+                Width: =320
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+                DataCardValue4_3 As label:
+                    DisplayMode: =Parent.DisplayMode
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =25
+                    Text: =Parent.Default
+                    Width: =141
+                    X: =167
+                    Y: =4
+                    ZIndex: =2
+
+            "'Part number _DataCard1_3' As typedDataCard.textualViewCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Part_x0020_number_x0020_"
+                Default: =ThisItem.'Part number '
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Part_x0020_number_x0020_")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =false
+                Width: =640
+                X: =0
+                Y: =1
+                ZIndex: =1
+
+                DataCardValue6_3 As label:
+                    DisplayMode: =Parent.DisplayMode
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =25
+                    Text: =Parent.Default
+                    Width: =370
+                    X: =255
+                    Y: =2
+                    ZIndex: =2
+
+            Batch_DataCard3_5 As typedDataCard.textualViewCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Batch"
+                Default: =ThisItem.Batch
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Batch")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =40
+                Required: =false
+                Width: =640
+                X: =0
+                Y: =2
+                ZIndex: =1
+
+                DataCardValue5_5 As label:
+                    DisplayMode: =Parent.DisplayMode
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =25
+                    Text: =Parent.Default
+                    Width: =370
+                    X: =132
+                    Y: =
+                    ZIndex: =2
+
+            "'Count Quantity_DataCard1_3' As typedDataCard.textualViewCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Count_x0020_Quantity"
+                Default: =ThisItem.'Count Quantity'
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Count_x0020_Quantity")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =false
+                Width: =320
+                X: =0
+                Y: =3
+                ZIndex: =1
+
+                DataCardValue2_3 As label:
+                    DisplayMode: =Parent.DisplayMode
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =25
+                    Text: =Parent.Default
+                    Width: =127
+                    X: =189
+                    Y: =8
+                    ZIndex: =2
+
+            "'Storage location_DataCard1_3' As typedDataCard.textualViewCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Storage_x0020_location"
+                Default: =ThisItem.'Storage location'
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Storage_x0020_location")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =false
+                Visible: =true
+                Width: =320
+                WidthFit: =false
+                X: =320
+                Y: =3
+                ZIndex: =1
+
+                DataCardValue8_3 As label:
+                    DisplayMode: =Parent.DisplayMode
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =25
+                    Text: =Parent.Default
+                    Width: =120
+                    X: =190
+                    Y: =8
+                    ZIndex: =2
+
+        Label2_5 As label:
+            FontWeight: =FontWeight.Bold
+            Size: =25
+            Text: |-
+                ="User ID:"
+            Visible: =If(Dropdown4.Selected.Value = "Simple", true,false)
+            Width: =168
+            X: =347
+            Y: =804
+            ZIndex: =44
+
+        Label2_6 As label:
+            FontWeight: =FontWeight.Bold
+            Size: =25
+            Text: |-
+                ="Part Number:"
+            Visible: =If(Dropdown4.Selected.Value = "Simple", true,false)
+            Width: =243
+            X: =19
+            Y: =852
+            ZIndex: =45
+
+        Label2_7 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =57
+            Size: =25
+            Text: |-
+                ="Quantity:"
+            Visible: =If(Dropdown4.Selected.Value = "Simple", true,false)
+            Width: =216
+            X: =19
+            Y: =936
+            ZIndex: =46
+
+        Label2_8 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =57
+            Size: =25
+            Text: |-
+                ="Location:"
+            Visible: =If(Dropdown4.Selected.Value = "Simple", true,false)
+            Width: =170
+            X: =347
+            Y: =936
+            ZIndex: =47
+
+        Label2_9 As label:
+            FontWeight: =FontWeight.Bold
+            PaddingBottom: =0
+            PaddingTop: =0
+            Size: =25
+            Text: |-
+                ="Date:"
+            Visible: =If(Dropdown4.Selected.Value = "Simple", true,false)
+            Width: =168
+            X: =20
+            Y: =804
+            ZIndex: =48
+
+        Label2_38 As label:
+            FontWeight: =FontWeight.Bold
+            Size: =25
+            Text: |-
+                ="Batch:"
+            Visible: =If(Dropdown4.Selected.Value = "Simple", true,false)
+            Width: =243
+            X: =20
+            Y: =900
+            ZIndex: =49
+
+    Group5 As group:
+        Height: =5
+        Width: =5
+        X: =120
+        Y: =120
+        ZIndex: =59
+
+        Rectangle16 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =980
+            Visible: =varGroup5Visible
+            Width: =640
+            Y: =80
+            ZIndex: =52
+
+        Rectangle12 As rectangle:
+            BorderThickness: =2
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =200
+            Visible: =varGroup5Visible
+            Width: =440
+            X: =100
+            Y: =300
+            ZIndex: =53
+
+        Label13 As label:
+            Height: =70
+            PaddingBottom: =12
+            PaddingLeft: =12
+            PaddingTop: =12
+            Size: =20
+            Text: ="Delete this item from Database?"
+            Visible: =varGroup5Visible
+            Width: =440
+            X: =100
+            Y: =301
+            ZIndex: =54
+
+        Label14 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 94, 146, 1)
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 94, 146, 1)
+            OnSelect: =Set(varGroup4Visible, true)
+            Size: =21
+            Text: ="Delete"
+            Visible: =varGroup5Visible
+            Width: =108
+            X: =278
+            Y: =445
+            ZIndex: =55
+
+        Label14_1 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 94, 146, 1)
+            BorderThickness: =2
+            Color: =RGBA(0, 94, 146, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Size: =21
+            Text: ="Cancel"
+            Visible: =varGroup5Visible
+            Width: =108
+            X: =396
+            Y: =445
+            ZIndex: =56
+
+    Group4 As group:
+        Height: =5
+        Width: =5
+        X: =120
+        Y: =120
+        ZIndex: =59
+
+        TextInput9 As text:
+            BorderColor: =RGBA(0, 94, 146, 1)
+            Default: =
+            Height: =70
+            HintText: ="Enter Password"
+            Size: =21
+            Visible: =varGroup4Visible
+            Width: =440
+            X: =100
+            Y: =591
+            ZIndex: =57
+
+        Icon21 As icon.Check:
+            Color: =RGBA(0, 94, 146, 1)
+            Icon: =Icon.Check
+            OnSelect: =If(TextInput9.Text = "DLadmin@123",Remove([@Table1], BrowseGallery1.Selected); If (IsEmpty(Errors([@Table1], BrowseGallery1.Selected)), Back()),Reset(TextInput9)&Notify("Wrong Password",NotificationType.Error))
+            PaddingBottom: =12
+            PaddingLeft: =12
+            PaddingRight: =12
+            PaddingTop: =12
+            Visible: =varGroup4Visible
+            X: =473
+            Y: =594
+            ZIndex: =58
 

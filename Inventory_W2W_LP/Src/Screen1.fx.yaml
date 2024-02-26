@@ -33,3 +33,14 @@ Screen1 As screen:
         Y: =684
         ZIndex: =4
 
+    Spinner1 As Spinner:
+        Appearance: ='Spinner.Appearance'.Primary
+        DisplayMode: =DisplayMode.Edit
+        Height: =350
+        Label: =""
+        SpinnerSize: ='Spinner.SpinnerSize'.Huge
+        Width: =350
+        X: =147
+        Y: =684
+        ZIndex: =5
+

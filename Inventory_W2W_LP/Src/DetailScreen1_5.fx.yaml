@@ -64,7 +64,7 @@
                 Size: =16
                 Text: =Parent.Default
                 Width: =140
-                X: =64
+                X: =50
                 Y: =1
                 ZIndex: =2
 
@@ -174,8 +174,8 @@
                 PaddingTop: =0
                 Size: =16
                 Text: =Parent.Default
-                Width: =204
-                X: =33
+                Width: =80
+                X: =71
                 Y: =1
                 ZIndex: =2
 
@@ -186,7 +186,7 @@
         Text: |-
             ="User ID:"
         Width: =100
-        X: =375
+        X: =360
         Y: =54
         ZIndex: =2
 
@@ -217,9 +217,9 @@
         Height: =30
         Size: =16
         Text: |-
-            ="Bin:"
-        Width: =76
-        X: =375
+            ="Location:"
+        Width: =110
+        X: =360
         Y: =156
         ZIndex: =5
 

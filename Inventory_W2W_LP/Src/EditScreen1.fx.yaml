@@ -62,7 +62,7 @@
                 AutoHeight: =true
                 Height: =48
                 Size: =21
-                Text: ="Count day"
+                Text: ="Date"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
@@ -126,7 +126,7 @@
                 AutoHeight: =true
                 Height: =48
                 Size: =21
-                Text: =Parent.DisplayName
+                Text: ="User ID"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =32
@@ -201,7 +201,7 @@
                 AutoHeight: =true
                 Height: =48
                 Size: =21
-                Text: =Parent.DisplayName
+                Text: ="Location"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
@@ -403,7 +403,7 @@
                 AutoHeight: =true
                 Height: =48
                 Size: =21
-                Text: =Parent.DisplayName
+                Text: ="Quantity"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30

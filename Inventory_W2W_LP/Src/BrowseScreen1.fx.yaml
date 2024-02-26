@@ -1,5 +1,5 @@
 "BrowseScreen1 As screen.'phoneBrowseLayout_ver3.0'":
-    OnVisible: =Set(BGvisible,true);Set(DisplayPopup,false);Set(DBPW,false);Set(DBLaunch,true);Set(DBLaunch1, false);Set(QueryMail,true);Set(QueryMail1,false);Reset(TextInput6_3);Set(BGWhite,false);Set(Table3Visible, false)
+    OnVisible: =Set(BGvisible,true);Set(DisplayPopup,false);Set(DBPW,false);Set(DBLaunch,true);Set(DBLaunch1, false);Set(QueryMail,true);Set(QueryMail1,false);Reset(TextInput6_3);Set(BGWhite,false);Set(Table3Visible, false);
 
     RectQuickActionBar1 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
@@ -724,7 +724,7 @@
     "TabList1 As 'Tab list'.pcfdataset":
         Alignment: ='TabList.Alignment'.Horizontal
         BasePaletteColor: =RGBA(0, 94, 146, 1)
-        DefaultSelectedItems: =
+        DefaultSelectedItems: =["Log"]
         DisplayMode: =DisplayMode.Edit
         FontSize: =25
         FontWeight: =""
@@ -736,26 +736,19 @@
         Y: =120
         ZIndex: =52
 
-        Value1 As pcfDataField.textualColumn:
-            FieldDisplayName: ="Value"
-            FieldName: ="Value"
-            FieldType: ="s"
-            FieldVariantName: ="textualColumn"
-            Order: =1
-            ZIndex: =24
-
     Table3 As Table.pcfdataset:
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontSize: =20
         HeaderFontSize: =25
         Height: =816
-        Items: =Table1
+        Items: =SortByColumns(Search([@Table1], TextSearchBox1.Text, "Inventory_x0020_count_x0020_date"),"Inventory_x0020_count_x0020_date", If(SortDescending1, SortOrder.Descending,SortOrder.Ascending))
         onCellValueChange: =false
         onFilter: =false
         onNavigate: =false
         onRowSelect: =false
         onSave: =false
-        OnSelect: =
+        OnSelect: =Navigate(DetailScreen1, ScreenTransition.None);
         ShowAvatar: ="no"
         Visible: =Table3Visible
         Width: =640
