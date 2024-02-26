@@ -56,7 +56,7 @@
                 Color: =RGBA(0, 94, 146, 1)
                 FontWeight: =FontWeight.Bold
                 Height: =53
-                Size: =21
+                Size: =25
                 Text: ="User ID"
                 Width: =200
                 Wrap: =false
@@ -103,26 +103,26 @@
                 ZIndex: =1
 
             DataCardValue3 As label:
-                AutoHeight: =true
                 DisplayMode: =Parent.DisplayMode
+                Height: =44
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
                 Size: =25
                 Text: =Parent.Default
                 Width: =Parent.Width - 60
-                X: =35
-                Y: =53
+                X: =36
+                Y: =56
                 ZIndex: =2
 
             Label1 As label:
                 Color: =RGBA(0, 94, 146, 1)
                 FontWeight: =FontWeight.Bold
-                Height: =58
-                Size: =21
+                Height: =53
+                Size: =25
                 Text: ="Date"
                 Width: =240
-                X: =26
+                X: =27
                 ZIndex: =3
 
         Batch_DataCard1 As typedDataCard.textualViewCard:

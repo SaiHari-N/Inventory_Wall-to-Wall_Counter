@@ -56,7 +56,7 @@
                 Color: =RGBA(0, 94, 146, 1)
                 FontWeight: =FontWeight.Bold
                 Height: =53
-                Size: =21
+                Size: =25
                 Text: ="User ID"
                 Width: =200
                 Wrap: =false
@@ -118,8 +118,8 @@
             Label1_1 As label:
                 Color: =RGBA(0, 94, 146, 1)
                 FontWeight: =FontWeight.Bold
-                Height: =58
-                Size: =21
+                Height: =53
+                Size: =25
                 Text: ="Date"
                 Width: =240
                 X: =26
