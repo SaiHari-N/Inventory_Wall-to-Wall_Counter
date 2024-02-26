@@ -1,5 +1,5 @@
 "DetailScreen1_2 As screen.'phoneDetailViewLayout_ver3.0'":
-    OnVisible: =Reset(TextInput6_7);Set(BGWhite,false)
+    OnVisible: =Reset(TextInput6_7);Set(BGWhite,false); Set(varGroup4Visible1, false); Set(varGroup5Visible1, false)
 
     Rectangle4_1 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
@@ -29,19 +29,6 @@
         X: =570
         Y: =15
         ZIndex: =3
-
-    IconDelete1_1 As icon.Trash:
-        AccessibleLabel: =Self.Tooltip
-        DisplayMode: =If(!IsBlank(BrowseGallery1.Selected) && DataSourceInfo([@Table1], DataSourceInfo.DeletePermission), DisplayMode.Edit, DisplayMode.Disabled)
-        Height: =50
-        Icon: =Icon.Trash
-        OnSelect: =Remove([@Table1], BrowseGallery1.Selected); If (IsEmpty(Errors([@Table1], BrowseGallery1.Selected)), Back())
-        TabIndex: =0
-        Tooltip: ="Delete this item"
-        Width: =50
-        X: =500
-        Y: =15
-        ZIndex: =4
 
     DetailForm1_2 As formViewer:
         DataSource: =[@Table1]
@@ -1283,4 +1270,115 @@
         X: =203
         Y: =715
         ZIndex: =56
+
+    Icon22_1 As icon.Trash:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =50
+        Icon: =Icon.Trash
+        OnSelect: =Set(varGroup5Visible1, true)
+        Width: =50
+        X: =500
+        Y: =16
+        ZIndex: =64
+
+    Group5_1 As group:
+        Height: =5
+        Width: =5
+        X: =120
+        Y: =76
+        ZIndex: =65
+
+        Rectangle16_1 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =980
+            Visible: =varGroup5Visible1
+            Width: =640
+            Y: =81
+            ZIndex: =57
+
+        Rectangle12_1 As rectangle:
+            BorderThickness: =2
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =200
+            Visible: =varGroup5Visible1
+            Width: =440
+            X: =100
+            Y: =301
+            ZIndex: =58
+
+        Label13_1 As label:
+            Height: =70
+            PaddingBottom: =12
+            PaddingLeft: =12
+            PaddingTop: =12
+            Size: =20
+            Text: ="Delete this item from Database?"
+            Visible: =varGroup5Visible1
+            Width: =440
+            X: =100
+            Y: =302
+            ZIndex: =59
+
+        Label14_3 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 94, 146, 1)
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 94, 146, 1)
+            OnSelect: =Set(varGroup4Visible1, true)
+            Size: =21
+            Text: ="Delete"
+            Visible: =varGroup5Visible1
+            Width: =108
+            X: =278
+            Y: =446
+            ZIndex: =60
+
+        Label14_2 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 94, 146, 1)
+            BorderThickness: =2
+            Color: =RGBA(0, 94, 146, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            OnSelect: =Set(varGroup5Visible1, false);Set(varGroup4Visible1, false)
+            Size: =21
+            Text: ="Cancel"
+            Visible: =varGroup5Visible1
+            Width: =108
+            X: =396
+            Y: =446
+            ZIndex: =61
+
+    Group4_1 As group:
+        Height: =5
+        Width: =5
+        X: =120
+        Y: =76
+        ZIndex: =66
+
+        TextInput9_1 As text:
+            BorderColor: =RGBA(0, 94, 146, 1)
+            Default: =
+            Height: =70
+            HintText: ="Enter Password"
+            Mode: =TextMode.Password
+            Size: =21
+            Visible: =varGroup4Visible1
+            Width: =440
+            X: =100
+            Y: =592
+            ZIndex: =62
+
+        Icon21_1 As icon.Check:
+            Color: =RGBA(0, 94, 146, 1)
+            Icon: =Icon.Check
+            OnSelect: =If(TextInput9_1.Text = "DLadmin@123",Remove([@Table1], BrowseGallery1.Selected); If (IsEmpty(Errors([@Table1], BrowseGallery1.Selected)), Back()),Reset(TextInput9_1)&Notify("Wrong Password",NotificationType.Error))
+            PaddingBottom: =12
+            PaddingLeft: =12
+            PaddingRight: =12
+            PaddingTop: =12
+            Visible: =varGroup4Visible1
+            X: =473
+            Y: =595
+            ZIndex: =63
 

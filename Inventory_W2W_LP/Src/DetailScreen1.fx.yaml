@@ -1,5 +1,5 @@
 "DetailScreen1 As screen.'phoneDetailViewLayout_ver3.0'":
-    OnVisible: =Reset(TextInput6_6);Set(BGWhite,false); Set(varGroup4Visible, false);Set(varGroup5Visible, false)
+    OnVisible: =Reset(TextInput6_6);Set(BGWhite,false); Set(varGroup4Visible, false);Set(varGroup5Visible, false);Reset(TextInput9)
 
     Rectangle4 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
@@ -29,20 +29,6 @@
         X: =570
         Y: =15
         ZIndex: =3
-
-    IconDelete1 As icon.Trash:
-        AccessibleLabel: =Self.Tooltip
-        AutoDisableOnSelect: =false
-        DisplayMode: =If(!IsBlank(BrowseGallery1.Selected) && DataSourceInfo([@Table1], DataSourceInfo.DeletePermission), DisplayMode.Edit, DisplayMode.Disabled)
-        Height: =50
-        Icon: =Icon.Trash
-        OnSelect: =Set(varGroup5Visible, true)
-        TabIndex: =0
-        Tooltip: ="Delete this item"
-        Width: =50
-        X: =500
-        Y: =15
-        ZIndex: =4
 
     DetailForm1 As formViewer:
         DataSource: =[@Table1]
@@ -1285,6 +1271,16 @@
             Y: =900
             ZIndex: =49
 
+    Icon22 As icon.Trash:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =50
+        Icon: =Icon.Trash
+        OnSelect: =Set(varGroup5Visible, true)
+        Width: =50
+        X: =500
+        Y: =15
+        ZIndex: =59
+
     Group5 As group:
         Height: =5
         Width: =5
@@ -1344,6 +1340,7 @@
             BorderThickness: =2
             Color: =RGBA(0, 94, 146, 1)
             Fill: =RGBA(255, 255, 255, 1)
+            OnSelect: =Set(varGroup5Visible, false);Set(varGroup4Visible, false)
             Size: =21
             Text: ="Cancel"
             Visible: =varGroup5Visible
@@ -1364,6 +1361,7 @@
             Default: =
             Height: =70
             HintText: ="Enter Password"
+            Mode: =TextMode.Password
             Size: =21
             Visible: =varGroup4Visible
             Width: =440
