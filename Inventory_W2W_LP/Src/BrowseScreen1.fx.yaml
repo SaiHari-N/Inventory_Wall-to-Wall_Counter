@@ -766,7 +766,7 @@
         Batch1 As pcfDataField.textualColumn:
             FieldDisplayName: ="Batch"
             FieldName: ="Batch"
-            FieldType: ="l"
+            FieldType: ="m"
             FieldVariantName: ="textualColumn"
             Order: =4
             ZIndex: =17
@@ -798,7 +798,7 @@
         "'Part number 1' As pcfDataField.textualColumn":
             FieldDisplayName: ="Part Number"
             FieldName: ="Part_x0020_number_x0020_"
-            FieldType: ="l"
+            FieldType: ="m"
             FieldVariantName: ="textualColumn"
             Order: =3
             ZIndex: =22
