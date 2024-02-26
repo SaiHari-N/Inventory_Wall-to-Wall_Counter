@@ -543,7 +543,7 @@
         Default: =Barcode1_1.Text
         Height: =66
         HintText: ="Scan here"
-        OnChange: =If(LookUp(Table1,'Part number '=TextInput1.Text,Batch=DataCardValue15.Text),Notify("Same part number already scanned in this batch",NotificationType.Warning)&ResetForm(EditForm1));
+        OnChange: =
         Size: =21
         TabIndex: =-1
         Width: =196

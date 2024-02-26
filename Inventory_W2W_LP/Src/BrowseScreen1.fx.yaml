@@ -755,7 +755,7 @@
         onNavigate: =false
         onRowSelect: =false
         onSave: =false
-        OnSelect: =Navigate(DetailScreen1, ScreenTransition.None);
+        OnSelect: =
         ShowAvatar: ="no"
         Visible: =Table3Visible
         Width: =640
@@ -766,7 +766,7 @@
         Batch1 As pcfDataField.textualColumn:
             FieldDisplayName: ="Batch"
             FieldName: ="Batch"
-            FieldType: ="s"
+            FieldType: ="l"
             FieldVariantName: ="textualColumn"
             Order: =4
             ZIndex: =17
@@ -774,7 +774,7 @@
         "'Count Quantity1' As pcfDataField.textualColumn":
             FieldDisplayName: ="Quantity"
             FieldName: ="Count_x0020_Quantity"
-            FieldType: ="s"
+            FieldType: ="m"
             FieldVariantName: ="textualColumn"
             Order: =5
             ZIndex: =18
@@ -782,7 +782,7 @@
         "'Inventory count date1' As pcfDataField.textualColumn":
             FieldDisplayName: ="Date"
             FieldName: ="Inventory_x0020_count_x0020_date"
-            FieldType: ="s"
+            FieldType: ="m"
             FieldVariantName: ="textualColumn"
             Order: =1
             ZIndex: =19
@@ -798,7 +798,7 @@
         "'Part number 1' As pcfDataField.textualColumn":
             FieldDisplayName: ="Part Number"
             FieldName: ="Part_x0020_number_x0020_"
-            FieldType: ="s"
+            FieldType: ="l"
             FieldVariantName: ="textualColumn"
             Order: =3
             ZIndex: =22
@@ -806,7 +806,7 @@
         "'Storage location1' As pcfDataField.textualColumn":
             FieldDisplayName: ="Location"
             FieldName: ="Storage_x0020_location"
-            FieldType: ="s"
+            FieldType: ="m"
             FieldVariantName: ="textualColumn"
             Order: =6
             ZIndex: =23

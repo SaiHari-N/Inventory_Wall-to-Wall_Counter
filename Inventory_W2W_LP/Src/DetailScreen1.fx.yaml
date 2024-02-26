@@ -46,7 +46,7 @@
     DetailForm1 As formViewer:
         DataSource: =[@Table1]
         Height: =879
-        Item: =BrowseGallery1.Selected
+        Item: =If(TabList1.Selected.Value = "Log",BrowseGallery1.Selected,Table3.Selected)
         Width: =Parent.Width
         Y: =150
         ZIndex: =5
