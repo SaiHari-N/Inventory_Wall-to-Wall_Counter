@@ -45,7 +45,7 @@
 
     IconNewItem1 As icon.Add:
         AccessibleLabel: =Self.Tooltip
-        DisplayMode: =If(DataSourceInfo([@Table1], DataSourceInfo.CreatePermission), DisplayMode.Edit, DisplayMode.Disabled)
+        DisplayMode: =If(DataSourceInfo([@Inventory_MDB], DataSourceInfo.CreatePermission), DisplayMode.Edit, DisplayMode.Disabled)
         Height: =50
         Icon: =Icon.Add
         OnSelect: =NewForm(EditForm1);Navigate(Bin_Edit, ScreenTransition.None);Reset(TextInput4_1);
@@ -81,7 +81,7 @@
         Color: =RGBA(191, 190, 190, 1)
         Height: =Self.Width
         Icon: =Icon.Search
-        OnSelect: =Search(Table1,TextSearchBox1.Text,"Part_x0020_number_x0020_","Count_x0020_Quantity","Inventory_x0020_count_x0020_date","Batch","Operator_x0020_ID","Part_x0020_number_x0020_")
+        OnSelect: =Search(Inventory_MDB,TextSearchBox1.Text,"Batch","Description","Expiry_x0020_Date","Location","Manufacturing_x0020_Date","Expiry_x0020_Date","Location","Part_x0020_Number","Quantity","Time_Stamp","User_x0020_ID","UID")
         PaddingBottom: =14
         PaddingLeft: =14
         PaddingRight: =14
