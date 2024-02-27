@@ -485,7 +485,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             MaxLength: =DataSourceInfo([@Inventory_MDB], DataSourceInfo.MaxLength, "Batch")
-            Required: =false
+            Required: =true
             Update: =DataCardValue7.Text
             Width: =400
             X: =0
@@ -558,7 +558,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             MaxLength: =DataSourceInfo([@Inventory_MDB], DataSourceInfo.MaxLength, "Quantity")
-            Required: =false
+            Required: =true
             Update: =DataCardValue18.Text
             Visible: =true
             Width: =240
@@ -780,17 +780,17 @@
             MaxLength: =DataSourceInfo([@Inventory_MDB], DataSourceInfo.MaxLength, "Description")
             Required: =false
             Update: =DataCardValue9.Text
+            Visible: =false
             Width: =640
             X: =0
             Y: =745
             ZIndex: =1
 
             DataCardKey7 As label:
-                AutoHeight: =true
-                Height: =48
+                Height: =36
                 Size: =21
                 Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =580
                 Wrap: =false
                 X: =30
                 Y: =10
