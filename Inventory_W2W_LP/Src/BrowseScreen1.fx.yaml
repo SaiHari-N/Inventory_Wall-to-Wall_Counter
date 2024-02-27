@@ -544,7 +544,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =1
-            Text: =ThisItem.Inventory_x0020_count_x0020_date
+            Text: =ThisItem.'Inventory count date'
             Width: =150
             X: =0
             Y: =0
@@ -559,7 +559,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =2
-            Text: =ThisItem.Operator_x0020_ID
+            Text: =ThisItem.'Operator ID'
             Width: =110
             X: =0
             Y: =0
@@ -574,7 +574,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =3
-            Text: =ThisItem.Part_x0020_number_x0020_
+            Text: =ThisItem.'Part number '
             Width: =200
             X: =0
             Y: =0
@@ -604,7 +604,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =5
-            Text: =ThisItem.Count_x0020_Quantity
+            Text: =ThisItem.'Count Quantity'
             Width: =130
             X: =0
             Y: =0
@@ -618,7 +618,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =6
-            Text: =ThisItem.Storage_x0020_location
+            Text: =ThisItem.'Storage location'
             Width: =100
             X: =0
             Y: =0
