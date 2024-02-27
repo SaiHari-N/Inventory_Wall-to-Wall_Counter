@@ -3,7 +3,7 @@
     OnVisible: =If(varPrintTriggered, Print());If(varPrintTriggered,Icon4.Visible=false,Icon4.Visible=true)
 
     DetailForm1_1 As formViewer:
-        DataSource: =[@Table1]
+        DataSource: =[@Inventory_MDB]
         Height: =197
         Item: =BrowseGallery1.Selected
         Width: =Parent.Width
@@ -12,7 +12,7 @@
         "'Inventory count date_DataCard1_1' As typedDataCard.textualViewCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Inventory_x0020_count_x0020_date"
-            Default: =ThisItem.'Inventory count date'
+            Default: =ThisItem.Time_Stamp
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Inventory_x0020_count_x0020_date")
             Fill: =RGBA(0, 0, 0, 0)
@@ -39,7 +39,7 @@
         "'Operator ID_DataCard1_1' As typedDataCard.textualViewCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Operator_x0020_ID"
-            Default: =ThisItem.'Operator ID'
+            Default: =ThisItem.'User ID'
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Operator_x0020_ID")
             Fill: =RGBA(0, 0, 0, 0)
@@ -66,7 +66,7 @@
         "'Part number _DataCard1_1' As typedDataCard.textualViewCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Part_x0020_number_x0020_"
-            Default: =ThisItem.'Part number '
+            Default: =ThisItem.'Part Number'
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Part_x0020_number_x0020_")
             Fill: =RGBA(0, 0, 0, 0)
@@ -120,7 +120,7 @@
         "'Count Quantity_DataCard1_1' As typedDataCard.textualViewCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Count_x0020_Quantity"
-            Default: =ThisItem.'Count Quantity'
+            Default: =ThisItem.Quantity
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Count_x0020_Quantity")
             Fill: =RGBA(0, 0, 0, 0)
@@ -146,7 +146,7 @@
         "'Storage location_DataCard1_1' As typedDataCard.textualViewCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Storage_x0020_location"
-            Default: =ThisItem.'Storage location'
+            Default: =ThisItem.Location
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Storage_x0020_location")
             Fill: =RGBA(0, 0, 0, 0)

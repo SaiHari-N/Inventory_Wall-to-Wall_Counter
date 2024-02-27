@@ -24,6 +24,9 @@
     "datasets": {
       "b!3kXZQstSb0ayVfpn3eMZt4mCcGsrdMZPq5FX09timC4_mcJRcZVvS6alUOED2dtG.01SRKD7XITEQABBB5HEBBLOBO7CDFSYGSE": {
         "dataSources": {
+          "Inventory_MDB": {
+            "tableName": "Inventory_MDB"
+          },
           "Inventory_W2W_LP_Data": {
             "tableName": "Inventory_W2W_LP_Data"
           },
@@ -51,7 +54,8 @@
       "Table1",
       "Table2",
       "Inventory_W2W_LP_Data",
-      "Part_Description"
+      "Part_Description",
+      "Inventory_MDB"
     ],
     "dependencies": {
       "fileSource": "6d34e21b-fa37-43aa-852d-da7a7b48aa8f"

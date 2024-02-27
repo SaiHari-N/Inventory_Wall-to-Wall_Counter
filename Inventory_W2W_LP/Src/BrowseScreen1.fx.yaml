@@ -22,7 +22,7 @@
         AccessibleLabel: =Self.Tooltip
         Height: =50
         Icon: =Icon.Reload
-        OnSelect: =Refresh([@Table1])
+        OnSelect: =Refresh([@Inventory_MDB])
         TabIndex: =0
         Tooltip: ="Refresh list"
         Width: =50
@@ -65,7 +65,7 @@
         DelayOutput: =true
         Height: =80
         HintText: ="Search items"
-        OnChange: =Search(Table1,TextSearchBox1.Text,"Part_x0020_number_x0020_","Count_x0020_Quantity","Inventory_x0020_count_x0020_date","Batch","Operator_x0020_ID","Part_x0020_number_x0020_")
+        OnChange: =Search(Inventory_MDB,TextSearchBox1.Text,"Batch","Description","Expiry_x0020_Date","Location","Manufacturing_x0020_Date","Expiry_x0020_Date","Location","Part_x0020_Number","Quantity","Time_Stamp","User_x0020_ID","UID")
         PaddingLeft: =25
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
@@ -103,7 +103,7 @@
         AccessibleLabel: ="Browse Gallery"
         DelayItemLoading: =true
         Height: =660
-        Items: =SortByColumns(Search([@Table1], ComboBox1.Selected.Value,"Batch","Count_x0020_Quantity","Inventory_x0020_count_x0020_date","Operator_x0020_ID","Part_x0020_number_x0020_","Storage_x0020_location"),"Inventory_x0020_count_x0020_date", If(SortDescending1, SortOrder.Descending,SortOrder.Ascending))
+        Items: =SortByColumns(Search([@Inventory_MDB], ComboBox1.Selected.Value,"Batch","Description","Expiry_x0020_Date","Location","Manufacturing_x0020_Date","Part_x0020_Number","Quantity","Time_Stamp","User_x0020_ID"),"Time_Stamp", If(SortDescending1, SortOrder.Descending,SortOrder.Ascending))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =Navigate(DetailScreen1, ScreenTransition.None);
@@ -125,7 +125,7 @@
             PaddingRight: =0
             PaddingTop: =0
             Size: =20
-            Text: =ThisItem.'Part number '
+            Text: =ThisItem.'Part Number'
             VerticalAlign: =VerticalAlign.Top
             Width: =300
             X: =210
@@ -188,7 +188,7 @@
             PaddingRight: =0
             PaddingTop: =2
             Size: =20
-            Text: =ThisItem.'Operator ID'
+            Text: =ThisItem.'User ID'
             VerticalAlign: =VerticalAlign.Top
             Width: =138
             X: =100
@@ -214,7 +214,7 @@
             PaddingRight: =0
             PaddingTop: =2
             Size: =20
-            Text: =ThisItem.'Inventory count date'
+            Text: =ThisItem.Time_Stamp
             VerticalAlign: =VerticalAlign.Top
             Width: =138
             X: =340
@@ -260,7 +260,7 @@
             PaddingRight: =0
             PaddingTop: =2
             Size: =20
-            Text: =ThisItem.'Count Quantity'
+            Text: =ThisItem.Quantity
             VerticalAlign: =VerticalAlign.Top
             Width: =138
             X: =155
@@ -286,7 +286,7 @@
             PaddingRight: =0
             PaddingTop: =2
             Size: =20
-            Text: =ThisItem.'Storage location'
+            Text: =ThisItem.Location
             VerticalAlign: =VerticalAlign.Top
             Width: =200
             X: =392
@@ -405,7 +405,7 @@
         FontSize: =20
         HeaderFontSize: =25
         Height: =560
-        Items: =SortByColumns(Search([@Table1], ComboBox1.Selected.Value,"Batch","Count_x0020_Quantity","Inventory_x0020_count_x0020_date","Operator_x0020_ID","Part_x0020_number_x0020_","Storage_x0020_location"),"Inventory_x0020_count_x0020_date", If(SortDescending1, SortOrder.Descending,SortOrder.Ascending))
+        Items: =SortByColumns(Search([@Inventory_MDB], ComboBox1.Selected.Value,"Batch","Description","Expiry_x0020_Date","Location","Manufacturing_x0020_Date","Part_x0020_Number","Quantity","Time_Stamp","User_x0020_ID"),"Time_Stamp", If(SortDescending1, SortOrder.Descending,SortOrder.Ascending))
         onCellValueChange: =false
         onFilter: =false
         onNavigate: =false
@@ -472,7 +472,7 @@
         ChevronBackground: =RGBA(0, 94, 146, 1)
         Default: =
         Height: =70
-        Items: =["All","User ID","Date","Part Number","Batch","Quantity","Location"]
+        Items: =["All","User ID","Date","Part Number","Batch","Quantity","Location","Description","Manufacturing Date","Expiry Date"]
         OnChange: =Reset(ComboBox1)
         Size: =18
         Width: =216
@@ -500,10 +500,11 @@
         DisplayFields: =["Value"]
         Height: =70
         InputTextPlaceholder: ="Find items"
-        Items: =Distinct(Table1,(If(Dropdown3.Selected.Value = "User ID",'Operator ID',If(Dropdown3.Selected.Value = "Date",'Inventory count date',If(Dropdown3.Selected.Value = "Part Number",'Part number ',If(Dropdown3.Selected.Value = "Batch",Batch,If(Dropdown3.Selected.Value = "Quantity",'Count Quantity',If(Dropdown3.Selected.Value = "Location",'Storage location'))))))))
+        IsSearchable: =false
+        Items: =Distinct(Inventory_MDB,(If(Dropdown3.Selected.Value = "User ID",'User ID',If(Dropdown3.Selected.Value = "Date",Time_Stamp,If(Dropdown3.Selected.Value = "Part Number",'Part Number',If(Dropdown3.Selected.Value = "Batch",Batch,If(Dropdown3.Selected.Value = "Quantity",Quantity,If(Dropdown3.Selected.Value = "Location",Location,If(Dropdown3.Selected.Value = "Description",Description,If(Dropdown3.Selected.Value = "Manufacturing Date",'Manufacturing Date',If(Dropdown3.Selected.Value = "Expiry Date",'Expiry Date')))))))))))
         MultiValueDelimiter: ="& "
         SearchFields: =["Value"]
-        SearchItems: =Search(Distinct(Table1,(If(Dropdown3.Selected.Value = "User ID",'Operator ID',If(Dropdown3.Selected.Value = "Date",'Inventory count date',If(Dropdown3.Selected.Value = "Part Number",'Part number ',If(Dropdown3.Selected.Value = "Batch",Batch,If(Dropdown3.Selected.Value = "Quantity",'Count Quantity',If(Dropdown3.Selected.Value = "Location",'Storage location')))))))),ComboBox1.SearchText,"Value")
+        SearchItems: =[]
         SelectMultiple: =false
         Size: =18
         Visible: =If(Dropdown3.Selected.Value = "All", false, true)
@@ -544,7 +545,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =1
-            Text: =ThisItem.'Inventory count date'
+            Text: =ThisItem.Time_Stamp
             Width: =150
             X: =0
             Y: =0
@@ -559,7 +560,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =2
-            Text: =ThisItem.'Operator ID'
+            Text: =ThisItem.'User ID'
             Width: =110
             X: =0
             Y: =0
@@ -574,7 +575,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =3
-            Text: =ThisItem.'Part number '
+            Text: =ThisItem.'Part Number'
             Width: =200
             X: =0
             Y: =0
@@ -604,7 +605,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =5
-            Text: =ThisItem.'Count Quantity'
+            Text: =ThisItem.Quantity
             Width: =130
             X: =0
             Y: =0
@@ -618,7 +619,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =6
-            Text: =ThisItem.'Storage location'
+            Text: =ThisItem.Location
             Width: =100
             X: =0
             Y: =0
@@ -659,7 +660,7 @@
             Height: =70
             Icon: =Icon.Check
             OnSelect: |-
-                =If(TextInput7.Text="DBadmin@123", Launch("https://syrmatech-my.sharepoint.com/personal/selvakumar_m_syrmasgs_com/Documents/Inventory%20Count_power%20app%20v2.xlsx")&Set(DBPW, false); Set(BGvisible, true); SetFocus (TextInput7) & Reset (TextInput7))
+                =If(TextInput7.Text="DBadmin@123", Launch("https://syrmatech-my.sharepoint.com/personal/saiharivignesh_n_syrmasgs_com/Documents/Inventory%20W2W-LP.xlsx")&Set(DBPW, false); Set(BGvisible, true); SetFocus (TextInput7) & Reset (TextInput7))
             PaddingBottom: =10
             PaddingLeft: =10
             PaddingRight: =10

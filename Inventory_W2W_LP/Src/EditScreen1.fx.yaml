@@ -33,7 +33,7 @@
         ZIndex: =3
 
     EditForm1 As form:
-        DataSource: =[@Table1]
+        DataSource: =Inventory_MDB
         Fill: =RGBA(255, 255, 255, 1)
         Height: =876
         Item: =BrowseGallery1.Selected
@@ -45,7 +45,7 @@
         "'Inventory count date_DataCard2' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Inventory_x0020_count_x0020_date"
-            Default: =ThisItem.'Inventory count date'
+            Default: =ThisItem.Time_Stamp
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Inventory_x0020_count_x0020_date")
             Fill: =RGBA(0, 0, 0, 0)
@@ -111,7 +111,7 @@
         "'Operator ID_DataCard2' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Operator_x0020_ID"
-            Default: =ThisItem.'Operator ID'
+            Default: =ThisItem.'User ID'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Operator_x0020_ID")
             Fill: =RGBA(0, 0, 0, 0)
@@ -186,7 +186,7 @@
         "'Storage location_DataCard2' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Storage_x0020_location"
-            Default: =ThisItem.'Storage location'
+            Default: =ThisItem.Location
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Storage_x0020_location")
             Fill: =RGBA(0, 0, 0, 0)
@@ -251,7 +251,7 @@
         "'Part number _DataCard2' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Part_x0020_number_x0020_"
-            Default: =ThisItem.'Part number '
+            Default: =ThisItem.'Part Number'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Part_x0020_number_x0020_")
             Fill: =RGBA(0, 0, 0, 0)
@@ -388,7 +388,7 @@
         "'Count Quantity_DataCard2' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Count_x0020_Quantity"
-            Default: =ThisItem.'Count Quantity'
+            Default: =ThisItem.Quantity
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Count_x0020_Quantity")
             Fill: =RGBA(0, 0, 0, 0)
@@ -458,7 +458,7 @@
         "'Part Description_DataCard1' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Part_x0020_Description"
-            Default: =ThisItem.'Part Description'
+            Default: =ThisItem.UID
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Part_x0020_Description")
             Fill: =RGBA(0, 0, 0, 0)

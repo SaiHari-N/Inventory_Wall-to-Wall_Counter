@@ -5,7 +5,7 @@
         If(varPrintTriggered1, Icon4_5.Visible=false,Icon4_5.Visible=true);Reset(TextInputCanvas1_1)
 
     DetailForm1_6 As formViewer:
-        DataSource: =[@Table1]
+        DataSource: =[@Inventory_MDB]
         Height: =137
         Item: =LastSubmittedRecord
         Width: =Parent.Width
@@ -15,7 +15,7 @@
         "'Inventory count date_DataCard1_6' As typedDataCard.textualViewCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Inventory_x0020_count_x0020_date"
-            Default: =ThisItem.'Inventory count date'
+            Default: =ThisItem.Time_Stamp
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Inventory_x0020_count_x0020_date")
             Fill: =RGBA(0, 0, 0, 0)
@@ -43,7 +43,7 @@
         "'Operator ID_DataCard1_6' As typedDataCard.textualViewCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Operator_x0020_ID"
-            Default: =ThisItem.'Operator ID'
+            Default: =ThisItem.'User ID'
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Operator_x0020_ID")
             Fill: =RGBA(0, 0, 0, 0)
@@ -71,7 +71,7 @@
         "'Part number _DataCard1_6' As typedDataCard.textualViewCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Part_x0020_number_x0020_"
-            Default: =ThisItem.'Part number '
+            Default: =ThisItem.'Part Number'
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Part_x0020_number_x0020_")
             Fill: =RGBA(0, 0, 0, 0)
@@ -126,7 +126,7 @@
         "'Count Quantity_DataCard1_6' As typedDataCard.textualViewCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Count_x0020_Quantity"
-            Default: =ThisItem.'Count Quantity'
+            Default: =ThisItem.Quantity
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Count_x0020_Quantity")
             Fill: =RGBA(0, 0, 0, 0)
@@ -153,7 +153,7 @@
         "'Storage location_DataCard1_6' As typedDataCard.textualViewCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Storage_x0020_location"
-            Default: =ThisItem.'Storage location'
+            Default: =ThisItem.Location
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Storage_x0020_location")
             Fill: =RGBA(0, 0, 0, 0)
@@ -311,7 +311,7 @@
         Height: =95
         HtmlText: |-
             ="<img src=""https://barcode.tec-it.com/barcode.ashx?data=" &
-            If(IsBlank(LastSubmittedRecord.'Part Description'),"No Data Found",LastSubmittedRecord.'Part Description') & "
+            If(IsBlank(LastSubmittedRecord.UID),"No Data Found",LastSubmittedRecord.UID) & "
             &type=C128B&showhrt=no&rotation=90&width=40&height=6&xres=96&font=3""/>"
         PaddingBottom: =0
         PaddingLeft: =0
@@ -336,7 +336,7 @@
                 "font-size: 16px;" &
             "'>"&
             
-            If(IsBlank(LastSubmittedRecord.'Part Description'),"No Data Found",LastSubmittedRecord.'Part Description')
+            If(IsBlank(LastSubmittedRecord.UID),"No Data Found",LastSubmittedRecord.UID)
             
             &"</div>"
         Width: =20
@@ -359,7 +359,7 @@
         FontSize: =25
         FontWeight: =FontWeight.Semibold
         Height: =80
-        OnChange: =If(TextInputCanvas1_1.Value = If(IsBlank(LastSubmittedRecord.'Part Description'),"No Data Found",LastSubmittedRecord.'Part Description'), Back(), Notify("Wrong Count ID")&Reset(TextInputCanvas1_1))
+        OnChange: =If(TextInputCanvas1_1.Value = If(IsBlank(LastSubmittedRecord.UID),"No Data Found",LastSubmittedRecord.UID), Back(), Notify("Wrong Count ID")&Reset(TextInputCanvas1_1))
         Placeholder: ="Scan Count ID"
         Visible: =TIC1Visible1
         Width: =360

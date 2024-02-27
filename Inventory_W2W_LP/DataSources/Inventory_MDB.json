@@ -1,0 +1,30 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_excel",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-02-14T17:17:41.6390000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "__PowerAppsId__": "Row id",
+      "Batch": "Batch",
+      "Description": "Description",
+      "Expiry_x0020_Date": "Expiry Date",
+      "Location": "Location",
+      "Manufacturing_x0020_Date": "Manufacturing Date",
+      "Part_x0020_Number": "Part Number",
+      "Quantity": "Quantity",
+      "S_x002e__x0020_No_x002e_": "S. No.",
+      "Time_Stamp": "Time_Stamp",
+      "UID": "UID",
+      "User_x0020_ID": "User ID"
+    },
+    "DatasetName": "b!3kXZQstSb0ayVfpn3eMZt4mCcGsrdMZPq5FX09timC4_mcJRcZVvS6alUOED2dtG.01SRKD7XITEQABBB5HEBBLOBO7CDFSYGSE",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "Inventory_MDB",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]
