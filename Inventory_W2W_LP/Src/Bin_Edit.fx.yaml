@@ -24,7 +24,7 @@ Bin_Edit As screen:
         FontWeight: =FontWeight.Semibold
         Height: =80
         Size: =27
-        Text: ="Format Page"
+        Text: ="Format"
         Width: =280
         Wrap: =false
         X: =80

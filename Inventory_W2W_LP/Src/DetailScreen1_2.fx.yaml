@@ -11,7 +11,7 @@
         FontWeight: =FontWeight.Semibold
         Height: =80
         Size: =27
-        Text: ="Print Screen"
+        Text: ="Preview"
         Width: =280
         Wrap: =false
         X: =80
