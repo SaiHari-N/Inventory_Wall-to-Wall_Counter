@@ -522,8 +522,8 @@
       "ControlPropertyState": [
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "\"Count_x0020_Quantity\"",
           "InvariantPropertyName": "DataField",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -9979,8 +9979,8 @@
       "ControlPropertyState": [
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "\"Inventory_x0020_count_x0020_date\"",
           "InvariantPropertyName": "DataField",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -13292,8 +13292,8 @@
       "ControlPropertyState": [
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "\"Operator_x0020_ID\"",
           "InvariantPropertyName": "DataField",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -13474,8 +13474,8 @@
       "ControlPropertyState": [
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "\"Part_x0020_Description\"",
           "InvariantPropertyName": "DataField",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -13648,8 +13648,8 @@
       "ControlPropertyState": [
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "\"Part_x0020_number_x0020_\"",
           "InvariantPropertyName": "DataField",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -16614,8 +16614,8 @@
       "ControlPropertyState": [
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "\"Storage_x0020_location\"",
           "InvariantPropertyName": "DataField",
           "IsLockable": true,
           "NameMapSourceSchema": "?"

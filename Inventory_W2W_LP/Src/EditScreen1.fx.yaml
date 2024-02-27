@@ -44,7 +44,7 @@
 
         "'Inventory count date_DataCard2' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
-            DataField: ="Inventory_x0020_count_x0020_date"
+            DataField: =ThisItem.Time_Stamp
             Default: =ThisItem.Time_Stamp
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"Time_Stamp")
@@ -110,7 +110,7 @@
 
         "'Operator ID_DataCard2' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
-            DataField: ="Operator_x0020_ID"
+            DataField: =ThisItem.'User ID'
             Default: =ThisItem.'User ID'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"User_x0020_ID")
@@ -185,7 +185,7 @@
 
         "'Storage location_DataCard2' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
-            DataField: ="Storage_x0020_location"
+            DataField: =ThisItem.Location
             Default: =ThisItem.Location
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"Location")
@@ -250,7 +250,7 @@
 
         "'Part number _DataCard2' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
-            DataField: ="Part_x0020_number_x0020_"
+            DataField: =ThisItem.'Part Number'
             Default: =ThisItem.'Part Number'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"Part_x0020_Number")
@@ -387,7 +387,7 @@
 
         "'Count Quantity_DataCard2' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
-            DataField: ="Count_x0020_Quantity"
+            DataField: =ThisItem.Quantity
             Default: =ThisItem.Quantity
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"Quantity")
@@ -457,7 +457,7 @@
 
         "'Part Description_DataCard1' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
-            DataField: ="Part_x0020_Description"
+            DataField: =ThisItem.UID
             Default: =ThisItem.UID
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"UID")
