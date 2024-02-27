@@ -19,18 +19,18 @@
         Width: =50
         X: =570
         Y: =15
-        ZIndex: =3
+        ZIndex: =2
 
     LblAppName3 As label:
         Fill: =RGBA(58, 58, 58, 0)
         FontWeight: =FontWeight.Semibold
         Height: =80
         Size: =27
-        Text: ="Tag Entry Page"
+        Text: ="Stock Count"
         Width: =280
         Wrap: =false
         X: =80
-        ZIndex: =4
+        ZIndex: =3
 
     EditForm1 As form:
         DataSource: =[@Table1]
@@ -40,7 +40,7 @@
         OnSuccess: =Navigate(DetailScreen1_2,ScreenTransition.None); Set(LastSubmittedRecord, EditForm1.LastSubmit)
         Width: =Parent.Width
         Y: =120
-        ZIndex: =5
+        ZIndex: =4
 
         "'Inventory count date_DataCard2' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
@@ -307,7 +307,7 @@
             TextInput1 As text:
                 AccessibleLabel: ="Part Number"
                 Default: =If(IsBlank(TextInput5.Text),"", Left(TextInput5.Text,Find(",", TextInput5.Text)-1))
-                DisplayMode: =If(RadioGroupCanvas1.Selected.Value = "RM", DisplayMode.Disabled, DisplayMode.Edit)
+                DisplayMode: =If(RadioGroupCanvas1.Selected.Value = "Raw Materials", DisplayMode.Disabled, DisplayMode.Edit)
                 Height: =70
                 Size: =21
                 Width: =569
@@ -347,7 +347,7 @@
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Mid(TextInput5.Text, Find(",", TextInput5.Text) + 19 ,10)
                 DelayOutput: =true
-                DisplayMode: =If(RadioGroupCanvas1.Selected.Value = "RM", DisplayMode.Disabled, DisplayMode.Edit)
+                DisplayMode: =If(RadioGroupCanvas1.Selected.Value = "Raw Materials", DisplayMode.Disabled, DisplayMode.Edit)
                 FontWeight: =FontWeight.Semibold
                 Height: =70
                 MaxLength: =10
@@ -538,7 +538,7 @@
         Width: =195
         X: =344
         Y: =288
-        ZIndex: =8
+        ZIndex: =5
 
     TextInput5 As text:
         AccessibleLabel: ="Scan QR Code"
@@ -552,7 +552,7 @@
         Width: =196
         X: =344
         Y: =350
-        ZIndex: =9
+        ZIndex: =6
 
     Icon2 As icon.Reset:
         AccessibleLabel: ="Undo"
@@ -564,14 +564,14 @@
         Width: =50
         X: =500
         Y: =15
-        ZIndex: =10
+        ZIndex: =7
 
     Rectangle2_2 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
         Height: =80
         Width: =640
         Y: =1060
-        ZIndex: =11
+        ZIndex: =8
 
     Icon8_2 As icon.Home:
         AccessibleLabel: ="Home"
@@ -583,7 +583,7 @@
         Width: =56
         X: =60
         Y: =1073
-        ZIndex: =12
+        ZIndex: =9
 
     Icon9_2 As icon.Tray:
         AccessibleLabel: ="Bin"
@@ -595,7 +595,7 @@
         Width: =56
         X: =176
         Y: =1073
-        ZIndex: =13
+        ZIndex: =10
 
     Icon10_2 As icon.DocumentwithContent:
         AccessibleLabel: ="Tag"
@@ -607,7 +607,7 @@
         Width: =56
         X: =292
         Y: =1073
-        ZIndex: =14
+        ZIndex: =11
 
     Icon11_2 As icon.Print:
         AccessibleLabel: ="Detail"
@@ -619,7 +619,34 @@
         Width: =56
         X: =408
         Y: =1073
-        ZIndex: =15
+        ZIndex: =12
+
+    Timer3 As timer:
+        AutoStart: =true
+        Duration: =1000
+        Height: =65
+        OnTimerEnd: |-
+            =UpdateContext({ currentTime: Text(Now(), DateTimeFormat.ShortTime24&"ss") })
+        Repeat: =true
+        Visible: =false
+        Width: =58
+        X: =360
+        Y: =15
+        ZIndex: =13
+
+    Icon18 As icon.OpenInNewWindow:
+        Color: =RGBA(0, 94, 146, 1)
+        Height: =66
+        Icon: =Icon.OpenInNewWindow
+        OnSelect: =Navigate(Screen6);Set(Barcode1_1visible,true)
+        PaddingBottom: =12
+        PaddingLeft: =12
+        PaddingRight: =12
+        PaddingTop: =12
+        Width: =66
+        X: =540
+        Y: =350
+        ZIndex: =14
 
     Query_Mail_4 As group:
         Height: =5
@@ -634,7 +661,7 @@
             Visible: =BGWhite
             Width: =640
             Y: =80
-            ZIndex: =16
+            ZIndex: =15
 
         Rectangle6_5 As rectangle:
             BorderColor: =RGBA(0, 94, 146, 1)
@@ -646,7 +673,7 @@
             Width: =572
             X: =34
             Y: =425
-            ZIndex: =17
+            ZIndex: =16
 
         Label5_5 As label:
             Align: =Align.Center
@@ -660,7 +687,7 @@
             Width: =560
             X: =40
             Y: =433
-            ZIndex: =18
+            ZIndex: =17
 
         TextInput6_5 As text:
             AccessibleLabel: ="Body of the mail"
@@ -682,7 +709,7 @@
             Width: =560
             X: =40
             Y: =488
-            ZIndex: =19
+            ZIndex: =18
 
         Button1_5 As button:
             BorderThickness: =0
@@ -703,7 +730,7 @@
             Width: =120
             X: =480
             Y: =691
-            ZIndex: =20
+            ZIndex: =19
 
         Icon5_5 As icon.Cancel:
             AccessibleLabel: ="Close"
@@ -726,7 +753,7 @@
             Width: =60
             X: =540
             Y: =426
-            ZIndex: =21
+            ZIndex: =20
 
         Icon7_11 As icon.Mail:
             AccessibleLabel: ="Mail"
@@ -745,7 +772,7 @@
             Width: =56
             X: =524
             Y: =1073
-            ZIndex: =22
+            ZIndex: =21
 
         Icon7_10 As icon.Mail:
             AccessibleLabel: ="Mail"
@@ -759,7 +786,7 @@
             Width: =56
             X: =524
             Y: =1073
-            ZIndex: =23
+            ZIndex: =22
 
     Menu_Navigation_4 As group:
         Height: =5
@@ -781,7 +808,7 @@
             Tooltip: ="Navigation"
             Visible: =HN1
             Width: =80
-            ZIndex: =33
+            ZIndex: =30
 
         IconBackarrow1_10 As icon.ChevronLeft:
             AccessibleLabel: =Self.Tooltip
@@ -798,7 +825,7 @@
             Tooltip: ="Navigation"
             Visible: =HN2
             Width: =80
-            ZIndex: =34
+            ZIndex: =31
 
     Menu_4 As group:
         Height: =5
@@ -814,7 +841,7 @@
             OnSelect: =Navigate(App_Details)
             Visible: =Navigation
             Width: =300
-            ZIndex: =24
+            ZIndex: =23
 
         Label7_25 As label:
             FontWeight: =FontWeight.Semibold
@@ -830,7 +857,7 @@
             Visible: =HN3
             Width: =300
             Y: =80
-            ZIndex: =26
+            ZIndex: =24
 
         Label7_26 As label:
             FontWeight: =FontWeight.Semibold
@@ -846,7 +873,7 @@
             Visible: =HN3
             Width: =300
             Y: =160
-            ZIndex: =28
+            ZIndex: =25
 
         Label7_27 As label:
             FontWeight: =FontWeight.Semibold
@@ -862,7 +889,7 @@
             Visible: =HN3
             Width: =300
             Y: =240
-            ZIndex: =29
+            ZIndex: =26
 
         Label7_28 As label:
             FontWeight: =FontWeight.Semibold
@@ -878,7 +905,7 @@
             Visible: =HN3
             Width: =300
             Y: =320
-            ZIndex: =30
+            ZIndex: =27
 
         Label7_29 As label:
             FontWeight: =FontWeight.Semibold
@@ -894,7 +921,7 @@
             Visible: =HN3
             Width: =300
             Y: =400
-            ZIndex: =31
+            ZIndex: =28
 
         Label7_30 As label:
             FontWeight: =FontWeight.Semibold
@@ -910,32 +937,5 @@
             Visible: =HN3
             Width: =300
             Y: =480
-            ZIndex: =32
-
-    Timer3 As timer:
-        AutoStart: =true
-        Duration: =600
-        Height: =65
-        OnTimerEnd: |-
-            =UpdateContext({ currentTime: Text(Now(), DateTimeFormat.ShortTime24&"ss") })
-        Repeat: =true
-        Visible: =false
-        Width: =58
-        X: =360
-        Y: =15
-        ZIndex: =35
-
-    Icon18 As icon.OpenInNewWindow:
-        Color: =RGBA(0, 94, 146, 1)
-        Height: =66
-        Icon: =Icon.OpenInNewWindow
-        OnSelect: =Navigate(Screen6);Set(Barcode1_1visible,true)
-        PaddingBottom: =12
-        PaddingLeft: =12
-        PaddingRight: =12
-        PaddingTop: =12
-        Width: =66
-        X: =540
-        Y: =350
-        ZIndex: =36
+            ZIndex: =29
 

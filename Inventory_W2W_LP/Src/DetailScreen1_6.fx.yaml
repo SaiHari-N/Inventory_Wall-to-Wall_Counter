@@ -292,7 +292,7 @@
         AutoHeight: =true
         Height: =100
         HtmlText: |-
-            ="<img src=""https://qrcode.tec-it.com/API/QRCode?data="&DataCardValue3_6.Text&", "&DataCardValue4_6.Text&", "&DataCardValue6_6.Text&", "&DataCardValue5_3.Text&", "&DataCardValue2_6.Text&", "&DataCardValue8_6.Text&"&unit=Min&imagetype=Png&eclevel=L&backcolor=%23ffffff&&istransparent=True&dpi=105&size=Small"" />"
+            ="<img src=""https://qrcode.tec-it.com/API/QRCode?data="&DataCardValue3_6.Text&", "&DataCardValue4_6.Text&", "&DataCardValue6_6.Text&", "&DataCardValue5_3.Text&", "&DataCardValue2_6.Text&", "&DataCardValue8_6.Text&"&code=MobileQRCode&unit=Min&imagetype=Png&eclevel=L&backcolor=%23ffffff&&istransparent=True&dpi=105&size=Small"" />"
         Width: =120
         X: =18
         Y: =68

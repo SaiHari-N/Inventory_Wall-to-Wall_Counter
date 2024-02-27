@@ -36,7 +36,7 @@
         Item: =LastSubmittedRecord
         Width: =Parent.Width
         Y: =127
-        ZIndex: =5
+        ZIndex: =4
 
         "'Operator ID_DataCard1_2' As typedDataCard.textualViewCard":
             BorderStyle: =BorderStyle.Solid
@@ -299,7 +299,7 @@
         Width: =50
         X: =430
         Y: =15
-        ZIndex: =6
+        ZIndex: =5
 
     Icon3_1 As icon.Save:
         AccessibleLabel: ="New Tag"
@@ -311,14 +311,14 @@
         Width: =50
         X: =360
         Y: =15
-        ZIndex: =7
+        ZIndex: =6
 
     Rectangle2_4 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
         Height: =80
         Width: =640
         Y: =1060
-        ZIndex: =9
+        ZIndex: =7
 
     Icon8_4 As icon.Home:
         AccessibleLabel: ="Home"
@@ -330,7 +330,7 @@
         Width: =56
         X: =60
         Y: =1073
-        ZIndex: =10
+        ZIndex: =8
 
     Icon9_4 As icon.Tray:
         AccessibleLabel: ="Bin"
@@ -342,7 +342,7 @@
         Width: =56
         X: =176
         Y: =1073
-        ZIndex: =11
+        ZIndex: =9
 
     Icon10_4 As icon.DocumentwithContent:
         AccessibleLabel: ="Tag"
@@ -354,7 +354,7 @@
         Width: =56
         X: =292
         Y: =1073
-        ZIndex: =12
+        ZIndex: =10
 
     Icon11_4 As icon.Print:
         AccessibleLabel: ="Detail"
@@ -366,7 +366,7 @@
         Width: =56
         X: =408
         Y: =1073
-        ZIndex: =13
+        ZIndex: =11
 
     Query_Mail_6 As group:
         Height: =5
@@ -381,7 +381,7 @@
             Visible: =BGWhite
             Width: =640
             Y: =80
-            ZIndex: =14
+            ZIndex: =42
 
         Rectangle6_7 As rectangle:
             BorderColor: =RGBA(0, 94, 146, 1)
@@ -393,7 +393,7 @@
             Width: =572
             X: =34
             Y: =432
-            ZIndex: =15
+            ZIndex: =43
 
         Label5_7 As label:
             Align: =Align.Center
@@ -407,7 +407,7 @@
             Width: =560
             X: =40
             Y: =440
-            ZIndex: =16
+            ZIndex: =44
 
         TextInput6_7 As text:
             AccessibleLabel: ="Body of the mail"
@@ -429,7 +429,7 @@
             Width: =560
             X: =40
             Y: =495
-            ZIndex: =17
+            ZIndex: =45
 
         Button1_7 As button:
             BorderThickness: =0
@@ -450,7 +450,7 @@
             Width: =120
             X: =480
             Y: =698
-            ZIndex: =18
+            ZIndex: =46
 
         Icon5_7 As icon.Cancel:
             AccessibleLabel: ="Close"
@@ -473,7 +473,7 @@
             Width: =60
             X: =540
             Y: =433
-            ZIndex: =19
+            ZIndex: =47
 
         Icon7_15 As icon.Mail:
             AccessibleLabel: ="Mail"
@@ -492,7 +492,7 @@
             Width: =56
             X: =524
             Y: =1073
-            ZIndex: =20
+            ZIndex: =48
 
         Icon7_14 As icon.Mail:
             AccessibleLabel: ="Mail"
@@ -506,7 +506,7 @@
             Width: =56
             X: =524
             Y: =1073
-            ZIndex: =21
+            ZIndex: =49
 
     Menu_Navigation_6 As group:
         Height: =5
@@ -528,7 +528,7 @@
             Tooltip: ="Navigation"
             Visible: =HN1
             Width: =80
-            ZIndex: =31
+            ZIndex: =57
 
         IconBackarrow1_14 As icon.ChevronLeft:
             AccessibleLabel: =Self.Tooltip
@@ -545,7 +545,19 @@
             Tooltip: ="Navigation"
             Visible: =HN2
             Width: =80
-            ZIndex: =32
+            ZIndex: =58
+
+    Dropdown4_1 As dropdown:
+        BorderColor: =RGBA(0, 94, 146, 1)
+        ChevronBackground: =RGBA(0, 94, 146, 1)
+        Default: ="DataMax"
+        Height: =61
+        Items: =["QuickTrack","DataMax"]
+        Size: =21
+        Width: =220
+        X: =380
+        Y: =715
+        ZIndex: =24
 
     Menu_6 As group:
         Height: =5
@@ -561,7 +573,7 @@
             OnSelect: =Navigate(App_Details)
             Visible: =Navigation
             Width: =300
-            ZIndex: =22
+            ZIndex: =50
 
         Label7_37 As label:
             FontWeight: =FontWeight.Semibold
@@ -577,7 +589,7 @@
             Visible: =HN3
             Width: =300
             Y: =80
-            ZIndex: =24
+            ZIndex: =51
 
         Label7_38 As label:
             FontWeight: =FontWeight.Semibold
@@ -593,7 +605,7 @@
             Visible: =HN3
             Width: =300
             Y: =160
-            ZIndex: =26
+            ZIndex: =52
 
         Label7_39 As label:
             FontWeight: =FontWeight.Semibold
@@ -609,7 +621,7 @@
             Visible: =HN3
             Width: =300
             Y: =240
-            ZIndex: =27
+            ZIndex: =53
 
         Label7_40 As label:
             FontWeight: =FontWeight.Semibold
@@ -625,7 +637,7 @@
             Visible: =HN3
             Width: =300
             Y: =320
-            ZIndex: =28
+            ZIndex: =54
 
         Label7_41 As label:
             FontWeight: =FontWeight.Semibold
@@ -641,7 +653,7 @@
             Visible: =HN3
             Width: =300
             Y: =400
-            ZIndex: =29
+            ZIndex: =55
 
         Label7_42 As label:
             FontWeight: =FontWeight.Semibold
@@ -657,19 +669,40 @@
             Visible: =HN3
             Width: =300
             Y: =480
-            ZIndex: =30
+            ZIndex: =56
 
-    Dropdown4_1 As dropdown:
+    Rectangle10_1 As rectangle:
         BorderColor: =RGBA(0, 94, 146, 1)
-        ChevronBackground: =RGBA(0, 94, 146, 1)
-        Default: ="DataMax"
-        Height: =61
-        Items: =["QuickTrack","DataMax"]
+        BorderThickness: =2
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =198
+        OnSelect: |-
+            =If(Dropdown4_1.Selected.Value = "QuickTrack",Navigate(DetailScreen1_4, ScreenTransition.None),Navigate(DetailScreen1_6, ScreenTransition.None));
+            Set(varPrintTriggered1, true);Set(TIC1Visible,false)
+        Width: =636
+        X: =2
+        Y: =802
+        ZIndex: =32
+
+    Label12_1 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =60
         Size: =21
-        Width: =220
-        X: =380
+        Text: ="Label Template"
+        Width: =285
+        X: =150
         Y: =715
-        ZIndex: =45
+        ZIndex: =33
+
+    Icon22_1 As icon.Trash:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =50
+        Icon: =Icon.Trash
+        OnSelect: =Set(varGroup5Visible1, true)
+        Width: =50
+        X: =500
+        Y: =16
+        ZIndex: =41
 
     Group2_1 As group:
         Height: =5
@@ -685,7 +718,7 @@
             Visible: =If(Dropdown4_1.Selected.Value = "DataMax", true,false)
             Width: =Parent.Width
             Y: =859
-            ZIndex: =33
+            ZIndex: =12
 
             "'Inventory count date_DataCard1_8' As typedDataCard.textualViewCard":
                 BorderStyle: =BorderStyle.Solid
@@ -864,7 +897,7 @@
             Width: =100
             X: =320
             Y: =855
-            ZIndex: =34
+            ZIndex: =13
 
         Label2_40 As label:
             FontWeight: =FontWeight.Semibold
@@ -876,7 +909,7 @@
             Width: =160
             X: =138
             Y: =889
-            ZIndex: =35
+            ZIndex: =14
 
         Label2_41 As label:
             FontWeight: =FontWeight.Semibold
@@ -888,7 +921,7 @@
             Width: =120
             X: =138
             Y: =957
-            ZIndex: =36
+            ZIndex: =15
 
         Label2_42 As label:
             FontWeight: =FontWeight.Semibold
@@ -900,7 +933,7 @@
             Width: =110
             X: =320
             Y: =957
-            ZIndex: =37
+            ZIndex: =16
 
         Label2_43 As label:
             FontWeight: =FontWeight.Semibold
@@ -914,7 +947,7 @@
             Width: =80
             X: =138
             Y: =855
-            ZIndex: =38
+            ZIndex: =17
 
         Label2_44 As label:
             FontWeight: =FontWeight.Semibold
@@ -926,7 +959,7 @@
             Width: =100
             X: =138
             Y: =923
-            ZIndex: =39
+            ZIndex: =18
 
         Label2_45 As label:
             Align: =Align.Center
@@ -940,18 +973,18 @@
             Width: =240
             X: =200
             Y: =810
-            ZIndex: =40
+            ZIndex: =19
 
         HtmlText2_3 As htmlViewer:
             AutoHeight: =true
             Height: =100
             HtmlText: |-
-                ="<img src=""https://qrcode.tec-it.com/API/QRCode?data="&DataCardValue3_8.Text&", "&DataCardValue4_8.Text&", "&DataCardValue6_8.Text&", "&DataCardValue5_6.Text&", "&DataCardValue2_8.Text&", "&DataCardValue8_8.Text&"code=MobileQRCode&unit=Min&imagetype=Png&eclevel=L&backcolor=%23ffffff&&istransparent=True&dpi=105&size=Small"" />"
+                ="<img src=""https://qrcode.tec-it.com/API/QRCode?data="&DataCardValue3_8.Text&", "&DataCardValue4_8.Text&", "&DataCardValue6_8.Text&", "&DataCardValue5_6.Text&", "&DataCardValue2_8.Text&", "&DataCardValue8_8.Text&"&code=MobileQRCode&unit=Min&imagetype=Png&eclevel=L&backcolor=%23ffffff&&istransparent=True&dpi=105&size=Small"" />"
             Visible: =If(Dropdown4_1.Selected.Value = "DataMax", true,false)
             Width: =120
             X: =18
             Y: =869
-            ZIndex: =41
+            ZIndex: =20
 
         Image4_3 As image:
             Height: =45
@@ -960,7 +993,7 @@
             Width: =145
             X: =12
             Y: =813
-            ZIndex: =42
+            ZIndex: =21
 
         HtmlText3_3 As htmlViewer:
             AutoHeight: =true
@@ -977,7 +1010,7 @@
             Width: =70
             X: =555
             Y: =825
-            ZIndex: =43
+            ZIndex: =22
 
         HtmlText4_3 As htmlViewer:
             Height: =160
@@ -1000,20 +1033,7 @@
             Width: =20
             X: =578
             Y: =821
-            ZIndex: =44
-
-    Rectangle10_1 As rectangle:
-        BorderColor: =RGBA(0, 94, 146, 1)
-        BorderThickness: =2
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =198
-        OnSelect: |-
-            =If(Dropdown4_1.Selected.Value = "QuickTrack",Navigate(DetailScreen1_4, ScreenTransition.None),Navigate(DetailScreen1_6, ScreenTransition.None));
-            Set(varPrintTriggered1, true);Set(TIC1Visible,false)
-        Width: =636
-        X: =2
-        Y: =802
-        ZIndex: =54
+            ZIndex: =23
 
     Group3_1 As group:
         Height: =5
@@ -1029,7 +1049,7 @@
             Visible: =If(Dropdown4_1.Selected.Value = "QuickTrack", true,false)
             Width: =Parent.Width
             Y: =802
-            ZIndex: =47
+            ZIndex: =25
 
             "'Inventory count date_DataCard1_9' As typedDataCard.textualViewCard":
                 BorderStyle: =BorderStyle.Solid
@@ -1202,7 +1222,7 @@
             Width: =168
             X: =347
             Y: =806
-            ZIndex: =48
+            ZIndex: =26
 
         Label2_47 As label:
             FontWeight: =FontWeight.Bold
@@ -1213,7 +1233,7 @@
             Width: =243
             X: =19
             Y: =854
-            ZIndex: =49
+            ZIndex: =27
 
         Label2_48 As label:
             FontWeight: =FontWeight.Bold
@@ -1225,7 +1245,7 @@
             Width: =216
             X: =19
             Y: =938
-            ZIndex: =50
+            ZIndex: =28
 
         Label2_49 As label:
             FontWeight: =FontWeight.Bold
@@ -1237,7 +1257,7 @@
             Width: =170
             X: =347
             Y: =938
-            ZIndex: =51
+            ZIndex: =29
 
         Label2_50 As label:
             FontWeight: =FontWeight.Bold
@@ -1250,7 +1270,7 @@
             Width: =168
             X: =20
             Y: =806
-            ZIndex: =52
+            ZIndex: =30
 
         Label2_51 As label:
             FontWeight: =FontWeight.Bold
@@ -1261,27 +1281,7 @@
             Width: =243
             X: =20
             Y: =902
-            ZIndex: =53
-
-    Label12_1 As label:
-        FontWeight: =FontWeight.Semibold
-        Height: =60
-        Size: =21
-        Text: ="Label Template"
-        Width: =285
-        X: =150
-        Y: =715
-        ZIndex: =56
-
-    Icon22_1 As icon.Trash:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =50
-        Icon: =Icon.Trash
-        OnSelect: =Set(varGroup5Visible1, true)
-        Width: =50
-        X: =500
-        Y: =16
-        ZIndex: =64
+            ZIndex: =31
 
     Group5_1 As group:
         Height: =5
@@ -1296,7 +1296,7 @@
             Visible: =varGroup5Visible1
             Width: =640
             Y: =81
-            ZIndex: =57
+            ZIndex: =34
 
         Rectangle12_1 As rectangle:
             BorderThickness: =2
@@ -1306,7 +1306,7 @@
             Width: =440
             X: =100
             Y: =301
-            ZIndex: =58
+            ZIndex: =35
 
         Label13_1 As label:
             Height: =70
@@ -1319,7 +1319,7 @@
             Width: =440
             X: =100
             Y: =302
-            ZIndex: =59
+            ZIndex: =36
 
         Label14_3 As label:
             Align: =Align.Center
@@ -1334,7 +1334,7 @@
             Width: =108
             X: =278
             Y: =446
-            ZIndex: =60
+            ZIndex: =37
 
         Label14_2 As label:
             Align: =Align.Center
@@ -1349,7 +1349,7 @@
             Width: =108
             X: =396
             Y: =446
-            ZIndex: =61
+            ZIndex: =38
 
     Group4_1 As group:
         Height: =5
@@ -1369,7 +1369,7 @@
             Width: =440
             X: =100
             Y: =592
-            ZIndex: =62
+            ZIndex: =39
 
         Icon21_1 As icon.Check:
             Color: =RGBA(0, 94, 146, 1)
@@ -1382,5 +1382,5 @@
             Visible: =varGroup4Visible1
             X: =473
             Y: =595
-            ZIndex: =63
+            ZIndex: =40
 

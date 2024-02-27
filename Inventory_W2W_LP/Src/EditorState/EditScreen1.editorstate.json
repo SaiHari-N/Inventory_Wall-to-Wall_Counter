@@ -3377,7 +3377,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "Parent.DisplayMode",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "DisplayMode",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -13203,7 +13203,7 @@
       "MetaDataIDKey": "",
       "Name": "Menu_4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 33,
+      "ParentIndex": 31,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13864,7 +13864,7 @@
       "MetaDataIDKey": "",
       "Name": "Query_Mail_4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 31,
+      "ParentIndex": 33,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16823,7 +16823,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "DisplayMode.Edit",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "DisplayMode",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -18177,7 +18177,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "60000",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "Duration",
           "IsLockable": false,
           "NameMapSourceSchema": "?"

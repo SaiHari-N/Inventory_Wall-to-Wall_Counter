@@ -4,12 +4,14 @@ Screen6 As screen:
     Barcode1 As barcode:
         BarcodeType: =BarcodeType.Auto
         Height: =1136
+        ScanRate: =100
         Visible: =Barcode1visible
         ZIndex: =1
 
     Barcode1_1 As barcode:
         BarcodeType: =BarcodeType.Auto
         Height: =1136
+        ScanRate: =100
         Visible: =Barcode1_1visible
         ZIndex: =2
 
@@ -24,4 +26,26 @@ Screen6 As screen:
         X: =566
         Y: =1062
         ZIndex: =3
+
+    TextInput4 As text:
+        Default: =Barcode1.Text
+        Height: =70
+        OnChange: =Navigate(Bin_Edit)
+        Size: =21
+        Visible: =Barcode1visible
+        Width: =560
+        X: =40
+        Y: =40
+        ZIndex: =4
+
+    TextInput4_2 As text:
+        Default: =Barcode1_1.Text
+        Height: =70
+        OnChange: =Navigate(EditScreen1)
+        Size: =21
+        Visible: =Barcode1_1visible
+        Width: =560
+        X: =40
+        Y: =40
+        ZIndex: =5
 
