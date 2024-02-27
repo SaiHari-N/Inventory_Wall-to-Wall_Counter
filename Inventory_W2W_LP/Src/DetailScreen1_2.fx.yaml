@@ -19,7 +19,7 @@
 
     IconEdit1_1 As icon.Edit:
         AccessibleLabel: =Self.Tooltip
-        DisplayMode: =If(DataSourceInfo([@Table1], DataSourceInfo.EditPermission), DisplayMode.Edit, DisplayMode.Disabled)
+        DisplayMode: =If(DataSourceInfo([@Inventory_MDB], DataSourceInfo.EditPermission), DisplayMode.Edit, DisplayMode.Disabled)
         Height: =50
         Icon: =Icon.Edit
         OnSelect: =Navigate(Bin_Edit,ScreenTransition.None);Reset(TextInput5);Reset(TextInput4_1);NewForm(EditForm1)
@@ -130,7 +130,7 @@
             DataField: ="Batch"
             Default: =ThisItem.Batch
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Batch")
+            DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"Batch")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =120
             Required: =false
@@ -170,7 +170,7 @@
             DataField: ="Part_x0020_number_x0020_"
             Default: =ThisItem.'Part Number'
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Part_x0020_number_x0020_")
+            DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"Part_x0020_Number")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =120
             Required: =false
@@ -210,7 +210,7 @@
             DataField: ="Storage_x0020_location"
             Default: =ThisItem.Location
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Storage_x0020_location")
+            DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"Location")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =120
             Required: =false
@@ -251,7 +251,7 @@
             DataField: ="Count_x0020_Quantity"
             Default: =ThisItem.Quantity
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Table1],DataSourceInfo.DisplayName,"Count_x0020_Quantity")
+            DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"Quantity")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =128
             Required: =false

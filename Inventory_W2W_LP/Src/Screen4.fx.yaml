@@ -21,7 +21,7 @@ Screen4 As screen:
         AccessibleLabel: =Self.Tooltip
         Height: =50
         Icon: =Icon.Reload
-        OnSelect: =Refresh([@Table1])
+        OnSelect: =Refresh([@Inventory_MDB])
         TabIndex: =0
         Tooltip: ="Refresh list"
         Width: =50
@@ -249,24 +249,9 @@ Screen4 As screen:
         Y: =1073
         ZIndex: =18
 
-    PieChart1_1 As pieChart:
-        BorderColor: =RGBA(0, 94, 146, 1)
-        Height: =525
-        ItemBorderColor: =RGBA(0, 94, 146, 1)
-        ItemColorSet: =[RGBA(255,255,255,1),RGBA(0,94,146,1)]
-        Items: |-
-            =Table(
-                 {Value: CountRows(Filter(Table1, Dropdown1.Selected.'Storage location' = 'Storage location')), Label:"Bin Count: " & CountRows(Table1)-(CountRows(Table1) - CountRows(Filter(Table1, Dropdown1.Selected.'Storage location' = 'Storage location')))},
-                 {Value: (CountRows(Table1) - CountRows(Filter(Table1, Dropdown1.Selected.'Storage location' = 'Storage location'))), Label: "Other Bins: " & (CountRows(Table1) - CountRows(Filter(Table1, Dropdown1.Selected.'Storage location' = 'Storage location')))})
-        Size: =20
-        Visible: =If(IsBlank(TextInput4_1.Text),false,true)
-        Width: =640
-        Y: =412
-        ZIndex: =24
-
     Dropdown1 As dropdown:
         Height: =70
-        Items: =Table1
+        Items: =Inventory_MDB
         Size: =21
         Width: =575
         X: =32
