@@ -293,7 +293,7 @@
         Height: =50
         Icon: =Icon.Print
         OnSelect: |-
-            =If(Dropdown2.Selected.Value = "Simple",Navigate(DetailScreen1_1, ScreenTransition.None),Navigate(DetailScreen1_5, ScreenTransition.None));
+            =If(Dropdown2.Selected.Value = "QuickTrack",Navigate(DetailScreen1_1, ScreenTransition.None),Navigate(DetailScreen1_5, ScreenTransition.None));
             Set(varPrintTriggered, true);Set(TIC1Visible,false)
         TabIndex: =
         Width: =50
@@ -662,12 +662,12 @@
     Dropdown4 As dropdown:
         BorderColor: =RGBA(0, 94, 146, 1)
         ChevronBackground: =RGBA(0, 94, 146, 1)
-        Default: ="UID"
+        Default: ="DataMax"
         Height: =61
-        Items: =["Simple","UID"]
+        Items: =["QuickTrack","DataMax"]
         Size: =21
-        Width: =160
-        X: =437
+        Width: =220
+        X: =380
         Y: =715
         ZIndex: =42
 
@@ -682,7 +682,7 @@
             DataSource: =[@Table1]
             Height: =137
             Item: =If(TabList1.Selected.Value = "Log",BrowseGallery1.Selected,Table3.Selected)
-            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Visible: =If(Dropdown4.Selected.Value = "DataMax", true,false)
             Width: =Parent.Width
             Y: =857
             ZIndex: =30
@@ -860,7 +860,7 @@
             Size: =16
             Text: |-
                 ="User ID:"
-            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Visible: =If(Dropdown4.Selected.Value = "DataMax", true,false)
             Width: =100
             X: =320
             Y: =853
@@ -872,7 +872,7 @@
             Size: =16
             Text: |-
                 ="Part Number:"
-            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Visible: =If(Dropdown4.Selected.Value = "DataMax", true,false)
             Width: =160
             X: =138
             Y: =887
@@ -884,7 +884,7 @@
             Size: =16
             Text: |-
                 ="Quantity:"
-            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Visible: =If(Dropdown4.Selected.Value = "DataMax", true,false)
             Width: =120
             X: =138
             Y: =955
@@ -896,7 +896,7 @@
             Size: =16
             Text: |-
                 ="Location:"
-            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Visible: =If(Dropdown4.Selected.Value = "DataMax", true,false)
             Width: =110
             X: =320
             Y: =955
@@ -910,7 +910,7 @@
             Size: =16
             Text: |-
                 ="Date:"
-            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Visible: =If(Dropdown4.Selected.Value = "DataMax", true,false)
             Width: =80
             X: =138
             Y: =853
@@ -922,7 +922,7 @@
             Size: =16
             Text: |-
                 ="Batch:"
-            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Visible: =If(Dropdown4.Selected.Value = "DataMax", true,false)
             Width: =100
             X: =138
             Y: =921
@@ -936,7 +936,7 @@
             PaddingTop: =0
             Size: =18
             Text: ="Inventory W2W-LP"
-            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Visible: =If(Dropdown4.Selected.Value = "DataMax", true,false)
             Width: =240
             X: =200
             Y: =808
@@ -947,7 +947,7 @@
             Height: =100
             HtmlText: |-
                 ="<img src=""https://qrcode.tec-it.com/API/QRCode?data="&DataCardValue3_7.Text&", "&DataCardValue4_7.Text&", "&DataCardValue6_7.Text&", "&DataCardValue5_4.Text&", "&DataCardValue2_7.Text&", "&DataCardValue8_7.Text&"code=MobileQRCode&unit=Min&imagetype=Png&eclevel=L&backcolor=%23ffffff&&istransparent=True&dpi=105&size=Small"" />"
-            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Visible: =If(Dropdown4.Selected.Value = "DataMax", true,false)
             Width: =120
             X: =18
             Y: =867
@@ -956,7 +956,7 @@
         Image4_2 As image:
             Height: =45
             Image: ='SYRMA.NS_BIG-b83dd874'
-            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Visible: =If(Dropdown4.Selected.Value = "DataMax", true,false)
             Width: =145
             X: =12
             Y: =811
@@ -973,7 +973,7 @@
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Visible: =If(Dropdown4.Selected.Value = "DataMax", true,false)
             Width: =70
             X: =555
             Y: =823
@@ -996,7 +996,7 @@
                 If(IsBlank(BrowseGallery1.Selected.'Part Description'),"No Data Found",BrowseGallery1.Selected.'Part Description')
                 
                 &"</div>"
-            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Visible: =If(Dropdown4.Selected.Value = "DataMax", true,false)
             Width: =20
             X: =578
             Y: =819
@@ -1008,7 +1008,7 @@
         Fill: =RGBA(0, 0, 0, 0)
         Height: =198
         OnSelect: |-
-            =If(Dropdown4.Selected.Value = "Simple",Navigate(DetailScreen1_1, ScreenTransition.None),Navigate(DetailScreen1_5, ScreenTransition.None));
+            =If(Dropdown4.Selected.Value = "QuickTrack",Navigate(DetailScreen1_1, ScreenTransition.None),Navigate(DetailScreen1_5, ScreenTransition.None));
             Set(varPrintTriggered, true);Set(TIC1Visible,false)
         Width: =636
         X: =2
@@ -1021,7 +1021,7 @@
         Size: =21
         Text: ="Label Template"
         Width: =285
-        X: =203
+        X: =150
         Y: =715
         ZIndex: =51
 
@@ -1036,7 +1036,7 @@
             DataSource: =[@Table1]
             Height: =197
             Item: =If(TabList1.Selected.Value = "Log",BrowseGallery1.Selected,Table3.Selected)
-            Visible: =If(Dropdown4.Selected.Value = "Simple", true,false)
+            Visible: =If(Dropdown4.Selected.Value = "QuickTrack", true,false)
             Width: =Parent.Width
             Y: =800
             ZIndex: =43
@@ -1198,8 +1198,8 @@
                     PaddingTop: =0
                     Size: =25
                     Text: =Parent.Default
-                    Width: =120
-                    X: =190
+                    Width: =190
+                    X: =103
                     Y: =8
                     ZIndex: =2
 
@@ -1208,7 +1208,7 @@
             Size: =25
             Text: |-
                 ="User ID:"
-            Visible: =If(Dropdown4.Selected.Value = "Simple", true,false)
+            Visible: =If(Dropdown4.Selected.Value = "QuickTrack", true,false)
             Width: =168
             X: =347
             Y: =804
@@ -1219,7 +1219,7 @@
             Size: =25
             Text: |-
                 ="Part Number:"
-            Visible: =If(Dropdown4.Selected.Value = "Simple", true,false)
+            Visible: =If(Dropdown4.Selected.Value = "QuickTrack", true,false)
             Width: =243
             X: =19
             Y: =852
@@ -1231,7 +1231,7 @@
             Size: =25
             Text: |-
                 ="Quantity:"
-            Visible: =If(Dropdown4.Selected.Value = "Simple", true,false)
+            Visible: =If(Dropdown4.Selected.Value = "QuickTrack", true,false)
             Width: =216
             X: =19
             Y: =936
@@ -1242,8 +1242,8 @@
             Height: =57
             Size: =25
             Text: |-
-                ="Location:"
-            Visible: =If(Dropdown4.Selected.Value = "Simple", true,false)
+                ="Bin:"
+            Visible: =If(Dropdown4.Selected.Value = "QuickTrack", true,false)
             Width: =170
             X: =347
             Y: =936
@@ -1256,7 +1256,7 @@
             Size: =25
             Text: |-
                 ="Date:"
-            Visible: =If(Dropdown4.Selected.Value = "Simple", true,false)
+            Visible: =If(Dropdown4.Selected.Value = "QuickTrack", true,false)
             Width: =168
             X: =20
             Y: =804
@@ -1267,7 +1267,7 @@
             Size: =25
             Text: |-
                 ="Batch:"
-            Visible: =If(Dropdown4.Selected.Value = "Simple", true,false)
+            Visible: =If(Dropdown4.Selected.Value = "QuickTrack", true,false)
             Width: =243
             X: =20
             Y: =900
