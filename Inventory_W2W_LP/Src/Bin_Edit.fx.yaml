@@ -173,8 +173,8 @@ Bin_Edit As screen:
         ItemColorSet: =[RGBA(255,255,255,1),RGBA(0,94,146,1)]
         Items: |-
             =Table(
-                 {Value: CountRows(Filter(Inventory_MDB, TextInput4_1.Text = Location)), Label:"Bin Count: " & CountRows(Inventory_MDB)-(CountRows(Inventory_MDB) - CountRows(Filter(Inventory_MDB, TextInput4_1.Text = Location)))},
-                 {Value: (CountRows(Inventory_MDB) - CountRows(Filter(Inventory_MDB, TextInput4_1.Text = Location))), Label: "Other Bins: " & (CountRows(Inventory_MDB) - CountRows(Filter(Inventory_MDB, TextInput4_1.Text = Location)))})
+                 {Value: CountRows(Filter(WISA_Pro_MDB, TextInput4_1.Text = Location)), Label:"Bin Count: " & CountRows(WISA_Pro_MDB)-(CountRows(WISA_Pro_MDB) - CountRows(Filter(WISA_Pro_MDB, TextInput4_1.Text = Location)))},
+                 {Value: (CountRows(WISA_Pro_MDB) - CountRows(Filter(WISA_Pro_MDB, TextInput4_1.Text = Location))), Label: "Other Bins: " & (CountRows(WISA_Pro_MDB) - CountRows(Filter(WISA_Pro_MDB, TextInput4_1.Text = Location)))})
         Size: =20
         Visible: |-
             =false

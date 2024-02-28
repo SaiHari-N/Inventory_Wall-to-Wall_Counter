@@ -19,7 +19,7 @@
 
     IconEdit1 As icon.Edit:
         AccessibleLabel: =Self.Tooltip
-        DisplayMode: =If(DataSourceInfo([@Inventory_MDB], DataSourceInfo.EditPermission), DisplayMode.Edit, DisplayMode.Disabled)
+        DisplayMode: =If(DataSourceInfo([@WISA_Pro_MDB], DataSourceInfo.EditPermission), DisplayMode.Edit, DisplayMode.Disabled)
         Height: =50
         Icon: =Icon.Edit
         OnSelect: =Navigate(Bin_Edit,ScreenTransition.None);Reset(TextInput5);Reset(TextInput4_1);NewForm(EditForm1)
@@ -31,7 +31,7 @@
         ZIndex: =3
 
     DetailForm1 As formViewer:
-        DataSource: =[@Inventory_MDB]
+        DataSource: =[@WISA_Pro_MDB]
         Height: =514
         Item: =If(TabList1.Selected.Value = "Log",BrowseGallery1.Selected,Table3.Selected)
         Width: =Parent.Width
@@ -43,7 +43,7 @@
             DataField: ="Operator_x0020_ID"
             Default: =ThisItem.'User ID'
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"User_x0020_ID")
+            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"User_x0020_ID")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =120
             Required: =false
@@ -81,7 +81,7 @@
             DataField: ="Inventory_x0020_count_x0020_date"
             Default: =ThisItem.Time_Stamp
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"Time_Stamp")
+            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Time_Stamp")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =120
             Required: =false
@@ -130,7 +130,7 @@
             DataField: ="Part_x0020_number_x0020_"
             Default: =ThisItem.'Part Number'
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"Part_x0020_Number")
+            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Part_x0020_Number")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =120
             Required: =false
@@ -170,7 +170,7 @@
             DataField: ="Batch"
             Default: =ThisItem.Batch
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"Batch")
+            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Batch")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =120
             Required: =false
@@ -210,7 +210,7 @@
             DataField: ="Storage_x0020_location"
             Default: =ThisItem.Location
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"Location")
+            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Location")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =120
             Required: =false
@@ -251,7 +251,7 @@
             DataField: ="Count_x0020_Quantity"
             Default: =ThisItem.Quantity
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"Quantity")
+            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Quantity")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =128
             Required: =false
@@ -712,7 +712,7 @@
         ZIndex: =45
 
         DetailForm1_7 As formViewer:
-            DataSource: =[@Inventory_MDB]
+            DataSource: =[@WISA_Pro_MDB]
             Height: =137
             Item: =If(TabList1.Selected.Value = "Log",BrowseGallery1.Selected,Table3.Selected)
             Visible: =If(Dropdown4.Selected.Value = "DataMax", true,false)
@@ -725,7 +725,7 @@
                 DataField: ="Inventory_x0020_count_x0020_date"
                 Default: =ThisItem.Time_Stamp
                 DisplayMode: =DisplayMode.View
-                DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"Time_Stamp")
+                DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Time_Stamp")
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =35
                 Required: =false
@@ -753,7 +753,7 @@
                 DataField: ="Operator_x0020_ID"
                 Default: =ThisItem.'User ID'
                 DisplayMode: =DisplayMode.View
-                DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"User_x0020_ID")
+                DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"User_x0020_ID")
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =30
                 Required: =false
@@ -781,7 +781,7 @@
                 DataField: ="Part_x0020_number_x0020_"
                 Default: =ThisItem.'Part Number'
                 DisplayMode: =DisplayMode.View
-                DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"Part_x0020_Number")
+                DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Part_x0020_Number")
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =35
                 Required: =false
@@ -808,7 +808,7 @@
                 DataField: ="Batch"
                 Default: =ThisItem.Batch
                 DisplayMode: =DisplayMode.View
-                DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"Batch")
+                DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Batch")
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =35
                 Required: =false
@@ -836,7 +836,7 @@
                 DataField: ="Count_x0020_Quantity"
                 Default: =ThisItem.Quantity
                 DisplayMode: =DisplayMode.View
-                DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"Quantity")
+                DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Quantity")
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =30
                 Required: =false
@@ -863,7 +863,7 @@
                 DataField: ="Storage_x0020_location"
                 Default: =ThisItem.Location
                 DisplayMode: =DisplayMode.View
-                DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"Location")
+                DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Location")
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =30
                 Required: =false
@@ -1043,7 +1043,7 @@
         ZIndex: =53
 
         DetailForm1_3 As formViewer:
-            DataSource: =[@Inventory_MDB]
+            DataSource: =[@WISA_Pro_MDB]
             Height: =197
             Item: =If(TabList1.Selected.Value = "Log",BrowseGallery1.Selected,Table3.Selected)
             Visible: =If(Dropdown4.Selected.Value = "QuickTrack", true,false)
@@ -1056,7 +1056,7 @@
                 DataField: ="Inventory_x0020_count_x0020_date"
                 Default: =ThisItem.Time_Stamp
                 DisplayMode: =DisplayMode.View
-                DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"Time_Stamp")
+                DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Time_Stamp")
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =50
                 Required: =false
@@ -1083,7 +1083,7 @@
                 DataField: ="Operator_x0020_ID"
                 Default: =ThisItem.'User ID'
                 DisplayMode: =DisplayMode.View
-                DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"User_x0020_ID")
+                DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"User_x0020_ID")
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =40
                 Required: =false
@@ -1110,7 +1110,7 @@
                 DataField: ="Part_x0020_number_x0020_"
                 Default: =ThisItem.'Part Number'
                 DisplayMode: =DisplayMode.View
-                DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"Part_x0020_Number")
+                DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Part_x0020_Number")
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =50
                 Required: =false
@@ -1137,7 +1137,7 @@
                 DataField: ="Batch"
                 Default: =ThisItem.Batch
                 DisplayMode: =DisplayMode.View
-                DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"Batch")
+                DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Batch")
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =40
                 Required: =false
@@ -1164,7 +1164,7 @@
                 DataField: ="Count_x0020_Quantity"
                 Default: =ThisItem.Quantity
                 DisplayMode: =DisplayMode.View
-                DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"Quantity")
+                DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Quantity")
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =50
                 Required: =false
@@ -1190,7 +1190,7 @@
                 DataField: ="Storage_x0020_location"
                 Default: =ThisItem.Location
                 DisplayMode: =DisplayMode.View
-                DisplayName: =DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,"Location")
+                DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Location")
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =50
                 Required: =false
@@ -1374,7 +1374,7 @@
         Icon21 As icon.Check:
             Color: =RGBA(0, 94, 146, 1)
             Icon: =Icon.Check
-            OnSelect: =If(TextInput9.Text = "DLadmin@123",Remove([@Inventory_MDB], BrowseGallery1.Selected); If (IsEmpty(Errors([@Inventory_MDB], BrowseGallery1.Selected)), Back()),Reset(TextInput9)&Notify("Wrong Password",NotificationType.Error))
+            OnSelect: =If(TextInput9_1.Text = "DLadmin@123",Remove([@WISA_Pro_MDB], BrowseGallery1.Selected); If (IsEmpty(Errors([@WISA_Pro_MDB], BrowseGallery1.Selected)), Back()),Reset(TextInput9_1)&Notify("Wrong Password",NotificationType.Error))
             PaddingBottom: =12
             PaddingLeft: =12
             PaddingRight: =12

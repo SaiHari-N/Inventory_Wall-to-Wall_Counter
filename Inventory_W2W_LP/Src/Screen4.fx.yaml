@@ -21,7 +21,7 @@ Screen4 As screen:
         AccessibleLabel: =Self.Tooltip
         Height: =50
         Icon: =Icon.Reload
-        OnSelect: =Refresh([@Inventory_MDB])
+        OnSelect: =Refresh([@WISA_Pro_MDB])
         TabIndex: =0
         Tooltip: ="Refresh list"
         Width: =50
@@ -251,7 +251,7 @@ Screen4 As screen:
 
     Dropdown1 As dropdown:
         Height: =70
-        Items: =Inventory_MDB
+        Items: =WISA_Pro_MDB
         Size: =21
         Width: =575
         X: =32

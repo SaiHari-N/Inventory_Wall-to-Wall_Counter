@@ -41,6 +41,13 @@
           }
         }
       },
+      "b!3kXZQstSb0ayVfpn3eMZt4mCcGsrdMZPq5FX09timC4_mcJRcZVvS6alUOED2dtG.01SRKD7XJXJFESFB7W7FF3ZJ4M4SKEHYN2": {
+        "dataSources": {
+          "WISA_Pro_MDB": {
+            "tableName": "WISA_Pro_MDB"
+          }
+        }
+      },
       "b!3kXZQstSb0ayVfpn3eMZt4mCcGsrdMZPq5FX09timC4_mcJRcZVvS6alUOED2dtG.01SRKD7XKPKR5YLLMQXRGZNADNFIXY7NFI": {
         "dataSources": {
           "Table2": {
@@ -63,7 +70,8 @@
       "Part_Description",
       "Inventory_MDB",
       "Part_Description_1",
-      "Description_Details"
+      "Description_Details",
+      "WISA_Pro_MDB"
     ],
     "dependencies": {
       "fileSource": "6d34e21b-fa37-43aa-852d-da7a7b48aa8f"

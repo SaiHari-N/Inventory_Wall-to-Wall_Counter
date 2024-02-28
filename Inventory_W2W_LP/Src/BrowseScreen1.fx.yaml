@@ -22,7 +22,7 @@
         AccessibleLabel: =Self.Tooltip
         Height: =50
         Icon: =Icon.Reload
-        OnSelect: =Refresh([@Inventory_MDB])
+        OnSelect: =Refresh([@WISA_Pro_MDB])
         TabIndex: =0
         Tooltip: ="Refresh list"
         Width: =50
@@ -45,7 +45,7 @@
 
     IconNewItem1 As icon.Add:
         AccessibleLabel: =Self.Tooltip
-        DisplayMode: =If(DataSourceInfo([@Inventory_MDB], DataSourceInfo.CreatePermission), DisplayMode.Edit, DisplayMode.Disabled)
+        DisplayMode: =If(DataSourceInfo([@WISA_Pro_MDB], DataSourceInfo.CreatePermission), DisplayMode.Edit, DisplayMode.Disabled)
         Height: =50
         Icon: =Icon.Add
         OnSelect: =NewForm(EditForm1);Navigate(Bin_Edit, ScreenTransition.None);Reset(TextInput4_1);
@@ -65,7 +65,7 @@
         DelayOutput: =true
         Height: =80
         HintText: ="Search items"
-        OnChange: =Search(Inventory_MDB,TextSearchBox1.Text,"Batch","Description","Expiry_x0020_Date","Location","Manufacturing_x0020_Date","Expiry_x0020_Date","Location","Part_x0020_Number","Quantity","Time_Stamp","User_x0020_ID","UID")
+        OnChange: =Search(WISA_Pro_MDB,TextSearchBox1.Text,"Batch","Description","Expiry_x0020_Date","Location","Manufacturing_x0020_Date","Expiry_x0020_Date","Location","Part_x0020_Number","Quantity","Time_Stamp","User_x0020_ID","UID")
         PaddingLeft: =25
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
@@ -81,7 +81,7 @@
         Color: =RGBA(191, 190, 190, 1)
         Height: =Self.Width
         Icon: =Icon.Search
-        OnSelect: =Search(Inventory_MDB,TextSearchBox1.Text,"Batch","Description","Expiry_x0020_Date","Location","Manufacturing_x0020_Date","Expiry_x0020_Date","Location","Part_x0020_Number","Quantity","Time_Stamp","User_x0020_ID","UID")
+        OnSelect: =Search(WISA_Pro_MDB,TextSearchBox1.Text,"Batch","Description","Expiry_x0020_Date","Location","Manufacturing_x0020_Date","Expiry_x0020_Date","Location","Part_x0020_Number","Quantity","Time_Stamp","User_x0020_ID","UID")
         PaddingBottom: =14
         PaddingLeft: =14
         PaddingRight: =14
@@ -103,7 +103,7 @@
         AccessibleLabel: ="Browse Gallery"
         DelayItemLoading: =true
         Height: =660
-        Items: =SortByColumns(Search([@Inventory_MDB], ComboBox1.Selected.Value,"Batch","Description","Expiry_x0020_Date","Location","Manufacturing_x0020_Date","Part_x0020_Number","Quantity","Time_Stamp","User_x0020_ID"),"Time_Stamp", If(SortDescending1, SortOrder.Descending,SortOrder.Ascending))
+        Items: =SortByColumns(Search([@WISA_Pro_MDB], ComboBox1.Selected.Value,"Batch","Description","Expiry_x0020_Date","Location","Manufacturing_x0020_Date","Part_x0020_Number","Quantity","Time_Stamp","User_x0020_ID"),"Time_Stamp", If(SortDescending1, SortOrder.Descending,SortOrder.Ascending))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =Navigate(DetailScreen1, ScreenTransition.None);
@@ -405,7 +405,7 @@
         FontSize: =20
         HeaderFontSize: =25
         Height: =560
-        Items: =SortByColumns(Search([@Inventory_MDB], ComboBox1.Selected.Value,"Batch","Description","Expiry_x0020_Date","Location","Manufacturing_x0020_Date","Part_x0020_Number","Quantity","Time_Stamp","User_x0020_ID"),"Time_Stamp", If(SortDescending1, SortOrder.Descending,SortOrder.Ascending))
+        Items: =SortByColumns(Search([@WISA_Pro_MDB], ComboBox1.Selected.Value,"Batch","Description","Expiry_x0020_Date","Location","Manufacturing_x0020_Date","Part_x0020_Number","Quantity","Time_Stamp","User_x0020_ID"),"Time_Stamp", If(SortDescending1, SortOrder.Descending,SortOrder.Ascending))
         onCellValueChange: =false
         onFilter: =false
         onNavigate: =false
@@ -501,7 +501,7 @@
         Height: =70
         InputTextPlaceholder: ="Find items"
         IsSearchable: =false
-        Items: =Distinct(Inventory_MDB,(If(Dropdown3.Selected.Value = "User ID",'User ID',If(Dropdown3.Selected.Value = "Date",Time_Stamp,If(Dropdown3.Selected.Value = "Part Number",'Part Number',If(Dropdown3.Selected.Value = "Batch",Batch,If(Dropdown3.Selected.Value = "Quantity",Quantity,If(Dropdown3.Selected.Value = "Location",Location,If(Dropdown3.Selected.Value = "Description",Description,If(Dropdown3.Selected.Value = "Manufacturing Date",'Manufacturing Date',If(Dropdown3.Selected.Value = "Expiry Date",'Expiry Date')))))))))))
+        Items: =Distinct(WISA_Pro_MDB,(If(Dropdown3.Selected.Value = "User ID",'User ID',If(Dropdown3.Selected.Value = "Date",Time_Stamp,If(Dropdown3.Selected.Value = "Part Number",'Part Number',If(Dropdown3.Selected.Value = "Batch",Batch,If(Dropdown3.Selected.Value = "Quantity",Quantity,If(Dropdown3.Selected.Value = "Location",Location,If(Dropdown3.Selected.Value = "Description",Description,If(Dropdown3.Selected.Value = "Manufacturing Date",'Manufacturing Date',If(Dropdown3.Selected.Value = "Expiry Date",'Expiry Date')))))))))))
         MultiValueDelimiter: ="& "
         SearchFields: =["Value"]
         SearchItems: =[]

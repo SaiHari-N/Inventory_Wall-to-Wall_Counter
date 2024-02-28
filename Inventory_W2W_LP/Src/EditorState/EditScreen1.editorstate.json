@@ -13,8 +13,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,\"Batch\")",
           "InvariantPropertyName": "DisplayName",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -53,8 +53,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DataSourceInfo([@Inventory_MDB], DataSourceInfo.MaxLength, \"Batch\")",
           "InvariantPropertyName": "MaxLength",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -7126,8 +7126,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,\"Description\")",
           "InvariantPropertyName": "DisplayName",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -7166,8 +7166,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DataSourceInfo([@Inventory_MDB], DataSourceInfo.MaxLength, \"Description\")",
           "InvariantPropertyName": "MaxLength",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -10639,8 +10639,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,\"Expiry_x0020_Date\")",
           "InvariantPropertyName": "DisplayName",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -10679,8 +10679,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DataSourceInfo([@Inventory_MDB], DataSourceInfo.MaxLength, \"Expiry_x0020_Date\")",
           "InvariantPropertyName": "MaxLength",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -17341,8 +17341,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,\"Location\")",
           "InvariantPropertyName": "DisplayName",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -17381,8 +17381,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DataSourceInfo([@Inventory_MDB], DataSourceInfo.MaxLength, \"Location\")",
           "InvariantPropertyName": "MaxLength",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -17509,8 +17509,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,\"Manufacturing_x0020_Date\")",
           "InvariantPropertyName": "DisplayName",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -17549,8 +17549,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DataSourceInfo([@Inventory_MDB], DataSourceInfo.MaxLength, \"Manufacturing_x0020_Date\")",
           "InvariantPropertyName": "MaxLength",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -17788,8 +17788,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,\"Part_x0020_Number\")",
           "InvariantPropertyName": "DisplayName",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -17828,8 +17828,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DataSourceInfo([@Inventory_MDB], DataSourceInfo.MaxLength, \"Part_x0020_Number\")",
           "InvariantPropertyName": "MaxLength",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -17956,8 +17956,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,\"Quantity\")",
           "InvariantPropertyName": "DisplayName",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -17996,8 +17996,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DataSourceInfo([@Inventory_MDB], DataSourceInfo.MaxLength, \"Quantity\")",
           "InvariantPropertyName": "MaxLength",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -22796,8 +22796,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,\"Time_Stamp\")",
           "InvariantPropertyName": "DisplayName",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -22836,8 +22836,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DataSourceInfo([@Inventory_MDB], DataSourceInfo.MaxLength, \"Time_Stamp\")",
           "InvariantPropertyName": "MaxLength",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -23225,8 +23225,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,\"UID\")",
           "InvariantPropertyName": "DisplayName",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -23265,8 +23265,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DataSourceInfo([@Inventory_MDB], DataSourceInfo.MaxLength, \"UID\")",
           "InvariantPropertyName": "MaxLength",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -23406,8 +23406,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DataSourceInfo([@Inventory_MDB],DataSourceInfo.DisplayName,\"User_x0020_ID\")",
           "InvariantPropertyName": "DisplayName",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -23446,8 +23446,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DataSourceInfo([@Inventory_MDB], DataSourceInfo.MaxLength, \"User_x0020_ID\")",
           "InvariantPropertyName": "MaxLength",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
