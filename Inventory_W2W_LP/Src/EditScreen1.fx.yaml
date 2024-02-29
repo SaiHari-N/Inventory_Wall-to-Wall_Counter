@@ -501,7 +501,7 @@
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =If(Toggle1.Value = true,(Mid(TextInput5.Text, Find(",", TextInput5.Text, Find(",", TextInput5.Text,Find(",", TextInput5.Text,Find(",", TextInput5.Text) + 1) + 1) + 1)+1)),"")
                 DelayOutput: =true
-                DisplayMode: =If(Toggle1.Value=true,DisplayMode.Disabled,DisplayMode.Edit)
+                DisplayMode: =If(RadioGroupCanvas1.Selected.Value = "Raw Materials",If(Toggle1.Value = true,DisplayMode.Disabled,DisplayMode.Edit),DisplayMode.Edit)
                 Height: =70
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
@@ -598,7 +598,7 @@
             BorderStyle: =BorderStyle.Solid
             DataField: ="Manufacturing_x0020_Date"
             Default: =ThisItem.'Manufacturing Date'
-            DisplayMode: =DisplayMode.Disabled
+            DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Manufacturing_x0020_Date")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
@@ -625,7 +625,7 @@
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =If(!IsBlank(TextInput5.Text),(Mid(TextInput5.Text, Find(",", TextInput5.Text) + 1, Find(",", TextInput5.Text, Find(",", TextInput5.Text) + 1) - (Find(",", TextInput5.Text) + 1))))
                 DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =If(RadioGroupCanvas1.Selected.Value = "Raw Materials", DisplayMode.Disabled, DisplayMode.Edit)
                 Height: =70
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
@@ -660,7 +660,7 @@
             BorderStyle: =BorderStyle.Solid
             DataField: ="Expiry_x0020_Date"
             Default: =ThisItem.'Expiry Date'
-            DisplayMode: =DisplayMode.Disabled
+            DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Expiry_x0020_Date")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
@@ -687,7 +687,7 @@
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =If(!IsBlank(TextInput5.Text),(Mid(TextInput5.Text, Find(",", TextInput5.Text, Find(",", TextInput5.Text) + 1)+1, Find(",", TextInput5.Text, Find(",", TextInput5.Text,Find(",", TextInput5.Text) + 1)+1) - (Find(",", TextInput5.Text,Find(",", TextInput5.Text) + 1) + 1))))
                 DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =If(RadioGroupCanvas1.Selected.Value = "Raw Materials", DisplayMode.Disabled, DisplayMode.Edit)
                 Height: =70
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
