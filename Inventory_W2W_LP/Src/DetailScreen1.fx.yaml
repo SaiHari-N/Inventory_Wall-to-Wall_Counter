@@ -3,9 +3,10 @@
 
     FormViewer1 As formViewer:
         DataSource: =WISA_Pro_MDB
+        Height: =608
         Item: =If(TabList1.Selected.Value = "Log",BrowseGallery1.Selected,Table3.Selected)
         Width: =640
-        Y: =120
+        Y: =100
         ZIndex: =1
 
         Time_Stamp_DataCard3 As typedDataCard.textualViewCard:
@@ -43,7 +44,7 @@
                 Size: =21
                 Text: =Left(ThisItem.Time_Stamp,Find(" ", ThisItem.Time_Stamp)-1)
                 Width: =Parent.Width - 60
-                X: =30
+                X: =37
                 Y: =DataCardKey27.Y + DataCardKey27.Height + 5
                 ZIndex: =2
 
@@ -329,7 +330,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
-            Width: =634
+            Width: =640
             X: =0
             Y: =1
             ZIndex: =1
@@ -922,7 +923,7 @@
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =16
-                    Text: =Parent.Default
+                    Text: =Left(ThisItem.Time_Stamp,Find(" ", ThisItem.Time_Stamp)-1)
                     Width: =120
                     X: =198
                     Y: =1

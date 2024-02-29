@@ -32,7 +32,7 @@
                 PaddingRight: =0
                 PaddingTop: =0
                 Size: =25
-                Text: =Parent.Default
+                Text: =Left(ThisItem.Time_Stamp,Find(" ", ThisItem.Time_Stamp)-1)
                 Width: =178
                 X: =119
                 Y: =4
