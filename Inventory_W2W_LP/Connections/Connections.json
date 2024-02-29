@@ -144,5 +144,20 @@
     "dependencies": {},
     "dependents": [],
     "id": "b5f5d847-1d68-485a-a5ad-1f9fad3737c1"
+  },
+  "da00c5e3-8350-4d4c-aff8-507f07574d80": {
+    "connectionRef": {
+      "displayName": "Power Apps Notification V2",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/version-mismatches-special-train/1.0.1670.3520/powerappsnotificationv2/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_powerappsnotificationv2",
+      "sharedConnectionId": "/providers/microsoft.powerapps/apis/shared_powerappsnotificationv2/connections/f0a28689ddad49ce8bf137450fc7ecaa"
+    },
+    "datasets": {},
+    "dataSources": [
+      "PowerAppsNotificationV2"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "da00c5e3-8350-4d4c-aff8-507f07574d80"
   }
 }
