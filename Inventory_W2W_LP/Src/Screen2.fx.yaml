@@ -1,5 +1,5 @@
 Screen2 As screen:
-    OnVisible: =Reset(TextInput2); Reset(TextInput2_1); SetFocus(TextInput2); Set(Close,false);Set(ContextPopup,false);Set(AI,false);Set(HN1,true);Set(HN2,false);Set(QueryMail2,true);Set(QueryMail3,false);Reset(TextInput6_2);Set(Settings2,false);Set(Settings1,true);Set(BGWhite,false);TextInput2_1.HintText= "Enter Password"
+    OnVisible: =Reset(TextInput2); Reset(TextInput2_1); SetFocus(TextInput2); Set(Close,false);Set(ContextPopup,false);Set(AI,false);Set(HN1,true);Set(HN2,false);Set(QueryMail2,true);Set(QueryMail3,false);Reset(TextInput6_2);Set(Settings2,false);Set(Settings1,true);Set(BGWhite,false);TextInput2_1.HintText= "Enter Password";Reset(TextInput2_2)
 
     Menu_Navigation_1 As group:
         Height: =5
@@ -442,7 +442,7 @@ Screen2 As screen:
             Color: =RGBA(255, 255, 255, 1)
             Height: =70
             Icon: =Icon.Check
-            OnSelect: =If(IsBlank(TextInput2.Text),SetFocus(TextInput2),If(IsBlank(TextInput2_2.Text),SetFocus(TextInput2_2),If(TextInput2_1.Text="ISadmin@123",Navigate(BrowseScreen1,ScreenTransition.Fade),Notify("Incorrect Password",NotificationType.Error)&Reset(TextInput2_1))))
+            OnSelect: =If(IsBlank(TextInput2.Text),SetFocus(TextInput2),If(TextInput2_1.Text="ISadmin@123",Navigate(BrowseScreen1,ScreenTransition.Fade),Notify("Incorrect Password",NotificationType.Error)&Reset(TextInput2_1)));If(IsBlank(TextInput2_2.Text),SetFocus(TextInput2_2),If(TextInput2_1.Text="ISadmin@123",Navigate(BrowseScreen1,ScreenTransition.Fade),Notify("Incorrect Password",NotificationType.Error)&Reset(TextInput2_1)))
             PaddingBottom: =15
             PaddingLeft: =15
             PaddingRight: =15

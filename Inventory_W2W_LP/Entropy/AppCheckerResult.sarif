@@ -10480,17 +10480,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.Settings2"
+                  "fullyQualifiedName": "App.Settings1"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.Settings2",
+                  "fullyQualifiedName": "App.Settings1",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Settings2",
+                "member": "Settings1",
                 "module": "App",
                 "type": "App"
               }
@@ -10510,17 +10510,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.Settings1"
+                  "fullyQualifiedName": "App.Settings2"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.Settings1",
+                  "fullyQualifiedName": "App.Settings2",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Settings1",
+                "member": "Settings2",
                 "module": "App",
                 "type": "App"
               }
