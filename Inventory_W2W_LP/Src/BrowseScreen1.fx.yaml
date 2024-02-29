@@ -72,6 +72,7 @@
         RadiusTopLeft: =0
         RadiusTopRight: =10
         Size: =21
+        Visible: =BGvisible
         Width: =428
         X: =2
         Y: =127
@@ -87,6 +88,7 @@
         PaddingRight: =14
         PaddingTop: =14
         Tooltip: ="Search"
+        Visible: =BGvisible
         Width: =TextSearchBox1.Height
         X: =348
         Y: =125
@@ -95,6 +97,7 @@
     Rectangle11 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
         Height: =4
+        Visible: =BGvisible
         Width: =Parent.Width
         Y: =205
         ZIndex: =8
@@ -362,7 +365,7 @@
         AccessibleLabel: =Self.Tooltip
         Height: =50
         Icon: =Icon.Download
-        OnSelect: =Reset(TextInput7);Set(DBPW,true);Set(BGvisible,false);SetFocus(TextInput7);Set(DBLaunch,false);Set(DBLaunch1,true)
+        OnSelect: =Reset(TextInput7);Set(DBPW,true);Set(BGvisible,false);SetFocus(TextInput7);Set(DBLaunch,false);Set(DBLaunch1,true);Set(Table3Visible, false)
         TabIndex: =0
         Tooltip: ="Refresh list"
         Visible: =DBLaunch
@@ -394,6 +397,7 @@
         Height: =55
         Items: =["Log", "Report"]
         OnSelect: =If(TabList1.Selected.Value = "Log", Set(BGvisible, true), Set(BGvisible, false));If(TabList1.Selected.Value = "Report", Set(Table3Visible, true), Set(Table3Visible, false))
+        Visible: =BGvisible
         Width: =210
         X: =440
         Y: =120
@@ -475,6 +479,7 @@
         Items: =["All","User ID","Date","Part Number","Batch","Quantity","Location","Manufacturing Date","Expiry Date"]
         OnChange: =Reset(ComboBox1)
         Size: =18
+        Visible: =BGvisible
         Width: =216
         X: =88
         Y: =251
@@ -489,6 +494,7 @@
         PaddingLeft: =5
         PaddingRight: =5
         PaddingTop: =5
+        Visible: =BGvisible
         Width: =70
         X: =10
         Y: =251
@@ -507,7 +513,7 @@
         SearchItems: =[]
         SelectMultiple: =false
         Size: =18
-        Visible: =If(Dropdown3.Selected.Value = "All", false, true)
+        Visible: =If(Dropdown3.Selected.Value = "All", false, BGvisible)
         Width: =296
         X: =324
         Y: =251
@@ -516,6 +522,7 @@
     Rectangle11_1 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
         Height: =4
+        Visible: =BGvisible
         Width: =Parent.Width
         Y: =361
         ZIndex: =25
@@ -524,13 +531,14 @@
         BorderStyle: =BorderStyle.Solid
         DisplayMode: =DisplayMode.Edit
         Fill: =RGBA(0, 0, 0, 0)
+        FontWeight: =FontWeight.Lighter
         HeadingFill: =RGBA(0, 96, 146, 1)
         HeadingFontWeight: =FontWeight.Semibold
         HeadingSize: =18
         Height: =100
         Items: =Table3.Selected
         Size: =16
-        Visible: =If(IsBlank(Table3.Selected),false,true)
+        Visible: =If(IsBlank(Table3.Selected),false,BGvisible)
         Width: =636
         X: =2
         Y: =925
@@ -660,7 +668,7 @@
             Height: =70
             Icon: =Icon.Check
             OnSelect: |-
-                =If(TextInput7.Text="DBadmin@123", Launch("https://syrmatech-my.sharepoint.com/personal/saiharivignesh_n_syrmasgs_com/Documents/WISA%20Pro%20Master%20Database.xlsx")&Set(DBPW, false); Set(BGvisible, true); SetFocus (TextInput7) & Reset (TextInput7));Reset(TextInput7);Set(DBPW,false);Set(BGvisible,true);SetFocus(TextInput7);Set(DBLaunch,true);Set(DBLaunch1,false)
+                =If(TextInput7.Text="DBadmin@123", Launch("https://syrmatech-my.sharepoint.com/personal/saiharivignesh_n_syrmasgs_com/Documents/WISA%20Pro%20Master%20Database.xlsx")&Set(DBPW, false)& Set(BGvisible, true)& SetFocus (TextInput7) & Reset (TextInput7)&Set(DBLaunch,true)&Set(DBLaunch1,false));
             PaddingBottom: =10
             PaddingLeft: =10
             PaddingRight: =10
