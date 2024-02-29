@@ -1,11 +1,447 @@
 "DetailScreen1 As screen.'phoneDetailViewLayout_ver3.0'":
     OnVisible: =Reset(TextInput6_6);Set(BGWhite,false); Set(varGroup4Visible, false);Set(varGroup5Visible, false);Reset(TextInput9)
 
+    FormViewer1 As formViewer:
+        DataSource: =WISA_Pro_MDB
+        Item: =If(TabList1.Selected.Value = "Log",BrowseGallery1.Selected,Table3.Selected)
+        Width: =640
+        Y: =120
+        ZIndex: =1
+
+        Time_Stamp_DataCard3 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Time_Stamp"
+            Default: =ThisItem.Time_Stamp
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Time_Stamp")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =270
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey27 As label:
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =21
+                Text: ="Date"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue27 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Left(ThisItem.Time_Stamp,Find(" ", ThisItem.Time_Stamp)-1)
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey27.Y + DataCardKey27.Height + 5
+                ZIndex: =2
+
+        "'Device ID_DataCard3' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Device_x0020_ID"
+            Default: =ThisItem.'Device ID'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Device_x0020_ID")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =185
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey28 As label:
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 20
+                Wrap: =false
+                X: =10
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue28 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 20
+                X: =10
+                Y: =DataCardKey28.Y + DataCardKey28.Height + 5
+                ZIndex: =2
+
+        "'User ID_DataCard2' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="User_x0020_ID"
+            Default: =ThisItem.'User ID'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"User_x0020_ID")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =185
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey29 As label:
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 20
+                Wrap: =false
+                X: =10
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue29 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 20
+                X: =10
+                Y: =DataCardKey29.Y + DataCardKey29.Height + 5
+                ZIndex: =2
+
+        "'Container Type_DataCard3' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Container_x0020_Type"
+            Default: =ThisItem.'Container Type'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Container_x0020_Type")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =300
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey32 As label:
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue32 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey32.Y + DataCardKey32.Height + 5
+                ZIndex: =2
+
+        "'Item Type_DataCard3' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Item_x0020_Type"
+            Default: =ThisItem.'Item Type'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Item_x0020_Type")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =300
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey31 As label:
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue31 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey31.Y + DataCardKey31.Height + 5
+                ZIndex: =2
+
+        "'Part Number_DataCard2' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Part_x0020_Number"
+            Default: =ThisItem.'Part Number'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Part_x0020_Number")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey33 As label:
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue33 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey33.Y + DataCardKey33.Height + 5
+                ZIndex: =2
+
+        "'Manufacturing Date_DataCard3' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Manufacturing_x0020_Date"
+            Default: =ThisItem.'Manufacturing Date'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Manufacturing_x0020_Date")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =300
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey34 As label:
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =21
+                Text: ="MFG Date"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue34 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey34.Y + DataCardKey34.Height + 5
+                ZIndex: =2
+
+        "'Expiry Date_DataCard3' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Expiry_x0020_Date"
+            Default: =ThisItem.'Expiry Date'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Expiry_x0020_Date")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =300
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey35 As label:
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =21
+                Text: ="EXP Date"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue35 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey35.Y + DataCardKey35.Height + 5
+                ZIndex: =2
+
+        Batch_DataCard2 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Batch"
+            Default: =ThisItem.Batch
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Batch")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =634
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey36 As label:
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue36 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey36.Y + DataCardKey36.Height + 5
+                ZIndex: =2
+
+        Location_DataCard2 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Location"
+            Default: =ThisItem.Location
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Location")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =370
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey30 As label:
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue30 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey30.Y + DataCardKey30.Height + 5
+                ZIndex: =2
+
+        Quantity_DataCard2 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Quantity"
+            Default: =ThisItem.Quantity
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Quantity")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =270
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey37 As label:
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue37 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey37.Y + DataCardKey37.Height + 5
+                ZIndex: =2
+
     Rectangle4 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
         Height: =80
         Width: =640
-        ZIndex: =1
+        ZIndex: =2
 
     LblAppName2 As label:
         FontWeight: =FontWeight.Semibold
@@ -15,7 +451,7 @@
         Width: =280
         Wrap: =false
         X: =80
-        ZIndex: =2
+        ZIndex: =3
 
     IconEdit1 As icon.Edit:
         AccessibleLabel: =Self.Tooltip
@@ -28,343 +464,7 @@
         Width: =50
         X: =570
         Y: =15
-        ZIndex: =3
-
-    DetailForm1 As formViewer:
-        DataSource: =[@WISA_Pro_MDB]
-        Height: =514
-        Item: =If(TabList1.Selected.Value = "Log",BrowseGallery1.Selected,Table3.Selected)
-        Width: =Parent.Width
-        Y: =127
         ZIndex: =4
-
-        "'Operator ID_DataCard1' As typedDataCard.textualViewCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Operator_x0020_ID"
-            Default: =ThisItem.'User ID'
-            DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"User_x0020_ID")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =120
-            Required: =false
-            Width: =292
-            X: =0
-            Y: =0
-            ZIndex: =1
-
-            DataCardKey4 As label:
-                Color: =RGBA(0, 94, 146, 1)
-                FontWeight: =FontWeight.Bold
-                Height: =53
-                Size: =25
-                Text: ="User ID"
-                Width: =200
-                Wrap: =false
-                X: =27
-                ZIndex: =1
-
-            DataCardValue4 As label:
-                DisplayMode: =Parent.DisplayMode
-                Height: =44
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =25
-                Text: =Parent.Default
-                Width: =Parent.Width - 60
-                X: =36
-                Y: =56
-                ZIndex: =2
-
-        "'Inventory count date_DataCard1' As typedDataCard.textualViewCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Inventory_x0020_count_x0020_date"
-            Default: =If(IsBlank(ThisItem.Time_Stamp),"", Left(ThisItem.Time_Stamp,Find(" ", ThisItem.Time_Stamp)-1))
-            DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Time_Stamp")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =120
-            Required: =false
-            Width: =312
-            X: =0
-            Y: =0
-            ZIndex: =1
-
-            DataCardKey3 As label:
-                AutoHeight: =true
-                Height: =48
-                Size: =21
-                Text: =Parent.DisplayName
-                Visible: =false
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue3 As label:
-                DisplayMode: =Parent.DisplayMode
-                Height: =44
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =25
-                Text: =Parent.Default
-                Width: =Parent.Width - 60
-                X: =36
-                Y: =56
-                ZIndex: =2
-
-            Label1 As label:
-                Color: =RGBA(0, 94, 146, 1)
-                FontWeight: =FontWeight.Bold
-                Height: =53
-                Size: =25
-                Text: ="Date"
-                Width: =240
-                X: =27
-                ZIndex: =3
-
-        Batch_DataCard1 As typedDataCard.textualViewCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Part_x0020_number_x0020_"
-            Default: =ThisItem.'Part Number'
-            DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Part_x0020_Number")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =120
-            Required: =false
-            Width: =640
-            X: =0
-            Y: =0
-            ZIndex: =1
-
-            DataCardKey1 As label:
-                AutoHeight: =true
-                Color: =RGBA(0, 94, 146, 1)
-                FontWeight: =FontWeight.Bold
-                Height: =48
-                Size: =25
-                Text: ="Part Number"
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =2
-                ZIndex: =1
-
-            DataCardValue1 As label:
-                DisplayMode: =Parent.DisplayMode
-                Height: =51
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =25
-                Text: =Parent.Default
-                Width: =Parent.Width - 60
-                X: =37
-                Y: =62
-                ZIndex: =2
-
-        "'Part number _DataCard1' As typedDataCard.textualViewCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Batch"
-            Default: =ThisItem.Batch
-            DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Batch")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =120
-            Required: =false
-            Width: =370
-            X: =0
-            Y: =1
-            ZIndex: =1
-
-            DataCardKey6 As label:
-                AutoHeight: =true
-                Color: =RGBA(0, 94, 146, 1)
-                FontWeight: =FontWeight.Bold
-                Height: =48
-                Size: =25
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue6 As label:
-                DisplayMode: =Parent.DisplayMode
-                Height: =81
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =25
-                Text: =Parent.Default
-                Width: =Parent.Width - 60
-                X: =38
-                Y: =58
-                ZIndex: =2
-
-        "'Storage location_DataCard1' As typedDataCard.textualViewCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Storage_x0020_location"
-            Default: =ThisItem.Location
-            DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Location")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =120
-            Required: =false
-            Visible: =true
-            Width: =270
-            WidthFit: =false
-            X: =0
-            Y: =2
-            ZIndex: =1
-
-            DataCardKey8 As label:
-                Color: =RGBA(0, 94, 146, 1)
-                FontWeight: =FontWeight.Bold
-                Height: =61
-                Size: =25
-                Text: ="Location"
-                Width: =180
-                Wrap: =false
-                X: =31
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue8 As label:
-                DisplayMode: =Parent.DisplayMode
-                Height: =80
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =25
-                Text: =Parent.Default
-                Width: =Parent.Width - 60
-                X: =39
-                Y: =55
-                ZIndex: =2
-
-        "'Count Quantity_DataCard1' As typedDataCard.textualViewCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Count_x0020_Quantity"
-            Default: =ThisItem.Quantity
-            DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Quantity")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =128
-            Required: =false
-            Width: =320
-            X: =0
-            Y: =2
-            ZIndex: =1
-
-            DataCardKey2 As label:
-                AutoHeight: =true
-                Color: =RGBA(0, 94, 146, 1)
-                FontWeight: =FontWeight.Bold
-                Height: =48
-                Size: =25
-                Text: ="Quantity"
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue2 As label:
-                DisplayMode: =Parent.DisplayMode
-                Height: =70
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =25
-                Text: =Parent.Default
-                Width: =Parent.Width - 60
-                X: =40
-                Y: =58
-                ZIndex: =2
-
-        "'Expiry Date_DataCard1' As typedDataCard.textualViewCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Expiry_x0020_Date"
-            Default: =ThisItem.'Expiry Date'
-            DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Expiry_x0020_Date")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =40
-            Required: =false
-            Width: =300
-            X: =0
-            Y: =3
-            ZIndex: =1
-
-            DataCardKey10 As label:
-                AutoHeight: =true
-                Color: =RGBA(0, 94, 146, 1)
-                FontWeight: =FontWeight.Bold
-                Height: =48
-                Size: =25
-                Text: ="MFG Date"
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue11 As label:
-                AutoHeight: =true
-                DisplayMode: =Parent.DisplayMode
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =21
-                Text: =ThisItem.'Manufacturing Date'
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey10.Y + DataCardKey10.Height + 5
-                ZIndex: =2
-
-        "'Manufacturing Date_DataCard1' As typedDataCard.textualViewCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Manufacturing_x0020_Date"
-            Default: =ThisItem.'Manufacturing Date'
-            DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Manufacturing_x0020_Date")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =40
-            Required: =false
-            Width: =320
-            X: =0
-            Y: =3
-            ZIndex: =1
-
-            DataCardKey15 As label:
-                AutoHeight: =true
-                Color: =RGBA(0, 94, 146, 1)
-                FontWeight: =FontWeight.Bold
-                Height: =48
-                Size: =25
-                Text: ="EXP Date"
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue15 As label:
-                AutoHeight: =true
-                DisplayMode: =Parent.DisplayMode
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =21
-                Text: =ThisItem.'Expiry Date'
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey15.Y + DataCardKey15.Height + 5
-                ZIndex: =2
 
     Icon1 As icon.Print:
         AccessibleLabel: ="Print"
@@ -379,7 +479,7 @@
         Width: =50
         X: =430
         Y: =15
-        ZIndex: =5
+        ZIndex: =6
 
     Icon3 As icon.Save:
         AccessibleLabel: ="New Tag"
@@ -391,14 +491,14 @@
         Width: =50
         X: =360
         Y: =15
-        ZIndex: =6
+        ZIndex: =7
 
     Rectangle2_1 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
         Height: =80
         Width: =640
         Y: =1060
-        ZIndex: =7
+        ZIndex: =8
 
     Icon8_1 As icon.Home:
         AccessibleLabel: ="Home"
@@ -410,7 +510,7 @@
         Width: =56
         X: =60
         Y: =1073
-        ZIndex: =8
+        ZIndex: =9
 
     Icon9_1 As icon.Tray:
         AccessibleLabel: ="Bin"
@@ -422,7 +522,7 @@
         Width: =56
         X: =176
         Y: =1073
-        ZIndex: =9
+        ZIndex: =10
 
     Icon10_1 As icon.DocumentwithContent:
         AccessibleLabel: ="Tag"
@@ -434,7 +534,7 @@
         Width: =56
         X: =292
         Y: =1073
-        ZIndex: =10
+        ZIndex: =11
 
     Icon11_1 As icon.Print:
         AccessibleLabel: ="Detail"
@@ -446,7 +546,7 @@
         Width: =56
         X: =408
         Y: =1073
-        ZIndex: =11
+        ZIndex: =12
 
     Query_Mail_5 As group:
         Height: =5
@@ -461,7 +561,7 @@
             Visible: =BGWhite
             Width: =640
             Y: =80
-            ZIndex: =42
+            ZIndex: =44
 
         Rectangle6_6 As rectangle:
             BorderColor: =RGBA(0, 94, 146, 1)
@@ -473,7 +573,7 @@
             Width: =572
             X: =34
             Y: =424
-            ZIndex: =43
+            ZIndex: =45
 
         Label5_6 As label:
             Align: =Align.Center
@@ -487,7 +587,7 @@
             Width: =560
             X: =40
             Y: =432
-            ZIndex: =44
+            ZIndex: =46
 
         TextInput6_6 As text:
             AccessibleLabel: ="Body of the mail"
@@ -509,7 +609,7 @@
             Width: =560
             X: =40
             Y: =487
-            ZIndex: =45
+            ZIndex: =47
 
         Button1_6 As button:
             BorderThickness: =0
@@ -530,7 +630,7 @@
             Width: =120
             X: =480
             Y: =690
-            ZIndex: =46
+            ZIndex: =48
 
         Icon5_6 As icon.Cancel:
             AccessibleLabel: ="Close"
@@ -553,7 +653,7 @@
             Width: =60
             X: =540
             Y: =425
-            ZIndex: =47
+            ZIndex: =49
 
         Icon7_13 As icon.Mail:
             AccessibleLabel: ="Mail"
@@ -572,7 +672,7 @@
             Width: =56
             X: =524
             Y: =1073
-            ZIndex: =48
+            ZIndex: =50
 
         Icon7_12 As icon.Mail:
             AccessibleLabel: ="Mail"
@@ -586,7 +686,7 @@
             Width: =56
             X: =524
             Y: =1073
-            ZIndex: =49
+            ZIndex: =51
 
     Menu_Navigation_5 As group:
         Height: =5
@@ -608,7 +708,7 @@
             Tooltip: ="Navigation"
             Visible: =HN1
             Width: =80
-            ZIndex: =57
+            ZIndex: =58
 
         IconBackarrow1_12 As icon.ChevronLeft:
             AccessibleLabel: =Self.Tooltip
@@ -625,7 +725,7 @@
             Tooltip: ="Navigation"
             Visible: =HN2
             Width: =80
-            ZIndex: =58
+            ZIndex: =59
 
     Dropdown4 As dropdown:
         BorderColor: =RGBA(0, 94, 146, 1)
@@ -637,7 +737,7 @@
         Width: =220
         X: =380
         Y: =715
-        ZIndex: =24
+        ZIndex: =25
 
     Menu_5 As group:
         Height: =5
@@ -653,7 +753,7 @@
             OnSelect: =Navigate(App_Details)
             Visible: =Navigation
             Width: =300
-            ZIndex: =50
+            ZIndex: =43
 
         Label7_31 As label:
             FontWeight: =FontWeight.Semibold
@@ -669,7 +769,7 @@
             Visible: =HN3
             Width: =300
             Y: =80
-            ZIndex: =51
+            ZIndex: =52
 
         Label7_32 As label:
             FontWeight: =FontWeight.Semibold
@@ -685,7 +785,7 @@
             Visible: =HN3
             Width: =300
             Y: =160
-            ZIndex: =52
+            ZIndex: =53
 
         Label7_33 As label:
             FontWeight: =FontWeight.Semibold
@@ -701,7 +801,7 @@
             Visible: =HN3
             Width: =300
             Y: =240
-            ZIndex: =53
+            ZIndex: =54
 
         Label7_34 As label:
             FontWeight: =FontWeight.Semibold
@@ -717,7 +817,7 @@
             Visible: =HN3
             Width: =300
             Y: =320
-            ZIndex: =54
+            ZIndex: =55
 
         Label7_35 As label:
             FontWeight: =FontWeight.Semibold
@@ -733,7 +833,7 @@
             Visible: =HN3
             Width: =300
             Y: =400
-            ZIndex: =55
+            ZIndex: =56
 
         Label7_36 As label:
             FontWeight: =FontWeight.Semibold
@@ -749,7 +849,7 @@
             Visible: =HN3
             Width: =300
             Y: =480
-            ZIndex: =56
+            ZIndex: =57
 
     Rectangle10 As rectangle:
         BorderColor: =RGBA(0, 94, 146, 1)
@@ -762,7 +862,7 @@
         Width: =636
         X: =2
         Y: =800
-        ZIndex: =32
+        ZIndex: =33
 
     Label12 As label:
         FontWeight: =FontWeight.Semibold
@@ -772,7 +872,7 @@
         Width: =285
         X: =150
         Y: =715
-        ZIndex: =33
+        ZIndex: =34
 
     Icon22 As icon.Trash:
         Color: =RGBA(255, 255, 255, 1)
@@ -782,7 +882,7 @@
         Width: =50
         X: =500
         Y: =15
-        ZIndex: =41
+        ZIndex: =42
 
     Group2 As group:
         Height: =5
@@ -798,7 +898,7 @@
             Visible: =If(Dropdown4.Selected.Value = "DataMax", true,false)
             Width: =Parent.Width
             Y: =857
-            ZIndex: =12
+            ZIndex: =13
 
             "'Inventory count date_DataCard1_7' As typedDataCard.textualViewCard":
                 BorderStyle: =BorderStyle.Solid
@@ -977,7 +1077,7 @@
             Width: =100
             X: =320
             Y: =853
-            ZIndex: =13
+            ZIndex: =14
 
         Label2_32 As label:
             FontWeight: =FontWeight.Semibold
@@ -989,7 +1089,7 @@
             Width: =160
             X: =138
             Y: =887
-            ZIndex: =14
+            ZIndex: =15
 
         Label2_33 As label:
             FontWeight: =FontWeight.Semibold
@@ -1001,7 +1101,7 @@
             Width: =120
             X: =138
             Y: =955
-            ZIndex: =15
+            ZIndex: =16
 
         Label2_34 As label:
             FontWeight: =FontWeight.Semibold
@@ -1013,7 +1113,7 @@
             Width: =110
             X: =320
             Y: =955
-            ZIndex: =16
+            ZIndex: =17
 
         Label2_35 As label:
             FontWeight: =FontWeight.Semibold
@@ -1027,7 +1127,7 @@
             Width: =80
             X: =138
             Y: =853
-            ZIndex: =17
+            ZIndex: =18
 
         Label2_36 As label:
             FontWeight: =FontWeight.Semibold
@@ -1039,7 +1139,7 @@
             Width: =100
             X: =138
             Y: =921
-            ZIndex: =18
+            ZIndex: =19
 
         Label2_37 As label:
             Align: =Align.Center
@@ -1053,7 +1153,7 @@
             Width: =240
             X: =200
             Y: =808
-            ZIndex: =19
+            ZIndex: =20
 
         HtmlText2_2 As htmlViewer:
             AutoHeight: =true
@@ -1064,7 +1164,7 @@
             Width: =120
             X: =18
             Y: =867
-            ZIndex: =20
+            ZIndex: =21
 
         Image4_2 As image:
             Height: =45
@@ -1073,7 +1173,7 @@
             Width: =145
             X: =12
             Y: =811
-            ZIndex: =21
+            ZIndex: =22
 
         HtmlText3_2 As htmlViewer:
             AutoHeight: =true
@@ -1090,7 +1190,7 @@
             Width: =70
             X: =555
             Y: =823
-            ZIndex: =22
+            ZIndex: =23
 
         HtmlText4_2 As htmlViewer:
             Height: =160
@@ -1113,7 +1213,7 @@
             Width: =20
             X: =578
             Y: =819
-            ZIndex: =23
+            ZIndex: =24
 
     Group3 As group:
         Height: =5
@@ -1129,7 +1229,7 @@
             Visible: =If(Dropdown4.Selected.Value = "QuickTrack", true,false)
             Width: =Parent.Width
             Y: =800
-            ZIndex: =25
+            ZIndex: =26
 
             "'Inventory count date_DataCard1_3' As typedDataCard.textualViewCard":
                 BorderStyle: =BorderStyle.Solid
@@ -1302,7 +1402,7 @@
             Width: =168
             X: =347
             Y: =804
-            ZIndex: =26
+            ZIndex: =27
 
         Label2_6 As label:
             FontWeight: =FontWeight.Bold
@@ -1313,7 +1413,7 @@
             Width: =243
             X: =19
             Y: =852
-            ZIndex: =27
+            ZIndex: =28
 
         Label2_7 As label:
             FontWeight: =FontWeight.Bold
@@ -1325,7 +1425,7 @@
             Width: =216
             X: =19
             Y: =936
-            ZIndex: =28
+            ZIndex: =29
 
         Label2_8 As label:
             FontWeight: =FontWeight.Bold
@@ -1337,7 +1437,7 @@
             Width: =170
             X: =347
             Y: =936
-            ZIndex: =29
+            ZIndex: =30
 
         Label2_9 As label:
             FontWeight: =FontWeight.Bold
@@ -1350,7 +1450,7 @@
             Width: =168
             X: =20
             Y: =804
-            ZIndex: =30
+            ZIndex: =31
 
         Label2_38 As label:
             FontWeight: =FontWeight.Bold
@@ -1361,7 +1461,7 @@
             Width: =243
             X: =20
             Y: =900
-            ZIndex: =31
+            ZIndex: =32
 
     Group5 As group:
         Height: =5
@@ -1376,7 +1476,7 @@
             Visible: =varGroup5Visible
             Width: =640
             Y: =80
-            ZIndex: =34
+            ZIndex: =35
 
         Rectangle12 As rectangle:
             BorderThickness: =2
@@ -1386,7 +1486,7 @@
             Width: =440
             X: =100
             Y: =300
-            ZIndex: =35
+            ZIndex: =36
 
         Label13 As label:
             Height: =70
@@ -1399,7 +1499,7 @@
             Width: =440
             X: =100
             Y: =301
-            ZIndex: =36
+            ZIndex: =37
 
         Label14 As label:
             Align: =Align.Center
@@ -1414,7 +1514,7 @@
             Width: =108
             X: =278
             Y: =445
-            ZIndex: =37
+            ZIndex: =38
 
         Label14_1 As label:
             Align: =Align.Center
@@ -1429,7 +1529,7 @@
             Width: =108
             X: =396
             Y: =445
-            ZIndex: =38
+            ZIndex: =39
 
     Group4 As group:
         Height: =5
@@ -1449,7 +1549,7 @@
             Width: =440
             X: =100
             Y: =591
-            ZIndex: =39
+            ZIndex: =40
 
         Icon21 As icon.Check:
             Color: =RGBA(0, 94, 146, 1)
@@ -1462,5 +1562,5 @@
             Visible: =varGroup4Visible
             X: =473
             Y: =594
-            ZIndex: =40
+            ZIndex: =41
 
