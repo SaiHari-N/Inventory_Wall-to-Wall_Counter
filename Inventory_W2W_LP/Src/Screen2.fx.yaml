@@ -364,6 +364,7 @@ Screen2 As screen:
             PaddingLeft: =210
             PaddingRight: =50
             Size: =21
+            Visible: =If(!IsBlank(TextInput2.Text),If(!IsBlank(TextInput2_2.Text),true,false))
             Width: =560
             X: =40
             Y: =960
@@ -375,6 +376,7 @@ Screen2 As screen:
             Fill: =RGBA(0, 94, 146, 1)
             Height: =70
             TabIndex: =0
+            Visible: =If(!IsBlank(TextInput2.Text),If(!IsBlank(TextInput2_2.Text),true,false))
             Width: =193
             X: =40
             Y: =960
@@ -387,6 +389,7 @@ Screen2 As screen:
             PaddingLeft: =17
             Size: =22
             Text: ="Password"
+            Visible: =If(!IsBlank(TextInput2.Text),If(!IsBlank(TextInput2_2.Text),true,false))
             Width: =191
             X: =40
             Y: =960
@@ -432,6 +435,7 @@ Screen2 As screen:
         Rectangle5 As rectangle:
             Fill: =RGBA(0, 94, 146, 1)
             Height: =70
+            Visible: =If(!IsBlank(TextInput2.Text),If(!IsBlank(TextInput2_2.Text),true,false))
             Width: =76
             X: =525
             Y: =960
@@ -442,12 +446,13 @@ Screen2 As screen:
             Color: =RGBA(255, 255, 255, 1)
             Height: =70
             Icon: =Icon.Check
-            OnSelect: =If(IsBlank(TextInput2.Text),SetFocus(TextInput2),If(TextInput2_1.Text="ISadmin@123",Navigate(BrowseScreen1,ScreenTransition.Fade),Notify("Incorrect Password",NotificationType.Error)&Reset(TextInput2_1)));If(IsBlank(TextInput2_2.Text),SetFocus(TextInput2_2),If(TextInput2_1.Text="ISadmin@123",Navigate(BrowseScreen1,ScreenTransition.Fade),Notify("Incorrect Password",NotificationType.Error)&Reset(TextInput2_1)))
+            OnSelect: =If(IsBlank(TextInput2.Text),SetFocus(TextInput2),If(!IsBlank(TextInput2.Text)&!IsBlank(TextInput2_2.Text)&TextInput2_1.Text="ISadmin@123",Navigate(BrowseScreen1,ScreenTransition.Fade),Notify("Incorrect Password",NotificationType.Error)&Reset(TextInput2_1)))
             PaddingBottom: =15
             PaddingLeft: =15
             PaddingRight: =15
             PaddingTop: =15
             TabIndex: =
+            Visible: =If(!IsBlank(TextInput2.Text),If(!IsBlank(TextInput2_2.Text),true,false))
             Width: =75
             X: =525
             Y: =960
