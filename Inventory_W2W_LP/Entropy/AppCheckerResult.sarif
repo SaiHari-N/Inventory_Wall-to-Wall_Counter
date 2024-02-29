@@ -10180,17 +10180,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.DisplayPopup"
+                  "fullyQualifiedName": "App.QueryMail1"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.DisplayPopup",
+                  "fullyQualifiedName": "App.QueryMail1",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "DisplayPopup",
+                "member": "QueryMail1",
                 "module": "App",
                 "type": "App"
               }
@@ -10240,17 +10240,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.QueryMail1"
+                  "fullyQualifiedName": "App.DisplayPopup"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.QueryMail1",
+                  "fullyQualifiedName": "App.DisplayPopup",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "QueryMail1",
+                "member": "DisplayPopup",
                 "module": "App",
                 "type": "App"
               }

@@ -1,5 +1,5 @@
 "BrowseScreen1 As screen.'phoneBrowseLayout_ver3.0'":
-    OnVisible: =Set(BGvisible,true);Set(DisplayPopup,false);Set(DBPW,false);Set(DBLaunch,true);Set(DBLaunch1, false);Set(QueryMail,true);Set(QueryMail1,false);Reset(TextInput6_3);Set(BGWhite,false);Set(Table3Visible, false);Reset(Dropdown3)
+    OnVisible: =Set(BGvisible,true);Set(DisplayPopup,false);Set(DBPW,false);Set(DBLaunch,true);Set(DBLaunch1, false);Set(QueryMail,true);Set(QueryMail1,false);Reset(TextInput6_3);Set(BGWhite,false);Set(Table3Visible, false);Reset(Dropdown3);Reset(TextInput7);Set(DBPW,false);Set(BGvisible,true);SetFocus(TextInput7);Set(DBLaunch,true);Set(DBLaunch1,false)
 
     RectQuickActionBar1 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
@@ -660,7 +660,7 @@
             Height: =70
             Icon: =Icon.Check
             OnSelect: |-
-                =If(TextInput7.Text="DBadmin@123", Launch("https://syrmatech-my.sharepoint.com/personal/saiharivignesh_n_syrmasgs_com/Documents/WISA%20Pro%20Master%20Database.xlsx")&Set(DBPW, false); Set(BGvisible, true); SetFocus (TextInput7) & Reset (TextInput7))
+                =If(TextInput7.Text="DBadmin@123", Launch("https://syrmatech-my.sharepoint.com/personal/saiharivignesh_n_syrmasgs_com/Documents/WISA%20Pro%20Master%20Database.xlsx")&Set(DBPW, false); Set(BGvisible, true); SetFocus (TextInput7) & Reset (TextInput7));Reset(TextInput7);Set(DBPW,false);Set(BGvisible,true);SetFocus(TextInput7);Set(DBLaunch,true);Set(DBLaunch1,false)
             PaddingBottom: =10
             PaddingLeft: =10
             PaddingRight: =10
