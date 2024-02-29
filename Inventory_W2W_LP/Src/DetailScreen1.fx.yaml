@@ -3,10 +3,10 @@
 
     FormViewer1 As formViewer:
         DataSource: =WISA_Pro_MDB
-        Height: =608
+        Height: =624
         Item: =If(TabList1.Selected.Value = "Log",BrowseGallery1.Selected,Table3.Selected)
         Width: =640
-        Y: =100
+        Y: =84
         ZIndex: =1
 
         Time_Stamp_DataCard3 As typedDataCard.textualViewCard:
@@ -83,7 +83,7 @@
                 Size: =21
                 Text: =Parent.Default
                 Width: =Parent.Width - 20
-                X: =10
+                X: =13
                 Y: =DataCardKey28.Y + DataCardKey28.Height + 5
                 ZIndex: =2
 
@@ -122,7 +122,7 @@
                 Size: =21
                 Text: =Parent.Default
                 Width: =Parent.Width - 20
-                X: =10
+                X: =13
                 Y: =DataCardKey29.Y + DataCardKey29.Height + 5
                 ZIndex: =2
 
@@ -161,7 +161,7 @@
                 Size: =21
                 Text: =Parent.Default
                 Width: =Parent.Width - 60
-                X: =30
+                X: =33
                 Y: =DataCardKey32.Y + DataCardKey32.Height + 5
                 ZIndex: =2
 
@@ -200,7 +200,7 @@
                 Size: =21
                 Text: =Parent.Default
                 Width: =Parent.Width - 60
-                X: =30
+                X: =33
                 Y: =DataCardKey31.Y + DataCardKey31.Height + 5
                 ZIndex: =2
 
@@ -239,7 +239,7 @@
                 Size: =21
                 Text: =Parent.Default
                 Width: =Parent.Width - 60
-                X: =30
+                X: =33
                 Y: =DataCardKey33.Y + DataCardKey33.Height + 5
                 ZIndex: =2
 
@@ -252,7 +252,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
-            Width: =300
+            Width: =320
             X: =0
             Y: =1
             ZIndex: =1
@@ -278,7 +278,7 @@
                 Size: =21
                 Text: =Parent.Default
                 Width: =Parent.Width - 60
-                X: =30
+                X: =33
                 Y: =DataCardKey34.Y + DataCardKey34.Height + 5
                 ZIndex: =2
 
@@ -291,7 +291,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
-            Width: =300
+            Width: =320
             X: =0
             Y: =1
             ZIndex: =1
@@ -317,7 +317,7 @@
                 Size: =21
                 Text: =Parent.Default
                 Width: =Parent.Width - 60
-                X: =30
+                X: =33
                 Y: =DataCardKey35.Y + DataCardKey35.Height + 5
                 ZIndex: =2
 
@@ -356,7 +356,7 @@
                 Size: =21
                 Text: =Parent.Default
                 Width: =Parent.Width - 60
-                X: =30
+                X: =33
                 Y: =DataCardKey36.Y + DataCardKey36.Height + 5
                 ZIndex: =2
 
@@ -395,7 +395,7 @@
                 Size: =21
                 Text: =Parent.Default
                 Width: =Parent.Width - 60
-                X: =30
+                X: =33
                 Y: =DataCardKey30.Y + DataCardKey30.Height + 5
                 ZIndex: =2
 
@@ -434,7 +434,7 @@
                 Size: =21
                 Text: =Parent.Default
                 Width: =Parent.Width - 60
-                X: =30
+                X: =33
                 Y: =DataCardKey37.Y + DataCardKey37.Height + 5
                 ZIndex: =2
 

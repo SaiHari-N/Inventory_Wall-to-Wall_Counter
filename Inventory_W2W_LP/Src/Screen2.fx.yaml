@@ -364,7 +364,7 @@ Screen2 As screen:
             PaddingLeft: =210
             PaddingRight: =50
             Size: =21
-            Visible: =If(!IsBlank(TextInput2.Text),If(!IsBlank(TextInput2_2.Text),true,false))
+            Visible: =If(Len(TextInput2.Text)>4,If(Len(TextInput2_2.Text)=4,true,false))
             Width: =560
             X: =40
             Y: =960
@@ -376,7 +376,7 @@ Screen2 As screen:
             Fill: =RGBA(0, 94, 146, 1)
             Height: =70
             TabIndex: =0
-            Visible: =If(!IsBlank(TextInput2.Text),If(!IsBlank(TextInput2_2.Text),true,false))
+            Visible: =If(Len(TextInput2.Text)>4,If(Len(TextInput2_2.Text)=4,true,false))
             Width: =193
             X: =40
             Y: =960
@@ -389,7 +389,7 @@ Screen2 As screen:
             PaddingLeft: =17
             Size: =22
             Text: ="Password"
-            Visible: =If(!IsBlank(TextInput2.Text),If(!IsBlank(TextInput2_2.Text),true,false))
+            Visible: =If(Len(TextInput2.Text)>4,If(Len(TextInput2_2.Text)=4,true,false))
             Width: =191
             X: =40
             Y: =960
@@ -435,7 +435,7 @@ Screen2 As screen:
         Rectangle5 As rectangle:
             Fill: =RGBA(0, 94, 146, 1)
             Height: =70
-            Visible: =If(!IsBlank(TextInput2.Text),If(!IsBlank(TextInput2_2.Text),true,false))
+            Visible: =If(Len(TextInput2.Text)>4,If(Len(TextInput2_2.Text)=4,true,false))
             Width: =76
             X: =525
             Y: =960
@@ -452,7 +452,7 @@ Screen2 As screen:
             PaddingRight: =15
             PaddingTop: =15
             TabIndex: =
-            Visible: =If(!IsBlank(TextInput2.Text),If(!IsBlank(TextInput2_2.Text),true,false))
+            Visible: =If(Len(TextInput2.Text)>4,If(Len(TextInput2_2.Text)=4,true,false))
             Width: =75
             X: =525
             Y: =960

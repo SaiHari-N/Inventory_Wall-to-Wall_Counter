@@ -148,6 +148,13 @@
   "da00c5e3-8350-4d4c-aff8-507f07574d80": {
     "connectionRef": {
       "displayName": "Power Apps Notification V2",
+      "executionRestrictions": {
+        "apiId": "/providers/microsoft.powerapps/apis/shared_powerappsnotificationv2",
+        "appVer": "3.24023.11",
+        "modifiedOn": "2024-02-29 16:17:39",
+        "policy": "{\"type\":\"unused\"}",
+        "version": 1
+      },
       "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/version-mismatches-special-train/1.0.1670.3520/powerappsnotificationv2/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_powerappsnotificationv2",
       "sharedConnectionId": "/providers/microsoft.powerapps/apis/shared_powerappsnotificationv2/connections/f0a28689ddad49ce8bf137450fc7ecaa"
