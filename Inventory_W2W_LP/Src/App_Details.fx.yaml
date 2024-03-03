@@ -2400,9 +2400,9 @@ App_Details As screen:
 
         Image3 As image:
             Height: =220
-            Image: ='QR Code-t.ly_nw38g (1)'
+            Image: ='QR Code-t.ly_s65mU'
             OnSelect: |-
-                =Launch("https://t.ly/nw38g")
+                =Launch("https://t.ly/s65mU")
             Visible: =AboutVisible
             Width: =220
             X: =210

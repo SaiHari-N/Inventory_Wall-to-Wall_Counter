@@ -1,5 +1,5 @@
 "BrowseScreen1 As screen.'phoneBrowseLayout_ver3.0'":
-    OnVisible: =Set(BGvisible,true);Set(DisplayPopup,false);Set(DBPW,false);Set(DBLaunch,true);Set(DBLaunch1, false);Set(QueryMail,true);Set(QueryMail1,false);Reset(TextInput6_3);Set(BGWhite,false);Set(Table3Visible, false);Reset(Dropdown3);Reset(TextInput7);Set(DBPW,false);Set(BGvisible,true);SetFocus(TextInput7);Set(DBLaunch,true);Set(DBLaunch1,false)
+    OnVisible: =Set(BGvisible,true);Set(DisplayPopup,false);Set(DBPW,false);Set(DBLaunch,true);Set(DBLaunch1, false);Set(QueryMail,true);Set(QueryMail1,false);Reset(TextInput6_3);Set(BGWhite,false);Set(Table3Visible, false);Reset(Dropdown3);Reset(TextInput7);Set(DBPW,false);Set(BGvisible,true);SetFocus(TextInput7);Set(DBLaunch,true);Set(DBLaunch1,false);Set(BrowseControl, true)
 
     RectQuickActionBar1 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
@@ -72,7 +72,7 @@
         RadiusTopLeft: =0
         RadiusTopRight: =10
         Size: =21
-        Visible: =BGvisible
+        Visible: =BrowseControl
         Width: =428
         X: =2
         Y: =127
@@ -88,7 +88,7 @@
         PaddingRight: =14
         PaddingTop: =14
         Tooltip: ="Search"
-        Visible: =BGvisible
+        Visible: =BrowseControl
         Width: =TextSearchBox1.Height
         X: =348
         Y: =125
@@ -97,7 +97,7 @@
     Rectangle11 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
         Height: =4
-        Visible: =BGvisible
+        Visible: =BrowseControl
         Width: =Parent.Width
         Y: =205
         ZIndex: =8
@@ -217,7 +217,7 @@
             PaddingRight: =0
             PaddingTop: =2
             Size: =20
-            Text: =ThisItem.Time_Stamp
+            Text: =Left(ThisItem.Time_Stamp,Find(" ", ThisItem.Time_Stamp)-1)
             VerticalAlign: =VerticalAlign.Top
             Width: =138
             X: =340
@@ -365,7 +365,7 @@
         AccessibleLabel: =Self.Tooltip
         Height: =50
         Icon: =Icon.Download
-        OnSelect: =Reset(TextInput7);Set(DBPW,true);Set(BGvisible,false);SetFocus(TextInput7);Set(DBLaunch,false);Set(DBLaunch1,true);Set(Table3Visible, false)
+        OnSelect: =Reset(TextInput7);Set(DBPW,true);Set(BGvisible,false);SetFocus(TextInput7);Set(DBLaunch,false);Set(DBLaunch1,true);Set(Table3Visible, false);Set(BrowseControl, false)
         TabIndex: =0
         Tooltip: ="Refresh list"
         Visible: =DBLaunch
@@ -378,7 +378,7 @@
         AccessibleLabel: =Self.Tooltip
         Height: =50
         Icon: =Icon.Cancel
-        OnSelect: =Reset(TextInput7);Set(DBPW,false);Set(BGvisible,true);SetFocus(TextInput7);Set(DBLaunch,true);Set(DBLaunch1,false)
+        OnSelect: =Reset(TextInput7);Set(DBPW,false);Set(BGvisible,true);SetFocus(TextInput7);Set(DBLaunch,true);Set(DBLaunch1,false);Set(BrowseControl, true)
         TabIndex: =0
         Tooltip: ="Refresh list"
         Visible: =DBLaunch1
@@ -397,7 +397,7 @@
         Height: =55
         Items: =["Log", "Report"]
         OnSelect: =If(TabList1.Selected.Value = "Log", Set(BGvisible, true), Set(BGvisible, false));If(TabList1.Selected.Value = "Report", Set(Table3Visible, true), Set(Table3Visible, false))
-        Visible: =BGvisible
+        Visible: =BrowseControl
         Width: =210
         X: =440
         Y: =120
@@ -423,25 +423,17 @@
         Y: =365
         ZIndex: =21
 
-        Batch1 As pcfDataField.textualColumn:
-            FieldDisplayName: ="Batch"
-            FieldName: ="Batch"
-            FieldType: ="m"
-            FieldVariantName: ="textualColumn"
-            Order: =4
-            ZIndex: =17
-
         "'Count Quantity1' As pcfDataField.textualColumn":
             FieldDisplayName: ="Quantity"
-            FieldName: ="Count_x0020_Quantity"
+            FieldName: ="Quantity"
             FieldType: ="m"
             FieldVariantName: ="textualColumn"
-            Order: =5
+            Order: =9
             ZIndex: =18
 
         "'Inventory count date1' As pcfDataField.textualColumn":
             FieldDisplayName: ="Date"
-            FieldName: ="Inventory_x0020_count_x0020_date"
+            FieldName: ="Time_Stamp"
             FieldType: ="m"
             FieldVariantName: ="textualColumn"
             Order: =1
@@ -449,7 +441,7 @@
 
         "'Operator ID1' As pcfDataField.textualColumn":
             FieldDisplayName: ="User"
-            FieldName: ="Operator_x0020_ID"
+            FieldName: ="User_x0020_ID"
             FieldType: ="s"
             FieldVariantName: ="textualColumn"
             Order: =2
@@ -457,7 +449,7 @@
 
         "'Part number 1' As pcfDataField.textualColumn":
             FieldDisplayName: ="Part Number"
-            FieldName: ="Part_x0020_number_x0020_"
+            FieldName: ="Part_x0020_Number"
             FieldType: ="m"
             FieldVariantName: ="textualColumn"
             Order: =3
@@ -465,11 +457,51 @@
 
         "'Storage location1' As pcfDataField.textualColumn":
             FieldDisplayName: ="Location"
-            FieldName: ="Storage_x0020_location"
+            FieldName: ="Location"
+            FieldType: ="m"
+            FieldVariantName: ="textualColumn"
+            Order: =10
+            ZIndex: =23
+
+        Batch1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Batch"
+            FieldName: ="Batch"
+            FieldType: ="m"
+            FieldVariantName: ="textualColumn"
+            Order: =8
+            ZIndex: =30
+
+        Manufacturing_x0020_Date1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="MFG Date"
+            FieldName: ="Manufacturing_x0020_Date"
+            FieldType: ="m"
+            FieldVariantName: ="textualColumn"
+            Order: =5
+            ZIndex: =31
+
+        Expiry_x0020_Date1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="EXP Date"
+            FieldName: ="Expiry_x0020_Date"
             FieldType: ="m"
             FieldVariantName: ="textualColumn"
             Order: =6
-            ZIndex: =23
+            ZIndex: =32
+
+        Container_x0020_Type1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Container Type"
+            FieldName: ="Container_x0020_Type"
+            FieldType: ="s"
+            FieldVariantName: ="textualColumn"
+            Order: =6
+            ZIndex: =33
+
+        Item_x0020_Type1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Item Type"
+            FieldName: ="Item_x0020_Type"
+            FieldType: ="m"
+            FieldVariantName: ="textualColumn"
+            Order: =7
+            ZIndex: =34
 
     Dropdown3 As dropdown:
         BorderColor: =RGBA(0, 94, 146, 1)
@@ -479,7 +511,7 @@
         Items: =["All","User ID","Date","Part Number","Batch","Quantity","Location","Manufacturing Date","Expiry Date"]
         OnChange: =Reset(ComboBox1)
         Size: =18
-        Visible: =BGvisible
+        Visible: =BrowseControl
         Width: =216
         X: =88
         Y: =251
@@ -494,7 +526,7 @@
         PaddingLeft: =5
         PaddingRight: =5
         PaddingTop: =5
-        Visible: =BGvisible
+        Visible: =BrowseControl
         Width: =70
         X: =10
         Y: =251
@@ -507,22 +539,22 @@
         Height: =70
         InputTextPlaceholder: ="Find items"
         IsSearchable: =false
-        Items: =Distinct(WISA_Pro_MDB,(If(Dropdown3.Selected.Value = "User ID",'User ID',If(Dropdown3.Selected.Value = "Date",Time_Stamp,If(Dropdown3.Selected.Value = "Part Number",'Part Number',If(Dropdown3.Selected.Value = "Batch",Batch,If(Dropdown3.Selected.Value = "Quantity",Quantity,If(Dropdown3.Selected.Value = "Location",Location,If(Dropdown3.Selected.Value = "Description",Description,If(Dropdown3.Selected.Value = "Manufacturing Date",'Manufacturing Date',If(Dropdown3.Selected.Value = "Expiry Date",'Expiry Date')))))))))))
+        Items: =Distinct(WISA_Pro_MDB,(If(Dropdown3.Selected.Value = "User ID",'User ID',If(Dropdown3.Selected.Value = "Date",Left(Time_Stamp,Find(" ", Time_Stamp)-1),If(Dropdown3.Selected.Value = "Part Number",'Part Number',If(Dropdown3.Selected.Value = "Batch",Batch,If(Dropdown3.Selected.Value = "Quantity",Quantity,If(Dropdown3.Selected.Value = "Location",Location,If(Dropdown3.Selected.Value = "Description",Description,If(Dropdown3.Selected.Value = "Manufacturing Date",'Manufacturing Date',If(Dropdown3.Selected.Value = "Expiry Date",'Expiry Date')))))))))))
         MultiValueDelimiter: ="& "
         SearchFields: =["Value"]
         SearchItems: =[]
         SelectMultiple: =false
         Size: =18
-        Visible: =If(Dropdown3.Selected.Value = "All", false, BGvisible)
-        Width: =296
-        X: =324
+        Visible: =If(Dropdown3.Selected.Value = "All", false,BrowseControl)
+        Width: =284
+        X: =330
         Y: =251
         ZIndex: =24
 
     Rectangle11_1 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
         Height: =4
-        Visible: =BGvisible
+        Visible: =BrowseControl
         Width: =Parent.Width
         Y: =361
         ZIndex: =25
@@ -538,100 +570,151 @@
         Height: =100
         Items: =Table3.Selected
         Size: =16
-        Visible: =If(IsBlank(Table3.Selected),false,BGvisible)
+        Visible: =If(IsBlank(Table3.Selected),false,Table3Visible)
         Width: =636
         X: =2
         Y: =925
         ZIndex: =26
 
-        Inventory_x0020_count_x0020_date_Column1 As dataTableColumn.textualColumn:
-            AutoWidth: =false
+        Time_Stamp_Column1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Date"
-            FieldName: ="Inventory_x0020_count_x0020_date"
+            FieldDisplayName: ="Time_Stamp"
+            FieldName: ="Time_Stamp"
             FieldVariantName: ="textualColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =1
             Text: =ThisItem.Time_Stamp
-            Width: =150
+            Width: =200
             X: =0
             Y: =0
-            ZIndex: =24
+            ZIndex: =35
 
-        Operator_x0020_ID_Column1 As dataTableColumn.textualColumn:
-            AutoWidth: =false
+        User_x0020_ID_Column1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="User ID"
-            FieldName: ="Operator_x0020_ID"
+            FieldName: ="User_x0020_ID"
             FieldVariantName: ="textualColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =2
-            Text: =ThisItem.'User ID'
-            Width: =110
-            X: =0
-            Y: =0
-            ZIndex: =25
-
-        Part_x0020_number_x0020__Column1 As dataTableColumn.textualColumn:
-            AutoWidth: =false
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Part Number"
-            FieldName: ="Part_x0020_number_x0020_"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =3
-            Text: =ThisItem.'Part Number'
+            Text: =ThisItem.User_x0020_ID
             Width: =200
             X: =0
             Y: =0
-            ZIndex: =26
+            ZIndex: =36
+
+        Part_x0020_Number_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Part Number"
+            FieldName: ="Part_x0020_Number"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =5
+            Text: =ThisItem.Part_x0020_Number
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =37
+
+        Manufacturing_x0020_Date_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Manufacturing Date"
+            FieldName: ="Manufacturing_x0020_Date"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =6
+            Text: =ThisItem.Manufacturing_x0020_Date
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =38
+
+        Expiry_x0020_Date_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Expiry Date"
+            FieldName: ="Expiry_x0020_Date"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =7
+            Text: =ThisItem.Expiry_x0020_Date
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =39
 
         Batch_Column1 As dataTableColumn.textualColumn:
-            AutoWidth: =false
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Batch"
             FieldName: ="Batch"
             FieldVariantName: ="textualColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
-            Order: =4
+            Order: =8
             Text: =ThisItem.Batch
-            Width: =175
+            Width: =100
             X: =0
             Y: =0
-            ZIndex: =27
+            ZIndex: =40
 
-        Count_x0020_Quantity_Column1 As dataTableColumn.textualColumn:
-            AutoWidth: =false
+        Quantity_Column1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Quantity"
-            FieldName: ="Count_x0020_Quantity"
+            FieldName: ="Quantity"
             FieldVariantName: ="textualColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
-            Order: =5
+            Order: =9
             Text: =ThisItem.Quantity
-            Width: =130
+            Width: =100
             X: =0
             Y: =0
-            ZIndex: =28
+            ZIndex: =41
 
-        Storage_x0020_location_Column1 As dataTableColumn.textualColumn:
+        Location_Column1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Location"
-            FieldName: ="Storage_x0020_location"
+            FieldName: ="Location"
             FieldVariantName: ="textualColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
-            Order: =6
+            Order: =10
             Text: =ThisItem.Location
             Width: =100
             X: =0
             Y: =0
-            ZIndex: =29
+            ZIndex: =42
+
+        Container_x0020_Type_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Container Type"
+            FieldName: ="Container_x0020_Type"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =3
+            Text: =ThisItem.Container_x0020_Type
+            Width: =200
+            X: =0
+            Y: =0
+            ZIndex: =43
+
+        Item_x0020_Type_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Item Type"
+            FieldName: ="Item_x0020_Type"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =4
+            Text: =ThisItem.Item_x0020_Type
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =44
 
     Group1 As group:
         Height: =5

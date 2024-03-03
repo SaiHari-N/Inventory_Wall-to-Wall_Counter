@@ -474,7 +474,7 @@
         Height: =50
         Icon: =Icon.Print
         OnSelect: |-
-            =If(Dropdown2.Selected.Value = "QuickTrack",Navigate(DetailScreen1_1, ScreenTransition.None),Navigate(DetailScreen1_5, ScreenTransition.None));
+            =If(Dropdown2.Selected.Value = "QuickTrack",Navigate(DetailScreen1_1, ScreenTransition.None),If(Dropdown2.Selected.Value = "DataMax",Navigate(DetailScreen1_5, ScreenTransition.None),Navigate(DetailScreen1_7,ScreenTransition.None)));
             Set(varPrintTriggered, true);Set(TIC1Visible,false)
         TabIndex: =
         Width: =50
@@ -733,7 +733,7 @@
         ChevronBackground: =RGBA(0, 94, 146, 1)
         Default: ="DataMax"
         Height: =61
-        Items: =["QuickTrack","DataMax"]
+        Items: =["QuickTrack","DataMax","UID"]
         Size: =21
         Width: =220
         X: =380
@@ -858,7 +858,7 @@
         Fill: =RGBA(0, 0, 0, 0)
         Height: =198
         OnSelect: |-
-            =If(Dropdown4.Selected.Value = "QuickTrack",Navigate(DetailScreen1_1, ScreenTransition.None),Navigate(DetailScreen1_5, ScreenTransition.None));
+            =If(Dropdown4.Selected.Value = "QuickTrack",Navigate(DetailScreen1_1, ScreenTransition.None),If(Dropdown4.Selected.Value = "DataMax",Navigate(DetailScreen1_5, ScreenTransition.None),Navigate(DetailScreen1_7,ScreenTransition.None)));
             Set(varPrintTriggered, true);Set(TIC1Visible,false)
         Width: =636
         X: =2
@@ -1564,4 +1564,93 @@
             X: =473
             Y: =594
             ZIndex: =41
+
+    Group6 As group:
+        Height: =5
+        Width: =5
+        X: =120
+        Y: =120
+        ZIndex: =65
+
+        DetailForm1_12 As formViewer:
+            DataSource: =[@WISA_Pro_MDB]
+            Height: =44
+            Item: =BrowseGallery1.Selected
+            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Width: =372
+            X: =107
+            Y: =884
+            ZIndex: =60
+
+            "'Part number _DataCard1_12' As typedDataCard.textualViewCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Part_x0020_number_x0020_"
+                Default: =ThisItem.'Part Number'
+                DisplayMode: =DisplayMode.View
+                DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Part_x0020_Number")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =35
+                Required: =false
+                Width: =372
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+                DataCardValue6_12 As label:
+                    DisplayMode: =Parent.DisplayMode
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =25
+                    Text: =ThisItem.UID
+                    Width: =455
+                    X: =45
+                    ZIndex: =2
+
+        Label2_57 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =30
+            Size: =25
+            Text: |-
+                ="UID:"
+            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Width: =160
+            X: =67
+            Y: =889
+            ZIndex: =61
+
+        Label2_54 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Bold
+            Height: =30
+            PaddingBottom: =0
+            PaddingTop: =0
+            Size: =28
+            Text: ="WISA Pro"
+            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Width: =240
+            X: =192
+            Y: =815
+            ZIndex: =62
+
+        HtmlText2_6 As htmlViewer:
+            AutoHeight: =true
+            Height: =200
+            HtmlText: |-
+                ="<img src=""https://qrcode.tec-it.com/API/QRCode?data="&If(IsBlank(BrowseGallery1.Selected.UID),"No Data Found",BrowseGallery1.Selected.UID)&"&code=MobileQRCode&unit=Min&imagetype=Png&eclevel=L&backcolor=%23ffffff&&istransparent=True&dpi=200&size=Small"" />"
+            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Width: =150
+            X: =467
+            Y: =830
+            ZIndex: =63
+
+        Image4_6 As image:
+            Height: =45
+            Image: ='SYRMA.NS_BIG-b83dd874'
+            Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
+            Width: =145
+            X: =14
+            Y: =818
+            ZIndex: =64
 
