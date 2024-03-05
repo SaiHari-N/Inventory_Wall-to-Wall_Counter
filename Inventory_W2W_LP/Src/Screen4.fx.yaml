@@ -319,6 +319,7 @@ Screen4 As screen:
         ZIndex: =31
 
     Slider2 As Slider:
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         Height: =35
         Width: =200

@@ -127,7 +127,7 @@
 
             DataCardValue10 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =TextInput2_2.Text
+                Default: =Upper(TextInput2_2.Text)
                 DelayOutput: =true
                 DisplayMode: =DisplayMode.Disabled
                 Height: =70
@@ -624,7 +624,12 @@
 
             DataCardValue22 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =If(!IsBlank(TextInput5.Text),(Mid(TextInput5.Text, Find(",", TextInput5.Text) + 1, Find(",", TextInput5.Text, Find(",", TextInput5.Text) + 1) - (Find(",", TextInput5.Text) + 1))))
+                Default: |-
+                    =If(Len(Label1.Text) = 8, 
+                      Text(Mid(Label1.Text, 7, 2) & "/" & Mid(Label1.Text, 5, 2) & "/" & Mid(Label1.Text, 1, 4), "yyyy/mm/dd"),
+                      If(Len(Label1.Text) = 6,
+                      Text(Mid(Label1.Text, 5, 2) & "/" & Mid(Label1.Text, 3, 2) & "/" & Mid(Label1.Text, 1, 2), "yy/mm/dd"),Label1.Text
+                    ))
                 DelayOutput: =true
                 DisplayMode: =If(RadioGroupCanvas1.Selected.Value = "Raw Materials", DisplayMode.Disabled, DisplayMode.Edit)
                 Height: =70
@@ -686,7 +691,12 @@
 
             DataCardValue23 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =If(!IsBlank(TextInput5.Text),(Mid(TextInput5.Text, Find(",", TextInput5.Text, Find(",", TextInput5.Text) + 1)+1, Find(",", TextInput5.Text, Find(",", TextInput5.Text,Find(",", TextInput5.Text) + 1)+1) - (Find(",", TextInput5.Text,Find(",", TextInput5.Text) + 1) + 1))))
+                Default: |-
+                    =If(Len(Label1_1.Text) = 8, 
+                      Text(Mid(Label1_1.Text, 7, 2) & "/" & Mid(Label1_1.Text, 5, 2) & "/" & Mid(Label1_1.Text, 1, 4), "yyyy/mm/dd"),
+                      If(Len(Label1_1.Text) = 6,
+                      Text(Mid(Label1_1.Text, 5, 2) & "/" & Mid(Label1_1.Text, 3, 2) & "/" & Mid(Label1_1.Text, 1, 2), "yy/mm/dd"),Label1_1.Text
+                    ))
                 DelayOutput: =true
                 DisplayMode: =If(RadioGroupCanvas1.Selected.Value = "Raw Materials", DisplayMode.Disabled, DisplayMode.Edit)
                 Height: =70
@@ -1316,4 +1326,24 @@
             Width: =300
             Y: =480
             ZIndex: =29
+
+    Label1 As label:
+        Height: =20
+        Size: =21
+        Text: =If(!IsBlank(TextInput5.Text),(Mid(TextInput5.Text, Find(",", TextInput5.Text) + 1, Find(",", TextInput5.Text, Find(",", TextInput5.Text) + 1) - (Find(",", TextInput5.Text) + 1))))
+        Visible: =false
+        Width: =64
+        X: =118
+        Y: =1006
+        ZIndex: =32
+
+    Label1_1 As label:
+        Height: =20
+        Size: =21
+        Text: =If(!IsBlank(TextInput5.Text),(Mid(TextInput5.Text, Find(",", TextInput5.Text, Find(",", TextInput5.Text) + 1)+1, Find(",", TextInput5.Text, Find(",", TextInput5.Text,Find(",", TextInput5.Text) + 1)+1) - (Find(",", TextInput5.Text,Find(",", TextInput5.Text) + 1) + 1))))
+        Visible: =false
+        Width: =64
+        X: =447
+        Y: =1006
+        ZIndex: =33
 
