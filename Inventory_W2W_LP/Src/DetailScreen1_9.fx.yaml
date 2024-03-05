@@ -95,7 +95,7 @@
     Form1_4 As form:
         DataSource: =WISA_Pro_MDB
         Height: =197
-        Item: =If(TabList1.Selected.Value = "Log",BrowseGallery1.Selected,Table3.Selected)
+        Item: =LastSubmittedRecord
         OnSuccess: =Set(TIC1Visible,true)
         Width: =640
         ZIndex: =7
@@ -166,7 +166,7 @@
     Form1_5 As form:
         DataSource: =WISA_Pro_MDB
         Height: =197
-        Item: =If(TabList1.Selected.Value = "Log",BrowseGallery1.Selected,Table3.Selected)
+        Item: =LastSubmittedRecord
         OnSuccess: =Back()
         Width: =640
         ZIndex: =8
