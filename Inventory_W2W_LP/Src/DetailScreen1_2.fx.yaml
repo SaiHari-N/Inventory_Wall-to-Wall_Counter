@@ -135,7 +135,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
-            Width: =300
+            Width: =320
             X: =0
             Y: =0
             ZIndex: =1
@@ -174,7 +174,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
-            Width: =300
+            Width: =320
             X: =0
             Y: =0
             ZIndex: =1
@@ -369,7 +369,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
-            Width: =370
+            Width: =320
             X: =0
             Y: =2
             ZIndex: =1
@@ -408,7 +408,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
-            Width: =270
+            Width: =320
             X: =0
             Y: =2
             ZIndex: =1
