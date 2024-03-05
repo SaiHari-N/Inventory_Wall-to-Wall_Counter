@@ -1,6 +1,6 @@
 "DetailScreen1_9 As screen.'phoneDetailViewLayout_ver3.0'":
     Height: =Max(DetailForm1_14.Height,197)
-    OnVisible: =If(varPrintTriggered1, Print()&Set(TIC1Visible,false)&Set(FormDesc1,"Label Printed but not scanned"));Reset(TextInputCanvas1_4);Set(SFT2, false)
+    OnVisible: =If(varPrintTriggered1, Print()&Set(TIC1Visible,false)&Set(FormDesc1,"Label Printed but not scanned"));Reset(TextInputCanvas1_4);Set(SFT2, false);
 
     DetailForm1_14 As formViewer:
         DataSource: =[@WISA_Pro_MDB]
