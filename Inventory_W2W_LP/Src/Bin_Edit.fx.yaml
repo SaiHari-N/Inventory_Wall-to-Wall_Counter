@@ -11,7 +11,7 @@ Bin_Edit As screen:
         AccessibleLabel: =Self.Tooltip
         Height: =50
         Icon: =Icon.Check
-        OnSelect: =If(IsBlank(TextInput4_1.Text),SetFocus(TextInput4_1),Navigate(EditScreen1,ScreenTransition.None)); NewForm(EditForm1); Reset(TextInput5)
+        OnSelect: =If(IsBlank(TextInput4_1.Text),SetFocus(TextInput4_1),Navigate(EditScreen1,ScreenTransition.None)); NewForm(EditForm1); Reset(TextInput5);ResetForm(EditForm1)
         TabIndex: =0
         Tooltip: ="Submit item"
         Width: =50
