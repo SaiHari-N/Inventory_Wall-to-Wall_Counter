@@ -1,7 +1,7 @@
 "DetailScreen1_7 As screen.'phoneDetailViewLayout_ver3.0'":
     Height: =Max(DetailForm1_10.Height,197)
     OnVisible: |-
-        =If(varPrintTriggered, Print()&Set(TIC1Visible,true));
+        =If(varPrintTriggered, Print());
         If(varPrintTriggered, Icon4_6.Visible=false,Icon4_6.Visible=true);Reset(TextInputCanvas1_2)
 
     DetailForm1_10 As formViewer:
@@ -9,8 +9,8 @@
         Height: =44
         Item: =BrowseGallery1.Selected
         Width: =372
-        X: =115
-        Y: =84
+        X: =83
+        Y: =97
         ZIndex: =1
 
         "'Part number _DataCard1_10' As typedDataCard.textualViewCard":
@@ -33,7 +33,7 @@
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Size: =25
+                Size: =22
                 Text: =ThisItem.UID
                 Width: =455
                 X: =45
@@ -46,8 +46,8 @@
         Text: |-
             ="UID:"
         Width: =160
-        X: =75
-        Y: =89
+        X: =50
+        Y: =99
         ZIndex: =3
 
     Timer1_6 As timer:
@@ -56,7 +56,7 @@
         Duration: =5000
         Fill: =RGBA(0, 0, 0, 0)
         Height: =14
-        OnTimerEnd: =Back()
+        OnTimerEnd: =Set(TIC1Visible,true)
         Start: =true
         Width: =14
         X: =625
