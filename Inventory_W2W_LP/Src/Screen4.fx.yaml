@@ -1,5 +1,5 @@
 Screen4 As screen:
-    OnVisible: =Set(LowQnThreshold, 10);Set(LowQNData, Filter(WISA_Pro_MDB, Quantity < LowQnThreshold))
+    OnVisible: =
 
     RectQuickActionBar1_2 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
@@ -267,10 +267,7 @@ Screen4 As screen:
             ZIndex: =27
 
         LineChart1 As lineChart:
-            Items: |-
-                =Table(
-                     {X: Filter(WISA_Pro_MDB, Quantity < LowQnThreshold).UID, Label:"Low Stock Quantity: " & CountRows(WISA_Pro_MDB)-(CountRows(WISA_Pro_MDB) - CountRows(Filter(WISA_Pro_MDB, TextInput4_1.Text = Location)))}
-                    )
+            Items: =WISA_Pro_MDB
             X: =124
             Y: =308
             ZIndex: =28
