@@ -81,6 +81,7 @@
             ="<img src=""https://qrcode.tec-it.com/API/QRCode?data="&If(IsBlank(BrowseGallery1.Selected.UID),"No Data Found",BrowseGallery1.Selected.UID)&"&code=MobileQRCode&unit=Min&imagetype=Png&eclevel=L&backcolor=%23ffffff&&istransparent=True&dpi=200&size=Small"" />"
         Width: =150
         X: =475
+        Y: =30
         ZIndex: =5
 
     Image4_8 As image:
