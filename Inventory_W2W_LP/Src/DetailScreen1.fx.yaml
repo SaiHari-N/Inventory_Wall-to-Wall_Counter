@@ -1577,7 +1577,7 @@
             Height: =44
             Item: =BrowseGallery1.Selected
             Visible: =If(Dropdown4.Selected.Value = "UID", true,false)
-            Width: =372
+            Width: =380
             X: =77
             Y: =894
             ZIndex: =41
@@ -1591,7 +1591,7 @@
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =35
                 Required: =false
-                Width: =372
+                Width: =380
                 X: =0
                 Y: =0
                 ZIndex: =1

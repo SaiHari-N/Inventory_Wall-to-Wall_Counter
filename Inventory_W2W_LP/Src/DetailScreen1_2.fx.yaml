@@ -1476,7 +1476,7 @@
             Height: =44
             Item: =LastSubmittedRecord
             Visible: =If(Dropdown4_1.Selected.Value = "UID", true,false)
-            Width: =372
+            Width: =380
             X: =77
             Y: =896
             ZIndex: =41
@@ -1490,7 +1490,7 @@
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =35
                 Required: =false
-                Width: =372
+                Width: =380
                 X: =0
                 Y: =0
                 ZIndex: =1
