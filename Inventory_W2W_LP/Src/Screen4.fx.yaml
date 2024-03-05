@@ -250,15 +250,6 @@ Screen4 As screen:
         Y: =1073
         ZIndex: =18
 
-    Dropdown1 As dropdown:
-        Height: =70
-        Items: =WISA_Pro_MDB
-        Size: =21
-        Width: =575
-        X: =32
-        Y: =157
-        ZIndex: =25
-
     CompositeLineChart1 As group:
         Height: =5
         Width: =5
@@ -293,4 +284,45 @@ Screen4 As screen:
             X: =164
             Y: =718
             ZIndex: =29
+
+    Dropdown3_1 As dropdown:
+        BorderColor: =RGBA(0, 94, 146, 1)
+        ChevronBackground: =RGBA(0, 94, 146, 1)
+        Default: =
+        Height: =70
+        Items: =["All","User ID","Date","Part Number","Batch","Quantity","Location","Manufacturing Date","Expiry Date"]
+        OnChange: =Reset(ComboBox1_1)
+        Size: =18
+        Visible: =BrowseControl
+        Width: =216
+        X: =54
+        Y: =136
+        ZIndex: =30
+
+    ComboBox1_1 As combobox:
+        BorderColor: =RGBA(0, 94, 146, 1)
+        ChevronBackground: =RGBA(0, 94, 146, 1)
+        DisplayFields: =["Value"]
+        Height: =70
+        InputTextPlaceholder: ="Find items"
+        IsSearchable: =false
+        Items: =Distinct(WISA_Pro_MDB,(If(Dropdown3_1.Selected.Value = "User ID",'User ID',If(Dropdown3_1.Selected.Value = "Date",Left(Time_Stamp,Find(" ", Time_Stamp)-1),If(Dropdown3_1.Selected.Value = "Part Number",'Part Number',If(Dropdown3_1.Selected.Value = "Batch",Batch,If(Dropdown3_1.Selected.Value = "Quantity",Quantity,If(Dropdown3_1.Selected.Value = "Location",Location,If(Dropdown3_1.Selected.Value = "Description",Description,If(Dropdown3_1.Selected.Value = "Manufacturing Date",'Manufacturing Date',If(Dropdown3_1.Selected.Value = "Expiry Date",'Expiry Date')))))))))))
+        MultiValueDelimiter: ="& "
+        SearchFields: =["Value"]
+        SearchItems: =[]
+        SelectMultiple: =false
+        Size: =18
+        Visible: =If(Dropdown3_1.Selected.Value = "All", false,BrowseControl)
+        Width: =284
+        X: =296
+        Y: =136
+        ZIndex: =31
+
+    Slider2 As Slider:
+        DisplayMode: =DisplayMode.Edit
+        Height: =35
+        Width: =200
+        X: =338
+        Y: =142
+        ZIndex: =32
 

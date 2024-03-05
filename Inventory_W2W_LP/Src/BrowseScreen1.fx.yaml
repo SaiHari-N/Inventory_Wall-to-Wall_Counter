@@ -106,7 +106,7 @@
         AccessibleLabel: ="Browse Gallery"
         DelayItemLoading: =true
         Height: =660
-        Items: =SortByColumns(Search([@WISA_Pro_MDB], ComboBox1.Selected.Value,"Batch","Description","Expiry_x0020_Date","Location","Manufacturing_x0020_Date","Part_x0020_Number","Quantity","Time_Stamp","User_x0020_ID"),"Time_Stamp", If(SortDescending1, SortOrder.Descending,SortOrder.Ascending))
+        Items: =SortByColumns(Search([@WISA_Pro_MDB], ComboBox1.Selected.Value,"Time_Stamp","Batch","Description","Expiry_x0020_Date","Location","Manufacturing_x0020_Date","Part_x0020_Number","Quantity","User_x0020_ID"),"Time_Stamp", If(SortDescending1, SortOrder.Descending,SortOrder.Ascending))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =Navigate(DetailScreen1, ScreenTransition.None);
@@ -775,7 +775,7 @@
             Visible: =BGWhite
             Width: =640
             Y: =80
-            ZIndex: =27
+            ZIndex: =28
 
         Rectangle6_3 As rectangle:
             BorderColor: =RGBA(0, 94, 146, 1)
@@ -787,7 +787,7 @@
             Width: =572
             X: =34
             Y: =411
-            ZIndex: =28
+            ZIndex: =29
 
         Label5_3 As label:
             Align: =Align.Center
@@ -801,7 +801,7 @@
             Width: =560
             X: =40
             Y: =419
-            ZIndex: =29
+            ZIndex: =30
 
         TextInput6_3 As text:
             AccessibleLabel: ="Body of the mail"
@@ -823,7 +823,7 @@
             Width: =560
             X: =40
             Y: =474
-            ZIndex: =30
+            ZIndex: =31
 
         Button1_3 As button:
             BorderThickness: =0
@@ -844,7 +844,7 @@
             Width: =120
             X: =480
             Y: =677
-            ZIndex: =31
+            ZIndex: =32
 
         Icon5_3 As icon.Cancel:
             AccessibleLabel: ="Close"
@@ -867,7 +867,7 @@
             Width: =60
             X: =540
             Y: =412
-            ZIndex: =32
+            ZIndex: =33
 
         Icon7_7 As icon.Mail:
             AccessibleLabel: ="Mail"
@@ -886,7 +886,7 @@
             Width: =56
             X: =524
             Y: =1073
-            ZIndex: =33
+            ZIndex: =34
 
         Icon7_6 As icon.Mail:
             AccessibleLabel: ="Mail"
@@ -900,7 +900,7 @@
             Width: =56
             X: =524
             Y: =1073
-            ZIndex: =34
+            ZIndex: =35
 
     Menu_Navigation_2 As group:
         Height: =5
@@ -922,7 +922,7 @@
             Tooltip: ="Navigation"
             Visible: =HN1
             Width: =80
-            ZIndex: =42
+            ZIndex: =43
 
         IconBackarrow1_6 As icon.ChevronLeft:
             AccessibleLabel: =Self.Tooltip
@@ -939,7 +939,7 @@
             Tooltip: ="Navigation"
             Visible: =HN2
             Width: =80
-            ZIndex: =43
+            ZIndex: =44
 
     Menu_2 As group:
         Height: =5
@@ -955,7 +955,7 @@
             OnSelect: =Navigate(App_Details)
             Visible: =Navigation
             Width: =300
-            ZIndex: =35
+            ZIndex: =36
 
         Label7_13 As label:
             FontWeight: =FontWeight.Semibold
@@ -971,7 +971,7 @@
             Visible: =HN3
             Width: =300
             Y: =80
-            ZIndex: =36
+            ZIndex: =37
 
         Label7_14 As label:
             FontWeight: =FontWeight.Semibold
@@ -987,7 +987,7 @@
             Visible: =HN3
             Width: =300
             Y: =160
-            ZIndex: =37
+            ZIndex: =38
 
         Label7_15 As label:
             FontWeight: =FontWeight.Semibold
@@ -1003,7 +1003,7 @@
             Visible: =HN3
             Width: =300
             Y: =240
-            ZIndex: =38
+            ZIndex: =39
 
         Label7_16 As label:
             FontWeight: =FontWeight.Semibold
@@ -1019,7 +1019,7 @@
             Visible: =HN3
             Width: =300
             Y: =320
-            ZIndex: =39
+            ZIndex: =40
 
         Label7_17 As label:
             FontWeight: =FontWeight.Semibold
@@ -1035,7 +1035,7 @@
             Visible: =HN3
             Width: =300
             Y: =400
-            ZIndex: =40
+            ZIndex: =41
 
         Label7_18 As label:
             FontWeight: =FontWeight.Semibold
@@ -1051,5 +1051,5 @@
             Visible: =HN3
             Width: =300
             Y: =480
-            ZIndex: =41
+            ZIndex: =42
 

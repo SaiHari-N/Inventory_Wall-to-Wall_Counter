@@ -562,7 +562,7 @@
             Visible: =BGWhite
             Width: =640
             Y: =80
-            ZIndex: =41
+            ZIndex: =47
 
         Rectangle6_7 As rectangle:
             BorderColor: =RGBA(0, 94, 146, 1)
@@ -574,7 +574,7 @@
             Width: =572
             X: =34
             Y: =432
-            ZIndex: =42
+            ZIndex: =48
 
         Label5_7 As label:
             Align: =Align.Center
@@ -588,7 +588,7 @@
             Width: =560
             X: =40
             Y: =440
-            ZIndex: =43
+            ZIndex: =49
 
         TextInput6_7 As text:
             AccessibleLabel: ="Body of the mail"
@@ -610,7 +610,7 @@
             Width: =560
             X: =40
             Y: =495
-            ZIndex: =44
+            ZIndex: =50
 
         Button1_7 As button:
             BorderThickness: =0
@@ -631,7 +631,7 @@
             Width: =120
             X: =480
             Y: =698
-            ZIndex: =45
+            ZIndex: =51
 
         Icon5_7 As icon.Cancel:
             AccessibleLabel: ="Close"
@@ -654,7 +654,7 @@
             Width: =60
             X: =540
             Y: =433
-            ZIndex: =46
+            ZIndex: =52
 
         Icon7_15 As icon.Mail:
             AccessibleLabel: ="Mail"
@@ -673,7 +673,7 @@
             Width: =56
             X: =524
             Y: =1073
-            ZIndex: =47
+            ZIndex: =53
 
         Icon7_14 As icon.Mail:
             AccessibleLabel: ="Mail"
@@ -687,7 +687,7 @@
             Width: =56
             X: =524
             Y: =1073
-            ZIndex: =48
+            ZIndex: =54
 
     Menu_Navigation_6 As group:
         Height: =5
@@ -709,7 +709,7 @@
             Tooltip: ="Navigation"
             Visible: =HN1
             Width: =80
-            ZIndex: =56
+            ZIndex: =62
 
         IconBackarrow1_14 As icon.ChevronLeft:
             AccessibleLabel: =Self.Tooltip
@@ -726,7 +726,7 @@
             Tooltip: ="Navigation"
             Visible: =HN2
             Width: =80
-            ZIndex: =57
+            ZIndex: =63
 
     Dropdown4_1 As dropdown:
         BorderColor: =RGBA(0, 94, 146, 1)
@@ -754,7 +754,7 @@
             OnSelect: =Navigate(App_Details)
             Visible: =Navigation
             Width: =300
-            ZIndex: =49
+            ZIndex: =55
 
         Label7_37 As label:
             FontWeight: =FontWeight.Semibold
@@ -770,7 +770,7 @@
             Visible: =HN3
             Width: =300
             Y: =80
-            ZIndex: =50
+            ZIndex: =56
 
         Label7_38 As label:
             FontWeight: =FontWeight.Semibold
@@ -786,7 +786,7 @@
             Visible: =HN3
             Width: =300
             Y: =160
-            ZIndex: =51
+            ZIndex: =57
 
         Label7_39 As label:
             FontWeight: =FontWeight.Semibold
@@ -802,7 +802,7 @@
             Visible: =HN3
             Width: =300
             Y: =240
-            ZIndex: =52
+            ZIndex: =58
 
         Label7_40 As label:
             FontWeight: =FontWeight.Semibold
@@ -818,7 +818,7 @@
             Visible: =HN3
             Width: =300
             Y: =320
-            ZIndex: =53
+            ZIndex: =59
 
         Label7_41 As label:
             FontWeight: =FontWeight.Semibold
@@ -834,7 +834,7 @@
             Visible: =HN3
             Width: =300
             Y: =400
-            ZIndex: =54
+            ZIndex: =60
 
         Label7_42 As label:
             FontWeight: =FontWeight.Semibold
@@ -850,7 +850,7 @@
             Visible: =HN3
             Width: =300
             Y: =480
-            ZIndex: =55
+            ZIndex: =61
 
     Label12_1 As label:
         FontWeight: =FontWeight.Semibold
@@ -871,6 +871,19 @@
         X: =500
         Y: =16
         ZIndex: =40
+
+    Rectangle10_1 As rectangle:
+        BorderColor: =RGBA(0, 94, 146, 1)
+        BorderThickness: =2
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =198
+        OnSelect: |-
+            =If(Dropdown4.Selected.Value = "QuickTrack",Navigate(DetailScreen1_4, ScreenTransition.None),If(Dropdown4.Selected.Value = "DataMax",Navigate(DetailScreen1_6, ScreenTransition.None),Navigate(DetailScreen1_8,ScreenTransition.None)));
+            Set(varPrintTriggered1, true);Set(TIC1Visible,false)
+        Width: =636
+        X: =2
+        Y: =802
+        ZIndex: =46
 
     Group2_1 As group:
         Height: =5
@@ -1451,19 +1464,6 @@
             Y: =902
             ZIndex: =31
 
-    Rectangle10_1 As rectangle:
-        BorderColor: =RGBA(0, 94, 146, 1)
-        BorderThickness: =2
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =198
-        OnSelect: |-
-            =If(Dropdown4.Selected.Value = "QuickTrack",Navigate(DetailScreen1_4, ScreenTransition.None),If(Dropdown4.Selected.Value = "DataMax",Navigate(DetailScreen1_6, ScreenTransition.None),Navigate(DetailScreen1_8,ScreenTransition.None)));
-            Set(varPrintTriggered1, true);Set(TIC1Visible,false)
-        Width: =636
-        X: =2
-        Y: =802
-        ZIndex: =63
-
     Group7 As group:
         Height: =5
         Width: =5
@@ -1477,9 +1477,9 @@
             Item: =LastSubmittedRecord
             Visible: =If(Dropdown4_1.Selected.Value = "UID", true,false)
             Width: =372
-            X: =107
-            Y: =886
-            ZIndex: =58
+            X: =77
+            Y: =896
+            ZIndex: =41
 
             "'Part number _DataCard1_13' As typedDataCard.textualViewCard":
                 BorderStyle: =BorderStyle.Solid
@@ -1515,9 +1515,9 @@
                 ="UID:"
             Visible: =If(Dropdown4_1.Selected.Value = "UID", true,false)
             Width: =160
-            X: =67
-            Y: =891
-            ZIndex: =59
+            X: =37
+            Y: =901
+            ZIndex: =42
 
         Label2_59 As label:
             Align: =Align.Center
@@ -1531,7 +1531,7 @@
             Width: =240
             X: =192
             Y: =817
-            ZIndex: =60
+            ZIndex: =43
 
         HtmlText2_7 As htmlViewer:
             AutoHeight: =true
@@ -1542,7 +1542,7 @@
             Width: =150
             X: =467
             Y: =832
-            ZIndex: =61
+            ZIndex: =44
 
         Image4_7 As image:
             Height: =45
@@ -1551,7 +1551,7 @@
             Width: =145
             X: =14
             Y: =820
-            ZIndex: =62
+            ZIndex: =45
 
     Group5_1 As group:
         Height: =5

@@ -11640,7 +11640,7 @@
       "MetaDataIDKey": "",
       "Name": "DetailForm1_12",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 47,
+      "ParentIndex": 48,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -20180,7 +20180,7 @@
       "MetaDataIDKey": "",
       "Name": "Label2_32",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 48,
+      "ParentIndex": 47,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

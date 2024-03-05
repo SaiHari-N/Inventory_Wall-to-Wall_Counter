@@ -88,6 +88,7 @@
             DatePicker1 As datepicker:
                 AccessibleLabel: ="Date"
                 BorderColor: =RGBA(0, 94, 146, 1)
+                Format: ="dd/mm/yyyy"
                 Height: =70
                 IconBackground: =RGBA(0, 94, 146, 1)
                 OnSelect: =
@@ -106,7 +107,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             MaxLength: =DataSourceInfo([@WISA_Pro_MDB], DataSourceInfo.MaxLength, "Device_x0020_ID")
-            Required: =false
+            Required: =true
             Update: =DataCardValue10.Text
             Width: =185
             X: =0
@@ -168,7 +169,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             MaxLength: =DataSourceInfo([@WISA_Pro_MDB], DataSourceInfo.MaxLength, "User_x0020_ID")
-            Required: =false
+            Required: =true
             Update: =DataCardValue20.Text
             Width: =185
             X: =0
@@ -230,7 +231,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             MaxLength: =DataSourceInfo([@WISA_Pro_MDB], DataSourceInfo.MaxLength, "Location")
-            Required: =false
+            Required: =true
             Update: =DataCardValue13.Text
             Width: =350
             X: =185
@@ -292,7 +293,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             MaxLength: =DataSourceInfo([@WISA_Pro_MDB], DataSourceInfo.MaxLength, "Item_x0020_Type")
-            Required: =false
+            Required: =true
             Update: =DataCardValue14.Text
             Width: =320
             X: =0
@@ -354,7 +355,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             MaxLength: =DataSourceInfo([@WISA_Pro_MDB], DataSourceInfo.MaxLength, "Container_x0020_Type")
-            Required: =false
+            Required: =true
             Update: =DataCardValue12.Text
             Width: =320
             X: =0
@@ -416,7 +417,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             MaxLength: =DataSourceInfo([@WISA_Pro_MDB], DataSourceInfo.MaxLength, "Part_x0020_Number")
-            Required: =false
+            Required: =true
             Update: =DataCardValue16.Text
             Width: =640
             X: =0
@@ -561,7 +562,7 @@
 
             DataCardValue7 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =If(Toggle1.Value=true,(Mid(TextInput5.Text, Find(",", TextInput5.Text, Find(",", TextInput5.Text,Find(",", TextInput5.Text) + 1) + 1)+1, Find(",", TextInput5.Text, Find(",", TextInput5.Text,Find(",", TextInput5.Text,Find(",", TextInput5.Text) + 1) + 1)+1) - (Find(",", TextInput5.Text,Find(",", TextInput5.Text,Find(",", TextInput5.Text) + 1) + 1) + 1))),(Mid(TextInput5.Text, Find(",", TextInput5.Text, Find(",", TextInput5.Text,Find(",", TextInput5.Text) + 1) + 1)+1)))
+                Default: =If(!IsBlank(TextInput5),If(Toggle1.Value=true,(Mid(TextInput5.Text, Find(",", TextInput5.Text, Find(",", TextInput5.Text,Find(",", TextInput5.Text) + 1) + 1)+1, Find(",", TextInput5.Text, Find(",", TextInput5.Text,Find(",", TextInput5.Text,Find(",", TextInput5.Text) + 1) + 1)+1) - (Find(",", TextInput5.Text,Find(",", TextInput5.Text,Find(",", TextInput5.Text) + 1) + 1) + 1))),(Mid(TextInput5.Text, Find(",", TextInput5.Text, Find(",", TextInput5.Text,Find(",", TextInput5.Text) + 1) + 1)+1))))
                 DelayOutput: =true
                 DisplayMode: =If(RadioGroupCanvas1.Selected.Value = "Raw Materials", DisplayMode.Disabled, DisplayMode.Edit)
                 Height: =70
@@ -603,7 +604,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             MaxLength: =DataSourceInfo([@WISA_Pro_MDB], DataSourceInfo.MaxLength, "Manufacturing_x0020_Date")
-            Required: =false
+            Required: =true
             Update: =DataCardValue22.Text
             Width: =320
             X: =0
@@ -665,7 +666,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             MaxLength: =DataSourceInfo([@WISA_Pro_MDB], DataSourceInfo.MaxLength, "Expiry_x0020_Date")
-            Required: =false
+            Required: =true
             Update: =DataCardValue23.Text
             Width: =320
             X: =0
@@ -812,7 +813,7 @@
             DataCardValue21 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: |-
-                    ="DT-"&If(Len(DatePicker1.SelectedDate)=9,"0"&Left(Substitute(DatePicker1.SelectedDate,"/",""),4)&Right(DatePicker1.SelectedDate,1))&"-"&Left(Substitute(currentTime,":",""),4)&Mid(Substitute(currentTime,":",""),5,2)
+                    ="DT-"&Text(DatePicker1.SelectedDate,"ddmmyyyy")&"-"&Left(Substitute(currentTime,":",""),4)&Mid(Substitute(currentTime,":",""),5,2)
                 DelayOutput: =true
                 DisplayMode: =DisplayMode.Disabled
                 Height: =70
@@ -874,7 +875,7 @@
 
             DataCardValue9 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =
+                Default: ="Label Not Printed"
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
