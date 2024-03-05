@@ -878,7 +878,7 @@
         Fill: =RGBA(0, 0, 0, 0)
         Height: =198
         OnSelect: |-
-            =If(Dropdown4.Selected.Value = "QuickTrack",Navigate(DetailScreen1_4, ScreenTransition.None),If(Dropdown4.Selected.Value = "DataMax",Navigate(DetailScreen1_6, ScreenTransition.None),Navigate(DetailScreen1_9,ScreenTransition.None)));
+            =If(Dropdown4_1.Selected.Value = "QuickTrack",Navigate(DetailScreen1_4, ScreenTransition.None),If(Dropdown4_1.Selected.Value = "DataMax",Navigate(DetailScreen1_6, ScreenTransition.None),Navigate(DetailScreen1_9,ScreenTransition.None)));
             Set(varPrintTriggered1, true);Set(TIC1Visible,false)
         Width: =636
         X: =2

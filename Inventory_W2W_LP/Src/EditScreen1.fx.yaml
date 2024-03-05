@@ -759,7 +759,7 @@
 
             DataCardValue19 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =DatePicker1.SelectedDate&" "&currentTime1
+                Default: =Text(DatePicker1.SelectedDate,"dd/mm/yyyy")&" "&currentTime1
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
