@@ -1,6 +1,6 @@
 {
   "ControlStates": {
-    "DataCardKey1_2": {
+    "DataCardKey1_4": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -61,7 +61,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldName.ID%",
-      "Name": "DataCardKey1_2",
+      "Name": "DataCardKey1_4",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
@@ -275,7 +275,7 @@
       "StyleName": "accentLabelStyle",
       "Type": "ControlInfo"
     },
-    "DataCardKey1_3": {
+    "DataCardKey1_5": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -336,7 +336,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldName.ID%",
-      "Name": "DataCardKey1_3",
+      "Name": "DataCardKey1_5",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
@@ -550,7 +550,7 @@
       "StyleName": "accentLabelStyle",
       "Type": "ControlInfo"
     },
-    "DataCardValue1_2": {
+    "DataCardValue1_4": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -642,7 +642,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldValue.ID%",
-      "Name": "DataCardValue1_2",
+      "Name": "DataCardValue1_4",
       "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
@@ -871,7 +871,7 @@
       "StyleName": "defaultTextStyle",
       "Type": "ControlInfo"
     },
-    "DataCardValue1_3": {
+    "DataCardValue1_5": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -963,7 +963,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldValue.ID%",
-      "Name": "DataCardValue1_3",
+      "Name": "DataCardValue1_5",
       "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
@@ -1192,7 +1192,7 @@
       "StyleName": "defaultTextStyle",
       "Type": "ControlInfo"
     },
-    "DataCardValue6_11": {
+    "DataCardValue6_14": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -1308,7 +1308,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%FieldValue.ID%",
-      "Name": "DataCardValue6_11",
+      "Name": "DataCardValue6_14",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
@@ -1517,7 +1517,7 @@
       "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
-    "Description_DataCard2_2": {
+    "Description_DataCard2_4": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -1602,7 +1602,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Description_DataCard2_2",
+      "Name": "Description_DataCard2_4",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
@@ -1691,7 +1691,7 @@
       "StyleName": "defaultTypedDataCardStyle",
       "Type": "ControlInfo"
     },
-    "Description_DataCard2_3": {
+    "Description_DataCard2_5": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -1776,7 +1776,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Description_DataCard2_3",
+      "Name": "Description_DataCard2_5",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
@@ -1865,7 +1865,7 @@
       "StyleName": "defaultTypedDataCardStyle",
       "Type": "ControlInfo"
     },
-    "DetailForm1_11": {
+    "DetailForm1_14": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -1924,7 +1924,7 @@
       "IsLocked": false,
       "LayoutName": "vertical",
       "MetaDataIDKey": "%DetailViewContainer.ID%",
-      "Name": "DetailForm1_11",
+      "Name": "DetailForm1_14",
       "OptimizeForDevices": "Off",
       "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
@@ -1988,7 +1988,7 @@
       "StyleName": "defaultFormViewerStyle",
       "Type": "ControlInfo"
     },
-    "DetailScreen1_8": {
+    "DetailScreen1_9": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Fill",
@@ -2023,7 +2023,7 @@
       "IsLocked": false,
       "LayoutName": "vertical",
       "MetaDataIDKey": "",
-      "Name": "DetailScreen1_8",
+      "Name": "DetailScreen1_9",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
@@ -2077,7 +2077,7 @@
       "StyleName": "defaultScreenStyle",
       "Type": "ControlInfo"
     },
-    "ErrorMessage7_2": {
+    "ErrorMessage7_4": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -2145,7 +2145,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%ErrorMessage.ID%",
-      "Name": "ErrorMessage7_2",
+      "Name": "ErrorMessage7_4",
       "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
@@ -2359,7 +2359,7 @@
       "StyleName": "criticalErrorLabelStyle",
       "Type": "ControlInfo"
     },
-    "ErrorMessage7_3": {
+    "ErrorMessage7_5": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -2427,7 +2427,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%ErrorMessage.ID%",
-      "Name": "ErrorMessage7_3",
+      "Name": "ErrorMessage7_5",
       "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
@@ -2641,7 +2641,7 @@
       "StyleName": "criticalErrorLabelStyle",
       "Type": "ControlInfo"
     },
-    "Form1_2": {
+    "Form1_4": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "DefaultMode",
@@ -2688,7 +2688,7 @@
       "IsLocked": false,
       "LayoutName": "vertical",
       "MetaDataIDKey": "",
-      "Name": "Form1_2",
+      "Name": "Form1_4",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
@@ -2762,7 +2762,7 @@
       "StyleName": "defaultFormStyle",
       "Type": "ControlInfo"
     },
-    "Form1_3": {
+    "Form1_5": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "DefaultMode",
@@ -2809,7 +2809,7 @@
       "IsLocked": false,
       "LayoutName": "vertical",
       "MetaDataIDKey": "",
-      "Name": "Form1_3",
+      "Name": "Form1_5",
       "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
@@ -2883,7 +2883,7 @@
       "StyleName": "defaultFormStyle",
       "Type": "ControlInfo"
     },
-    "HtmlText2_5": {
+    "HtmlText2_8": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "DisplayMode",
@@ -2955,9 +2955,9 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "HtmlText2_5",
+      "Name": "HtmlText2_8",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3049,7 +3049,7 @@
       "StyleName": "",
       "Type": "ControlInfo"
     },
-    "Image4_5": {
+    "Image4_8": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -3126,9 +3126,9 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Image4_5",
+      "Name": "Image4_8",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3280,7 +3280,7 @@
       "StyleName": "defaultImageStyle",
       "Type": "ControlInfo"
     },
-    "Label2_53": {
+    "Label2_60": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Live",
@@ -3402,9 +3402,9 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Label2_53",
+      "Name": "Label2_60",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3606,7 +3606,7 @@
       "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
-    "Label2_56": {
+    "Label2_61": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Live",
@@ -3707,7 +3707,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Label2_56",
+      "Name": "Label2_61",
       "OptimizeForDevices": "Off",
       "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
@@ -3911,7 +3911,7 @@
       "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
-    "Part number _DataCard1_11": {
+    "Part number _DataCard1_14": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -4000,7 +4000,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "%Part_x0020_number_x0020_.ID%",
-      "Name": "Part number _DataCard1_11",
+      "Name": "Part number _DataCard1_14",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
@@ -4074,7 +4074,7 @@
       "StyleName": "defaultTypedDataCardStyle",
       "Type": "ControlInfo"
     },
-    "Rectangle6_10": {
+    "Rectangle6_11": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -4125,7 +4125,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Rectangle6_10",
+      "Name": "Rectangle6_11",
       "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
@@ -4219,7 +4219,7 @@
       "StyleName": "defaultRectangleStyle",
       "Type": "ControlInfo"
     },
-    "TextInputCanvas1_3": {
+    "TextInputCanvas1_4": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -4315,7 +4315,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "TextInputCanvas1_3",
+      "Name": "TextInputCanvas1_4",
       "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
@@ -4389,7 +4389,7 @@
       "StyleName": "",
       "Type": "ControlInfo"
     },
-    "Timer1_7": {
+    "Timer1_8": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Text",
@@ -4485,7 +4485,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Timer1_7",
+      "Name": "Timer1_8",
       "OptimizeForDevices": "Off",
       "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
@@ -4664,7 +4664,7 @@
       "StyleName": "defaultTimerStyle",
       "Type": "ControlInfo"
     },
-    "Timer4": {
+    "Timer4_2": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Text",
@@ -4695,7 +4695,14 @@
         "BorderThickness",
         "FocusedBorderThickness",
         "Size",
-        "Visible",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "true",
+          "InvariantPropertyName": "Visible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -4738,7 +4745,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Timer4",
+      "Name": "Timer4_2",
       "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
@@ -4913,5 +4920,5 @@
       "Type": "ControlInfo"
     }
   },
-  "TopParentName": "DetailScreen1_8"
+  "TopParentName": "DetailScreen1_9"
 }

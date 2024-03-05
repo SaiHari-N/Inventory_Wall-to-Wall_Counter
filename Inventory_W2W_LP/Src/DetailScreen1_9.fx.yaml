@@ -1,17 +1,17 @@
-"DetailScreen1_7 As screen.'phoneDetailViewLayout_ver3.0'":
-    Height: =Max(DetailForm1_10.Height,197)
-    OnVisible: =If(varPrintTriggered, Print()&Set(TIC1Visible,false)&Set(FormDesc1,"Label Printed but not scanned"));Reset(TextInputCanvas1_2);Set(SFT2, false)
+"DetailScreen1_9 As screen.'phoneDetailViewLayout_ver3.0'":
+    Height: =Max(DetailForm1_14.Height,197)
+    OnVisible: =If(varPrintTriggered1, Print()&Set(TIC1Visible,false)&Set(FormDesc1,"Label Printed but not scanned"));Reset(TextInputCanvas1_4);Set(SFT2, false)
 
-    DetailForm1_10 As formViewer:
+    DetailForm1_14 As formViewer:
         DataSource: =[@WISA_Pro_MDB]
         Height: =44
-        Item: =BrowseGallery1.Selected
+        Item: =LastSubmittedRecord
         Width: =372
         X: =83
         Y: =97
         ZIndex: =1
 
-        "'Part number _DataCard1_10' As typedDataCard.textualViewCard":
+        "'Part number _DataCard1_14' As typedDataCard.textualViewCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="Part_x0020_number_x0020_"
             Default: =ThisItem.'Part Number'
@@ -25,7 +25,7 @@
             Y: =0
             ZIndex: =1
 
-            DataCardValue6_10 As label:
+            DataCardValue6_14 As label:
                 DisplayMode: =Parent.DisplayMode
                 PaddingBottom: =0
                 PaddingLeft: =0
@@ -37,7 +37,7 @@
                 X: =45
                 ZIndex: =2
 
-    Label2_55 As label:
+    Label2_61 As label:
         FontWeight: =FontWeight.Semibold
         Height: =30
         Size: =25
@@ -48,20 +48,20 @@
         Y: =99
         ZIndex: =2
 
-    Timer1_6 As timer:
-        AutoStart: =If(varPrintTriggered=true,Timer1_6.Start)
+    Timer1_8 As timer:
+        AutoStart: =If(varPrintTriggered=true,Timer1_8.Start)
         Color: =RGBA(0, 0, 0, 0)
         Duration: =5000
         Fill: =RGBA(0, 0, 0, 0)
         Height: =14
-        OnTimerEnd: =SubmitForm(Form1)
+        OnTimerEnd: =SubmitForm(Form1_4)
         Start: =true
         Width: =14
         X: =625
         Y: =175
         ZIndex: =3
 
-    Label2_52 As label:
+    Label2_60 As label:
         Align: =Align.Center
         FontWeight: =FontWeight.Bold
         Height: =30
@@ -74,17 +74,16 @@
         Y: =15
         ZIndex: =4
 
-    HtmlText2_4 As htmlViewer:
+    HtmlText2_8 As htmlViewer:
         AutoHeight: =true
-        Height: =200
+        Height: =197
         HtmlText: |-
             ="<img src=""https://qrcode.tec-it.com/API/QRCode?data="&If(IsBlank(BrowseGallery1.Selected.UID),"No Data Found",BrowseGallery1.Selected.UID)&"&code=MobileQRCode&unit=Min&imagetype=Png&eclevel=L&backcolor=%23ffffff&&istransparent=True&dpi=200&size=Small"" />"
         Width: =150
         X: =475
-        Y: =30
         ZIndex: =5
 
-    Image4_4 As image:
+    Image4_8 As image:
         Height: =45
         Image: ='SYRMA.NS_BIG-b83dd874'
         Width: =145
@@ -92,7 +91,7 @@
         Y: =18
         ZIndex: =6
 
-    Form1 As form:
+    Form1_4 As form:
         DataSource: =WISA_Pro_MDB
         Height: =197
         Item: =If(TabList1.Selected.Value = "Log",BrowseGallery1.Selected,Table3.Selected)
@@ -100,7 +99,7 @@
         Width: =640
         ZIndex: =7
 
-        Description_DataCard2 As typedDataCard.textualEditCard:
+        Description_DataCard2_4 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Description"
             Default: =ThisItem.Description
@@ -110,14 +109,14 @@
             Height: =50
             MaxLength: =DataSourceInfo([@WISA_Pro_MDB], DataSourceInfo.MaxLength, "Description")
             Required: =false
-            Update: =DataCardValue1.Text
+            Update: =DataCardValue1_4.Text
             Visible: =false
             Width: =640
             X: =0
             Y: =0
             ZIndex: =1
 
-            DataCardKey1 As label:
+            DataCardKey1_4 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -128,7 +127,7 @@
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue1 As text:
+            DataCardValue1_4 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =FormDesc1
                 DelayOutput: =true
@@ -144,10 +143,10 @@
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey1.Y + DataCardKey1.Height + 5
+                Y: =DataCardKey1_4.Y + DataCardKey1_4.Height + 5
                 ZIndex: =2
 
-            ErrorMessage7 As label:
+            ErrorMessage7_4 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -160,10 +159,10 @@
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue1.Y + DataCardValue1.Height
+                Y: =DataCardValue1_4.Y + DataCardValue1_4.Height
                 ZIndex: =3
 
-    Form1_1 As form:
+    Form1_5 As form:
         DataSource: =WISA_Pro_MDB
         Height: =197
         Item: =If(TabList1.Selected.Value = "Log",BrowseGallery1.Selected,Table3.Selected)
@@ -171,7 +170,7 @@
         Width: =640
         ZIndex: =8
 
-        Description_DataCard2_1 As typedDataCard.textualEditCard:
+        Description_DataCard2_5 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Description"
             Default: =ThisItem.Description
@@ -181,14 +180,14 @@
             Height: =50
             MaxLength: =DataSourceInfo([@WISA_Pro_MDB], DataSourceInfo.MaxLength, "Description")
             Required: =false
-            Update: =DataCardValue1_1.Text
+            Update: =DataCardValue1_5.Text
             Visible: =false
             Width: =640
             X: =0
             Y: =0
             ZIndex: =1
 
-            DataCardKey1_1 As label:
+            DataCardKey1_5 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -199,7 +198,7 @@
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue1_1 As text:
+            DataCardValue1_5 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =FormDesc2
                 DelayOutput: =true
@@ -215,10 +214,10 @@
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey1_1.Y + DataCardKey1_1.Height + 5
+                Y: =DataCardKey1_5.Y + DataCardKey1_5.Height + 5
                 ZIndex: =2
 
-            ErrorMessage7_1 As label:
+            ErrorMessage7_5 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -231,25 +230,25 @@
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue1_1.Y + DataCardValue1_1.Height
+                Y: =DataCardValue1_5.Y + DataCardValue1_5.Height
                 ZIndex: =3
 
-    Rectangle6_9 As rectangle:
+    Rectangle6_11 As rectangle:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =197
-        OnSelect: =If(TextInputCanvas1_2.Value = If(IsBlank(BrowseGallery1.Selected.UID),"No Data Found",BrowseGallery1.Selected.UID), Set(FormDesc2, "Label Printed & Scanned")&Set(SFT2, true), Notify("Wrong UID"))
+        OnSelect: =If(TextInputCanvas1_4.Value = If(IsBlank(BrowseGallery1.Selected.UID),"No Data Found",BrowseGallery1.Selected.UID), Set(FormDesc2, "Label Printed & Scanned")&Set(SFT2, true), Notify("Wrong UID"))
         Visible: =TIC1Visible
         Width: =640
         ZIndex: =9
 
-    "TextInputCanvas1_2 As 'Text input'":
+    "TextInputCanvas1_4 As 'Text input'":
         BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
         FontColor: =
         FontSize: =25
         FontWeight: =FontWeight.Semibold
         Height: =80
-        OnChange: =If(TextInputCanvas1_2.Value = If(IsBlank(BrowseGallery1.Selected.UID),"No Data Found",BrowseGallery1.Selected.UID), Set(FormDesc2, "Label Printed & Scanned")&Set(SFT2, true), Notify("Wrong UID"))
+        OnChange: =If(TextInputCanvas1_4.Value = If(IsBlank(LastSubmittedRecord.UID),"No Data Found",LastSubmittedRecord.UID), Set(FormDesc2, "Label Printed & Scanned")&Set(SFT2, true), Notify("Wrong UID"))
         Placeholder: ="Scan Count ID"
         Visible: =TIC1Visible
         Width: =360
@@ -257,11 +256,11 @@
         Y: =58
         ZIndex: =10
 
-    Timer4_1 As timer:
+    Timer4_2 As timer:
         AutoStart: =SFT2
         Duration: =1000
         Height: =23
-        OnTimerEnd: =SubmitForm(Form1_1)
+        OnTimerEnd: =SubmitForm(Form1_5)
         Start: =SFT2
         Visible: =false
         Width: =43

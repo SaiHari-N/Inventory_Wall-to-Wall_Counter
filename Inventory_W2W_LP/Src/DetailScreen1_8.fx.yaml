@@ -249,7 +249,7 @@
         FontSize: =25
         FontWeight: =FontWeight.Semibold
         Height: =80
-        OnChange: =If(TextInputCanvas1_1.Value = If(IsBlank(LastSubmittedRecord.UID),"No Data Found",LastSubmittedRecord.UID), Set(FormDesc4, "Label Printed & Scanned")&Set(SFT1, true), Notify("Wrong UID"))
+        OnChange: =If(TextInputCanvas1_1.Value = If(IsBlank(LastSubmittedRecord.UID),"No Data Found",LastSubmittedRecord.UID), Set(FormDesc4, "Label Printed & Scanned")&Set(SFT1, true), Notify("Wrong UID"));
         Placeholder: ="Scan Count ID"
         Visible: =TIC1Visible1
         Width: =360
@@ -267,11 +267,4 @@
         X: =40
         Y: =40
         ZIndex: =11
-
-    Icon23 As icon.Check:
-        Icon: =Icon.Check
-        Visible: =If(TextInputCanvas1_1.Value = If(IsBlank(LastSubmittedRecord.UID),"No Data Found",LastSubmittedRecord.UID),true)
-        X: =436
-        Y: =58
-        ZIndex: =12
 
