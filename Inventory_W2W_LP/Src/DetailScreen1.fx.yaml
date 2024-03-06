@@ -862,6 +862,19 @@
         Y: =715
         ZIndex: =32
 
+    Rectangle10 As rectangle:
+        BorderColor: =RGBA(0, 94, 146, 1)
+        BorderThickness: =2
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =198
+        OnSelect: |-
+            =If(Dropdown4.Selected.Value = "QuickTrack",Navigate(DetailScreen1_1, ScreenTransition.None),If(Dropdown4.Selected.Value = "DataMax",Navigate(DetailScreen1_5, ScreenTransition.None),Navigate(DetailScreen1_7,ScreenTransition.None)));
+            Set(varPrintTriggered, true);Set(TIC1Visible,false)
+        Width: =636
+        X: =2
+        Y: =800
+        ZIndex: =38
+
     Icon22 As icon.Trash:
         Color: =RGBA(255, 255, 255, 1)
         Height: =50
@@ -1203,19 +1216,6 @@
             Y: =819
             ZIndex: =23
 
-    Rectangle10 As rectangle:
-        BorderColor: =RGBA(0, 94, 146, 1)
-        BorderThickness: =2
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =198
-        OnSelect: |-
-            =If(Dropdown4.Selected.Value = "QuickTrack",Navigate(DetailScreen1_1, ScreenTransition.None),If(Dropdown4.Selected.Value = "DataMax",Navigate(DetailScreen1_5, ScreenTransition.None),Navigate(DetailScreen1_7,ScreenTransition.None)));
-            Set(varPrintTriggered, true);Set(TIC1Visible,false)
-        Width: =636
-        X: =2
-        Y: =800
-        ZIndex: =46
-
     Group3 As group:
         Height: =5
         Width: =5
@@ -1477,7 +1477,7 @@
             Visible: =varGroup5Visible
             Width: =640
             Y: =80
-            ZIndex: =33
+            ZIndex: =39
 
         Rectangle12 As rectangle:
             BorderThickness: =2
@@ -1487,7 +1487,7 @@
             Width: =440
             X: =100
             Y: =300
-            ZIndex: =34
+            ZIndex: =42
 
         Label13 As label:
             Height: =70
@@ -1500,7 +1500,7 @@
             Width: =440
             X: =100
             Y: =301
-            ZIndex: =35
+            ZIndex: =43
 
         Label14 As label:
             Align: =Align.Center
@@ -1515,7 +1515,7 @@
             Width: =108
             X: =278
             Y: =445
-            ZIndex: =36
+            ZIndex: =44
 
         Label14_1 As label:
             Align: =Align.Center
@@ -1530,7 +1530,7 @@
             Width: =108
             X: =396
             Y: =445
-            ZIndex: =37
+            ZIndex: =45
 
     Group4 As group:
         Height: =5
@@ -1550,7 +1550,7 @@
             Width: =440
             X: =100
             Y: =591
-            ZIndex: =38
+            ZIndex: =41
 
         Icon21 As icon.Check:
             Color: =RGBA(0, 94, 146, 1)
@@ -1563,7 +1563,7 @@
             Visible: =varGroup4Visible
             X: =473
             Y: =594
-            ZIndex: =39
+            ZIndex: =46
 
     Group6 As group:
         Height: =5
@@ -1580,7 +1580,7 @@
             Width: =380
             X: =77
             Y: =894
-            ZIndex: =41
+            ZIndex: =33
 
             "'Part number _DataCard1_12' As typedDataCard.textualViewCard":
                 BorderStyle: =BorderStyle.Solid
@@ -1618,7 +1618,7 @@
             Width: =160
             X: =37
             Y: =899
-            ZIndex: =42
+            ZIndex: =34
 
         Label2_54 As label:
             Align: =Align.Center
@@ -1632,7 +1632,7 @@
             Width: =240
             X: =192
             Y: =815
-            ZIndex: =43
+            ZIndex: =35
 
         HtmlText2_6 As htmlViewer:
             AutoHeight: =true
@@ -1643,7 +1643,7 @@
             Width: =150
             X: =467
             Y: =830
-            ZIndex: =44
+            ZIndex: =36
 
         Image4_6 As image:
             Height: =45
@@ -1652,5 +1652,5 @@
             Width: =145
             X: =14
             Y: =818
-            ZIndex: =45
+            ZIndex: =37
 

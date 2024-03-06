@@ -822,8 +822,7 @@
 
             DataCardValue21 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: |-
-                    ="DT-"&Text(DatePicker1.SelectedDate,"ddmmyyyy")&"-"&Left(Substitute(currentTime,":",""),4)&Mid(Substitute(currentTime,":",""),5,2)
+                Default: ="DT-"&Text(DatePicker1.SelectedDate,"ddmmyyyy")&"-"&If(Len(Text(Label1_2.Text)) = 5, Text(0&Label1_2.Text), Text(Label1_2.Text))
                 DelayOutput: =true
                 DisplayMode: =DisplayMode.Disabled
                 Height: =70
@@ -1346,4 +1345,15 @@
         X: =447
         Y: =1006
         ZIndex: =33
+
+    Label1_2 As label:
+        Height: =20
+        Size: =21
+        Text: |-
+            =Left(Substitute(currentTime,":",""),4)&Mid(Substitute(currentTime,":",""),5,2)
+        Visible: =false
+        Width: =64
+        X: =138
+        Y: =1026
+        ZIndex: =34
 
