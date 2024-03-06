@@ -151,7 +151,7 @@
       "executionRestrictions": {
         "apiId": "/providers/microsoft.powerapps/apis/shared_powerappsnotificationv2",
         "appVer": "3.24024.12",
-        "modifiedOn": "2024-03-06 16:49:44",
+        "modifiedOn": "2024-03-06 17:53:18",
         "policy": "{\"type\":\"unused\"}",
         "version": 1
       },

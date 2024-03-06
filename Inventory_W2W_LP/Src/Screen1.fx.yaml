@@ -26,11 +26,11 @@ Screen1 As screen:
         Color: =RGBA(102, 102, 102, 1)
         FontWeight: =FontWeight.Bold
         Height: =112
-        Size: =28
-        Text: ="Inventory Wall-To-Wall Counter"
+        Size: =36
+        Text: ="WISA Portal"
         Width: =560
         X: =40
-        Y: =684
+        Y: =644
         ZIndex: =4
 
     Spinner1 As Spinner:
@@ -39,10 +39,10 @@ Screen1 As screen:
         DisplayMode: =DisplayMode.Edit
         FontColor: =
         Height: =350
-        Label: =""
+        Label: ="Loading..."
         SpinnerSize: ='Spinner.SpinnerSize'.Huge
         Width: =350
         X: =147
-        Y: =684
+        Y: =614
         ZIndex: =5
 

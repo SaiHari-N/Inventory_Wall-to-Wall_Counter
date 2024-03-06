@@ -1525,8 +1525,8 @@
             Height: =30
             PaddingBottom: =0
             PaddingTop: =0
-            Size: =28
-            Text: ="WISA Pro"
+            Size: =22
+            Text: ="WISA Portal"
             Visible: =If(Dropdown4_1.Selected.Value = "UID", true,false)
             Width: =240
             X: =192

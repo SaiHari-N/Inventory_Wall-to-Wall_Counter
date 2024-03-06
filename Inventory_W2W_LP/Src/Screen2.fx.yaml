@@ -545,7 +545,7 @@ Screen2 As screen:
             FontWeight: =FontWeight.Semibold
             Height: =80
             Size: =27
-            Text: ="Login Page"
+            Text: ="Login"
             Width: =280
             Wrap: =false
             X: =80
