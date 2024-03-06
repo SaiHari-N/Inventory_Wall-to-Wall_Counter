@@ -1,13 +1,13 @@
 "DetailScreen1_7 As screen.'phoneDetailViewLayout_ver3.0'":
     Height: =Max(DetailForm1_10.Height,197)
-    OnVisible: =If(varPrintTriggered, Print()&Set(TIC1Visible,false)&Set(FormDesc1,"Label Printed but not scanned"));Reset(TextInputCanvas1_2);Set(SFT2, false)
+    OnVisible: =
 
     DetailForm1_15 As formViewer:
         DataSource: =[@WISA_Pro_MDB]
-        Height: =137
+        Height: =200
         Item: =BrowseGallery1.Selected
         Width: =Parent.Width
-        Y: =31
+        Y: =30
         ZIndex: =1
 
         "'Inventory count date_DataCard1_10' As typedDataCard.textualViewCard":
@@ -20,21 +20,20 @@
             Height: =35
             Required: =false
             Width: =250
-            X: =200
+            X: =0
             Y: =0
             ZIndex: =1
 
             DataCardValue3_10 As label:
                 DisplayMode: =Parent.DisplayMode
-                Height: =20
+                Height: =30
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Size: =16
+                Size: =20
                 Text: =Left(ThisItem.Time_Stamp,Find(" ", ThisItem.Time_Stamp)-1)
-                Width: =120
-                X: =74
+                X: =87
                 Y: =3
                 ZIndex: =2
 
@@ -47,8 +46,8 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =30
             Required: =false
-            Width: =200
-            X: =320
+            Width: =300
+            X: =0
             Y: =0
             ZIndex: =1
 
@@ -59,11 +58,11 @@
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Size: =16
+                Size: =20
                 Text: =Parent.Default
                 Width: =100
-                X: =35
-                Y: =3
+                X: =110
+                Y: =7
                 ZIndex: =2
 
         "'Part number _DataCard1_15' As typedDataCard.textualViewCard":
@@ -73,25 +72,25 @@
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Part_x0020_Number")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =35
+            Height: =48
             Required: =false
             Width: =640
             X: =0
-            Y: =1
+            Y: =0
             ZIndex: =1
 
             DataCardValue6_15 As label:
                 DisplayMode: =Parent.DisplayMode
-                Height: =20
+                Height: =35
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Size: =16
+                Size: =20
                 Text: =Parent.Default
                 Width: =250
-                X: =160
-                Y: =2
+                X: =195
+                Y: =7
                 ZIndex: =2
 
         Batch_DataCard3_8 As typedDataCard.textualViewCard:
@@ -101,24 +100,24 @@
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Batch")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =35
+            Height: =45
             Required: =false
-            Width: =620
+            Width: =640
             X: =0
-            Y: =2
+            Y: =1
             ZIndex: =1
 
             DataCardValue5_8 As label:
                 DisplayMode: =Parent.DisplayMode
-                Height: =20
+                Height: =35
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Size: =16
+                Size: =20
                 Text: =Parent.Default
                 Width: =290
-                X: =85
+                X: =100
                 Y: =2
                 ZIndex: =2
 
@@ -129,23 +128,23 @@
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@WISA_Pro_MDB],DataSourceInfo.DisplayName,"Quantity")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =30
+            Height: =50
             Required: =false
             Width: =280
             X: =0
-            Y: =110
+            Y: =2
             ZIndex: =1
 
             DataCardValue2_10 As label:
                 DisplayMode: =Parent.DisplayMode
-                Height: =20
+                Height: =35
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Size: =16
+                Size: =20
                 Text: =Parent.Default
                 Width: =110
-                X: =115
+                X: =140
                 Y: =3
                 ZIndex: =2
 
@@ -161,65 +160,65 @@
             Visible: =true
             Width: =250
             WidthFit: =false
-            X: =320
-            Y: =110
+            X: =0
+            Y: =2
             ZIndex: =1
 
             DataCardValue8_10 As label:
                 DisplayMode: =Parent.DisplayMode
-                Height: =20
+                Height: =35
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Size: =16
+                Size: =20
                 Text: =Parent.Default
-                Width: =125
-                X: =15
-                Y: =3
+                Width: =200
+                X: =80
+                Y: =5
                 ZIndex: =2
 
     Label2_62 As label:
         FontWeight: =FontWeight.Semibold
         Height: =30
-        Size: =16
+        Size: =20
         Text: |-
             ="User ID:"
-        Width: =100
-        X: =194
-        Y: =29
+        Width: =120
+        X: =250
+        Y: =32
         ZIndex: =2
 
     Label2_63 As label:
         FontWeight: =FontWeight.Semibold
         Height: =30
-        Size: =16
+        Size: =20
         Text: |-
             ="Part Number:"
-        Width: =160
+        Width: =197
         X: =12
-        Y: =63
+        Y: =75
         ZIndex: =3
 
     Label2_64 As label:
         FontWeight: =FontWeight.Semibold
-        Height: =30
-        Size: =16
+        Height: =35
+        Size: =20
         Text: |-
             ="Quantity:"
-        Width: =120
+        Width: =139
         X: =12
-        Y: =131
+        Y: =158
         ZIndex: =4
 
     Label2_65 As label:
         FontWeight: =FontWeight.Semibold
-        Height: =30
-        Size: =16
+        Height: =35
+        Size: =20
         Text: |-
             ="Location:"
-        Width: =110
-        X: =194
-        Y: =131
+        Width: =140
+        X: =235
+        Y: =158
         ZIndex: =5
 
     Label2_66 As label:
@@ -227,32 +226,31 @@
         Height: =30
         PaddingBottom: =0
         PaddingTop: =0
-        Size: =16
+        Size: =20
         Text: |-
             ="Date:"
         Width: =80
         X: =12
-        Y: =29
+        Y: =32
         ZIndex: =6
 
     Label2_67 As label:
         FontWeight: =FontWeight.Semibold
         Height: =30
-        Size: =16
+        Size: =20
         Text: |-
             ="Batch:"
         Width: =100
         X: =12
-        Y: =97
+        Y: =118
         ZIndex: =7
 
     DetailForm1_10 As formViewer:
         DataSource: =[@WISA_Pro_MDB]
         Height: =35
         Item: =BrowseGallery1.Selected
-        Width: =372
-        X: =268
-        Y: =159
+        Width: =230
+        X: =440
         ZIndex: =8
 
         "'Part number _DataCard1_10' As typedDataCard.textualViewCard":
@@ -264,7 +262,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =35
             Required: =false
-            Width: =372
+            Width: =230
             X: =0
             Y: =0
             ZIndex: =1
@@ -276,9 +274,9 @@
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
+                Size: =17
                 Text: =ThisItem.UID
                 Width: =230
-                X: =195
                 ZIndex: =2
 
     Timer1_6 As timer:
@@ -298,10 +296,10 @@
         AutoHeight: =true
         Height: =200
         HtmlText: |-
-            ="<img src=""https://qrcode.tec-it.com/API/QRCode?data="&If(IsBlank(BrowseGallery1.Selected.UID),"No Data Found",BrowseGallery1.Selected.UID)&"&code=MobileQRCode&unit=Min&imagetype=Png&eclevel=L&backcolor=%23ffffff&&istransparent=True&dpi=200&size=Small"" />"
+            ="<img src=""https://qrcode.tec-it.com/API/QRCode?data="&If(IsBlank(BrowseGallery1.Selected.UID),"No Data Found",BrowseGallery1.Selected.UID)&"&code=MobileQRCode&unit=Min&imagetype=Png&eclevel=L&backcolor=%23ffffff&&istransparent=True&dpi=196&size=Small"" />"
         Width: =150
-        X: =475
-        Y: =15
+        X: =490
+        Y: =27
         ZIndex: =11
 
     Form1 As form:
@@ -480,4 +478,15 @@
         X: =40
         Y: =40
         ZIndex: =17
+
+    Timer5 As timer:
+        AutoStart: =true
+        Duration: =2000
+        Height: =70
+        OnTimerEnd: =If(varPrintTriggered, Print()&Set(TIC1Visible,false)&Set(FormDesc1,"Label Printed but not scanned"));Reset(TextInputCanvas1_2);Set(SFT2, false)
+        Visible: =false
+        Width: =280
+        X: =60
+        Y: =60
+        ZIndex: =18
 
