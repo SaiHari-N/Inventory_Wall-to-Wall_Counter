@@ -870,7 +870,7 @@
         Width: =50
         X: =500
         Y: =16
-        ZIndex: =40
+        ZIndex: =33
 
     Rectangle10_1 As rectangle:
         BorderColor: =RGBA(0, 94, 146, 1)
@@ -883,7 +883,7 @@
         Width: =636
         X: =2
         Y: =802
-        ZIndex: =46
+        ZIndex: =39
 
     Group2_1 As group:
         Height: =5
@@ -1479,7 +1479,7 @@
             Width: =380
             X: =77
             Y: =896
-            ZIndex: =41
+            ZIndex: =34
 
             "'Part number _DataCard1_13' As typedDataCard.textualViewCard":
                 BorderStyle: =BorderStyle.Solid
@@ -1517,7 +1517,7 @@
             Width: =160
             X: =37
             Y: =901
-            ZIndex: =42
+            ZIndex: =35
 
         Label2_59 As label:
             Align: =Align.Center
@@ -1531,7 +1531,7 @@
             Width: =240
             X: =192
             Y: =817
-            ZIndex: =43
+            ZIndex: =36
 
         HtmlText2_7 As htmlViewer:
             AutoHeight: =true
@@ -1542,7 +1542,7 @@
             Width: =150
             X: =467
             Y: =832
-            ZIndex: =44
+            ZIndex: =37
 
         Image4_7 As image:
             Height: =45
@@ -1551,7 +1551,7 @@
             Width: =145
             X: =14
             Y: =820
-            ZIndex: =45
+            ZIndex: =38
 
     Group5_1 As group:
         Height: =5
@@ -1566,7 +1566,7 @@
             Visible: =varGroup5Visible1
             Width: =640
             Y: =81
-            ZIndex: =33
+            ZIndex: =40
 
         Rectangle12_1 As rectangle:
             BorderThickness: =2
@@ -1576,7 +1576,7 @@
             Width: =440
             X: =100
             Y: =301
-            ZIndex: =34
+            ZIndex: =41
 
         Label13_1 As label:
             Height: =70
@@ -1589,7 +1589,7 @@
             Width: =440
             X: =100
             Y: =302
-            ZIndex: =35
+            ZIndex: =42
 
         Label14_3 As label:
             Align: =Align.Center
@@ -1604,7 +1604,7 @@
             Width: =108
             X: =278
             Y: =446
-            ZIndex: =36
+            ZIndex: =43
 
         Label14_2 As label:
             Align: =Align.Center
@@ -1619,7 +1619,7 @@
             Width: =108
             X: =396
             Y: =446
-            ZIndex: =37
+            ZIndex: =44
 
     Group4_1 As group:
         Height: =5
@@ -1639,12 +1639,12 @@
             Width: =440
             X: =100
             Y: =592
-            ZIndex: =38
+            ZIndex: =45
 
         Icon21_1 As icon.Check:
             Color: =RGBA(0, 94, 146, 1)
             Icon: =Icon.Check
-            OnSelect: =If(TextInput9_1.Text = "DLadmin@123",Remove([@WISA_Pro_MDB], BrowseGallery1.Selected); If (IsEmpty(Errors([@WISA_Pro_MDB], BrowseGallery1.Selected)), Back()),Reset(TextInput9_1)&Notify("Wrong Password",NotificationType.Error));
+            OnSelect: =If(TextInput9_1.Text = "DLadmin@123",Remove([@WISA_Pro_MDB], LastSubmittedRecord); If (IsEmpty(Errors([@WISA_Pro_MDB], LastSubmittedRecord)), Back()),Reset(TextInput9_1)&Notify("Wrong Password",NotificationType.Error));If(TextInput9_1.Text = "DLadmin@123", Notify("Stock deleted successfully",NotificationType.Success))
             PaddingBottom: =12
             PaddingLeft: =12
             PaddingRight: =12
@@ -1652,5 +1652,5 @@
             Visible: =varGroup4Visible1
             X: =473
             Y: =595
-            ZIndex: =39
+            ZIndex: =46
 

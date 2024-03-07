@@ -2224,7 +2224,7 @@ App_Details As screen:
             Height: =80
             PaddingLeft: =15
             Size: =21
-            Text: ="Inventory W2W_LP"
+            Text: ="WISA Portal"
             Visible: =AboutVisible
             Width: =350
             X: =210
@@ -2314,7 +2314,7 @@ App_Details As screen:
             Size: =21
             Text: |-
                 ="1. Zebra TC21/TC26 Android Device
-                2. XP-P323B/MTP-25 Bluetooth Thermal Printer
+                2. XP-P323B Bluetooth Direct Thermal Printer
                 3. 20x58 Peel-off Label"
             VerticalAlign: =VerticalAlign.Top
             Visible: =AboutVisible
@@ -2340,7 +2340,7 @@ App_Details As screen:
             Height: =80
             PaddingLeft: =15
             Size: =21
-            Text: ="3.24022.11"
+            Text: ="3.24024.12"
             Visible: =AboutVisible
             Width: =350
             X: =160

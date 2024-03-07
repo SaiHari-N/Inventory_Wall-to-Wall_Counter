@@ -26,11 +26,11 @@ Screen1 As screen:
         Color: =RGBA(102, 102, 102, 1)
         FontWeight: =FontWeight.Bold
         Height: =112
-        Size: =36
-        Text: ="WISA Portal"
+        Size: =30
+        Text: ="Warehouse Inventory Stock Audit Portal"
         Width: =560
-        X: =40
-        Y: =644
+        X: =41
+        Y: =614
         ZIndex: =4
 
     Spinner1 As Spinner:
