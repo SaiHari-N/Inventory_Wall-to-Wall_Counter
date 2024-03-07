@@ -481,7 +481,7 @@
 
     Timer6 As timer:
         AutoStart: =VarTimer6
-        Duration: =2000
+        Duration: =3000
         Height: =70
         OnTimerEnd: =If(varPrintTriggered1, Print()&Set(FormDesc1,"Label Printed but not scanned"));
         Visible: =false
