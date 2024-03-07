@@ -1,6 +1,6 @@
 {
   "ControlStates": {
-    "ComboBox1_1": {
+    "ComboBox1_2": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "NavigateFields",
@@ -130,7 +130,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "ComboBox1_1",
+      "Name": "ComboBox1_2",
       "OptimizeForDevices": "Off",
       "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
@@ -394,7 +394,7 @@
       "MetaDataIDKey": "",
       "Name": "CompositeLineChart1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 26,
+      "ParentIndex": 25,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -880,7 +880,7 @@
       "MetaDataIDKey": "",
       "Name": "Icon10_5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 21,
+      "ParentIndex": 20,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1121,7 +1121,7 @@
       "MetaDataIDKey": "",
       "Name": "Icon11_5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 22,
+      "ParentIndex": 21,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1403,7 +1403,7 @@
       "MetaDataIDKey": "",
       "Name": "Icon7_16",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 23,
+      "ParentIndex": 22,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1674,7 +1674,7 @@
       "MetaDataIDKey": "",
       "Name": "Icon8_5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 19,
+      "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1908,7 +1908,7 @@
       "MetaDataIDKey": "",
       "Name": "Icon9_5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 20,
+      "ParentIndex": 19,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3483,7 +3483,7 @@
       "MetaDataIDKey": "",
       "Name": "Label7_44",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 10,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3849,7 +3849,7 @@
       "MetaDataIDKey": "",
       "Name": "Label7_45",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 11,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4215,7 +4215,7 @@
       "MetaDataIDKey": "",
       "Name": "Label7_46",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 14,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4581,7 +4581,7 @@
       "MetaDataIDKey": "",
       "Name": "Label7_47",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 15,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4947,7 +4947,7 @@
       "MetaDataIDKey": "",
       "Name": "Label7_48",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 16,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5452,7 +5452,7 @@
       "MetaDataIDKey": "",
       "Name": "Legend1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 17,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5605,12 +5605,12 @@
       "MetaDataIDKey": "%LineChart.ID%",
       "Name": "LineChart1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 13,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
           "Category": "Data",
-          "NameMap": "{\"Labels\":\"Quantity\",\"Series1\":\"UID\",\"Series2\":\"Quantity\",\"Series3\":\"Quantity\",\"Series4\":\"Quantity\",\"Series5\":\"Quantity\",\"Series6\":\"Quantity\",\"Series7\":\"Quantity\",\"Series8\":\"Quantity\",\"Series9\":\"Quantity\"}",
+          "NameMap": "{\"Labels\":\"User_x0020_ID\",\"Series1\":\"Time_Stamp\",\"Series2\":\"User_x0020_ID\",\"Series3\":\"Device_x0020_ID\",\"Series4\":\"Expiry_x0020_Date\",\"Series5\":\"Item_x0020_Type\",\"Series6\":\"Location\",\"Series7\":\"Manufacturing_x0020_Date\",\"Series8\":\"Part_x0020_Number\",\"Series9\":\"Quantity\"}",
           "PropertyName": "Items",
           "RuleProviderType": "Unknown"
         },
@@ -5723,7 +5723,7 @@
       "MetaDataIDKey": "",
       "Name": "Menu_7",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 25,
+      "ParentIndex": 24,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5775,7 +5775,7 @@
       "MetaDataIDKey": "",
       "Name": "Menu_Navigation_7",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 24,
+      "ParentIndex": 23,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5858,7 +5858,7 @@
       "MetaDataIDKey": "",
       "Name": "Rectangle2_5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 18,
+      "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6309,70 +6309,6 @@
       "StyleName": "defaultScreenStyle",
       "Type": "ControlInfo"
     },
-    "Slider2": {
-      "AllowAccessToGlobals": true,
-      "ControlPropertyState": [
-        "X",
-        "Y",
-        "Width",
-        "Height",
-        "DisplayMode",
-        "ZIndex",
-        "BasePaletteColor"
-      ],
-      "HasDynamicProperties": false,
-      "IsAutoGenerated": false,
-      "IsComponentDefinition": false,
-      "IsDataControl": false,
-      "IsFromScreenLayout": false,
-      "IsGroupControl": false,
-      "IsLocked": false,
-      "LayoutName": "",
-      "MetaDataIDKey": "",
-      "Name": "Slider2",
-      "OptimizeForDevices": "Off",
-      "ParentIndex": 9,
-      "PersistMetaDataIDKey": false,
-      "Properties": [
-        {
-          "Category": "Data",
-          "PropertyName": "BasePaletteColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "X",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Y",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Height",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "DisplayMode",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "ZIndex",
-          "RuleProviderType": "Unknown"
-        }
-      ],
-      "StyleName": "",
-      "Type": "ControlInfo"
-    },
     "Title2": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
@@ -6424,7 +6360,7 @@
       "MetaDataIDKey": "",
       "Name": "Title2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 12,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

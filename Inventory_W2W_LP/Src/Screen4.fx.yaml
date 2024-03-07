@@ -288,15 +288,15 @@ Screen4 As screen:
         Default: =
         Height: =70
         Items: =["All","User ID","Date","Part Number","Batch","Quantity","Location","Manufacturing Date","Expiry Date"]
-        OnChange: =Reset(ComboBox1_1)
+        OnChange: =Reset(ComboBox1_2)
         Size: =18
         Visible: =BrowseControl
         Width: =216
-        X: =54
+        X: =61
         Y: =136
-        ZIndex: =30
+        ZIndex: =32
 
-    ComboBox1_1 As combobox:
+    ComboBox1_2 As combobox:
         BorderColor: =RGBA(0, 94, 146, 1)
         ChevronBackground: =RGBA(0, 94, 146, 1)
         DisplayFields: =["Value"]
@@ -311,16 +311,7 @@ Screen4 As screen:
         Size: =18
         Visible: =If(Dropdown3_1.Selected.Value = "All", false,BrowseControl)
         Width: =284
-        X: =296
+        X: =294
         Y: =136
-        ZIndex: =31
-
-    Slider2 As Slider:
-        BasePaletteColor: =
-        DisplayMode: =DisplayMode.Edit
-        Height: =35
-        Width: =200
-        X: =338
-        Y: =142
-        ZIndex: =32
+        ZIndex: =33
 

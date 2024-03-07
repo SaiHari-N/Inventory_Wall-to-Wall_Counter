@@ -27,7 +27,7 @@
       "MetaDataIDKey": "",
       "Name": "Batch_Column1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 7,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1295,7 +1295,7 @@
       "MetaDataIDKey": "",
       "Name": "Container_x0020_Type_Column1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2223,7 +2223,7 @@
       "MetaDataIDKey": "",
       "Name": "Expiry_x0020_Date_Column1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7118,7 +7118,7 @@
       "MetaDataIDKey": "",
       "Name": "Item_x0020_Type_Column1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11859,7 +11859,7 @@
       "MetaDataIDKey": "",
       "Name": "Location_Column1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 9,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11960,7 +11960,7 @@
       "MetaDataIDKey": "",
       "Name": "Manufacturing_x0020_Date_Column1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12668,7 +12668,7 @@
       "MetaDataIDKey": "",
       "Name": "Part_x0020_Number_Column1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12762,7 +12762,7 @@
       "MetaDataIDKey": "",
       "Name": "Quantity_Column1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 8,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17058,7 +17058,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Width",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Width",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Height",
         "DisplayMode",
         "OnSelect",

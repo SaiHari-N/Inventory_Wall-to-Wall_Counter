@@ -562,7 +562,7 @@
 
             DataCardValue7 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =If(!IsBlank(TextInput5),If(Toggle1.Value=true,(Mid(TextInput5.Text, Find(",", TextInput5.Text, Find(",", TextInput5.Text,Find(",", TextInput5.Text) + 1) + 1)+1, Find(",", TextInput5.Text, Find(",", TextInput5.Text,Find(",", TextInput5.Text,Find(",", TextInput5.Text) + 1) + 1)+1) - (Find(",", TextInput5.Text,Find(",", TextInput5.Text,Find(",", TextInput5.Text) + 1) + 1)+1))),(Mid(TextInput5.Text, Find(",", TextInput5.Text, Find(",", TextInput5.Text,Find(",", TextInput5.Text) + 1) + 1)+1))))
+                Default: =If(IsBlank(TextInput5),"",If(Toggle1.Value=true,(Mid(TextInput5.Text, Find(",", TextInput5.Text, Find(",", TextInput5.Text,Find(",", TextInput5.Text) + 1) + 1)+1, Find(",", TextInput5.Text, Find(",", TextInput5.Text,Find(",", TextInput5.Text,Find(",", TextInput5.Text) + 1) + 1)+1) - (Find(",", TextInput5.Text,Find(",", TextInput5.Text,Find(",", TextInput5.Text) + 1) + 1)+1))),(Mid(TextInput5.Text, Find(",", TextInput5.Text, Find(",", TextInput5.Text,Find(",", TextInput5.Text) + 1) + 1)+1))))
                 DelayOutput: =true
                 DisplayMode: =If(RadioGroupCanvas1.Selected.Value = "Raw Materials", DisplayMode.Disabled, DisplayMode.Edit)
                 Height: =70

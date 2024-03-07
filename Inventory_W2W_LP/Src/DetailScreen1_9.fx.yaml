@@ -1,6 +1,6 @@
 "DetailScreen1_9 As screen.'phoneDetailViewLayout_ver3.0'":
     Height: =Max(DetailForm1_14.Height,197)
-    OnVisible: =
+    OnVisible: =Set(VarTimer6, true); Reset(TextInputCanvas1_4);Set(SFT2, false);Set(TIC1Visible,false)
 
     DetailForm1_16 As formViewer:
         DataSource: =[@WISA_Pro_MDB]
@@ -250,7 +250,7 @@
         Height: =35
         Item: =LastSubmittedRecord
         Width: =230
-        X: =440
+        X: =450
         ZIndex: =8
 
         "'Part number _DataCard1_14' As typedDataCard.textualViewCard":
@@ -480,10 +480,10 @@
         ZIndex: =15
 
     Timer6 As timer:
-        AutoStart: =true
+        AutoStart: =VarTimer6
         Duration: =2000
         Height: =70
-        OnTimerEnd: =If(varPrintTriggered1, Print()&Set(TIC1Visible,false)&Set(FormDesc1,"Label Printed but not scanned"));Reset(TextInputCanvas1_4);Set(SFT2, false);
+        OnTimerEnd: =If(varPrintTriggered1, Print()&Set(FormDesc1,"Label Printed but not scanned"));
         Visible: =false
         Width: =280
         X: =60
