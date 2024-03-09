@@ -1357,3 +1357,22 @@
         Y: =1026
         ZIndex: =34
 
+    Header1_4 As Header:
+        BasePaletteColor: =RGBA(0, 94, 146, 1)
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =80
+        IsLogoVisible: =false
+        IsTitleVisible: =false
+        OnSelectLogo: =false
+        Style: ='Header.Style'.Neutral
+        Title: =
+        UserEmail: =User().Email
+        UserImage: =User().Image
+        UserName: =User().FullName
+        Visible: =Navigation
+        Width: =100
+        X: =200
+        Y: =0
+        ZIndex: =35
+

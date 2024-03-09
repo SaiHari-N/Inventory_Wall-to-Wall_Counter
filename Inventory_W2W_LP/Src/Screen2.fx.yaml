@@ -14,7 +14,7 @@ Screen2 As screen:
         Width: =200
         X: =400
         Y: =840
-        ZIndex: =1
+        ZIndex: =2
 
     Rectangle3_2 As rectangle:
         AccessibleLabel: ="User ID"
@@ -25,7 +25,7 @@ Screen2 As screen:
         Width: =110
         X: =400
         Y: =840
-        ZIndex: =2
+        ZIndex: =3
 
     Label6_2 As label:
         Color: =RGBA(255, 255, 255, 1)
@@ -36,7 +36,7 @@ Screen2 As screen:
         Width: =110
         X: =400
         Y: =840
-        ZIndex: =3
+        ZIndex: =4
 
     Menu_Navigation_1 As group:
         Height: =5
@@ -58,7 +58,7 @@ Screen2 As screen:
             Tooltip: ="Navigation"
             Visible: =HN1
             Width: =80
-            ZIndex: =38
+            ZIndex: =37
 
         IconBackarrow1_4 As icon.ChevronLeft:
             AccessibleLabel: =Self.Tooltip
@@ -75,7 +75,7 @@ Screen2 As screen:
             Tooltip: ="Navigation"
             Visible: =HN2
             Width: =80
-            ZIndex: =39
+            ZIndex: =38
 
     Menu_1 As group:
         Height: =5
@@ -91,7 +91,7 @@ Screen2 As screen:
             OnSelect: =Navigate(App_Details)
             Visible: =Navigation
             Width: =300
-            ZIndex: =31
+            ZIndex: =30
 
         Label7_7 As label:
             FontWeight: =FontWeight.Semibold
@@ -107,7 +107,7 @@ Screen2 As screen:
             Visible: =HN3
             Width: =300
             Y: =80
-            ZIndex: =32
+            ZIndex: =31
 
         Label7_8 As label:
             FontWeight: =FontWeight.Semibold
@@ -123,7 +123,7 @@ Screen2 As screen:
             Visible: =HN3
             Width: =300
             Y: =160
-            ZIndex: =33
+            ZIndex: =32
 
         Label7_9 As label:
             FontWeight: =FontWeight.Semibold
@@ -139,7 +139,7 @@ Screen2 As screen:
             Visible: =HN3
             Width: =300
             Y: =240
-            ZIndex: =34
+            ZIndex: =33
 
         Label7_10 As label:
             FontWeight: =FontWeight.Semibold
@@ -155,7 +155,7 @@ Screen2 As screen:
             Visible: =HN3
             Width: =300
             Y: =320
-            ZIndex: =35
+            ZIndex: =34
 
         Label7_11 As label:
             FontWeight: =FontWeight.Semibold
@@ -171,7 +171,7 @@ Screen2 As screen:
             Visible: =HN3
             Width: =300
             Y: =400
-            ZIndex: =36
+            ZIndex: =35
 
         Label7_12 As label:
             FontWeight: =FontWeight.Semibold
@@ -187,7 +187,7 @@ Screen2 As screen:
             Visible: =HN3
             Width: =300
             Y: =480
-            ZIndex: =37
+            ZIndex: =36
 
     Query_Mail_1 As group:
         Height: =5
@@ -202,7 +202,7 @@ Screen2 As screen:
             Visible: =BGWhite
             Width: =640
             Y: =80
-            ZIndex: =6
+            ZIndex: =22
 
         Rectangle6_2 As rectangle:
             BorderColor: =RGBA(0, 94, 146, 1)
@@ -214,7 +214,7 @@ Screen2 As screen:
             Width: =572
             X: =34
             Y: =411
-            ZIndex: =7
+            ZIndex: =23
 
         Label5_2 As label:
             Align: =Align.Center
@@ -228,7 +228,7 @@ Screen2 As screen:
             Width: =560
             X: =40
             Y: =419
-            ZIndex: =8
+            ZIndex: =24
 
         TextInput6_2 As text:
             AccessibleLabel: ="Body of the mail"
@@ -250,7 +250,7 @@ Screen2 As screen:
             Width: =560
             X: =40
             Y: =474
-            ZIndex: =9
+            ZIndex: =25
 
         Button1_2 As button:
             BorderThickness: =0
@@ -271,7 +271,7 @@ Screen2 As screen:
             Width: =120
             X: =480
             Y: =677
-            ZIndex: =10
+            ZIndex: =26
 
         Icon5_2 As icon.Cancel:
             AccessibleLabel: ="Close"
@@ -294,7 +294,7 @@ Screen2 As screen:
             Width: =60
             X: =540
             Y: =412
-            ZIndex: =11
+            ZIndex: =27
 
         Icon7_5 As icon.Mail:
             AccessibleLabel: ="Mail"
@@ -316,7 +316,7 @@ Screen2 As screen:
             Visible: =QueryMail3
             Width: =80
             X: =560
-            ZIndex: =12
+            ZIndex: =28
 
         Icon7_4 As icon.Mail:
             AccessibleLabel: ="Mail"
@@ -333,7 +333,7 @@ Screen2 As screen:
             Visible: =QueryMail2
             Width: =80
             X: =560
-            ZIndex: =13
+            ZIndex: =29
 
     "'Login Group' As group":
         Height: =5
@@ -351,7 +351,7 @@ Screen2 As screen:
             Width: =453
             X: =96
             Y: =310
-            ZIndex: =14
+            ZIndex: =5
 
         TextInput2_1 As text:
             AccessibleLabel: ="Login User ID"
@@ -371,7 +371,7 @@ Screen2 As screen:
             Width: =560
             X: =40
             Y: =960
-            ZIndex: =15
+            ZIndex: =6
 
         Rectangle3_1 As rectangle:
             AccessibleLabel: ="Password"
@@ -383,7 +383,7 @@ Screen2 As screen:
             Width: =193
             X: =40
             Y: =960
-            ZIndex: =16
+            ZIndex: =7
 
         Label6_1 As label:
             Color: =RGBA(255, 255, 255, 1)
@@ -396,7 +396,7 @@ Screen2 As screen:
             Width: =191
             X: =40
             Y: =960
-            ZIndex: =17
+            ZIndex: =8
 
         TextInput2 As text:
             AccessibleLabel: ="Login User ID"
@@ -411,7 +411,7 @@ Screen2 As screen:
             Width: =310
             X: =40
             Y: =840
-            ZIndex: =18
+            ZIndex: =9
 
         Rectangle3 As rectangle:
             AccessibleLabel: ="User ID"
@@ -422,7 +422,7 @@ Screen2 As screen:
             Width: =80
             X: =40
             Y: =840
-            ZIndex: =19
+            ZIndex: =10
 
         Label6 As label:
             Color: =RGBA(255, 255, 255, 1)
@@ -433,7 +433,7 @@ Screen2 As screen:
             Width: =80
             X: =40
             Y: =840
-            ZIndex: =20
+            ZIndex: =11
 
         Rectangle5 As rectangle:
             Fill: =RGBA(0, 94, 146, 1)
@@ -442,7 +442,7 @@ Screen2 As screen:
             Width: =76
             X: =525
             Y: =960
-            ZIndex: =21
+            ZIndex: =12
 
         Icon12 As icon.Check:
             AccessibleLabel: ="Submit"
@@ -460,13 +460,13 @@ Screen2 As screen:
             Width: =75
             X: =525
             Y: =960
-            ZIndex: =22
+            ZIndex: =13
 
         RectQuickActionBar1_1 As rectangle:
             Fill: =RGBA(0, 94, 146, 1)
             Height: =80
             Width: =Parent.Width
-            ZIndex: =23
+            ZIndex: =14
 
         Icon13 As icon.Help:
             Color: =RGBA(0, 94, 146, 1)
@@ -479,7 +479,7 @@ Screen2 As screen:
             Width: =60
             X: =540
             Y: =150
-            ZIndex: =24
+            ZIndex: =15
 
         Label8 As label:
             Align: =Align.Right
@@ -492,7 +492,7 @@ Screen2 As screen:
             Width: =480
             X: =40
             Y: =140
-            ZIndex: =25
+            ZIndex: =16
 
         Icon15 As icon.Cancel:
             Height: =30
@@ -506,7 +506,7 @@ Screen2 As screen:
             Width: =25
             X: =515
             Y: =130
-            ZIndex: =26
+            ZIndex: =17
 
         Timer2 As timer:
             AutoStart: =true
@@ -518,7 +518,7 @@ Screen2 As screen:
             Width: =51
             X: =257
             Y: =325
-            ZIndex: =27
+            ZIndex: =18
 
         Timer2_1 As timer:
             AutoStart: =true
@@ -530,7 +530,7 @@ Screen2 As screen:
             Width: =51
             X: =277
             Y: =345
-            ZIndex: =28
+            ZIndex: =19
 
         Timer2_2 As timer:
             AutoStart: =true
@@ -542,7 +542,7 @@ Screen2 As screen:
             Width: =51
             X: =297
             Y: =365
-            ZIndex: =29
+            ZIndex: =20
 
         LblAppName1_2 As label:
             Fill: =RGBA(58, 58, 58, 0)
@@ -553,5 +553,24 @@ Screen2 As screen:
             Width: =280
             Wrap: =false
             X: =80
-            ZIndex: =30
+            ZIndex: =21
+
+    Header1 As Header:
+        BasePaletteColor: =RGBA(0, 94, 146, 1)
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =80
+        IsLogoVisible: =false
+        IsTitleVisible: =false
+        OnSelectLogo: =false
+        Style: ='Header.Style'.Neutral
+        Title: =
+        UserEmail: =User().Email
+        UserImage: =User().Image
+        UserName: =User().FullName
+        Visible: =Navigation
+        Width: =100
+        X: =200
+        Y: =0
+        ZIndex: =39
 
