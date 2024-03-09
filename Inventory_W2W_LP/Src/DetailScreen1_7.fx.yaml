@@ -285,7 +285,7 @@
     Timer1_6 As timer:
         AutoStart: =VarT1_6
         Color: =RGBA(0, 0, 0, 0)
-        Duration: =5000
+        Duration: =10000
         Fill: =RGBA(0, 0, 0, 0)
         Height: =14
         OnTimerEnd: =SubmitForm(Form1)
