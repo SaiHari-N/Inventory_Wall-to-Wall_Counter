@@ -2287,7 +2287,7 @@ App_Details As screen:
             Height: =80
             PaddingLeft: =15
             Size: =21
-            Text: ="4.17."&appVersion
+            Text: ="4.17.107"
             Visible: =AboutVisible
             Width: =350
             X: =160
@@ -2340,12 +2340,7 @@ App_Details As screen:
             Height: =80
             PaddingLeft: =15
             Size: =21
-            Text: |-
-                =First(PowerAppsforMakers.GetAppVersions(LookUp(
-                    PowerAppsforMakers.GetApps().value,
-                    properties.displayName = "WISA Portal",
-                    name
-                )).value).properties.appDefinition.tags.publisherVersion
+            Text: ="3.24024.12"
             Visible: =AboutVisible
             Width: =350
             X: =160

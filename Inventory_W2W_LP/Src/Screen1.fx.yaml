@@ -46,16 +46,3 @@ Screen1 As screen:
         Y: =614
         ZIndex: =5
 
-    Label7_50 As label:
-        Align: =Align.Right
-        AutoHeight: =true
-        Height: =70
-        Size: =14
-        Text: |-
-            ="Version: 4.17."&appVersion
-        Visible: =false
-        Width: =566
-        X: =40
-        Y: =1066
-        ZIndex: =6
-

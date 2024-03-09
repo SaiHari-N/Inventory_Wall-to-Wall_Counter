@@ -38,32 +38,6 @@ Screen2 As screen:
         Y: =840
         ZIndex: =3
 
-    Label7 As label:
-        Height: =70
-        Size: =21
-        Text: |-
-            =LookUp(
-                PowerAppsforMakers.GetApps().value,
-                properties.displayName = "WISA Portal",
-                name
-            )
-        Visible: =false
-        Width: =560
-        X: =56
-        Y: =992
-        ZIndex: =4
-
-    Label7_49 As label:
-        Align: =Align.Right
-        AutoHeight: =true
-        Height: =70
-        Size: =14
-        Text: =Text(Label7_50.Text)
-        Width: =566
-        X: =40
-        Y: =1103
-        ZIndex: =5
-
     Menu_Navigation_1 As group:
         Height: =5
         Width: =5
@@ -373,7 +347,7 @@ Screen2 As screen:
             Height: =432
             Icon: =Icon.AddUser
             OnSelect: |-
-                =PowerAppsNotification.SendPushNotification( { recipients: ["saiharivignesh.n@syrmasgs.com","ems.planning@syrmasgs.com"], message: "New Version is Updated: 4.17."&appVersion });
+                =PowerAppsNotification.SendPushNotification( { recipients: ["saiharivignesh.n@syrmasgs.com","ems.planning@syrmasgs.com"], message: "New Version is Updated" });
             Width: =453
             X: =96
             Y: =310
