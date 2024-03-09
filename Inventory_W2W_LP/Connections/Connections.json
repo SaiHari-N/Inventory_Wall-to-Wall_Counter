@@ -1,4 +1,26 @@
 {
+  "0391c312-46ba-43de-8987-04b64083fec9": {
+    "connectionRef": {
+      "displayName": "Power Apps Notification",
+      "executionRestrictions": {
+        "apiId": "/providers/microsoft.powerapps/apis/shared_powerappsnotification",
+        "appVer": "3.24024.12",
+        "modifiedOn": "2024-03-09 05:40:24",
+        "policy": "{\"type\":\"action\",\"dataSources\":{\"actions\":[\"sendpushnotification\"]}}",
+        "version": 1
+      },
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/version-mismatches-special-train/1.0.1670.3520/powerappsnotification/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_powerappsnotification",
+      "sharedConnectionId": "/providers/microsoft.powerapps/apis/shared_powerappsnotification/connections/e3c76773e68c42f8bd6b583db3db6aa1"
+    },
+    "datasets": {},
+    "dataSources": [
+      "PowerAppsNotification"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "0391c312-46ba-43de-8987-04b64083fec9"
+  },
   "12decc00-2546-4355-91bc-406e8510ecf7": {
     "appActions": [
       "providers/PowerPlatform.Governance/Operations/Read",
@@ -151,7 +173,7 @@
       "executionRestrictions": {
         "apiId": "/providers/microsoft.powerapps/apis/shared_powerappsnotificationv2",
         "appVer": "3.24024.12",
-        "modifiedOn": "2024-03-09 04:48:14",
+        "modifiedOn": "2024-03-09 05:40:24",
         "policy": "{\"type\":\"unused\"}",
         "version": 1
       },

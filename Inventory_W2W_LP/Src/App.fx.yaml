@@ -14,7 +14,7 @@ App As appinfo:
                     )
                 ).value
             )
-        ); 
+        ); "Version: 4.17."&appVersion
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
