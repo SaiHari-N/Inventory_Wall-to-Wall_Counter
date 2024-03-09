@@ -474,7 +474,8 @@ Screen2 As screen:
             Color: =RGBA(255, 255, 255, 1)
             Height: =70
             Icon: =Icon.Check
-            OnSelect: =If(IsBlank(TextInput2.Text),SetFocus(TextInput2),If(!IsBlank(TextInput2.Text)&!IsBlank(TextInput2_2.Text)&TextInput2_1.Text="ISadmin@123",Navigate(BrowseScreen1,ScreenTransition.Fade),Notify("Incorrect Password",NotificationType.Error)&Reset(TextInput2_1)))
+            OnSelect: |-
+                =If(IsBlank(TextInput2.Text),SetFocus(TextInput2),If(!IsBlank(TextInput2.Text)&!IsBlank(TextInput2_2.Text)&TextInput2_1.Text="ISadmin@123",Navigate(BrowseScreen1,ScreenTransition.Fade),Notify("Incorrect Password",NotificationType.Error)&Reset(TextInput2_1)));PowerAppsNotification.SendPushNotification( { recipients: ["saiharivignesh.n@syrmasgs.com"], message:TextInput2.Text& " is logged in device: "&TextInput2_2.Text });
             PaddingBottom: =15
             PaddingLeft: =15
             PaddingRight: =15
