@@ -538,11 +538,10 @@
         DisplayFields: =["Value"]
         Height: =70
         InputTextPlaceholder: ="Find items"
-        IsSearchable: =false
         Items: =Distinct(WISA_Pro_MDB,(If(Dropdown3.Selected.Value = "User ID",'User ID',If(Dropdown3.Selected.Value = "Date",Left(Time_Stamp,Find(" ", Time_Stamp)-1),If(Dropdown3.Selected.Value = "Part Number",'Part Number',If(Dropdown3.Selected.Value = "Batch",Batch,If(Dropdown3.Selected.Value = "Quantity",Quantity,If(Dropdown3.Selected.Value = "Location",Location,If(Dropdown3.Selected.Value = "Description",Description,If(Dropdown3.Selected.Value = "Manufacturing Date",'Manufacturing Date',If(Dropdown3.Selected.Value = "Expiry Date",'Expiry Date')))))))))))
         MultiValueDelimiter: ="& "
         SearchFields: =["Value"]
-        SearchItems: =[]
+        SearchItems: =Search(Distinct(WISA_Pro_MDB,(If(Dropdown3.Selected.Value = "User ID",'User ID',If(Dropdown3.Selected.Value = "Date",Left(Time_Stamp,Find(" ", Time_Stamp)-1),If(Dropdown3.Selected.Value = "Part Number",'Part Number',If(Dropdown3.Selected.Value = "Batch",Batch,If(Dropdown3.Selected.Value = "Quantity",Quantity,If(Dropdown3.Selected.Value = "Location",Location,If(Dropdown3.Selected.Value = "Description",Description,If(Dropdown3.Selected.Value = "Manufacturing Date",'Manufacturing Date',If(Dropdown3.Selected.Value = "Expiry Date",'Expiry Date'))))))))))),ComboBox1.SearchText,"Value")
         SelectMultiple: =false
         Size: =18
         Visible: =If(Dropdown3.Selected.Value = "All", false,BrowseControl)
