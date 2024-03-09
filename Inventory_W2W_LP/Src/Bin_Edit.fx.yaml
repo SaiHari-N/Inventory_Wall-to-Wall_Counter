@@ -46,7 +46,7 @@ Bin_Edit As screen:
         FontWeight: =FontWeight.Bold
         Height: =70
         Size: =22
-        Text: ="Label Template"
+        Text: ="Default Label Template"
         Width: =240
         X: =32
         Y: =173
@@ -214,7 +214,7 @@ Bin_Edit As screen:
     Dropdown2 As dropdown:
         BorderColor: =RGBA(0, 94, 146, 1)
         ChevronBackground: =RGBA(0, 94, 146, 1)
-        Default: =
+        Default: ="UID"
         Height: =63
         Items: =["QuickTrack","DataMax","UID"]
         Size: =21
