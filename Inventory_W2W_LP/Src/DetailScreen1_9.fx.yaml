@@ -293,13 +293,13 @@
         ZIndex: =9
 
     Timer1_8 As timer:
-        AutoStart: =VarT1_8
+        AutoStart: =//VarT1_8
         Color: =RGBA(0, 0, 0, 0)
         Duration: =10000
         Fill: =RGBA(0, 0, 0, 0)
         Height: =14
         OnTimerEnd: =SubmitForm(Form1_4)
-        Start: =VarT1_8
+        Start: =//VarT1_8
         Width: =14
         X: =625
         Y: =175
@@ -309,7 +309,7 @@
         DataSource: =WISA_Pro_MDB
         Height: =197
         Item: =LastSubmittedRecord
-        OnSuccess: =Set(TIC1Visible,true);Set(SetfocusTIC1_4, true);Set(R17_1,false)
+        OnSuccess: =Set(TIC1Visible,true);Set(SetfocusTIC1_4, true);Set(R17_1,false);Set(R19, false)
         Width: =640
         ZIndex: =11
 
@@ -510,8 +510,19 @@
         BorderStyle: =BorderStyle.None
         Fill: =RGBA(0, 0, 0, 0)
         Height: =197
-        OnSelect: =If(varPrintTriggered1, Print()&Set(FormDesc1,"Label Printed but not scanned"));Set(VarT1_8, true)
+        OnSelect: |-
+            =If(varPrintTriggered1, Print()&Set(FormDesc1,"Label Printed but not scanned"));Set(R19, true)
+            //Set(VarT1_8, true);
         Visible: =R17_1
         Width: =640
         ZIndex: =18
+
+    Rectangle19 As rectangle:
+        BorderStyle: =BorderStyle.None
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =197
+        OnSelect: =SubmitForm(Form1_4)
+        Visible: =R19
+        Width: =640
+        ZIndex: =19
 
