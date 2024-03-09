@@ -267,7 +267,15 @@ Screen4 As screen:
             ZIndex: =27
 
         LineChart1 As lineChart:
-            Items: =WISA_Pro_MDB
+            Items: |-
+                =Sort(
+                    GroupBy(WISA_Pro_MDB, "Time_Stamp", "Grouped Dates"),
+                    Time_Stamp, Ascending),
+                    {
+                        Date: time,
+                        Count: CountRows(WISA_Pro_MDB, Filter('WISA_Pro_MDB', 'Date' = ThisRecord.Date))
+                    }
+                )
             X: =124
             Y: =308
             ZIndex: =28
@@ -314,4 +322,21 @@ Screen4 As screen:
         X: =294
         Y: =136
         ZIndex: =33
+
+    PieChart1_1 As pieChart:
+        BorderColor: =RGBA(0, 94, 146, 1)
+        Height: =476
+        ItemBorderColor: =RGBA(0, 94, 146, 1)
+        ItemColorSet: =[RGBA(255,255,255,1),RGBA(0,94,146,1)]
+        Items: |-
+            =Table(
+                 {Value: CountRows(Filter(WISA_Pro_MDB, TextInput4_1.Text = Location)), Label:"Bin Count: " & CountRows(WISA_Pro_MDB)-(CountRows(WISA_Pro_MDB) - CountRows(Filter(WISA_Pro_MDB, TextInput4_1.Text = Location)))},
+                 {Value: (CountRows(WISA_Pro_MDB) - CountRows(Filter(WISA_Pro_MDB, TextInput4_1.Text = Location))), Label: "Other Bins: " & (CountRows(WISA_Pro_MDB) - CountRows(Filter(WISA_Pro_MDB, TextInput4_1.Text = Location)))})
+        Size: =20
+        Visible: |-
+            =false
+            //If(IsBlank(TextInput4_1.Text),false,true)
+        Width: =640
+        Y: =430
+        ZIndex: =34
 
