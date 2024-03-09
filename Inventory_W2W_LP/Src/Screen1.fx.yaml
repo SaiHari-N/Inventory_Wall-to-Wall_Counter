@@ -1,5 +1,5 @@
 Screen1 As screen:
-    OnVisible: =Timer1.AutoStart=true
+    OnVisible: =Timer1.AutoStart=true;
 
     Image2 As image:
         DisplayMode: =DisplayMode.View

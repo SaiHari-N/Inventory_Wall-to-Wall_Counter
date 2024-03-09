@@ -2,6 +2,19 @@ App As appinfo:
     BackEnabled: =true
     ConfirmExit: =true
     ConfirmExitMessage: ="Quit WISA Portal?"
+    OnStart: |-
+        =Set(
+            appVersion,
+            CountRows(
+                PowerAppsforMakers.GetAppVersions(
+                    LookUp(
+                        PowerAppsforMakers.GetApps().value,
+                        properties.displayName = "WISA Portal",
+                        name
+                    )
+                ).value
+            )
+        ); 
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
