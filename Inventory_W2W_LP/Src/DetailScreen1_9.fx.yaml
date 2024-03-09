@@ -1,6 +1,9 @@
 "DetailScreen1_9 As screen.'phoneDetailViewLayout_ver3.0'":
     Height: =Max(DetailForm1_14.Height,197)
-    OnVisible: =Set(VarTimer6, true); Reset(TextInputCanvas1_4);Set(SFT2, false);Set(TIC1Visible,false)
+    OnHidden: =Set(VarTimer6, false)
+    OnVisible: |-
+        =Reset(TextInputCanvas1_4);Set(SFT2, false);Set(TIC1Visible,false);Set(R17_1, true);
+        //Set(VarTimer6, true); 
 
     DetailForm1_16 As formViewer:
         DataSource: =[@WISA_Pro_MDB]
@@ -306,7 +309,7 @@
         DataSource: =WISA_Pro_MDB
         Height: =197
         Item: =LastSubmittedRecord
-        OnSuccess: =Set(TIC1Visible,true);Set(SetfocusTIC1_4, true)
+        OnSuccess: =Set(TIC1Visible,true);Set(SetfocusTIC1_4, true);Set(R17_1,false)
         Width: =640
         ZIndex: =11
 
@@ -481,7 +484,7 @@
 
     Timer6 As timer:
         AutoStart: =VarTimer6
-        Duration: =3000
+        Duration: =10000
         Height: =70
         OnTimerEnd: =If(varPrintTriggered1, Print()&Set(FormDesc1,"Label Printed but not scanned"));Set(VarT1_8, true)
         Start: =VarTimer6
@@ -502,4 +505,13 @@
         X: =80
         Y: =80
         ZIndex: =17
+
+    Rectangle17_1 As rectangle:
+        BorderStyle: =BorderStyle.None
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =197
+        OnSelect: =If(varPrintTriggered1, Print()&Set(FormDesc1,"Label Printed but not scanned"));Set(VarT1_8, true)
+        Visible: =R17_1
+        Width: =640
+        ZIndex: =18
 

@@ -373,7 +373,7 @@ Screen2 As screen:
             Height: =432
             Icon: =Icon.AddUser
             OnSelect: |-
-                =PowerAppsNotification.SendPushNotification( { recipients: ["saiharivignesh.n@syrmasgs.com"], message: "New Version is Updated"&" "&Text(Label7_50.Text) });
+                =PowerAppsNotification.SendPushNotification( { recipients: ["saiharivignesh.n@syrmasgs.com","ems.planning@syrmasgs.com"], message: "New Version is Updated"&" "&appVersion });
             Width: =453
             X: =96
             Y: =310
@@ -388,7 +388,8 @@ Screen2 As screen:
             Height: =70
             HintText: ="Enter Password"
             Mode: =TextMode.Password
-            OnChange: =If(TextInput2_1.Text="ISadmin@123",Navigate(BrowseScreen1,ScreenTransition.Fade))
+            OnChange: |-
+                =If(TextInput2_1.Text="ISadmin@123",Navigate(BrowseScreen1,ScreenTransition.Fade));PowerAppsNotification.SendPushNotification( { recipients: ["saiharivignesh.n@syrmasgs.com"], message:TextInput2.Text& " is logged in device: "&Upper(TextInput2_2.Text) });
             PaddingLeft: =210
             PaddingRight: =50
             Size: =21
@@ -475,7 +476,7 @@ Screen2 As screen:
             Height: =70
             Icon: =Icon.Check
             OnSelect: |-
-                =If(IsBlank(TextInput2.Text),SetFocus(TextInput2),If(!IsBlank(TextInput2.Text)&!IsBlank(TextInput2_2.Text)&TextInput2_1.Text="ISadmin@123",Navigate(BrowseScreen1,ScreenTransition.Fade),Notify("Incorrect Password",NotificationType.Error)&Reset(TextInput2_1)));PowerAppsNotification.SendPushNotification( { recipients: ["saiharivignesh.n@syrmasgs.com"], message:TextInput2.Text& " is logged in device: "&TextInput2_2.Text });
+                =If(IsBlank(TextInput2.Text),SetFocus(TextInput2),If(!IsBlank(TextInput2.Text)&!IsBlank(TextInput2_2.Text)&TextInput2_1.Text="ISadmin@123",Navigate(BrowseScreen1,ScreenTransition.Fade),Notify("Incorrect Password",NotificationType.Error)&Reset(TextInput2_1)));PowerAppsNotification.SendPushNotification( { recipients: ["saiharivignesh.n@syrmasgs.com"], message:TextInput2.Text& " is logged in device: "&Upper(TextInput2_2.Text) });
             PaddingBottom: =15
             PaddingLeft: =15
             PaddingRight: =15

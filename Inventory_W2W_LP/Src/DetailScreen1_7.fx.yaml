@@ -1,7 +1,9 @@
 "DetailScreen1_7 As screen.'phoneDetailViewLayout_ver3.0'":
     Height: =Max(DetailForm1_10.Height,197)
     OnHidden: =Set(VarTimer5, false)
-    OnVisible: =Set(VarTimer5, true);Reset(TextInputCanvas1_2);Set(SFT2, false);Set(TIC1Visible,false)
+    OnVisible: |-
+        =Reset(TextInputCanvas1_2);Set(SFT2, false);Set(TIC1Visible,false);Set(R17,true);
+        //Set(VarTimer5, true);
 
     DetailForm1_15 As formViewer:
         DataSource: =[@WISA_Pro_MDB]
@@ -301,15 +303,15 @@
         Width: =150
         X: =490
         Y: =27
-        ZIndex: =11
+        ZIndex: =10
 
     Form1 As form:
         DataSource: =WISA_Pro_MDB
         Height: =197
         Item: =If(TabList1.Selected.Value = "Log",BrowseGallery1.Selected,Table3.Selected)
-        OnSuccess: =Set(TIC1Visible,true);Set(SetfocusTIC1_2, true)
+        OnSuccess: =Set(TIC1Visible,true);Set(SetfocusTIC1_2, true);Set(R17, false)
         Width: =640
-        ZIndex: =13
+        ZIndex: =11
 
         Description_DataCard2 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
@@ -380,7 +382,7 @@
         Item: =If(TabList1.Selected.Value = "Log",BrowseGallery1.Selected,Table3.Selected)
         OnSuccess: =Back()
         Width: =640
-        ZIndex: =14
+        ZIndex: =12
 
         Description_DataCard2_1 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
@@ -445,13 +447,58 @@
                 Y: =DataCardValue1_1.Y + DataCardValue1_1.Height
                 ZIndex: =3
 
+    Timer4_1 As timer:
+        AutoStart: =SFT2
+        Duration: =1000
+        Height: =23
+        OnTimerEnd: =SubmitForm(Form1_1)
+        Start: =SFT2
+        Visible: =false
+        Width: =43
+        X: =40
+        Y: =40
+        ZIndex: =13
+
+    Timer5 As timer:
+        AutoStart: =VarTimer5
+        Duration: =10000
+        Height: =70
+        OnTimerEnd: =If(varPrintTriggered, Print()&Set(FormDesc1,"Label Printed but not scanned"));Set(VarT1_6, true)
+        Start: =VarTimer5
+        Visible: =false
+        Width: =280
+        X: =60
+        Y: =60
+        ZIndex: =14
+
+    Timer8 As timer:
+        AutoStart: =SetfocusTIC1_2
+        Duration: =100
+        Height: =70
+        OnTimerEnd: =SetFocus(TextInputCanvas1_2)
+        Start: =SetfocusTIC1_2
+        Visible: =false
+        Width: =280
+        X: =80
+        Y: =80
+        ZIndex: =15
+
+    Rectangle17 As rectangle:
+        BorderStyle: =BorderStyle.None
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =197
+        OnSelect: =If(varPrintTriggered, Print()&Set(FormDesc1,"Label Printed but not scanned"));Set(VarT1_6, true)
+        Visible: =R17
+        Width: =640
+        ZIndex: =16
+
     Rectangle6_9 As rectangle:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =197
         OnSelect: =If(TextInputCanvas1_2.Value = If(IsBlank(BrowseGallery1.Selected.UID),"No Data Found",BrowseGallery1.Selected.UID), Set(FormDesc2, "Label Printed & Scanned")&Set(SFT2, true), Notify("Wrong UID"))
         Visible: =TIC1Visible
         Width: =640
-        ZIndex: =15
+        ZIndex: =17
 
     "TextInputCanvas1_2 As 'Text input'":
         BasePaletteColor: =
@@ -466,40 +513,5 @@
         Width: =360
         X: =140
         Y: =58
-        ZIndex: =16
-
-    Timer4_1 As timer:
-        AutoStart: =SFT2
-        Duration: =1000
-        Height: =23
-        OnTimerEnd: =SubmitForm(Form1_1)
-        Start: =SFT2
-        Visible: =false
-        Width: =43
-        X: =40
-        Y: =40
-        ZIndex: =17
-
-    Timer5 As timer:
-        AutoStart: =VarTimer5
-        Duration: =3000
-        Height: =70
-        OnTimerEnd: =If(varPrintTriggered, Print()&Set(FormDesc1,"Label Printed but not scanned"));Set(VarT1_6, true)
-        Visible: =false
-        Width: =280
-        X: =60
-        Y: =60
         ZIndex: =18
-
-    Timer8 As timer:
-        AutoStart: =SetfocusTIC1_2
-        Duration: =100
-        Height: =70
-        OnTimerEnd: =SetFocus(TextInputCanvas1_2)
-        Start: =SetfocusTIC1_2
-        Visible: =false
-        Width: =280
-        X: =80
-        Y: =80
-        ZIndex: =19
 
