@@ -45,7 +45,7 @@
       "enableexperimentaldataverseoffline": true,
       "enableideaspanel": true,
       "enablelargefilesindataverseoffline": false,
-      "enablelegacybarcodescanner": false,
+      "enablelegacybarcodescanner": true,
       "enableonstart": true,
       "enableonstartnavigate": false,
       "enablepcfmoderndatasets": true,

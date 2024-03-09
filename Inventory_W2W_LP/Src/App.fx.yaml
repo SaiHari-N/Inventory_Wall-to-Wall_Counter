@@ -1,6 +1,7 @@
 App As appinfo:
     BackEnabled: =true
     ConfirmExit: =true
+    ConfirmExitMessage: ="Quit WISA Portal?"
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
