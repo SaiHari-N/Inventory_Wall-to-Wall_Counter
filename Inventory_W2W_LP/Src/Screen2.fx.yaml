@@ -373,7 +373,7 @@ Screen2 As screen:
             Height: =432
             Icon: =Icon.AddUser
             OnSelect: |-
-                =PowerAppsNotification.SendPushNotification( { recipients: ["saiharivignesh.n@syrmasgs.com","ems.planning@syrmasgs.com"], message: "New Version is Updated"&" "&appVersion });
+                =PowerAppsNotification.SendPushNotification( { recipients: ["saiharivignesh.n@syrmasgs.com","ems.planning@syrmasgs.com"], message: "New Version is Updated: 4.17."&appVersion });
             Width: =453
             X: =96
             Y: =310
