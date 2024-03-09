@@ -654,6 +654,60 @@ App_Details As screen:
             Y: =548
             ZIndex: =46
 
+    "'Configuration 1' As group":
+        Height: =5
+        Width: =5
+        X: =100
+        Y: =86
+        ZIndex: =84
+
+        Label10_18 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =80
+            Size: =22
+            Text: ="RawBT Application"
+            Visible: =C1V
+            Width: =480
+            X: =80
+            Y: =120
+            ZIndex: =61
+
+        Image1_9 As image:
+            Height: =600
+            Image: ='Configuration 1_1'
+            Visible: =C1V
+            Width: =400
+            X: =120
+            Y: =240
+            ZIndex: =62
+
+        Label10_19 As label:
+            Align: =Align.Justify
+            Height: =170
+            Size: =18
+            Text: ="       Utilize the RawBT application and Bluetooth settings to establish a connection between the Zebra device and the XP-P323B/MTP-25 printer."
+            Visible: =C1V
+            Width: =520
+            X: =60
+            Y: =880
+            ZIndex: =63
+
+        Icon14_1 As icon.ChevronRight:
+            Color: =RGBA(102, 102, 102, 1)
+            Height: =120
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(C2V,true);Set(C1V,false)
+            PaddingBottom: =40
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =40
+            Visible: =C1V
+            Width: =120
+            X: =520
+            Y: =548
+            ZIndex: =64
+
     "'Instruction 7' As group":
         Height: =5
         Width: =5
@@ -721,60 +775,6 @@ App_Details As screen:
             Width: =120
             Y: =548
             ZIndex: =51
-
-    "'Configuration 1' As group":
-        Height: =5
-        Width: =5
-        X: =100
-        Y: =86
-        ZIndex: =84
-
-        Label10_18 As label:
-            Align: =Align.Center
-            FontWeight: =FontWeight.Semibold
-            Height: =80
-            Size: =22
-            Text: ="RawBT Application"
-            Visible: =C1V
-            Width: =480
-            X: =80
-            Y: =120
-            ZIndex: =61
-
-        Image1_9 As image:
-            Height: =600
-            Image: ='Configuration 1_1'
-            Visible: =C1V
-            Width: =400
-            X: =120
-            Y: =240
-            ZIndex: =62
-
-        Label10_19 As label:
-            Align: =Align.Justify
-            Height: =170
-            Size: =18
-            Text: ="       Utilize the RawBT application and Bluetooth settings to establish a connection between the Zebra device and the XP-P323B/MTP-25 printer."
-            Visible: =C1V
-            Width: =520
-            X: =60
-            Y: =880
-            ZIndex: =63
-
-        Icon14_1 As icon.ChevronRight:
-            Color: =RGBA(102, 102, 102, 1)
-            Height: =120
-            Icon: =Icon.ChevronRight
-            OnSelect: =Set(C2V,true);Set(C1V,false)
-            PaddingBottom: =40
-            PaddingLeft: =40
-            PaddingRight: =40
-            PaddingTop: =40
-            Visible: =C1V
-            Width: =120
-            X: =520
-            Y: =548
-            ZIndex: =64
 
     "'Configuration 2' As group":
         Height: =5
@@ -2287,7 +2287,7 @@ App_Details As screen:
             Height: =80
             PaddingLeft: =15
             Size: =21
-            Text: ="4.17.95"
+            Text: ="4.17."&appVersion
             Visible: =AboutVisible
             Width: =350
             X: =160

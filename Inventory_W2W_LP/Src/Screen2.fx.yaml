@@ -568,11 +568,14 @@ Screen2 As screen:
         ZIndex: =38
 
     Label7_49 As label:
+        Align: =Align.Right
+        AutoHeight: =true
         Height: =70
-        Size: =21
-        Text: =appVersion
+        Size: =14
+        Text: |-
+            ="Version: 4.17."&appVersion
         Width: =560
-        X: =56
-        Y: =1062
+        X: =40
+        Y: =1103
         ZIndex: =39
 
