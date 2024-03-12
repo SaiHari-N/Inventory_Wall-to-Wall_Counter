@@ -184,7 +184,7 @@ App_Details As screen:
         Icon13_1 As icon.Help:
             Color: =RGBA(0, 94, 146, 1)
             Height: =60
-            Icon: =Icon.Help
+            Icon: =Icon.Support
             OnSelect: |-
                 =Launch("https://flowgpt.com/p/sem0"); Set(ContextPopup1,true); Set(Close1,true)
             Rotation: =360

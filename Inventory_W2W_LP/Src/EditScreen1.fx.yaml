@@ -980,7 +980,7 @@
         AccessibleLabel: ="Bin"
         Color: =RGBA(255, 255, 255, 1)
         Height: =56
-        Icon: =Icon.Tag
+        Icon: =Icon.Items
         OnSelect: =Navigate(BrowseScreen1,ScreenTransition.None)
         TabIndex: =
         Width: =56

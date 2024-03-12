@@ -5,7 +5,7 @@
       "executionRestrictions": {
         "apiId": "/providers/microsoft.powerapps/apis/shared_powerappsnotification",
         "appVer": "3.24031.20",
-        "modifiedOn": "2024-03-12 15:51:56",
+        "modifiedOn": "2024-03-12 17:21:23",
         "policy": "{\"type\":\"action\",\"dataSources\":{\"actions\":[\"sendpushnotification\"]}}",
         "version": 1
       },
@@ -173,7 +173,7 @@
       "executionRestrictions": {
         "apiId": "/providers/microsoft.powerapps/apis/shared_powerappsnotificationv2",
         "appVer": "3.24031.20",
-        "modifiedOn": "2024-03-12 15:51:56",
+        "modifiedOn": "2024-03-12 17:21:23",
         "policy": "{\"type\":\"unused\"}",
         "version": 1
       },

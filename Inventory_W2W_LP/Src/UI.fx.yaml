@@ -1,2 +1,508 @@
 UI As screen:
+    Fill: =RGBA(255, 255, 255, 1)
+    OnVisible: =Set(VarRect25, true);Set(VarRect25_1, false);Set(VarRect25_2, false);Set(VarRect25_3, false);Set(VarRect28, false);Set(SettingsBadge, true)
+
+    Rectangle26_3 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0)
+        OnSelect: |-
+            =Launch("https://syrmatech-my.sharepoint.com/personal/saiharivignesh_n_syrmasgs_com/Documents/WISA%20Portal%20Report.xlsx");Set(VarRect25, false);Set(VarRect25_1, false);Set(VarRect25_2, false);Set(VarRect25_3, true)
+        Width: =160
+        Y: =920
+        ZIndex: =1
+
+    Rectangle26_2 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =120
+        OnSelect: |-
+            =Launch("https://flowgpt.com/p/sem0");Set(VarRect25, false);Set(VarRect25_1, false);Set(VarRect25_2, true);Set(VarRect25_3, false)
+        Width: =160
+        Y: =800
+        ZIndex: =2
+
+    Rectangle26_1 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =120
+        OnSelect: =Navigate(Meeting);Set(VarRect25, false);Set(VarRect25_1, true);Set(VarRect25_2, false);Set(VarRect25_3, false)
+        Width: =160
+        Y: =680
+        ZIndex: =3
+
+    Rectangle26 As rectangle:
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =120
+        OnSelect: =Navigate(MailQuery);Set(VarRect25, true);Set(VarRect25_1, false);Set(VarRect25_2, false);Set(VarRect25_3, false)
+        Width: =160
+        Y: =560
+        ZIndex: =4
+
+    RectQuickActionBar1_4 As rectangle:
+        Fill: =RGBA(0, 94, 146, 1)
+        Height: =80
+        Width: =Parent.Width
+        ZIndex: =5
+
+    LblAppName1_4 As label:
+        Align: =Align.Center
+        Fill: =RGBA(58, 58, 58, 0)
+        FontWeight: =FontWeight.Semibold
+        Height: =80
+        Size: =27
+        Text: ="WISA Portal"
+        Width: =280
+        Wrap: =false
+        X: =180
+        ZIndex: =6
+
+    IconAccept1_3 As icon.Check:
+        AccessibleLabel: =Self.Tooltip
+        Height: =50
+        Icon: =Icon.Settings
+        OnSelect: =Set(VarRect28, true);Set(SettingsBadge, false)
+        TabIndex: =0
+        Tooltip: ="Submit item"
+        Visible: =SettingsBadge
+        Width: =50
+        X: =570
+        Y: =15
+        ZIndex: =7
+
+    Header1_9 As Header:
+        BasePaletteColor: =RGBA(0, 94, 146, 1)
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =80
+        IsLogoVisible: =false
+        IsProfilePictureVisible: =false
+        IsTitleVisible: =true
+        OnSelectLogo: =false
+        Style: ='Header.Style'.Neutral
+        Title: =User().FullName
+        TitleFontSize: =46
+        UserEmail: =User().Email
+        UserImage: =User().Image
+        UserName: =User().FullName
+        Visible: =true
+        Width: =368
+        X: =10
+        Y: =413
+        ZIndex: =8
+
+    Icon24 As icon.Person:
+        Color: =RGBA(0, 96, 146, 1)
+        Height: =288
+        Icon: =Icon.Person
+        OnSelect: =Navigate(Screen2)
+        Width: =283
+        X: =336
+        Y: =136
+        ZIndex: =9
+
+    Rectangle24 As rectangle:
+        BorderColor: =RGBA(199, 199, 199, 1)
+        BorderThickness: =1
+        Fill: =RGBA(235, 235, 235, 1)
+        Height: =460
+        Width: =440
+        X: =160
+        Y: =560
+        ZIndex: =10
+
+    Icon7_18 As icon.Mail:
+        AccessibleLabel: ="Mail"
+        AutoDisableOnSelect: =false
+        Color: =RGBA(0, 94, 146, 1)
+        Height: =50
+        Icon: =Icon.Mail
+        OnSelect: =Navigate(MailQuery);Set(VarRect25, true);Set(VarRect25_1, false);Set(VarRect25_2, false);Set(VarRect25_3, false)
+        TabIndex: =
+        Visible: =QueryMail2
+        Width: =50
+        X: =49
+        Y: =570
+        ZIndex: =11
+
+    Icon7_19 As icon.Mail:
+        AccessibleLabel: ="Mail"
+        AutoDisableOnSelect: =false
+        Color: =RGBA(0, 94, 146, 1)
+        Height: =50
+        Icon: =Icon.People
+        OnSelect: =Navigate(Meeting);Set(VarRect25, false);Set(VarRect25_1, true);Set(VarRect25_2, false);Set(VarRect25_3, false)
+        TabIndex: =
+        Visible: =QueryMail2
+        Width: =50
+        X: =49
+        Y: =690
+        ZIndex: =12
+
+    Icon7_20 As icon.Mail:
+        AccessibleLabel: ="Mail"
+        AutoDisableOnSelect: =false
+        Color: =RGBA(0, 94, 146, 1)
+        Height: =50
+        Icon: =Icon.Support
+        OnSelect: |-
+            =Launch("https://flowgpt.com/p/sem0");Set(VarRect25, false);Set(VarRect25_1, false);Set(VarRect25_2, true);Set(VarRect25_3, false)
+        TabIndex: =
+        Visible: =QueryMail2
+        Width: =50
+        X: =49
+        Y: =810
+        ZIndex: =13
+
+    Icon7_21 As icon.Mail:
+        AccessibleLabel: ="Mail"
+        AutoDisableOnSelect: =false
+        Color: =RGBA(0, 94, 146, 1)
+        Height: =50
+        Icon: =Icon.Download
+        OnSelect: |-
+            =Launch("https://syrmatech-my.sharepoint.com/personal/saiharivignesh_n_syrmasgs_com/Documents/WISA%20Portal%20Report.xlsx");Set(VarRect25, false);Set(VarRect25_1, false);Set(VarRect25_2, false);Set(VarRect25_3, true)
+        TabIndex: =
+        Visible: =QueryMail2
+        Width: =50
+        X: =49
+        Y: =930
+        ZIndex: =14
+
+    Rectangle25 As rectangle:
+        Fill: =RGBA(0, 94, 146, 1)
+        Height: =120
+        HoverFill: =RGBA(0,96,146,1)
+        Visible: =VarRect25
+        Width: =10
+        Y: =560
+        ZIndex: =15
+
+    Rectangle25_1 As rectangle:
+        Fill: =RGBA(0, 94, 146, 1)
+        Height: =120
+        Visible: =VarRect25_1
+        Width: =10
+        Y: =680
+        ZIndex: =16
+
+    Rectangle25_2 As rectangle:
+        Fill: =RGBA(0, 94, 146, 1)
+        Height: =120
+        Visible: =VarRect25_2
+        Width: =10
+        Y: =800
+        ZIndex: =17
+
+    Rectangle25_3 As rectangle:
+        Fill: =RGBA(0, 94, 146, 1)
+        Height: =120
+        Visible: =VarRect25_3
+        Width: =10
+        Y: =920
+        ZIndex: =18
+
+    Label7 As label:
+        Align: =Align.Center
+        Height: =30
+        OnSelect: =Navigate(MailQuery);Set(VarRect25, true);Set(VarRect25_1, false);Set(VarRect25_2, false);Set(VarRect25_3, false)
+        Size: =16
+        Text: ="Mail"
+        Width: =100
+        X: =24
+        Y: =622
+        ZIndex: =19
+
+    Label7_43 As label:
+        Align: =Align.Center
+        Height: =30
+        OnSelect: =Navigate(Meeting);Set(VarRect25, false);Set(VarRect25_1, true);Set(VarRect25_2, false);Set(VarRect25_3, false)
+        Size: =16
+        Text: ="Meeting"
+        Width: =100
+        X: =24
+        Y: =742
+        ZIndex: =20
+
+    Label7_44 As label:
+        Align: =Align.Center
+        Height: =30
+        OnSelect: |-
+            =Launch("https://flowgpt.com/p/sem0");Set(VarRect25, false);Set(VarRect25_1, false);Set(VarRect25_2, true);Set(VarRect25_3, false)
+        Size: =16
+        Text: ="Support"
+        Width: =100
+        X: =24
+        Y: =862
+        ZIndex: =21
+
+    Label7_45 As label:
+        Align: =Align.Center
+        Height: =30
+        OnSelect: |-
+            =Launch("https://syrmatech-my.sharepoint.com/personal/saiharivignesh_n_syrmasgs_com/Documents/WISA%20Portal%20Report.xlsx");Set(VarRect25, false);Set(VarRect25_1, false);Set(VarRect25_2, false);Set(VarRect25_3, true)
+        Size: =16
+        Text: ="Download"
+        Width: =120
+        X: =14
+        Y: =982
+        ZIndex: =22
+
+    Button2 As button:
+        BorderColor: =RGBA(235, 235, 235, 1)
+        Color: =RGBA(0, 96, 146, 1)
+        DisabledColor: =RGBA(0, 96, 146, 1)
+        DisabledFill: =RGBA(0, 96, 146, 1)
+        Fill: =RGBA(0, 96, 146, 1)
+        Height: =144
+        HoverColor: =RGBA(0, 96, 146, 1)
+        OnSelect: =Navigate(BrowseScreen1,ScreenTransition.None)
+        PressedColor: =RGBA(0, 96, 146, 1)
+        PressedFill: =RGBA(0, 96, 146, 1)
+        Size: =24
+        Text: =""
+        Width: =180
+        X: =180
+        Y: =590
+        ZIndex: =23
+
+    Button2_1 As button:
+        BorderColor: =RGBA(235, 235, 235, 1)
+        Color: =RGBA(0, 96, 146, 1)
+        DisabledColor: =RGBA(0, 96, 146, 1)
+        DisabledFill: =RGBA(0, 96, 146, 1)
+        Fill: =RGBA(0, 96, 146, 1)
+        Height: =144
+        HoverColor: =RGBA(0, 96, 146, 1)
+        OnSelect: =Navigate(Bin_Edit,ScreenTransition.None)
+        PressedColor: =RGBA(0, 96, 146, 1)
+        PressedFill: =RGBA(0, 96, 146, 1)
+        Size: =24
+        Text: =""
+        Width: =180
+        X: =400
+        Y: =590
+        ZIndex: =24
+
+    Button2_2 As button:
+        BorderColor: =RGBA(235, 235, 235, 1)
+        Color: =RGBA(0, 96, 146, 1)
+        DisabledColor: =RGBA(0, 96, 146, 1)
+        DisabledFill: =RGBA(0, 96, 146, 1)
+        Fill: =RGBA(0, 96, 146, 1)
+        Height: =144
+        HoverColor: =RGBA(0, 96, 146, 1)
+        OnSelect: =Navigate(Dashboard,ScreenTransition.None)
+        PressedColor: =RGBA(0, 96, 146, 1)
+        PressedFill: =RGBA(0, 96, 146, 1)
+        Size: =24
+        Text: =""
+        Width: =180
+        X: =180
+        Y: =772
+        ZIndex: =25
+
+    Button2_3 As button:
+        BorderColor: =RGBA(235, 235, 235, 1)
+        Color: =RGBA(0, 96, 146, 1)
+        DisabledColor: =RGBA(0, 96, 146, 1)
+        DisabledFill: =RGBA(0, 96, 146, 1)
+        Fill: =RGBA(0, 96, 146, 1)
+        Height: =144
+        HoverColor: =RGBA(0, 96, 146, 1)
+        PressedColor: =RGBA(0, 96, 146, 1)
+        PressedFill: =RGBA(0, 96, 146, 1)
+        Size: =24
+        Text: =""
+        Width: =180
+        X: =400
+        Y: =772
+        ZIndex: =26
+
+    Icon9_7 As icon.Tray:
+        AccessibleLabel: ="Bin"
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =80
+        Icon: =Icon.Items
+        OnSelect: =Navigate(BrowseScreen1,ScreenTransition.None)
+        TabIndex: =
+        Width: =80
+        X: =230
+        Y: =610
+        ZIndex: =27
+
+    Icon10_7 As icon.DocumentwithContent:
+        AccessibleLabel: ="Tag"
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =80
+        Icon: =Icon.Tray
+        OnSelect: =Navigate(Bin_Edit,ScreenTransition.None)
+        TabIndex: =
+        Width: =80
+        X: =450
+        Y: =610
+        ZIndex: =28
+
+    Icon9_8 As icon.Tray:
+        AccessibleLabel: ="Bin"
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =80
+        Icon: =Icon.Trending
+        OnSelect: =Navigate(Dashboard,ScreenTransition.None)
+        TabIndex: =
+        Width: =80
+        X: =230
+        Y: =787
+        ZIndex: =29
+
+    Icon9_9 As icon.Tray:
+        AccessibleLabel: ="Bin"
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =80
+        Icon: =Icon.Information
+        OnSelect: =Navigate(App_Details,ScreenTransition.None)
+        TabIndex: =
+        Width: =80
+        X: =450
+        Y: =787
+        ZIndex: =30
+
+    Label16 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =38
+        OnSelect: =Navigate(BrowseScreen1,ScreenTransition.None)
+        Size: =18
+        Text: ="Browse"
+        Width: =120
+        X: =210
+        Y: =690
+        ZIndex: =31
+
+    Label16_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =38
+        OnSelect: =Navigate(Bin_Edit,ScreenTransition.None)
+        Size: =18
+        Text: ="Format"
+        Width: =120
+        X: =430
+        Y: =690
+        ZIndex: =32
+
+    Label16_2 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =38
+        OnSelect: =Navigate(Bin_Edit,ScreenTransition.None)
+        Size: =18
+        Text: ="Dashboard"
+        Width: =140
+        X: =200
+        Y: =871
+        ZIndex: =33
+
+    Label16_3 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =38
+        OnSelect: =Navigate(App_Details,ScreenTransition.None)
+        Size: =18
+        Text: ="About"
+        Width: =140
+        X: =420
+        Y: =871
+        ZIndex: =34
+
+    Icon28 As icon.ArrowRight:
+        Color: =RGBA(0, 96, 146, 1)
+        Icon: =Icon.ArrowRight
+        OnSelect: =Navigate(BrowseScreen1)
+        X: =496
+        Y: =938
+        ZIndex: =35
+
+    RectQuickActionBar1_5 As rectangle:
+        Fill: =RGBA(0, 94, 146, 1)
+        Height: =22
+        Width: =Parent.Width
+        Y: =1113
+        ZIndex: =36
+
+    Rectangle24_1 As rectangle:
+        BorderColor: =RGBA(199, 199, 199, 1)
+        BorderThickness: =1
+        Fill: =RGBA(235, 235, 235, 1)
+        Height: =460
+        Width: =20
+        X: =630
+        Y: =560
+        ZIndex: =37
+
+    Rectangle28 As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =1033
+        Visible: =VarRect28
+        Width: =640
+        Y: =80
+        ZIndex: =38
+
+    IconAccept1_4 As icon.Check:
+        AccessibleLabel: =Self.Tooltip
+        Height: =50
+        Icon: =Icon.CancelBadge
+        OnSelect: =Set(VarRect28, false);Set(SettingsBadge, true)
+        TabIndex: =0
+        Tooltip: ="Submit item"
+        Visible: =VarRect28
+        Width: =50
+        X: =569
+        Y: =15
+        ZIndex: =42
+
+    Group1_1 As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =47
+
+        TextInput7_1 As text:
+            BorderColor: =RGBA(0, 94, 146, 1)
+            Default: =
+            Height: =70
+            HintText: ="Password to Launch Database"
+            Mode: =TextMode.Password
+            PaddingLeft: =5
+            Size: =21
+            Visible: =VarRect28
+            Width: =560
+            X: =40
+            Y: =435
+            ZIndex: =39
+
+        Rectangle8_1 As rectangle:
+            Fill: =RGBA(0, 94, 146, 1)
+            Height: =70
+            Visible: =VarRect28
+            Width: =60
+            X: =540
+            Y: =435
+            ZIndex: =40
+
+        Icon16_1 As icon.Check:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =70
+            Icon: =Icon.Check
+            OnSelect: =If(TextInput7_1.Text="STadmin@123", Navigate(Settings)&Set(VarRect28, false)& Reset (TextInput7_1),Notify("Wrong password", NotificationType.Error)&SetFocus(TextInput7_1)&Reset((TextInput7_1)));
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            Visible: =VarRect28
+            Width: =60
+            X: =540
+            Y: =435
+            ZIndex: =41
 
