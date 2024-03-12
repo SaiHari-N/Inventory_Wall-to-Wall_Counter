@@ -253,7 +253,7 @@
         Height: =35
         Item: =LastSubmittedRecord
         Width: =230
-        X: =450
+        X: =435
         ZIndex: =8
 
         "'Part number _DataCard1_14' As typedDataCard.textualViewCard":
@@ -450,7 +450,7 @@
     Rectangle6_11 As rectangle:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =197
-        OnSelect: =If(TextInputCanvas1_4.Value = If(IsBlank(BrowseGallery1.Selected.UID),"No Data Found",BrowseGallery1.Selected.UID), Set(FormDesc2, "Label Printed & Scanned")&Set(SFT2, true), Notify("Wrong UID"))
+        OnSelect: =If(TextInputCanvas1_4.Value = If(IsBlank(LastSubmittedRecord.UID),"No Data Found",LastSubmittedRecord.UID), Set(FormDesc2, "Label Printed & Scanned")&Set(SFT2, true), If(Len(TextInputCanvas1_4.Value)=14,Notify("Wrong UID"),Notify("Manual Entry not allowed")&Reset(TextInputCanvas1_4)))
         Visible: =TIC1Visible
         Width: =640
         ZIndex: =13
@@ -462,7 +462,7 @@
         FontSize: =25
         FontWeight: =FontWeight.Semibold
         Height: =80
-        OnChange: =If(TextInputCanvas1_4.Value = If(IsBlank(LastSubmittedRecord.UID),"No Data Found",LastSubmittedRecord.UID), Set(FormDesc2, "Label Printed & Scanned")&Set(SFT2, true), Notify("Wrong UID"))
+        OnChange: =If(TextInputCanvas1_4.Value = If(IsBlank(LastSubmittedRecord.UID),"No Data Found",LastSubmittedRecord.UID), Set(FormDesc2, "Label Printed & Scanned")&Set(SFT2, true), If(Len(TextInputCanvas1_4.Value)=14,Notify("Wrong UID"),Notify("Manual Entry not allowed")&Reset(TextInputCanvas1_4)))
         Placeholder: ="Scan Count ID"
         Visible: =TIC1Visible
         Width: =360

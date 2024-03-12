@@ -253,7 +253,7 @@
         Height: =35
         Item: =BrowseGallery1.Selected
         Width: =230
-        X: =450
+        X: =435
         ZIndex: =8
 
         "'Part number _DataCard1_10' As typedDataCard.textualViewCard":
@@ -497,7 +497,7 @@
     Rectangle6_9 As rectangle:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =197
-        OnSelect: =If(TextInputCanvas1_2.Value = If(IsBlank(BrowseGallery1.Selected.UID),"No Data Found",BrowseGallery1.Selected.UID), Set(FormDesc2, "Label Printed & Scanned")&Set(SFT2, true), Notify("Wrong UID"))
+        OnSelect: =If(TextInputCanvas1_2.Value = If(IsBlank(BrowseGallery1.Selected.UID),"No Data Found",BrowseGallery1.Selected.UID), Set(FormDesc2, "Label Printed & Scanned")&Set(SFT2, true), If(Len(TextInputCanvas1_2.Value)=14,Notify("Wrong UID"),Notify("Manual Entry not allowed")&Reset(TextInputCanvas1_2)))
         Visible: =TIC1Visible
         Width: =640
         ZIndex: =17
@@ -509,7 +509,7 @@
         FontSize: =25
         FontWeight: =FontWeight.Semibold
         Height: =80
-        OnChange: =If(TextInputCanvas1_2.Value = If(IsBlank(BrowseGallery1.Selected.UID),"No Data Found",BrowseGallery1.Selected.UID), Set(FormDesc2, "Label Printed & Scanned")&Set(SFT2, true), Notify("Wrong UID"))
+        OnChange: =If(TextInputCanvas1_2.Value = If(IsBlank(BrowseGallery1.Selected.UID),"No Data Found",BrowseGallery1.Selected.UID), Set(FormDesc2, "Label Printed & Scanned")&Set(SFT2, true), If(Len(TextInputCanvas1_2.Value)=14,Notify("Wrong UID"),Notify("Manual Entry not allowed")&Reset(TextInputCanvas1_2)))
         Placeholder: ="Scan Count ID"
         Visible: =TIC1Visible
         Width: =360

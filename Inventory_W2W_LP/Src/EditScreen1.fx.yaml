@@ -822,7 +822,7 @@
 
             DataCardValue21 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Text(DatePicker1.SelectedDate,"ddmmyyyy")&If(Len(Text(Label1_2.Text)) = 5, Text(0&Label1_2.Text), Text(Label1_2.Text))
+                Default: =Text(DatePicker1.SelectedDate,"ddmmyy")&Text(Left(GUID(),2))&If(Len(Text(Label1_2.Text)) = 5, Text(0&Label1_2.Text), Text(Label1_2.Text))
                 DelayOutput: =true
                 DisplayMode: =DisplayMode.Disabled
                 Height: =70
