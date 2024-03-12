@@ -1,4 +1,4 @@
-Screen4 As screen:
+Dashboard As screen:
     OnVisible: =
 
     RectQuickActionBar1_2 As rectangle:
@@ -17,18 +17,6 @@ Screen4 As screen:
         Wrap: =false
         X: =80
         ZIndex: =2
-
-    IconRefresh1_3 As icon.Reload:
-        AccessibleLabel: =Self.Tooltip
-        Height: =50
-        Icon: =Icon.Reload
-        OnSelect: =Refresh([@WISA_Pro_MDB])
-        TabIndex: =0
-        Tooltip: ="Refresh list"
-        Width: =50
-        X: =430
-        Y: =15
-        ZIndex: =3
 
     Rectangle2_5 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
@@ -250,60 +238,6 @@ Screen4 As screen:
         Y: =1073
         ZIndex: =18
 
-    CompositeLineChart1 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =26
-
-        Title2 As label:
-            Align: =Align.Center
-            Height: =25
-            Text: ="Chart Title"
-            Width: =400
-            X: =124
-            Y: =278
-            ZIndex: =27
-
-        LineChart1 As lineChart:
-            Items: |-
-                =Sort(
-                    GroupBy(WISA_Pro_MDB, "Time_Stamp", "Grouped Dates"),
-                    Time_Stamp, Ascending),
-                    {
-                        Date: time,
-                        Count: CountRows(WISA_Pro_MDB, Filter('WISA_Pro_MDB', 'Date' = ThisRecord.Date))
-                    }
-                )
-            X: =124
-            Y: =308
-            ZIndex: =28
-
-        Legend1 As legend:
-            Height: =80
-            ItemColorSet: =LineChart1.ItemColorSet
-            Items: =LineChart1.SeriesLabels
-            Size: =18
-            Width: =320
-            X: =164
-            Y: =718
-            ZIndex: =29
-
-    Dropdown3_1 As dropdown:
-        BorderColor: =RGBA(0, 94, 146, 1)
-        ChevronBackground: =RGBA(0, 94, 146, 1)
-        Default: =
-        Height: =70
-        Items: =["All","User ID","Date","Part Number","Batch","Quantity","Location","Manufacturing Date","Expiry Date"]
-        OnChange: =Reset(ComboBox1_2)
-        Size: =18
-        Visible: =BrowseControl
-        Width: =216
-        X: =61
-        Y: =136
-        ZIndex: =32
-
     ComboBox1_2 As combobox:
         BorderColor: =RGBA(0, 94, 146, 1)
         ChevronBackground: =RGBA(0, 94, 146, 1)
@@ -311,13 +245,12 @@ Screen4 As screen:
         Height: =70
         InputTextPlaceholder: ="Find items"
         IsSearchable: =false
-        Items: =Distinct(WISA_Pro_MDB,(If(Dropdown3_1.Selected.Value = "User ID",'User ID',If(Dropdown3_1.Selected.Value = "Date",Left(Time_Stamp,Find(" ", Time_Stamp)-1),If(Dropdown3_1.Selected.Value = "Part Number",'Part Number',If(Dropdown3_1.Selected.Value = "Batch",Batch,If(Dropdown3_1.Selected.Value = "Quantity",Quantity,If(Dropdown3_1.Selected.Value = "Location",Location,If(Dropdown3_1.Selected.Value = "Description",Description,If(Dropdown3_1.Selected.Value = "Manufacturing Date",'Manufacturing Date',If(Dropdown3_1.Selected.Value = "Expiry Date",'Expiry Date')))))))))))
+        Items: =Distinct(WISA_Pro_MDB,Location)
         MultiValueDelimiter: ="& "
         SearchFields: =["Value"]
         SearchItems: =[]
         SelectMultiple: =false
         Size: =18
-        Visible: =If(Dropdown3_1.Selected.Value = "All", false,BrowseControl)
         Width: =284
         X: =294
         Y: =136
@@ -330,13 +263,11 @@ Screen4 As screen:
         ItemColorSet: =[RGBA(255,255,255,1),RGBA(0,94,146,1)]
         Items: |-
             =Table(
-                 {Value: CountRows(Filter(WISA_Pro_MDB, TextInput4_1.Text = Location)), Label:"Bin Count: " & CountRows(WISA_Pro_MDB)-(CountRows(WISA_Pro_MDB) - CountRows(Filter(WISA_Pro_MDB, TextInput4_1.Text = Location)))},
-                 {Value: (CountRows(WISA_Pro_MDB) - CountRows(Filter(WISA_Pro_MDB, TextInput4_1.Text = Location))), Label: "Other Bins: " & (CountRows(WISA_Pro_MDB) - CountRows(Filter(WISA_Pro_MDB, TextInput4_1.Text = Location)))})
-        Size: =20
-        Visible: |-
-            =false
-            //If(IsBlank(TextInput4_1.Text),false,true)
+                 {Value: CountRows(Filter(WISA_Pro_MDB, ComboBox1_2.Selected.Value = Location)), Label:"Bin Count: " & CountRows(WISA_Pro_MDB)-(CountRows(WISA_Pro_MDB) - CountRows(Filter(WISA_Pro_MDB, ComboBox1_2.Selected.Value = Location)))},
+                 {Value: (CountRows(WISA_Pro_MDB) - CountRows(Filter(WISA_Pro_MDB, ComboBox1_2.Selected.Value = Location))), Label: "Other Bins: " & (CountRows(WISA_Pro_MDB) - CountRows(Filter(WISA_Pro_MDB, ComboBox1_2.Selected.Value = Location)))})
+        Size: =18
+        Visible: =If(IsBlank(ComboBox1_2.Selected.Value),false,true)
         Width: =640
-        Y: =430
+        Y: =370
         ZIndex: =34
 

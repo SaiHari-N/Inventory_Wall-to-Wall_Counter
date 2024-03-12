@@ -1,0 +1,84 @@
+"Label_test As screen.'phoneDetailViewLayout_ver3.0'":
+    Height: =150
+    OnVisible: =If(varPrintTriggered4, Print())
+    Width: =640
+
+    Icon4_6 As icon.ChevronLeft:
+        AccessibleLabel: ="Back"
+        AutoDisableOnSelect: =false
+        Color: =RGBA(0, 0, 0, 0)
+        Height: =150
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Print()
+        PaddingBottom: =10
+        PaddingLeft: =50
+        PaddingRight: =50
+        PaddingTop: =150
+        TabIndex: =
+        Width: =640
+        ZIndex: =1
+
+    Button1_10 As button:
+        AutoDisableOnSelect: =false
+        BorderColor: =Self.Fill
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =150
+        HoverBorderColor: =Self.Fill
+        HoverFill: =Self.Fill
+        OnSelect: =Back()
+        Size: =24
+        Text: ="Button"
+        Width: =39
+        X: =601
+        ZIndex: =2
+
+    Button1_9 As button:
+        AutoDisableOnSelect: =false
+        BorderColor: =Self.Fill
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =150
+        HoverBorderColor: =Self.Fill
+        HoverFill: |
+            =Self.Fill
+        OnSelect: =Back()
+        Size: =24
+        Text: ="Button"
+        Width: =39
+        ZIndex: =3
+
+    Rectangle23 As rectangle:
+        BorderColor: =RGBA(0, 96, 146, 1)
+        BorderThickness: =Slider1_1.Value*2
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =150
+        OnSelect: =Back()
+        Width: =640
+        ZIndex: =4
+
+    Rectangle23_1 As rectangle:
+        BorderColor: =RGBA(0, 96, 146, 1)
+        BorderThickness: =Slider1_1.Value*2
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =130
+        OnSelect: =Back()
+        Width: =620
+        X: =10
+        Y: =10
+        ZIndex: =5
+
+    Label3 As label:
+        Align: =Align.Center
+        FontWeight: =If(Slider1_1.Value = 1, FontWeight.Lighter,If(Slider1_1.Value = 2, FontWeight.Normal,If(Slider1_1.Value = 3, FontWeight.Semibold,If(Slider1_1.Value = 4, FontWeight.Bold))))
+        Height: =120
+        OnSelect: =Print()
+        Size: =100
+        Text: ="TEST"
+        Width: =350
+        X: =145
+        Y: =15
+        ZIndex: =6
+

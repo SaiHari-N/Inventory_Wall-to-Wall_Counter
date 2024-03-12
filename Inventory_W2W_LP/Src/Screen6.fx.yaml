@@ -4,14 +4,14 @@ Screen6 As screen:
     Barcode1 As barcode:
         BarcodeType: =BarcodeType.Auto
         Height: =1136
-        ScanRate: =100
+        ScanRate: =Slider1.Value
         Visible: =Barcode1visible
         ZIndex: =1
 
     Barcode1_1 As barcode:
         BarcodeType: =BarcodeType.Auto
         Height: =1136
-        ScanRate: =100
+        ScanRate: =Slider1.Value
         Visible: =Barcode1_1visible
         ZIndex: =2
 

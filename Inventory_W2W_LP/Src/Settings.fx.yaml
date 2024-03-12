@@ -1,0 +1,326 @@
+Settings As screen:
+    OnVisible: =Set(VarIcon12_1Visible, false);Set(VarIcon12_2Visible, true);Set(VarTextInput1DisplayMode, DisplayMode.Disabled)
+
+    RectQuickActionBar1_3 As rectangle:
+        Fill: =RGBA(0, 94, 146, 1)
+        Height: =80
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName1_3 As label:
+        Fill: =RGBA(58, 58, 58, 0)
+        FontWeight: =FontWeight.Semibold
+        Height: =80
+        Size: =27
+        Text: ="Browse"
+        Width: =280
+        Wrap: =false
+        X: =80
+        ZIndex: =2
+
+    Rectangle2_6 As rectangle:
+        Fill: =RGBA(0, 94, 146, 1)
+        Height: =80
+        Width: =640
+        Y: =1060
+        ZIndex: =3
+
+    Icon8_6 As icon.Home:
+        AccessibleLabel: ="Home"
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =56
+        Icon: =Icon.AddUser
+        OnSelect: =Navigate(Screen2,ScreenTransition.Fade)
+        TabIndex: =
+        Width: =56
+        X: =60
+        Y: =1073
+        ZIndex: =4
+
+    Icon9_6 As icon.Tray:
+        AccessibleLabel: ="Bin"
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =56
+        Icon: =Icon.Tray
+        OnSelect: =Navigate(Bin_Edit,ScreenTransition.None)
+        TabIndex: =
+        Width: =56
+        X: =176
+        Y: =1073
+        ZIndex: =5
+
+    Icon10_6 As icon.DocumentwithContent:
+        AccessibleLabel: ="Tag"
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =56
+        Icon: =Icon.ColorPicker
+        OnSelect: =Navigate(EditScreen1,ScreenTransition.None)
+        TabIndex: =
+        Width: =56
+        X: =292
+        Y: =1073
+        ZIndex: =6
+
+    Icon11_6 As icon.Print:
+        AccessibleLabel: ="Detail"
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =56
+        Icon: =Icon.DocumentWithContent
+        OnSelect: =Navigate(DetailScreen1,ScreenTransition.None)
+        TabIndex: =
+        Width: =56
+        X: =408
+        Y: =1073
+        ZIndex: =7
+
+    Menu_Navigation_8 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =8
+
+        IconBackarrow1_19 As icon.ChevronLeft:
+            AccessibleLabel: =Self.Tooltip
+            AutoDisableOnSelect: =false
+            Height: =80
+            Icon: =Icon.Hamburger
+            OnSelect: =Set(Navigation,true);Set(HN1,false);Set(HN2,true);Set(HN3,true)
+            PaddingBottom: =15
+            PaddingLeft: =15
+            PaddingRight: =15
+            PaddingTop: =15
+            Tooltip: ="Navigation"
+            Visible: =HN1
+            Width: =80
+            ZIndex: =9
+
+        IconBackarrow1_18 As icon.ChevronLeft:
+            AccessibleLabel: =Self.Tooltip
+            AutoDisableOnSelect: =false
+            Color: =RGBA(0, 94, 146, 1)
+            Height: =80
+            Icon: =Icon.Cancel
+            OnSelect: =Set(Navigation,false);Set(HN2,false);Set(HN1,true);Set(HN3,false)
+            PaddingBottom: =15
+            PaddingLeft: =15
+            PaddingRight: =15
+            PaddingTop: =15
+            Rotation: =90
+            Tooltip: ="Navigation"
+            Visible: =HN2
+            Width: =80
+            ZIndex: =10
+
+    IconAccept1_2 As icon.Check:
+        AccessibleLabel: =Self.Tooltip
+        Height: =50
+        Icon: =Icon.Check
+        OnSelect: =Back()
+        TabIndex: =0
+        Tooltip: ="Submit item"
+        Width: =50
+        X: =570
+        Y: =15
+        ZIndex: =11
+
+    Icon7_17 As icon.Mail:
+        AccessibleLabel: ="Mail"
+        AutoDisableOnSelect: =false
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =56
+        Icon: =Icon.Mail
+        OnSelect: =Navigate(MailQuery)
+        TabIndex: =
+        Visible: =QueryMail2
+        Width: =56
+        X: =524
+        Y: =1073
+        ZIndex: =12
+
+    Label3_4 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =22
+        Text: ="Default Label Template"
+        Width: =240
+        X: =38
+        Y: =135
+        ZIndex: =13
+
+    Dropdown2_1 As dropdown:
+        BorderColor: =RGBA(0, 94, 146, 1)
+        ChevronBackground: =RGBA(0, 94, 146, 1)
+        Default: ="UID"
+        Height: =63
+        Items: =["QuickTrack","DataMax","UID"]
+        Size: =21
+        Width: =284
+        X: =306
+        Y: =139
+        ZIndex: =14
+
+    Toggle1_1 As toggleSwitch:
+        AccessibleLabel: ="Reel/Box"
+        BorderStyle: =BorderStyle.None
+        Default: =
+        FalseText: ="Web - Page"
+        Height: =45
+        OnCheck: =true
+        Size: =21
+        TrueFill: =RGBA(0, 94, 146, 1)
+        TrueText: ="Application"
+        Width: =240
+        X: =156
+        Y: =302
+        ZIndex: =15
+
+    Label3_6 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =22
+        Text: ="Mode"
+        Width: =118
+        X: =38
+        Y: =290
+        ZIndex: =16
+
+    Slider1 As slider:
+        HandleSize: =30
+        Height: =70
+        ValueFill: =RGBA(0, 96, 146, 1)
+        Width: =250
+        X: =340
+        Y: =437
+        ZIndex: =17
+
+    Label3_7 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =22
+        Text: ="Scanner Intensity"
+        Width: =268
+        X: =38
+        Y: =437
+        ZIndex: =18
+
+    Label3_8 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =22
+        Text: ="Label Darkness"
+        Width: =268
+        X: =38
+        Y: =577
+        ZIndex: =19
+
+    Rectangle23_2 As rectangle:
+        BorderColor: =RGBA(0, 96, 146, 1)
+        BorderThickness: =Slider1_1.Value*2
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =150
+        OnSelect: =Set(varPrintTriggered4, true);Navigate(Label_test)
+        Width: =444
+        X: =146
+        Y: =676
+        ZIndex: =20
+
+    Rectangle23_3 As rectangle:
+        BorderColor: =RGBA(0, 96, 146, 1)
+        BorderThickness: =Slider1_1.Value*2
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =130
+        OnSelect: =Set(varPrintTriggered4, true);Navigate(Label_test)
+        Width: =428
+        X: =156
+        Y: =686
+        ZIndex: =21
+
+    Label3_9 As label:
+        Align: =Align.Center
+        FontWeight: =If(Slider1_1.Value = 1, FontWeight.Lighter,If(Slider1_1.Value = 2, FontWeight.Normal,If(Slider1_1.Value = 3, FontWeight.Semibold,If(Slider1_1.Value = 4, FontWeight.Bold))))
+        Height: =120
+        OnSelect: =Set(varPrintTriggered4, true);Navigate(Label_test)
+        Size: =100
+        Text: ="TEST"
+        Width: =350
+        X: =193
+        Y: =686
+        ZIndex: =22
+
+    Label3_10 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =22
+        Text: ="Password"
+        Width: =268
+        X: =38
+        Y: =907
+        ZIndex: =23
+
+    TextInput1 As text:
+        BorderColor: =RGBA(0, 94, 146, 1)
+        Default: ="ISadmin@123"
+        DisplayMode: =VarTextInput1DisplayMode
+        Height: =70
+        Size: =21
+        Width: =377
+        X: =213
+        Y: =907
+        ZIndex: =24
+
+    Rectangle5_1 As rectangle:
+        Fill: =RGBA(0, 94, 146, 1)
+        Height: =70
+        Visible: =If(Len(TextInput2.Text)>3,If(Len(TextInput2_2.Text)=4,true,false))
+        Width: =76
+        X: =514
+        Y: =907
+        ZIndex: =25
+
+    Icon12_1 As icon.Check:
+        AccessibleLabel: ="Submit"
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =70
+        Icon: =Icon.Check
+        OnSelect: =Set(VarTextInput1DisplayMode, DisplayMode.Disabled); Set(VarIcon12_2Visible, true);Set(VarIcon12_1Visible, false)
+        PaddingBottom: =15
+        PaddingLeft: =15
+        PaddingRight: =15
+        PaddingTop: =15
+        TabIndex: =
+        Visible: =VarIcon12_1Visible
+        Width: =75
+        X: =515
+        Y: =907
+        ZIndex: =26
+
+    Icon12_2 As icon.Check:
+        AccessibleLabel: ="Submit"
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =70
+        Icon: =Icon.Reset
+        OnSelect: =Set(VarTextInput1DisplayMode, DisplayMode.Edit); Set(VarIcon12_1Visible, true);Set(VarIcon12_2Visible, false)
+        PaddingBottom: =15
+        PaddingLeft: =15
+        PaddingRight: =15
+        PaddingTop: =15
+        TabIndex: =
+        Visible: =VarIcon12_2Visible
+        Width: =75
+        X: =515
+        Y: =907
+        ZIndex: =27
+
+    Slider1_1 As slider:
+        Default: =2
+        HandleSize: =30
+        Height: =150
+        Layout: =Layout.Vertical
+        Max: =4
+        Min: =1
+        ValueFill: =RGBA(0, 96, 146, 1)
+        Width: =162
+        Y: =676
+        ZIndex: =28
+

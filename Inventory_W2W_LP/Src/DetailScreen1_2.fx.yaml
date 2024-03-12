@@ -731,7 +731,7 @@
     Dropdown4_1 As dropdown:
         BorderColor: =RGBA(0, 94, 146, 1)
         ChevronBackground: =RGBA(0, 94, 146, 1)
-        Default: =Dropdown2.Selected.Value
+        Default: =Dropdown2_1.Selected.Value
         Height: =61
         Items: =["QuickTrack","DataMax","UID"]
         Size: =21

@@ -1,171 +1,6 @@
 Bin_Edit As screen:
     OnVisible: =SetFocus(TextInput4_1); If(IsBlank(TextInput4_1.Text),IconAccept1_1.Visible=false); Reset(TextInput4_1);Reset(TextInput6_4);Set(BGWhite,false);Set(BinPrint,true);Set(BP,false)
 
-    RectQuickActionBar3_1 As rectangle:
-        Fill: =RGBA(0, 94, 146, 1)
-        Height: =80
-        Width: =Parent.Width
-        ZIndex: =1
-
-    IconAccept1_1 As icon.Check:
-        AccessibleLabel: =Self.Tooltip
-        Height: =50
-        Icon: =Icon.Check
-        OnSelect: =If(IsBlank(TextInput4_1.Text),SetFocus(TextInput4_1),Navigate(EditScreen1,ScreenTransition.None)); NewForm(EditForm1); Reset(TextInput5);
-        TabIndex: =0
-        Tooltip: ="Submit item"
-        Width: =50
-        X: =570
-        Y: =15
-        ZIndex: =2
-
-    LblAppName3_1 As label:
-        Fill: =RGBA(58, 58, 58, 0)
-        FontWeight: =FontWeight.Semibold
-        Height: =80
-        Size: =27
-        Text: ="Format"
-        Width: =280
-        Wrap: =false
-        X: =80
-        ZIndex: =3
-
-    Icon2_1 As icon.Reset:
-        AccessibleLabel: ="Undo"
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =50
-        Icon: =Icon.Undo
-        OnSelect: =Reset(TextInput4_1);
-        TabIndex: =
-        Width: =50
-        X: =500
-        Y: =15
-        ZIndex: =4
-
-    Label3 As label:
-        FontWeight: =FontWeight.Bold
-        Height: =70
-        Size: =22
-        Text: ="Default Label Template"
-        Width: =240
-        X: =32
-        Y: =173
-        ZIndex: =5
-
-    Label3_1 As label:
-        FontWeight: =FontWeight.Bold
-        Height: =70
-        Size: =22
-        Text: ="Items"
-        Width: =240
-        X: =32
-        Y: =326
-        ZIndex: =6
-
-    Label3_2 As label:
-        FontWeight: =FontWeight.Bold
-        Height: =70
-        Size: =22
-        Text: ="Location"
-        Width: =156
-        X: =32
-        Y: =628
-        ZIndex: =7
-
-    TextInput4_1 As text:
-        AccessibleLabel: ="Bin Number"
-        BorderColor: =RGBA(0, 94, 146, 1)
-        Default: =Barcode1.Text
-        Height: =70
-        HintText: ="Scan Bin Barcode"
-        OnChange: =Refresh(PieChart1.SeriesLabels);Set(BP,true)
-        Size: =21
-        Width: =313
-        X: =198
-        Y: =628
-        ZIndex: =8
-
-    Toggle1 As toggleSwitch:
-        AccessibleLabel: ="Reel/Box"
-        Default: =
-        FalseText: ="Box"
-        Height: =45
-        OnCheck: =true
-        Size: =21
-        TrueFill: =RGBA(0, 94, 146, 1)
-        TrueText: ="Reel"
-        Width: =150
-        X: =300
-        Y: =489
-        ZIndex: =9
-
-    Rectangle2_3 As rectangle:
-        Fill: =RGBA(0, 94, 146, 1)
-        Height: =80
-        Width: =640
-        Y: =1060
-        ZIndex: =10
-
-    Icon8_3 As icon.Home:
-        AccessibleLabel: ="Home"
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =56
-        Icon: =Icon.AddUser
-        OnSelect: =Navigate(Screen2,ScreenTransition.None)
-        TabIndex: =
-        Width: =56
-        X: =60
-        Y: =1073
-        ZIndex: =11
-
-    Icon9_3 As icon.Tray:
-        AccessibleLabel: ="Bin"
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =56
-        Icon: =Icon.Tag
-        OnSelect: =Navigate(BrowseScreen1,ScreenTransition.None)
-        TabIndex: =
-        Width: =56
-        X: =176
-        Y: =1073
-        ZIndex: =12
-
-    Icon10_3 As icon.DocumentwithContent:
-        AccessibleLabel: ="Tag"
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =56
-        Icon: =Icon.ColorPicker
-        OnSelect: =Navigate(EditScreen1,ScreenTransition.None)
-        TabIndex: =
-        Width: =56
-        X: =292
-        Y: =1073
-        ZIndex: =13
-
-    Icon11_3 As icon.Print:
-        AccessibleLabel: ="Detail"
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =56
-        Icon: =Icon.DocumentWithContent
-        OnSelect: =Navigate(DetailScreen1,ScreenTransition.None)
-        TabIndex: =
-        Width: =56
-        X: =408
-        Y: =1073
-        ZIndex: =14
-
-    Icon17 As icon.Print:
-        Color: =RGBA(0, 94, 146, 1)
-        FocusedBorderThickness: =0
-        Height: =60
-        Icon: =Icon.OpenInNewWindow
-        OnSelect: =Navigate(Screen6);Set(Barcode1visible, true)
-        Visible: =BinPrint
-        Width: =60
-        X: =532
-        Y: =633
-        ZIndex: =15
-
     PieChart1 As pieChart:
         BorderColor: =RGBA(0, 94, 146, 1)
         Height: =476
@@ -181,6 +16,162 @@ Bin_Edit As screen:
             //If(IsBlank(TextInput4_1.Text),false,true)
         Width: =640
         Y: =410
+        ZIndex: =1
+
+    RectQuickActionBar3_1 As rectangle:
+        Fill: =RGBA(0, 94, 146, 1)
+        Height: =80
+        Width: =Parent.Width
+        ZIndex: =2
+
+    IconAccept1_1 As icon.Check:
+        AccessibleLabel: =Self.Tooltip
+        Height: =50
+        Icon: =Icon.Check
+        OnSelect: =If(IsBlank(TextInput4_1.Text),SetFocus(TextInput4_1),Navigate(EditScreen1,ScreenTransition.None)); NewForm(EditForm1); Reset(TextInput5);
+        TabIndex: =0
+        Tooltip: ="Submit item"
+        Width: =50
+        X: =570
+        Y: =15
+        ZIndex: =3
+
+    LblAppName3_1 As label:
+        Fill: =RGBA(58, 58, 58, 0)
+        FontWeight: =FontWeight.Semibold
+        Height: =80
+        Size: =27
+        Text: ="Format"
+        Width: =280
+        Wrap: =false
+        X: =80
+        ZIndex: =4
+
+    Icon2_1 As icon.Reset:
+        AccessibleLabel: ="Undo"
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =50
+        Icon: =Icon.Undo
+        OnSelect: =Reset(TextInput4_1);
+        TabIndex: =
+        Width: =50
+        X: =500
+        Y: =15
+        ZIndex: =5
+
+    Label3_1 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =22
+        Text: ="Items"
+        Width: =240
+        X: =32
+        Y: =120
+        ZIndex: =7
+
+    Label3_2 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =22
+        Text: ="Location"
+        Width: =156
+        X: =32
+        Y: =628
+        ZIndex: =8
+
+    TextInput4_1 As text:
+        AccessibleLabel: ="Bin Number"
+        BorderColor: =RGBA(0, 94, 146, 1)
+        Default: =Barcode1.Text
+        Height: =70
+        HintText: ="Scan Bin Barcode"
+        OnChange: =Refresh(PieChart1.SeriesLabels);Set(BP,true)
+        Size: =21
+        Width: =313
+        X: =198
+        Y: =628
+        ZIndex: =9
+
+    Toggle1 As toggleSwitch:
+        AccessibleLabel: ="Reel/Box"
+        BorderStyle: =BorderStyle.None
+        Default: =
+        FalseText: ="IQC"
+        Height: =45
+        OnCheck: =true
+        Size: =21
+        TrueFill: =RGBA(0, 94, 146, 1)
+        TrueText: ="X-Ray"
+        Width: =150
+        X: =293
+        Y: =240
+        ZIndex: =10
+
+    Rectangle2_3 As rectangle:
+        Fill: =RGBA(0, 94, 146, 1)
+        Height: =80
+        Width: =640
+        Y: =1060
+        ZIndex: =11
+
+    Icon8_3 As icon.Home:
+        AccessibleLabel: ="Home"
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =56
+        Icon: =Icon.AddUser
+        OnSelect: =Navigate(Screen2,ScreenTransition.None)
+        TabIndex: =
+        Width: =56
+        X: =60
+        Y: =1073
+        ZIndex: =12
+
+    Icon9_3 As icon.Tray:
+        AccessibleLabel: ="Bin"
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =56
+        Icon: =Icon.Tag
+        OnSelect: =Navigate(BrowseScreen1,ScreenTransition.None)
+        TabIndex: =
+        Width: =56
+        X: =176
+        Y: =1073
+        ZIndex: =13
+
+    Icon10_3 As icon.DocumentwithContent:
+        AccessibleLabel: ="Tag"
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =56
+        Icon: =Icon.ColorPicker
+        OnSelect: =Navigate(EditScreen1,ScreenTransition.None)
+        TabIndex: =
+        Width: =56
+        X: =292
+        Y: =1073
+        ZIndex: =14
+
+    Icon11_3 As icon.Print:
+        AccessibleLabel: ="Detail"
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =56
+        Icon: =Icon.DocumentWithContent
+        OnSelect: =Navigate(DetailScreen1,ScreenTransition.None)
+        TabIndex: =
+        Width: =56
+        X: =408
+        Y: =1073
+        ZIndex: =15
+
+    Icon17 As icon.Print:
+        Color: =RGBA(0, 94, 146, 1)
+        DisplayMode: =If(Toggle1_1.Value = false,DisplayMode.Edit,DisplayMode.View)
+        FocusedBorderThickness: =0
+        Height: =60
+        Icon: =Icon.OpenInNewWindow
+        OnSelect: =Navigate(Screen6);Set(Barcode1visible, true)
+        Width: =60
+        X: =532
+        Y: =633
         ZIndex: =16
 
     HtmlText1 As htmlViewer:
@@ -201,36 +192,24 @@ Bin_Edit As screen:
         DisplayMode: =DisplayMode.Edit
         FontSize: =25
         FontWeight: =FontWeight.Semibold
-        Height: =61
+        Height: =70
         Items: =["Raw Materials", "Finished Goods"]
         Layout: ='RadioGroupCanvas.Layout'.Horizontal
         OnSelect: =If(RadioGroupCanvas1.Selected.Value = "Raw Materials", Set(PNDM, DisplayMode.Disabled)&Set(BDM, DisplayMode.Disabled), Set(PNDM, DisplayMode.Edit)&Set(BDM, DisplayMode.Edit))
         Required: =true
         Width: =430
         X: =158
-        Y: =335
+        Y: =129
         ZIndex: =18
-
-    Dropdown2 As dropdown:
-        BorderColor: =RGBA(0, 94, 146, 1)
-        ChevronBackground: =RGBA(0, 94, 146, 1)
-        Default: ="UID"
-        Height: =63
-        Items: =["QuickTrack","DataMax","UID"]
-        Size: =21
-        Width: =295
-        X: =300
-        Y: =177
-        ZIndex: =19
 
     Label3_3 As label:
         FontWeight: =FontWeight.Bold
         Height: =70
         Size: =22
-        Text: ="Container Type"
+        Text: ="Source Input"
         Width: =240
         X: =32
-        Y: =475
+        Y: =226
         ZIndex: =20
 
     Rectangle13 As rectangle:
@@ -551,4 +530,56 @@ Bin_Edit As screen:
         X: =200
         Y: =0
         ZIndex: =39
+
+    RadioGroupCanvas1_1 As Radio.pcfdataset:
+        DefaultSelectedItems: =["Tape/Reel"]
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =25
+        FontWeight: =FontWeight.Semibold
+        Height: =243
+        Items: =["Tape/Reel", "Box","Stick/Tube","Packet","Tray"]
+        Layout: ='RadioGroupCanvas.Layout'.Vertical
+        OnSelect: =If(RadioGroupCanvas1_1.Selected.Value = "Raw Materials", Set(PNDM, DisplayMode.Disabled)&Set(BDM, DisplayMode.Disabled), Set(PNDM, DisplayMode.Edit)&Set(BDM, DisplayMode.Edit))
+        Required: =true
+        Width: =202
+        X: =292
+        Y: =351
+        ZIndex: =40
+
+    Label3_5 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =22
+        Text: ="Container Type"
+        Width: =240
+        X: =30
+        Y: =338
+        ZIndex: =41
+
+    "BarcodeReader1_1 As 'Barcode Reader'":
+        BorderFillColor: =RGBA(47, 81, 151, 1)
+        BorderStyle: =BorderStyle.None
+        Disabled: =true
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledContentColor: =RGBA(0, 0, 0, 0)
+        DisabledFillColor: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.Edit
+        FillColor: =RGBA(56, 96, 178, 1)
+        Height: =66
+        HoverBorderColor: =RGBA(88, 115, 171, 1)
+        HoverContentColor: =RGBA(255, 255, 255, 1)
+        HoverFillColor: =RGBA(47, 81, 151, 1)
+        OnCancel: =false
+        OnScan: =false
+        PressedBorderColor: =RGBA(56, 96, 178, 1)
+        PressedContentColor: =RGBA(0, 0, 0, 0)
+        PressedFillColor: =RGBA(0, 0, 0, 0)
+        ScanningMode: ='BarcodeReader.ScanningMode'.SelectToScan
+        Text: =
+        TextColor: =RGBA(255, 255, 255, 1)
+        Visible: =If(Toggle1_1.Value = true,true,false)
+        Width: =66
+        X: =532
+        Y: =633
+        ZIndex: =42
 
