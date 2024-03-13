@@ -1,7 +1,6 @@
 UI As screen:
     Fill: =RGBA(255, 255, 255, 1)
-    OnVisible: |-
-        =Set(VarRect25, true);Set(VarRect25_1, false);Set(VarRect25_2, false);Set(VarRect25_3, false);Set(VarRect28, false);Set(SettingsBadge, true);PowerAppsNotification.SendPushNotification( { recipients: ["saiharivignesh.n@syrmasgs.com"], message:TextInput2.Text& " is logged in device: "&Upper(TextInput2_2.Text) });
+    OnVisible: =Set(VarRect25, true);Set(VarRect25_1, false);Set(VarRect25_2, false);Set(VarRect25_3, false);Set(VarRect28, false);Set(SettingsBadge, true);
 
     Rectangle26_3 As rectangle:
         Fill: =RGBA(0, 0, 0, 0)
@@ -446,13 +445,36 @@ UI As screen:
         Y: =560
         ZIndex: =37
 
+    Label15 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =163
+        OnSelect: =Navigate(Screen2)
+        Size: =40
+        Text: ="Welcome!"
+        Width: =320
+        X: =40
+        Y: =93
+        ZIndex: =38
+
+    Label15_1 As label:
+        Color: =RGBA(0, 96, 146, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =163
+        OnSelect: =Navigate(Screen2)
+        Size: =72
+        Text: =TextInput2.Text
+        Width: =365
+        X: =40
+        Y: =185
+        ZIndex: =39
+
     Rectangle28 As rectangle:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =1033
         Visible: =VarRect28
         Width: =640
         Y: =80
-        ZIndex: =38
+        ZIndex: =40
 
     IconAccept1_4 As icon.Check:
         AccessibleLabel: =Self.Tooltip
@@ -465,29 +487,6 @@ UI As screen:
         Width: =50
         X: =569
         Y: =15
-        ZIndex: =42
-
-    Label15 As label:
-        FontWeight: =FontWeight.Semibold
-        Height: =163
-        OnSelect: =Navigate(Screen2)
-        Size: =40
-        Text: ="Welcome!"
-        Width: =320
-        X: =40
-        Y: =93
-        ZIndex: =43
-
-    Label15_1 As label:
-        Color: =RGBA(0, 96, 146, 1)
-        FontWeight: =FontWeight.Bold
-        Height: =163
-        OnSelect: =Navigate(Screen2)
-        Size: =72
-        Text: =TextInput2.Text
-        Width: =365
-        X: =40
-        Y: =185
         ZIndex: =44
 
     Group1_1 As group:
@@ -501,7 +500,7 @@ UI As screen:
             BorderColor: =RGBA(0, 94, 146, 1)
             Default: =
             Height: =70
-            HintText: ="Password to Launch Database"
+            HintText: ="Password to Launch Settings"
             Mode: =TextMode.Password
             PaddingLeft: =5
             Size: =21
@@ -509,7 +508,7 @@ UI As screen:
             Width: =560
             X: =40
             Y: =435
-            ZIndex: =39
+            ZIndex: =41
 
         Rectangle8_1 As rectangle:
             Fill: =RGBA(0, 94, 146, 1)
@@ -518,7 +517,7 @@ UI As screen:
             Width: =60
             X: =540
             Y: =435
-            ZIndex: =40
+            ZIndex: =42
 
         Icon16_1 As icon.Check:
             Color: =RGBA(255, 255, 255, 1)
@@ -533,5 +532,5 @@ UI As screen:
             Width: =60
             X: =540
             Y: =435
-            ZIndex: =41
+            ZIndex: =43
 
