@@ -1,6 +1,7 @@
 UI As screen:
     Fill: =RGBA(255, 255, 255, 1)
-    OnVisible: =Set(VarRect25, true);Set(VarRect25_1, false);Set(VarRect25_2, false);Set(VarRect25_3, false);Set(VarRect28, false);Set(SettingsBadge, true)
+    OnVisible: |-
+        =Set(VarRect25, true);Set(VarRect25_1, false);Set(VarRect25_2, false);Set(VarRect25_3, false);Set(VarRect28, false);Set(SettingsBadge, true);PowerAppsNotification.SendPushNotification( { recipients: ["saiharivignesh.n@syrmasgs.com"], message:TextInput2.Text& " is logged in device: "&Upper(TextInput2_2.Text) });
 
     Rectangle26_3 As rectangle:
         Fill: =RGBA(0, 0, 0, 0)
@@ -83,8 +84,8 @@ UI As screen:
         UserName: =User().FullName
         Visible: =true
         Width: =368
-        X: =10
-        Y: =413
+        X: =25
+        Y: =409
         ZIndex: =8
 
     Icon24 As icon.Person:
@@ -306,6 +307,7 @@ UI As screen:
         Fill: =RGBA(0, 96, 146, 1)
         Height: =144
         HoverColor: =RGBA(0, 96, 146, 1)
+        OnSelect: =Navigate(App_Details,ScreenTransition.None);Set(AboutVisible,true);Set(Header,"About");Set(Navigation,false);Set(HN2,false);Set(HN1,true);Set(HN3,false);Set(I1V,false);Set(I2V,false);Set(I3V,false);Set(I4V,false);Set(I5V,false);Set(I6V,false);Set(I7V,false);Set(I8V,false);Set(I9V,false);Set(C1V,false);Set(C2V,false);Set(C3V,false);Set(H1V,false);Set(H2V,false);Set(H3V,false);Set(H4V,false);Set(H5V,false);Set(H6V,false);Set(H7V,false);Set(H8V,false);Set(G1V,false);Set(G2V,false);Set(G3V,false);Set(G4V,false);Set(G5V,false);Set(G6V,false);Set(G7V,false);Set(G8V,false);Set(G9V,false);Set(G10V,false);Set(G11V,false);Set(G12V,false);Set(G13V,false);Set(G14V,false);Set(G15V,false);Set(G16V,false);Set(U1V,false);Set(DisplayPopup1,false)
         PressedColor: =RGBA(0, 96, 146, 1)
         PressedFill: =RGBA(0, 96, 146, 1)
         Size: =24
@@ -356,7 +358,7 @@ UI As screen:
         Color: =RGBA(255, 255, 255, 1)
         Height: =80
         Icon: =Icon.Information
-        OnSelect: =Navigate(App_Details,ScreenTransition.None)
+        OnSelect: =Navigate(App_Details,ScreenTransition.None);Set(AboutVisible,true);Set(Header,"About");Set(Navigation,false);Set(HN2,false);Set(HN1,true);Set(HN3,false);Set(I1V,false);Set(I2V,false);Set(I3V,false);Set(I4V,false);Set(I5V,false);Set(I6V,false);Set(I7V,false);Set(I8V,false);Set(I9V,false);Set(C1V,false);Set(C2V,false);Set(C3V,false);Set(H1V,false);Set(H2V,false);Set(H3V,false);Set(H4V,false);Set(H5V,false);Set(H6V,false);Set(H7V,false);Set(H8V,false);Set(G1V,false);Set(G2V,false);Set(G3V,false);Set(G4V,false);Set(G5V,false);Set(G6V,false);Set(G7V,false);Set(G8V,false);Set(G9V,false);Set(G10V,false);Set(G11V,false);Set(G12V,false);Set(G13V,false);Set(G14V,false);Set(G15V,false);Set(G16V,false);Set(U1V,false);Set(DisplayPopup1,false)
         TabIndex: =
         Width: =80
         X: =450
@@ -407,7 +409,7 @@ UI As screen:
         Color: =RGBA(255, 255, 255, 1)
         FontWeight: =FontWeight.Semibold
         Height: =38
-        OnSelect: =Navigate(App_Details,ScreenTransition.None)
+        OnSelect: =Navigate(App_Details,ScreenTransition.None);Set(AboutVisible,true);Set(Header,"About");Set(Navigation,false);Set(HN2,false);Set(HN1,true);Set(HN3,false);Set(I1V,false);Set(I2V,false);Set(I3V,false);Set(I4V,false);Set(I5V,false);Set(I6V,false);Set(I7V,false);Set(I8V,false);Set(I9V,false);Set(C1V,false);Set(C2V,false);Set(C3V,false);Set(H1V,false);Set(H2V,false);Set(H3V,false);Set(H4V,false);Set(H5V,false);Set(H6V,false);Set(H7V,false);Set(H8V,false);Set(G1V,false);Set(G2V,false);Set(G3V,false);Set(G4V,false);Set(G5V,false);Set(G6V,false);Set(G7V,false);Set(G8V,false);Set(G9V,false);Set(G10V,false);Set(G11V,false);Set(G12V,false);Set(G13V,false);Set(G14V,false);Set(G15V,false);Set(G16V,false);Set(U1V,false);Set(DisplayPopup1,false)
         Size: =18
         Text: ="About"
         Width: =140
@@ -427,7 +429,7 @@ UI As screen:
         Fill: =RGBA(0, 94, 146, 1)
         Height: =22
         Width: =Parent.Width
-        Y: =1113
+        Y: =1114
         ZIndex: =36
 
     Rectangle24_1 As rectangle:
@@ -460,6 +462,26 @@ UI As screen:
         X: =569
         Y: =15
         ZIndex: =42
+
+    Label15 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =163
+        Size: =36
+        Text: ="Welcome!"
+        Width: =560
+        X: =40
+        Y: =93
+        ZIndex: =43
+
+    Label15_1 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =163
+        Size: =64
+        Text: =TextInput2.Text
+        Width: =338
+        X: =40
+        Y: =175
+        ZIndex: =44
 
     Group1_1 As group:
         Height: =5

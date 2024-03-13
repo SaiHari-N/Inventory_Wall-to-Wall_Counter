@@ -23,19 +23,19 @@ Dashboard As screen:
         Height: =80
         Width: =640
         Y: =1056
-        ZIndex: =4
+        ZIndex: =3
 
     Icon8_5 As icon.Home:
         AccessibleLabel: ="Home"
         Color: =RGBA(255, 255, 255, 1)
         Height: =56
-        Icon: =Icon.AddUser
-        OnSelect: =Navigate(Screen2,ScreenTransition.Fade)
+        Icon: =Icon.Home
+        OnSelect: =Navigate(UI,ScreenTransition.Fade)
         TabIndex: =
         Width: =56
         X: =60
         Y: =1073
-        ZIndex: =5
+        ZIndex: =4
 
     Icon11_5 As icon.Print:
         AccessibleLabel: ="Detail"
@@ -47,7 +47,7 @@ Dashboard As screen:
         Width: =56
         X: =408
         Y: =1073
-        ZIndex: =8
+        ZIndex: =5
 
     Icon7_16 As icon.Mail:
         AccessibleLabel: ="Mail"
@@ -61,7 +61,7 @@ Dashboard As screen:
         Width: =56
         X: =524
         Y: =1073
-        ZIndex: =18
+        ZIndex: =6
 
     ComboBox1_2 As combobox:
         BorderColor: =RGBA(0, 94, 146, 1)
@@ -76,10 +76,10 @@ Dashboard As screen:
         SearchItems: =[]
         SelectMultiple: =false
         Size: =18
-        Width: =284
-        X: =294
+        Width: =378
+        X: =200
         Y: =136
-        ZIndex: =33
+        ZIndex: =7
 
     PieChart1_1 As pieChart:
         BorderColor: =RGBA(0, 94, 146, 1)
@@ -94,7 +94,60 @@ Dashboard As screen:
         Visible: =If(IsBlank(ComboBox1_2.Selected.Value),false,true)
         Width: =640
         Y: =370
-        ZIndex: =34
+        ZIndex: =8
+
+    Icon9_5 As icon.Tray:
+        AccessibleLabel: ="Bin"
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =56
+        Icon: =Icon.Items
+        OnSelect: =Navigate(BrowseScreen1,ScreenTransition.None)
+        TabIndex: =
+        Width: =56
+        X: =176
+        Y: =1073
+        ZIndex: =9
+
+    Icon10_5 As icon.DocumentwithContent:
+        AccessibleLabel: ="Tag"
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =56
+        Icon: =Icon.Tray
+        OnSelect: =Navigate(Bin_Edit,ScreenTransition.None)
+        TabIndex: =
+        Width: =56
+        X: =292
+        Y: =1073
+        ZIndex: =10
+
+    Label17 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =21
+        Text: ="Location"
+        Width: =230
+        X: =40
+        Y: =136
+        ZIndex: =11
+
+    Header1_8 As Header:
+        BasePaletteColor: =RGBA(0, 94, 146, 1)
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =
+        Height: =80
+        IsLogoVisible: =false
+        IsTitleVisible: =false
+        OnSelectLogo: =false
+        Style: ='Header.Style'.Neutral
+        Title: =
+        UserEmail: =User().Email
+        UserImage: =User().Image
+        UserName: =User().FullName
+        Visible: =Navigation
+        Width: =100
+        X: =200
+        Y: =0
+        ZIndex: =21
 
     Menu_Navigation_9 As group:
         Height: =5
@@ -116,7 +169,7 @@ Dashboard As screen:
             Tooltip: ="Navigation"
             Visible: =HN1
             Width: =80
-            ZIndex: =44
+            ZIndex: =19
 
         IconBackarrow1_20 As icon.ChevronLeft:
             AccessibleLabel: =Self.Tooltip
@@ -133,7 +186,7 @@ Dashboard As screen:
             Tooltip: ="Navigation"
             Visible: =HN2
             Width: =80
-            ZIndex: =45
+            ZIndex: =20
 
     Menu_9 As group:
         Height: =5
@@ -149,7 +202,7 @@ Dashboard As screen:
             OnSelect: =Navigate(App_Details)
             Visible: =Navigation
             Width: =300
-            ZIndex: =36
+            ZIndex: =12
 
         Label7_55 As label:
             FontWeight: =FontWeight.Semibold
@@ -165,7 +218,7 @@ Dashboard As screen:
             Visible: =HN3
             Width: =300
             Y: =80
-            ZIndex: =37
+            ZIndex: =13
 
         Label7_56 As label:
             FontWeight: =FontWeight.Semibold
@@ -181,7 +234,7 @@ Dashboard As screen:
             Visible: =HN3
             Width: =300
             Y: =160
-            ZIndex: =38
+            ZIndex: =14
 
         Label7_57 As label:
             FontWeight: =FontWeight.Semibold
@@ -197,7 +250,7 @@ Dashboard As screen:
             Visible: =HN3
             Width: =300
             Y: =240
-            ZIndex: =39
+            ZIndex: =15
 
         Label7_58 As label:
             FontWeight: =FontWeight.Semibold
@@ -213,7 +266,7 @@ Dashboard As screen:
             Visible: =HN3
             Width: =300
             Y: =320
-            ZIndex: =40
+            ZIndex: =16
 
         Label7_59 As label:
             FontWeight: =FontWeight.Semibold
@@ -229,7 +282,7 @@ Dashboard As screen:
             Visible: =HN3
             Width: =300
             Y: =400
-            ZIndex: =41
+            ZIndex: =17
 
         Label7_60 As label:
             FontWeight: =FontWeight.Semibold
@@ -245,48 +298,5 @@ Dashboard As screen:
             Visible: =HN3
             Width: =300
             Y: =480
-            ZIndex: =42
-
-    Header1_8 As Header:
-        BasePaletteColor: =RGBA(0, 94, 146, 1)
-        DisplayMode: =DisplayMode.Edit
-        FontColor: =
-        Height: =80
-        IsLogoVisible: =false
-        IsTitleVisible: =false
-        OnSelectLogo: =false
-        Style: ='Header.Style'.Neutral
-        Title: =
-        UserEmail: =User().Email
-        UserImage: =User().Image
-        UserName: =User().FullName
-        Visible: =Navigation
-        Width: =100
-        X: =200
-        Y: =0
-        ZIndex: =46
-
-    Icon9_5 As icon.Tray:
-        AccessibleLabel: ="Bin"
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =56
-        Icon: =Icon.Items
-        OnSelect: =Navigate(BrowseScreen1,ScreenTransition.None)
-        TabIndex: =
-        Width: =56
-        X: =176
-        Y: =1073
-        ZIndex: =47
-
-    Icon10_5 As icon.DocumentwithContent:
-        AccessibleLabel: ="Tag"
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =56
-        Icon: =Icon.Tray
-        OnSelect: =Navigate(Bin_Edit,ScreenTransition.None)
-        TabIndex: =
-        Width: =56
-        X: =292
-        Y: =1073
-        ZIndex: =48
+            ZIndex: =18
 

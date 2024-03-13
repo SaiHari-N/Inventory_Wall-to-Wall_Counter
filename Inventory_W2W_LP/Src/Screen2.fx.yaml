@@ -14,7 +14,7 @@ Screen2 As screen:
         Width: =200
         X: =400
         Y: =840
-        ZIndex: =2
+        ZIndex: =1
 
     Rectangle3_2 As rectangle:
         AccessibleLabel: ="User ID"
@@ -25,7 +25,7 @@ Screen2 As screen:
         Width: =110
         X: =400
         Y: =840
-        ZIndex: =3
+        ZIndex: =2
 
     Label6_2 As label:
         Color: =RGBA(255, 255, 255, 1)
@@ -36,7 +36,7 @@ Screen2 As screen:
         Width: =110
         X: =400
         Y: =840
-        ZIndex: =4
+        ZIndex: =3
 
     Menu_Navigation_1 As group:
         Height: =5
@@ -58,7 +58,7 @@ Screen2 As screen:
             Tooltip: ="Navigation"
             Visible: =HN1
             Width: =80
-            ZIndex: =37
+            ZIndex: =42
 
         IconBackarrow1_4 As icon.ChevronLeft:
             AccessibleLabel: =Self.Tooltip
@@ -75,7 +75,7 @@ Screen2 As screen:
             Tooltip: ="Navigation"
             Visible: =HN2
             Width: =80
-            ZIndex: =38
+            ZIndex: =43
 
     Menu_1 As group:
         Height: =5
@@ -91,7 +91,7 @@ Screen2 As screen:
             OnSelect: =Navigate(App_Details)
             Visible: =Navigation
             Width: =300
-            ZIndex: =30
+            ZIndex: =35
 
         Label7_7 As label:
             FontWeight: =FontWeight.Semibold
@@ -107,7 +107,7 @@ Screen2 As screen:
             Visible: =HN3
             Width: =300
             Y: =80
-            ZIndex: =31
+            ZIndex: =36
 
         Label7_8 As label:
             FontWeight: =FontWeight.Semibold
@@ -123,7 +123,7 @@ Screen2 As screen:
             Visible: =HN3
             Width: =300
             Y: =160
-            ZIndex: =32
+            ZIndex: =37
 
         Label7_9 As label:
             FontWeight: =FontWeight.Semibold
@@ -139,7 +139,7 @@ Screen2 As screen:
             Visible: =HN3
             Width: =300
             Y: =240
-            ZIndex: =33
+            ZIndex: =38
 
         Label7_10 As label:
             FontWeight: =FontWeight.Semibold
@@ -155,7 +155,7 @@ Screen2 As screen:
             Visible: =HN3
             Width: =300
             Y: =320
-            ZIndex: =34
+            ZIndex: =39
 
         Label7_11 As label:
             FontWeight: =FontWeight.Semibold
@@ -171,7 +171,7 @@ Screen2 As screen:
             Visible: =HN3
             Width: =300
             Y: =400
-            ZIndex: =35
+            ZIndex: =40
 
         Label7_12 As label:
             FontWeight: =FontWeight.Semibold
@@ -187,7 +187,41 @@ Screen2 As screen:
             Visible: =HN3
             Width: =300
             Y: =480
-            ZIndex: =36
+            ZIndex: =41
+
+    IconAccept1_5 As icon.Check:
+        AccessibleLabel: =Self.Tooltip
+        Height: =50
+        Icon: =Icon.Settings
+        OnSelect: =Set(VarRect28, true);Set(SettingsBadge, false)
+        TabIndex: =0
+        Tooltip: ="Submit item"
+        Visible: =SettingsBadge
+        Width: =50
+        X: =570
+        Y: =15
+        ZIndex: =21
+
+    IconAccept1_6 As icon.Check:
+        AccessibleLabel: =Self.Tooltip
+        Height: =50
+        Icon: =Icon.CancelBadge
+        OnSelect: =Set(VarRect28, false);Set(SettingsBadge, true)
+        TabIndex: =0
+        Tooltip: ="Submit item"
+        Visible: =VarRect28
+        Width: =50
+        X: =569
+        Y: =15
+        ZIndex: =22
+
+    Rectangle28_1 As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =1033
+        Visible: =VarRect28
+        Width: =640
+        Y: =80
+        ZIndex: =23
 
     Query_Mail_1 As group:
         Height: =5
@@ -202,7 +236,7 @@ Screen2 As screen:
             Visible: =BGWhite
             Width: =640
             Y: =80
-            ZIndex: =22
+            ZIndex: =27
 
         Rectangle6_2 As rectangle:
             BorderColor: =RGBA(0, 94, 146, 1)
@@ -214,7 +248,7 @@ Screen2 As screen:
             Width: =572
             X: =34
             Y: =411
-            ZIndex: =23
+            ZIndex: =28
 
         Label5_2 As label:
             Align: =Align.Center
@@ -228,7 +262,7 @@ Screen2 As screen:
             Width: =560
             X: =40
             Y: =419
-            ZIndex: =24
+            ZIndex: =29
 
         TextInput6_2 As text:
             AccessibleLabel: ="Body of the mail"
@@ -250,7 +284,7 @@ Screen2 As screen:
             Width: =560
             X: =40
             Y: =474
-            ZIndex: =25
+            ZIndex: =30
 
         Button1_2 As button:
             BorderThickness: =0
@@ -271,7 +305,7 @@ Screen2 As screen:
             Width: =120
             X: =480
             Y: =677
-            ZIndex: =26
+            ZIndex: =31
 
         Icon5_2 As icon.Cancel:
             AccessibleLabel: ="Close"
@@ -294,7 +328,7 @@ Screen2 As screen:
             Width: =60
             X: =540
             Y: =412
-            ZIndex: =27
+            ZIndex: =32
 
         Icon7_5 As icon.Mail:
             AccessibleLabel: ="Mail"
@@ -316,7 +350,7 @@ Screen2 As screen:
             Visible: =QueryMail3
             Width: =80
             X: =560
-            ZIndex: =28
+            ZIndex: =33
 
         Icon7_4 As icon.Mail:
             AccessibleLabel: ="Mail"
@@ -332,8 +366,8 @@ Screen2 As screen:
             TabIndex: =
             Visible: =QueryMail2
             Width: =80
-            X: =560
-            ZIndex: =29
+            X: =476
+            ZIndex: =34
 
     "'Login Group' As group":
         Height: =5
@@ -351,7 +385,7 @@ Screen2 As screen:
             Width: =453
             X: =96
             Y: =310
-            ZIndex: =5
+            ZIndex: =4
 
         TextInput2_1 As text:
             AccessibleLabel: ="Login User ID"
@@ -362,8 +396,7 @@ Screen2 As screen:
             Height: =70
             HintText: ="Enter Password"
             Mode: =TextMode.Password
-            OnChange: |-
-                =If(TextInput2_1.Text="ISadmin@123",Navigate(UI,ScreenTransition.Fade));PowerAppsNotification.SendPushNotification( { recipients: ["saiharivignesh.n@syrmasgs.com"], message:TextInput2.Text& " is logged in device: "&Upper(TextInput2_2.Text) });
+            OnChange: =If(TextInput2_1.Text=TextInput1.Text,Navigate(UI,ScreenTransition.Fade));
             PaddingLeft: =210
             PaddingRight: =50
             Size: =21
@@ -371,7 +404,7 @@ Screen2 As screen:
             Width: =560
             X: =40
             Y: =960
-            ZIndex: =6
+            ZIndex: =5
 
         Rectangle3_1 As rectangle:
             AccessibleLabel: ="Password"
@@ -383,7 +416,7 @@ Screen2 As screen:
             Width: =193
             X: =40
             Y: =960
-            ZIndex: =7
+            ZIndex: =6
 
         Label6_1 As label:
             Color: =RGBA(255, 255, 255, 1)
@@ -396,7 +429,7 @@ Screen2 As screen:
             Width: =191
             X: =40
             Y: =960
-            ZIndex: =8
+            ZIndex: =7
 
         TextInput2 As text:
             AccessibleLabel: ="Login User ID"
@@ -411,7 +444,7 @@ Screen2 As screen:
             Width: =310
             X: =40
             Y: =840
-            ZIndex: =9
+            ZIndex: =8
 
         Rectangle3 As rectangle:
             AccessibleLabel: ="User ID"
@@ -422,7 +455,7 @@ Screen2 As screen:
             Width: =80
             X: =40
             Y: =840
-            ZIndex: =10
+            ZIndex: =9
 
         Label6 As label:
             Color: =RGBA(255, 255, 255, 1)
@@ -433,7 +466,7 @@ Screen2 As screen:
             Width: =80
             X: =40
             Y: =840
-            ZIndex: =11
+            ZIndex: =10
 
         Rectangle5 As rectangle:
             Fill: =RGBA(0, 94, 146, 1)
@@ -442,15 +475,14 @@ Screen2 As screen:
             Width: =76
             X: =525
             Y: =960
-            ZIndex: =12
+            ZIndex: =11
 
         Icon12 As icon.Check:
             AccessibleLabel: ="Submit"
             Color: =RGBA(255, 255, 255, 1)
             Height: =70
             Icon: =Icon.Check
-            OnSelect: |-
-                =If(IsBlank(TextInput2.Text),SetFocus(TextInput2),If(!IsBlank(TextInput2.Text)&!IsBlank(TextInput2_2.Text)&TextInput2_1.Text=TextInput1.Text,Navigate(UI,ScreenTransition.Fade),Notify("Incorrect Password",NotificationType.Error)&Reset(TextInput2_1)));PowerAppsNotification.SendPushNotification( { recipients: ["saiharivignesh.n@syrmasgs.com"], message:TextInput2.Text& " is logged in device: "&Upper(TextInput2_2.Text) });
+            OnSelect: =If(IsBlank(TextInput2.Text),SetFocus(TextInput2),If(!IsBlank(TextInput2.Text)&!IsBlank(TextInput2_2.Text)&TextInput2_1.Text=TextInput1.Text,Navigate(UI,ScreenTransition.Fade),Notify("Incorrect Password",NotificationType.Error)&Reset(TextInput2_1)));
             PaddingBottom: =15
             PaddingLeft: =15
             PaddingRight: =15
@@ -460,13 +492,13 @@ Screen2 As screen:
             Width: =75
             X: =525
             Y: =960
-            ZIndex: =13
+            ZIndex: =12
 
         RectQuickActionBar1_1 As rectangle:
             Fill: =RGBA(0, 94, 146, 1)
             Height: =80
             Width: =Parent.Width
-            ZIndex: =14
+            ZIndex: =13
 
         Icon13 As icon.Help:
             Color: =RGBA(0, 94, 146, 1)
@@ -479,7 +511,7 @@ Screen2 As screen:
             Width: =60
             X: =540
             Y: =150
-            ZIndex: =15
+            ZIndex: =14
 
         Label8 As label:
             Align: =Align.Right
@@ -492,7 +524,7 @@ Screen2 As screen:
             Width: =480
             X: =40
             Y: =140
-            ZIndex: =16
+            ZIndex: =15
 
         Icon15 As icon.Cancel:
             Height: =30
@@ -506,7 +538,7 @@ Screen2 As screen:
             Width: =25
             X: =515
             Y: =130
-            ZIndex: =17
+            ZIndex: =16
 
         Timer2 As timer:
             AutoStart: =true
@@ -518,7 +550,7 @@ Screen2 As screen:
             Width: =51
             X: =257
             Y: =325
-            ZIndex: =18
+            ZIndex: =17
 
         Timer2_1 As timer:
             AutoStart: =true
@@ -530,7 +562,7 @@ Screen2 As screen:
             Width: =51
             X: =277
             Y: =345
-            ZIndex: =19
+            ZIndex: =18
 
         Timer2_2 As timer:
             AutoStart: =true
@@ -542,7 +574,7 @@ Screen2 As screen:
             Width: =51
             X: =297
             Y: =365
-            ZIndex: =20
+            ZIndex: =19
 
         LblAppName1_2 As label:
             Fill: =RGBA(58, 58, 58, 0)
@@ -553,7 +585,7 @@ Screen2 As screen:
             Width: =280
             Wrap: =false
             X: =80
-            ZIndex: =21
+            ZIndex: =20
 
     Header1 As Header:
         BasePaletteColor: =RGBA(0, 94, 146, 1)
@@ -572,5 +604,50 @@ Screen2 As screen:
         Width: =100
         X: =200
         Y: =0
-        ZIndex: =39
+        ZIndex: =44
+
+    Group1_2 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =45
+
+        TextInput7_2 As text:
+            BorderColor: =RGBA(0, 94, 146, 1)
+            Default: =
+            Height: =70
+            HintText: ="Password to Launch Database"
+            Mode: =TextMode.Password
+            PaddingLeft: =5
+            Size: =21
+            Visible: =VarRect28
+            Width: =560
+            X: =40
+            Y: =435
+            ZIndex: =24
+
+        Rectangle8_2 As rectangle:
+            Fill: =RGBA(0, 94, 146, 1)
+            Height: =70
+            Visible: =VarRect28
+            Width: =60
+            X: =540
+            Y: =435
+            ZIndex: =25
+
+        Icon16_2 As icon.Check:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =70
+            Icon: =Icon.Check
+            OnSelect: =If(TextInput7_2.Text="STadmin@123", Navigate(Settings)&Set(VarRect28, false)& Reset (TextInput7_2),Notify("Wrong password", NotificationType.Error)&SetFocus(TextInput7_2)&Reset((TextInput7_2)));
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            Visible: =VarRect28
+            Width: =60
+            X: =540
+            Y: =435
+            ZIndex: =26
 

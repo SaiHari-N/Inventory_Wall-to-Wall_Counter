@@ -253,7 +253,7 @@
         Height: =35
         Item: =LastSubmittedRecord
         Width: =230
-        X: =435
+        X: =450
         ZIndex: =8
 
         "'Part number _DataCard1_14' As typedDataCard.textualViewCard":

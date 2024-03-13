@@ -252,7 +252,7 @@
     TextMeetingMessage1 As text:
         AccessibleLabel: ="Add a message"
         Default: =""
-        Height: =550
+        Height: =461
         HintText: ="Add a message"
         Mode: =TextMode.MultiLine
         Size: =21
@@ -738,7 +738,7 @@
         DisabledFill: =RGBA(0, 94, 146, 1)
         DisplayMode: |-
             =/*Email must have a subject and recipients to be sent*/
-            If(Len(Trim(TextEmailSubject1.Text)) > 0 && !IsEmpty(MyPeople), DisplayMode.Edit, DisplayMode.Disabled)
+            If(Len(Trim(TextMeetingSubject1.Text)) > 0 && !IsEmpty(MyPeople), DisplayMode.Edit, DisplayMode.Disabled)
         Height: =80
         Icon: =Icon.Send
         OnSelect: |-

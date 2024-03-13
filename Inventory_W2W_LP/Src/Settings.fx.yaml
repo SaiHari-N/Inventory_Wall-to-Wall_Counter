@@ -29,8 +29,8 @@ Settings As screen:
         AccessibleLabel: ="Home"
         Color: =RGBA(255, 255, 255, 1)
         Height: =56
-        Icon: =Icon.AddUser
-        OnSelect: =Navigate(Screen2,ScreenTransition.Fade)
+        Icon: =Icon.Home
+        OnSelect: =Navigate(UI,ScreenTransition.Fade)
         TabIndex: =
         Width: =56
         X: =60
@@ -47,7 +47,7 @@ Settings As screen:
         Width: =56
         X: =408
         Y: =1073
-        ZIndex: =7
+        ZIndex: =5
 
     IconAccept1_2 As icon.Check:
         AccessibleLabel: =Self.Tooltip
@@ -59,6 +59,30 @@ Settings As screen:
         Width: =50
         X: =570
         Y: =15
+        ZIndex: =6
+
+    Icon7_17 As icon.Mail:
+        AccessibleLabel: ="Mail"
+        AutoDisableOnSelect: =false
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =56
+        Icon: =Icon.Mail
+        OnSelect: =Navigate(MailQuery)
+        TabIndex: =
+        Visible: =QueryMail2
+        Width: =56
+        X: =524
+        Y: =1073
+        ZIndex: =7
+
+    Label3_4 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =22
+        Text: ="Default Label Template"
+        Width: =240
+        X: =38
+        Y: =135
         ZIndex: =8
 
     Menu_Navigation_8 As group:
@@ -81,7 +105,7 @@ Settings As screen:
             Tooltip: ="Navigation"
             Visible: =HN1
             Width: =80
-            ZIndex: =33
+            ZIndex: =31
 
         IconBackarrow1_18 As icon.ChevronLeft:
             AccessibleLabel: =Self.Tooltip
@@ -98,31 +122,7 @@ Settings As screen:
             Tooltip: ="Navigation"
             Visible: =HN2
             Width: =80
-            ZIndex: =34
-
-    Icon7_17 As icon.Mail:
-        AccessibleLabel: ="Mail"
-        AutoDisableOnSelect: =false
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =56
-        Icon: =Icon.Mail
-        OnSelect: =Navigate(MailQuery)
-        TabIndex: =
-        Visible: =QueryMail2
-        Width: =56
-        X: =524
-        Y: =1073
-        ZIndex: =9
-
-    Label3_4 As label:
-        FontWeight: =FontWeight.Bold
-        Height: =70
-        Size: =22
-        Text: ="Default Label Template"
-        Width: =240
-        X: =38
-        Y: =135
-        ZIndex: =10
+            ZIndex: =32
 
     Dropdown2_1 As dropdown:
         BorderColor: =RGBA(0, 94, 146, 1)
@@ -134,7 +134,7 @@ Settings As screen:
         Width: =284
         X: =306
         Y: =139
-        ZIndex: =11
+        ZIndex: =9
 
     Toggle1_1 As toggleSwitch:
         AccessibleLabel: ="Reel/Box"
@@ -149,7 +149,7 @@ Settings As screen:
         Width: =240
         X: =156
         Y: =302
-        ZIndex: =12
+        ZIndex: =10
 
     Label3_6 As label:
         FontWeight: =FontWeight.Bold
@@ -159,7 +159,7 @@ Settings As screen:
         Width: =118
         X: =38
         Y: =290
-        ZIndex: =13
+        ZIndex: =11
 
     Slider1 As slider:
         HandleSize: =30
@@ -168,7 +168,7 @@ Settings As screen:
         Width: =250
         X: =340
         Y: =437
-        ZIndex: =14
+        ZIndex: =12
 
     Label3_7 As label:
         FontWeight: =FontWeight.Bold
@@ -178,7 +178,7 @@ Settings As screen:
         Width: =268
         X: =38
         Y: =437
-        ZIndex: =15
+        ZIndex: =13
 
     Label3_8 As label:
         FontWeight: =FontWeight.Bold
@@ -188,7 +188,7 @@ Settings As screen:
         Width: =268
         X: =38
         Y: =577
-        ZIndex: =16
+        ZIndex: =14
 
     Rectangle23_2 As rectangle:
         BorderColor: =RGBA(0, 96, 146, 1)
@@ -199,7 +199,7 @@ Settings As screen:
         Width: =444
         X: =146
         Y: =676
-        ZIndex: =17
+        ZIndex: =15
 
     Rectangle23_3 As rectangle:
         BorderColor: =RGBA(0, 96, 146, 1)
@@ -207,10 +207,10 @@ Settings As screen:
         Fill: =RGBA(0, 0, 0, 0)
         Height: =130
         OnSelect: =Set(varPrintTriggered4, true);Navigate(Label_test)
-        Width: =428
+        Width: =424
         X: =156
         Y: =686
-        ZIndex: =18
+        ZIndex: =16
 
     Label3_9 As label:
         Align: =Align.Center
@@ -222,7 +222,7 @@ Settings As screen:
         Width: =350
         X: =193
         Y: =686
-        ZIndex: =19
+        ZIndex: =17
 
     Label3_10 As label:
         FontWeight: =FontWeight.Bold
@@ -232,7 +232,7 @@ Settings As screen:
         Width: =268
         X: =38
         Y: =907
-        ZIndex: =20
+        ZIndex: =18
 
     TextInput1 As text:
         BorderColor: =RGBA(0, 94, 146, 1)
@@ -243,16 +243,15 @@ Settings As screen:
         Width: =377
         X: =213
         Y: =907
-        ZIndex: =21
+        ZIndex: =19
 
     Rectangle5_1 As rectangle:
-        Fill: =RGBA(0, 94, 146, 1)
+        Fill: =RGBA(0, 96, 146, 1)
         Height: =70
-        Visible: =If(Len(TextInput2.Text)>3,If(Len(TextInput2_2.Text)=4,true,false))
         Width: =76
         X: =514
         Y: =907
-        ZIndex: =22
+        ZIndex: =20
 
     Icon12_1 As icon.Check:
         AccessibleLabel: ="Submit"
@@ -269,7 +268,7 @@ Settings As screen:
         Width: =75
         X: =515
         Y: =907
-        ZIndex: =23
+        ZIndex: =21
 
     Icon12_2 As icon.Check:
         AccessibleLabel: ="Submit"
@@ -286,7 +285,7 @@ Settings As screen:
         Width: =75
         X: =515
         Y: =907
-        ZIndex: =24
+        ZIndex: =22
 
     Slider1_1 As slider:
         Default: =2
@@ -298,7 +297,7 @@ Settings As screen:
         ValueFill: =RGBA(0, 96, 146, 1)
         Width: =162
         Y: =676
-        ZIndex: =25
+        ZIndex: =23
 
     Menu_8 As group:
         Height: =5
@@ -314,7 +313,7 @@ Settings As screen:
             OnSelect: =Navigate(App_Details)
             Visible: =Navigation
             Width: =300
-            ZIndex: =26
+            ZIndex: =24
 
         Label7_49 As label:
             FontWeight: =FontWeight.Semibold
@@ -330,7 +329,7 @@ Settings As screen:
             Visible: =HN3
             Width: =300
             Y: =80
-            ZIndex: =27
+            ZIndex: =25
 
         Label7_50 As label:
             FontWeight: =FontWeight.Semibold
@@ -346,7 +345,7 @@ Settings As screen:
             Visible: =HN3
             Width: =300
             Y: =160
-            ZIndex: =28
+            ZIndex: =26
 
         Label7_51 As label:
             FontWeight: =FontWeight.Semibold
@@ -362,7 +361,7 @@ Settings As screen:
             Visible: =HN3
             Width: =300
             Y: =240
-            ZIndex: =29
+            ZIndex: =27
 
         Label7_52 As label:
             FontWeight: =FontWeight.Semibold
@@ -378,7 +377,7 @@ Settings As screen:
             Visible: =HN3
             Width: =300
             Y: =320
-            ZIndex: =30
+            ZIndex: =28
 
         Label7_53 As label:
             FontWeight: =FontWeight.Semibold
@@ -394,7 +393,7 @@ Settings As screen:
             Visible: =HN3
             Width: =300
             Y: =400
-            ZIndex: =31
+            ZIndex: =29
 
         Label7_54 As label:
             FontWeight: =FontWeight.Semibold
@@ -410,7 +409,7 @@ Settings As screen:
             Visible: =HN3
             Width: =300
             Y: =480
-            ZIndex: =32
+            ZIndex: =30
 
     Header1_7 As Header:
         BasePaletteColor: =RGBA(0, 94, 146, 1)
@@ -429,7 +428,7 @@ Settings As screen:
         Width: =100
         X: =200
         Y: =0
-        ZIndex: =35
+        ZIndex: =33
 
     Icon9_6 As icon.Tray:
         AccessibleLabel: ="Bin"
@@ -441,7 +440,7 @@ Settings As screen:
         Width: =56
         X: =176
         Y: =1073
-        ZIndex: =36
+        ZIndex: =34
 
     Icon10_6 As icon.DocumentwithContent:
         AccessibleLabel: ="Tag"
@@ -453,5 +452,5 @@ Settings As screen:
         Width: =56
         X: =292
         Y: =1073
-        ZIndex: =37
+        ZIndex: =35
 
