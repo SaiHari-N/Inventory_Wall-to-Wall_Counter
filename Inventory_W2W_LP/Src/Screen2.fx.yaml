@@ -1,5 +1,5 @@
 Screen2 As screen:
-    OnVisible: =Reset(TextInput2); Reset(TextInput2_1); SetFocus(TextInput2); Set(Close,false);Set(ContextPopup,false);Set(AI,false);Set(HN1,true);Set(HN2,false);Set(QueryMail2,true);Set(QueryMail3,false);Reset(TextInput6_2);Set(Settings2,false);Set(Settings1,true);Set(BGWhite,false);TextInput2_1.HintText= "Enter Password";Reset(TextInput2_2)
+    OnVisible: =Reset(TextInput2); Reset(TextInput2_1); SetFocus(TextInput2); Set(Close,false);Set(ContextPopup,false);Set(AI,false);Set(HN1,true);Set(HN2,false);Set(QueryMail2,true);Set(QueryMail3,false);Reset(TextInput6_2);Set(Settings2,false);Set(Settings1,true);Set(BGWhite,false);TextInput2_1.HintText= "Enter Password";Reset(TextInput2_2);Set(VarRect28, false);Set(SettingsBadge, true)
 
     TextInput2_2 As text:
         AccessibleLabel: ="Login User ID"
