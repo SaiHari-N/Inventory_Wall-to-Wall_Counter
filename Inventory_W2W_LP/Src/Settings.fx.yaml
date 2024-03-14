@@ -162,6 +162,7 @@ Settings As screen:
         ZIndex: =11
 
     Slider1 As slider:
+        FocusedBorderThickness: =0
         HandleSize: =30
         Height: =70
         ValueFill: =RGBA(0, 96, 146, 1)
@@ -289,6 +290,7 @@ Settings As screen:
 
     Slider1_1 As slider:
         Default: =2
+        FocusedBorderThickness: =0
         HandleSize: =30
         Height: =150
         Layout: =Layout.Vertical

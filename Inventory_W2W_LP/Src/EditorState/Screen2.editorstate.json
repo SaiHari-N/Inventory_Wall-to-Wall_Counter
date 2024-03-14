@@ -369,7 +369,7 @@
       "MetaDataIDKey": "",
       "Name": "Group1_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 48,
+      "ParentIndex": 46,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2771,7 +2771,14 @@
         "HoverBorderColor",
         "FocusedBorderColor",
         "ZIndex",
-        "AutoDisableOnSelect",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "true",
+          "InvariantPropertyName": "AutoDisableOnSelect",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -3070,7 +3077,14 @@
         "HoverBorderColor",
         "FocusedBorderColor",
         "ZIndex",
-        "AutoDisableOnSelect",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "true",
+          "InvariantPropertyName": "AutoDisableOnSelect",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -8131,7 +8145,7 @@
       "MetaDataIDKey": "",
       "Name": "Query_Mail_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 46,
+      "ParentIndex": 48,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

@@ -55,6 +55,7 @@ UI As screen:
 
     IconAccept1_3 As icon.Check:
         AccessibleLabel: =Self.Tooltip
+        AutoDisableOnSelect: =false
         Height: =50
         Icon: =Icon.Settings
         OnSelect: =Set(VarRect28, true);Set(SettingsBadge, false)
@@ -478,6 +479,7 @@ UI As screen:
 
     IconAccept1_4 As icon.Check:
         AccessibleLabel: =Self.Tooltip
+        AutoDisableOnSelect: =false
         Height: =50
         Icon: =Icon.CancelBadge
         OnSelect: =Set(VarRect28, false);Set(SettingsBadge, true)
