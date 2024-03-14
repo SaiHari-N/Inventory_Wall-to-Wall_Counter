@@ -141,6 +141,7 @@ Settings As screen:
         BorderStyle: =BorderStyle.None
         Default: =
         FalseText: ="Web - Page"
+        FocusedBorderThickness: =0
         Height: =45
         OnCheck: =true
         Size: =21

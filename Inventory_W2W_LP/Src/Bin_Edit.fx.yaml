@@ -97,6 +97,7 @@ Bin_Edit As screen:
         BorderStyle: =BorderStyle.None
         Default: =
         FalseText: ="-IQC"
+        FocusedBorderThickness: =0
         Height: =45
         OnCheck: =true
         Size: =21
