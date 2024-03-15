@@ -83,9 +83,9 @@ UI As screen:
         UserImage: =User().Image
         UserName: =User().FullName
         Visible: =true
-        Width: =375
+        Width: =570
         X: =30
-        Y: =419
+        Y: =429
         ZIndex: =8
 
     Icon24 As icon.Person:
