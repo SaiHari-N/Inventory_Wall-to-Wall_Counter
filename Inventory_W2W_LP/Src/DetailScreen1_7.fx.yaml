@@ -380,7 +380,7 @@
         DataSource: =WISA_Pro_MDB
         Height: =197
         Item: =If(TabList1.Selected.Value = "Log",BrowseGallery1.Selected,Table3.Selected)
-        OnSuccess: =Back()
+        OnSuccess: =Navigate(EditScreen1,ScreenTransition.None); NewForm(EditForm1); Reset(TextInput5)
         Width: =640
         ZIndex: =12
 
@@ -510,7 +510,7 @@
         FontWeight: =FontWeight.Semibold
         Height: =80
         OnChange: =If(TextInputCanvas1_2.Value = If(IsBlank(BrowseGallery1.Selected.UID),"No Data Found",BrowseGallery1.Selected.UID), Set(FormDesc2, "Label Printed & Scanned")&Set(SFT2, true), If(Len(TextInputCanvas1_2.Value)=14,Notify("Wrong UID"),Notify("Manual Entry not allowed")&Reset(TextInputCanvas1_2)))
-        Placeholder: ="Scan Count ID"
+        Placeholder: ="Scan UID"
         Visible: =TIC1Visible
         Width: =360
         X: =140

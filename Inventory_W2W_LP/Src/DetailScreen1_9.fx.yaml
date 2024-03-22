@@ -380,7 +380,7 @@
         DataSource: =WISA_Pro_MDB
         Height: =197
         Item: =LastSubmittedRecord
-        OnSuccess: =Back()
+        OnSuccess: =Navigate(EditScreen1,ScreenTransition.None); NewForm(EditForm1);Reset(TextInput5)
         Width: =640
         ZIndex: =12
 

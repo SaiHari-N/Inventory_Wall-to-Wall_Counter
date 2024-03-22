@@ -1,0 +1,23 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_excel",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2024-02-14T17:17:41.6390000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "__PowerAppsId__": "Row id",
+      "Bin_Time_Stamp": "Bin_Time_Stamp",
+      "Bin_x0020_ID": "Bin ID",
+      "Quantity": "Quantity",
+      "User_x0020_ID": "User ID"
+    },
+    "DatasetName": "b!3kXZQstSb0ayVfpn3eMZt4mCcGsrdMZPq5FX09timC4_mcJRcZVvS6alUOED2dtG.01SRKD7XMNN6KRLZSAJVBKLC74SDPVGRI6",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "Table1_1",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

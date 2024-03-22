@@ -112,7 +112,27 @@
       ],
       "From": "1.0.150",
       "To": "1.0.151"
+    },
+    {
+      "Action": [
+        {
+          "Name": "EnableColumnMoving",
+          "Type": "add"
+        }
+      ],
+      "From": "1.0.162",
+      "To": "1.0.163"
+    },
+    {
+      "Action": [
+        {
+          "Name": "DisableChildItemsEditing",
+          "Type": "add"
+        }
+      ],
+      "From": "1.0.166",
+      "To": "1.0.167"
     }
   ],
-  "Version": "1.0.159"
+  "Version": "1.0.175"
 }

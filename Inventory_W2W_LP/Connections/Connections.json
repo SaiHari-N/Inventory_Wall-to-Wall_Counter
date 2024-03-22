@@ -4,8 +4,8 @@
       "displayName": "Power Apps Notification",
       "executionRestrictions": {
         "apiId": "/providers/microsoft.powerapps/apis/shared_powerappsnotification",
-        "appVer": "3.24031.25",
-        "modifiedOn": "2024-03-15 07:40:04",
+        "appVer": "3.24032.26",
+        "modifiedOn": "2024-03-22 09:53:54",
         "policy": "{\"type\":\"action\",\"dataSources\":{\"actions\":[\"sendpushnotification\"]}}",
         "version": 1
       },
@@ -77,6 +77,13 @@
           }
         }
       },
+      "b!3kXZQstSb0ayVfpn3eMZt4mCcGsrdMZPq5FX09timC4_mcJRcZVvS6alUOED2dtG.01SRKD7XMNN6KRLZSAJVBKLC74SDPVGRI6": {
+        "dataSources": {
+          "Table1_1": {
+            "tableName": "Table1"
+          }
+        }
+      },
       "b!4zsqBVIGgUuHrVI10uWeYYJmJHW2nk9MibZ0JHUj8AyZhE-rkOK8RqYawv02KpVr.01Y542QFLSSZEU33FR4NALKZVNMEDWWYTC": {
         "dataSources": {
           "Table1": {
@@ -93,7 +100,8 @@
       "Inventory_MDB",
       "Part_Description_1",
       "Description_Details",
-      "WISA_Pro_MDB"
+      "WISA_Pro_MDB",
+      "Table1_1"
     ],
     "dependencies": {
       "fileSource": "6d34e21b-fa37-43aa-852d-da7a7b48aa8f"
@@ -172,8 +180,8 @@
       "displayName": "Power Apps Notification V2",
       "executionRestrictions": {
         "apiId": "/providers/microsoft.powerapps/apis/shared_powerappsnotificationv2",
-        "appVer": "3.24031.25",
-        "modifiedOn": "2024-03-15 07:40:04",
+        "appVer": "3.24032.26",
+        "modifiedOn": "2024-03-22 09:53:54",
         "policy": "{\"type\":\"unused\"}",
         "version": 1
       },

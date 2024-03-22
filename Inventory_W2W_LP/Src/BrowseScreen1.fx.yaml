@@ -405,7 +405,9 @@
 
     Table3 As Table.pcfdataset:
         BasePaletteColor: =
+        DisableChildItemsEditing: ="no"
         DisplayMode: =DisplayMode.Edit
+        EnableColumnMoving: ="no"
         FontSize: =20
         HeaderFontSize: =25
         Height: =560
