@@ -2,7 +2,7 @@
     Height: =Max(DetailForm1_10.Height,197)
     OnHidden: =Set(VarTimer5, false)
     OnVisible: |-
-        =Reset(TextInputCanvas1_2);Set(SFT2, false);Set(TIC1Visible,false);Set(R17,true);
+        =Reset(TextInputCanvas1_2);Set(SFT2, false);Set(TIC1Visible,false);Set(R17,true);Set(R20, false)
         //Set(VarTimer5, true);
 
     DetailForm1_15 As formViewer:
