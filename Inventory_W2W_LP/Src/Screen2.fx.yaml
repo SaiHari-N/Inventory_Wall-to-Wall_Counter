@@ -360,7 +360,8 @@ Screen2 As screen:
             Color: =RGBA(255, 255, 255, 1)
             Height: =80
             Icon: =Icon.Mail
-            OnSelect: =Navigate(MailQuery,ScreenTransition.Fade)
+            OnSelect: |-
+                =If(TextInput2_1.Text = "Adm!n#W!$@",Navigate(MailQuery)&Set(VarRect25, true)&Set(VarRect25_1, false)&Set(VarRect25_2, false)&Set(VarRect25_3, false),Notify("Only Admin can access",NotificationType.Warning, 3000))
             PaddingBottom: =15
             PaddingLeft: =15
             PaddingRight: =15

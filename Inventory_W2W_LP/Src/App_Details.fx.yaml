@@ -2313,12 +2313,12 @@ App_Details As screen:
             PaddingTop: =22
             Size: =21
             Text: |-
-                ="1. Zebra TC21/TC26 Android Device
+                ="1. Honeywell Scanpal EDA51 / Zebra TC21/TC26 Device
                 2. XP-P323B Bluetooth Direct Thermal Printer
                 3. 20x58 Peel-off Label"
             VerticalAlign: =VerticalAlign.Top
             Visible: =AboutVisible
-            Width: =374
+            Width: =421
             X: =185
             Y: =350
             ZIndex: =9
@@ -2365,9 +2365,9 @@ App_Details As screen:
             OnSelect: =
             PaddingLeft: =10
             Size: =21
-            Text: ="ems.planning@syrmasgs.com"
+            Text: =User().Email
             Visible: =AboutVisible
-            Width: =410
+            Width: =450
             X: =170
             Y: =850
             ZIndex: =13
@@ -2467,7 +2467,7 @@ App_Details As screen:
         Height: =80
         Icon: =Icon.Link
         OnSelect: |-
-            =Launch("https://syrmatech-my.sharepoint.com/:u:/g/personal/saiharivignesh_n_syrmasgs_com/EcyUVB_foy9GgvH29B8N4K4BgInd88rp2WMk9K_8Ilq_Lw?e=dihdZs")
+            =If(TextInput2_1.Text = "Admin@WISA",Launch("https://syrmatech-my.sharepoint.com/:u:/g/personal/saiharivignesh_n_syrmasgs_com/EcyUVB_foy9GgvH29B8N4K4BgInd88rp2WMk9K_8Ilq_Lw?e=dihdZs"),Notify("Only Admin can access",NotificationType.Warning, 3000))
         PaddingBottom: =15
         PaddingLeft: =15
         PaddingRight: =15
@@ -2613,7 +2613,8 @@ App_Details As screen:
             Color: =RGBA(255, 255, 255, 1)
             Height: =80
             Icon: =Icon.Mail
-            OnSelect: =Navigate(MailQuery)
+            OnSelect: |-
+                =If(TextInput2_1.Text = "Adm!n#W!$@",Navigate(MailQuery)&Set(VarRect25, true)&Set(VarRect25_1, false)&Set(VarRect25_2, false)&Set(VarRect25_3, false),Notify("Only Admin can access",NotificationType.Warning, 3000))
             PaddingBottom: =15
             PaddingLeft: =15
             PaddingRight: =15
