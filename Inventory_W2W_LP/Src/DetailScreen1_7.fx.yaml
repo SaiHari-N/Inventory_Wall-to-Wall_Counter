@@ -541,7 +541,7 @@
         Fill: =RGBA(0, 0, 0, 0)
         Height: =197
         OnSelect: |-
-            =If(varPrintTriggered, Print());Set(R20, true); Set(R17, false);Set(LabelCheckGreen, RGBA(54, 176, 75, 1));Set(LabelCheckRed, RGBA(255,0,0,1));Set(LabelCheckGreenIcon, RGBA(255,255,255,1));Set(LabelCheckRedIcon, RGBA(255,255,255,1))
+            =If(varPrintTriggered, Print());Set(R20, true); Set(R17, false);Set(LabelCheckGreen, RGBA(54, 176, 75, 1));Set(LabelCheckRed, RGBA(255,0,0,1));Set(LabelCheckGreenIcon, RGBA(0,0,0,0));Set(LabelCheckRedIcon, RGBA(0,0,0,0))
             //Set(VarT1_6, true)
         Visible: =R17
         Width: =640
