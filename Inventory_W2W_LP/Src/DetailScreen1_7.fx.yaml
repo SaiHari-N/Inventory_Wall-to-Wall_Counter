@@ -2,7 +2,7 @@
     Height: =Max(DetailForm1_10.Height,197)
     OnHidden: =Set(VarTimer5, false)
     OnVisible: |-
-        =Reset(TextInputCanvas1_2);Set(SFT2, false);Set(TIC1Visible,false);Set(R17,true);Set(R20, false)
+        =Reset(TextInputCanvas1_2);Set(SFT2, false);Set(TIC1Visible,false);Set(R17,true);Set(R20, false);Set(LabelCheckGreen, RGBA(0,0,0,0));Set(LabelCheckRed, RGBA(0,0,0,0));Set(LabelCheckGreenIcon, RGBA(0,0,0,0));Set(LabelCheckRedIcon, RGBA(0,0,0,0))
         //Set(VarTimer5, true);
 
     DetailForm1_15 As formViewer:
@@ -515,14 +515,35 @@
         Width: =640
         ZIndex: =18
 
+    Icon23_4 As icon.CheckBadge:
+        Color: =LabelCheckGreenIcon
+        Fill: =LabelCheckGreen
+        Height: =197
+        Icon: =Icon.Check
+        OnSelect: =Set(FormDesc1,"Label Printed")&SubmitForm(Form1)
+        Visible: =Not(Parent.Printing)
+        Width: =320
+        ZIndex: =19
+
+    Icon23_5 As icon.CheckBadge:
+        Color: =LabelCheckRedIcon
+        Fill: =LabelCheckRed
+        Height: =197
+        Icon: =Icon.Cancel
+        OnSelect: =Set(FormDesc1,"Label Error")&SubmitForm(Form1)
+        Visible: =Not(Parent.Printing)
+        Width: =320
+        X: =320
+        ZIndex: =20
+
     Rectangle17 As rectangle:
         BorderStyle: =BorderStyle.None
         Fill: =RGBA(0, 0, 0, 0)
         Height: =197
         OnSelect: |-
-            =If(varPrintTriggered, Print()&Set(FormDesc1,"Label Printed"));Set(R20, true); Set(R17, false)
+            =If(varPrintTriggered, Print());Set(R20, true); Set(R17, false);Set(LabelCheckGreen, RGBA(54, 176, 75, 1));Set(LabelCheckRed, RGBA(255,0,0,1));Set(LabelCheckGreenIcon, RGBA(255,255,255,1));Set(LabelCheckRedIcon, RGBA(255,255,255,1))
             //Set(VarT1_6, true)
         Visible: =R17
         Width: =640
-        ZIndex: =19
+        ZIndex: =21
 
