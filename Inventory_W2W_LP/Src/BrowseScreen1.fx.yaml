@@ -366,7 +366,7 @@
         Height: =50
         Icon: =Icon.Download
         OnSelect: |-
-            =If(TextInput2_1.Text = "Admin@WISA",Launch("https://syrmatech-my.sharepoint.com/personal/saiharivignesh_n_syrmasgs_com/Documents/WISA%20Portal%20Report.xlsx")&Set(VarRect25, false)&Set(VarRect25_1, false)&Set(VarRect25_2, false)&Set(VarRect25_3, true),Notify("Only Admin can access",NotificationType.Warning, 3000))
+            =If(TextInput2_1.Text = "Adm!n#W!$@",Launch("https://syrmatech-my.sharepoint.com/personal/saiharivignesh_n_syrmasgs_com/Documents/WISA%20Portal%20Report.xlsx")&Set(VarRect25, false)&Set(VarRect25_1, false)&Set(VarRect25_2, false)&Set(VarRect25_3, true),Notify("Only Admin can access",NotificationType.Warning, 3000))
             //Reset(TextInput7);Set(DBPW,true);Set(BGvisible,false);SetFocus(TextInput7);Set(DBLaunch,false);Set(DBLaunch1,true);Set(Table3Visible, false);Set(BrowseControl, false)
         TabIndex: =0
         Tooltip: ="Refresh list"
@@ -754,7 +754,7 @@
             Height: =70
             Icon: =Icon.Check
             OnSelect: |-
-                =If(TextInput7.Text="Admin@WISA", Launch("https://syrmatech-my.sharepoint.com/personal/saiharivignesh_n_syrmasgs_com/Documents/WISA%20Portal%20Report.xlsx")&Set(DBPW, false)& Set(BGvisible, true)& SetFocus (TextInput7) & Reset (TextInput7)&Set(DBLaunch,true)&Set(DBLaunch1,false)&Set(BrowseControl, true),Notify("Wrong password", NotificationType.Error)&SetFocus(TextInput7)&Reset((TextInput7)));
+                =If(TextInput7.Text="Adm!n#W!$@", Launch("https://syrmatech-my.sharepoint.com/personal/saiharivignesh_n_syrmasgs_com/Documents/WISA%20Portal%20Report.xlsx")&Set(DBPW, false)& Set(BGvisible, true)& SetFocus (TextInput7) & Reset (TextInput7)&Set(DBLaunch,true)&Set(DBLaunch1,false)&Set(BrowseControl, true),Notify("Wrong password", NotificationType.Error)&SetFocus(TextInput7)&Reset((TextInput7)));
             PaddingBottom: =10
             PaddingLeft: =10
             PaddingRight: =10

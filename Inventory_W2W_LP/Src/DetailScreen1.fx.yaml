@@ -1555,7 +1555,8 @@
         Icon21 As icon.Check:
             Color: =RGBA(0, 94, 146, 1)
             Icon: =Icon.Check
-            OnSelect: =If(TextInput9.Text = "Admin@WISA",Remove([@WISA_Pro_MDB], BrowseGallery1.Selected); If (IsEmpty(Errors([@WISA_Pro_MDB], BrowseGallery1.Selected)), Back()),Reset(TextInput9)&Notify("Wrong Password",NotificationType.Error));If(TextInput9.Text = "Admin@WISA", Notify("Stock deleted successfully",NotificationType.Success))
+            OnSelect: |-
+                =If(TextInput9.Text = "Adm!n#W!$@",Remove([@WISA_Pro_MDB], BrowseGallery1.Selected); If (IsEmpty(Errors([@WISA_Pro_MDB], BrowseGallery1.Selected)), Back()),Reset(TextInput9)&Notify("Wrong Password",NotificationType.Error));If(TextInput9.Text = "Adm!n#W!$@", Notify("Stock deleted successfully",NotificationType.Success))
             PaddingBottom: =12
             PaddingLeft: =12
             PaddingRight: =12
