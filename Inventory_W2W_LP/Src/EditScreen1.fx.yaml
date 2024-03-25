@@ -1,7 +1,7 @@
 "EditScreen1 As screen.'phoneDetailEditLayout_ver3.0'":
     Fill: =RGBA(255, 255, 255, 1)
     OnVisible: |-
-        =SetFocus(TextInput5); Reset(TextInput5);Reset(TextInput6_5);Set(BGWhite,false);UpdateContext({ currentTime: Text(Now(), DateTimeFormat.ShortTime24&"ss") });Set(QRScan, DisplayMode.Edit)
+        =SetFocus(TextInput5); Reset(TextInput5);Reset(TextInput6_5);Set(BGWhite,false);UpdateContext({ currentTime: Text(Now(), DateTimeFormat.ShortTime24&"ss") });Set(QRScan, DisplayMode.Edit);Set(FormLoadingSpinner, false)
 
     RectQuickActionBar3 As rectangle:
         Fill: =RGBA(0, 94, 146, 1)
@@ -13,7 +13,7 @@
         AccessibleLabel: =Self.Tooltip
         Height: =50
         Icon: =Icon.Check
-        OnSelect: =SubmitForm(EditForm1)
+        OnSelect: =Set(FormLoadingSpinner, true)&SubmitForm(EditForm1)
         TabIndex: =0
         Tooltip: ="Submit item"
         Width: =50
@@ -1412,7 +1412,7 @@
     Rectangle27 As rectangle:
         Fill: =RGBA(0, 0, 0, 0)
         Height: =135
-        OnSelect: =SubmitForm(EditForm1)
+        OnSelect: =Set(FormLoadingSpinner, true)&SubmitForm(EditForm1)
         Width: =640
         Y: =455
         ZIndex: =37
@@ -1420,7 +1420,7 @@
     Rectangle27_3 As rectangle:
         Fill: =RGBA(0, 0, 0, 0)
         Height: =179
-        OnSelect: =SubmitForm(EditForm1)
+        OnSelect: =Set(FormLoadingSpinner, true)&SubmitForm(EditForm1)
         Width: =328
         Y: =276
         ZIndex: =40
@@ -1428,9 +1428,22 @@
     Rectangle27_4 As rectangle:
         Fill: =RGBA(0, 0, 0, 0)
         Height: =208
-        OnSelect: =SubmitForm(EditForm1)
+        OnSelect: =Set(FormLoadingSpinner, true)&SubmitForm(EditForm1)
         Width: =340
         X: =300
         Y: =80
         ZIndex: =41
+
+    Spinner2 As Spinner:
+        Appearance: ='Spinner.Appearance'.Primary
+        DisplayMode: =DisplayMode.Edit
+        Height: =980
+        Label: ="Loading..."
+        LabelPosition: ='Spinner.LabelPosition'.Below
+        SpinnerSize: ='Spinner.SpinnerSize'.Huge
+        Visible: =FormLoadingSpinner
+        Width: =640
+        X: =0
+        Y: =80
+        ZIndex: =42
 
