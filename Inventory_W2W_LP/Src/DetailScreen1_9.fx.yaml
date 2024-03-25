@@ -2,7 +2,7 @@
     Height: =Max(DetailForm1_14.Height,197)
     OnHidden: =Set(VarTimer6, false)
     OnVisible: |-
-        =Reset(TextInputCanvas1_4);Set(SFT2, false);Set(TIC1Visible,false);Set(R17_1, true);Set(LabelCheckGreen, RGBA(0,0,0,0));Set(LabelCheckRed, RGBA(0,0,0,0));Set(LabelCheckGreenIcon, RGBA(0,0,0,0));Set(LabelCheckRedIcon, RGBA(0,0,0,0))
+        =Reset(TextInputCanvas1_4);Set(SFT2, false);Set(TIC1Visible,false);Set(R17_1, true);Set(LabelCheckGreen, RGBA(0,0,0,0));Set(LabelCheckRed, RGBA(0,0,0,0));Set(LabelCheckGreenIcon, RGBA(0,0,0,0));Set(LabelCheckRedIcon, RGBA(0,0,0,0));Set(LabelLoadingSpinner, false);
         //Set(VarTimer6, true); 
 
     DetailForm1_16 As formViewer:
@@ -511,7 +511,7 @@
         Fill: =LabelCheckGreen
         Height: =197
         Icon: =Icon.Check
-        OnSelect: =Set(FormDesc1,"Label Printed")&SubmitForm(Form1_4)
+        OnSelect: =Set(LabelLoadingSpinner, true);Set(FormDesc1,"Label Printed")&SubmitForm(Form1_4)
         Visible: =Not(Parent.Printing)
         Width: =320
         ZIndex: =18
@@ -521,7 +521,7 @@
         Fill: =LabelCheckRed
         Height: =197
         Icon: =Icon.Cancel
-        OnSelect: =Set(FormDesc1,"Label Error")&SubmitForm(Form1_4)
+        OnSelect: =Set(LabelLoadingSpinner, true);Set(FormDesc1,"Label Error")&SubmitForm(Form1_4)
         Visible: =Not(Parent.Printing)
         Width: =320
         X: =320
@@ -546,4 +546,15 @@
         Visible: =R17_1
         Width: =640
         ZIndex: =21
+
+    Spinner3 As Spinner:
+        DisplayMode: =DisplayMode.Edit
+        Height: =197
+        Label: ="Loading..."
+        SpinnerSize: ='Spinner.SpinnerSize'.Huge
+        Visible: =LabelLoadingSpinner
+        Width: =640
+        X: =0
+        Y: =0
+        ZIndex: =22
 
