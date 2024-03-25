@@ -510,7 +510,7 @@
         BorderStyle: =BorderStyle.None
         Fill: =RGBA(0, 0, 0, 0)
         Height: =197
-        OnSelect: =SubmitForm(Form1)
+        OnSelect: =Set(LabelCheckGreen, RGBA(54, 176, 75, 1));Set(LabelCheckRed, RGBA(255,0,0,1));Set(LabelCheckGreenIcon, RGBA(0,0,0,0));Set(LabelCheckRedIcon, RGBA(0,0,0,0))
         Visible: =R20
         Width: =640
         ZIndex: =18
@@ -518,25 +518,22 @@
     Icon23_4 As icon.CheckBadge:
         Color: =LabelCheckGreenIcon
         Fill: =LabelCheckGreen
-        Height: =30
+        Height: =197
         Icon: =Icon.Check
         OnSelect: =Set(FormDesc1,"Label Printed")&SubmitForm(Form1)
         Visible: =Not(Parent.Printing)
-        Width: =72
-        X: =496
-        Y: =167
+        Width: =320
         ZIndex: =19
 
     Icon23_5 As icon.CheckBadge:
         Color: =LabelCheckRedIcon
         Fill: =LabelCheckRed
-        Height: =30
+        Height: =197
         Icon: =Icon.Cancel
         OnSelect: =Set(FormDesc1,"Label Error")&SubmitForm(Form1)
         Visible: =Not(Parent.Printing)
-        Width: =72
-        X: =568
-        Y: =167
+        Width: =320
+        X: =320
         ZIndex: =20
 
     Rectangle17 As rectangle:
