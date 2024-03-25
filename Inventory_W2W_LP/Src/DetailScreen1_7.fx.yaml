@@ -518,22 +518,25 @@
     Icon23_4 As icon.CheckBadge:
         Color: =LabelCheckGreenIcon
         Fill: =LabelCheckGreen
-        Height: =197
+        Height: =30
         Icon: =Icon.Check
         OnSelect: =Set(FormDesc1,"Label Printed")&SubmitForm(Form1)
         Visible: =Not(Parent.Printing)
-        Width: =320
+        Width: =72
+        X: =496
+        Y: =167
         ZIndex: =19
 
     Icon23_5 As icon.CheckBadge:
         Color: =LabelCheckRedIcon
         Fill: =LabelCheckRed
-        Height: =197
+        Height: =30
         Icon: =Icon.Cancel
         OnSelect: =Set(FormDesc1,"Label Error")&SubmitForm(Form1)
         Visible: =Not(Parent.Printing)
-        Width: =320
-        X: =320
+        Width: =72
+        X: =568
+        Y: =167
         ZIndex: =20
 
     Rectangle17 As rectangle:

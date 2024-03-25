@@ -309,7 +309,7 @@
         DataSource: =WISA_Pro_MDB
         Height: =197
         Item: =LastSubmittedRecord
-        OnSuccess: =Navigate(EditScreen1,ScreenTransition.None); NewForm(EditForm1);Reset(TextInput5)//Set(TIC1Visible,true);Set(SetfocusTIC1_4, true);Set(R17_1,false);Set(R19, false)
+        OnSuccess: =Navigate(EditScreen1,ScreenTransition.None); NewForm(EditForm1);Reset(TextInput5);//Set(TIC1Visible,true);Set(SetfocusTIC1_4, true);Set(R17_1,false);Set(R19, false)
         Width: =640
         ZIndex: =11
 
@@ -518,25 +518,25 @@
     Icon23_2 As icon.CheckBadge:
         Color: =LabelCheckGreenIcon
         Fill: =LabelCheckGreen
-        Height: =25
+        Height: =30
         Icon: =Icon.Check
         OnSelect: =Set(FormDesc1,"Label Printed")&SubmitForm(Form1_4)
         Visible: =Not(Parent.Printing)
         Width: =72
         X: =496
-        Y: =172
+        Y: =167
         ZIndex: =19
 
     Icon23_3 As icon.CheckBadge:
         Color: =LabelCheckRedIcon
         Fill: =LabelCheckRed
-        Height: =25
+        Height: =30
         Icon: =Icon.Cancel
         OnSelect: =Set(FormDesc1,"Label Error")&SubmitForm(Form1_4)
         Visible: =Not(Parent.Printing)
         Width: =72
         X: =568
-        Y: =172
+        Y: =167
         ZIndex: =20
 
     Rectangle17_1 As rectangle:
