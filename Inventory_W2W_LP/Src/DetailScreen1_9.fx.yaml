@@ -2,7 +2,7 @@
     Height: =Max(DetailForm1_14.Height,197)
     OnHidden: =Set(VarTimer6, false)
     OnVisible: |-
-        =Reset(TextInputCanvas1_4);Set(SFT2, false);Set(TIC1Visible,false);Set(R17_1, true);Set(LabelCheckGreen, RGBA(0,0,0,0));Set(LabelCheckRed, RGBA(0,0,0,0));Set(LabelCheckGreenIcon, RGBA(0,0,0,0));Set(LabelCheckRedIcon, RGBA(0,0,0,0));Set(LabelLoadingSpinner, false);
+        =Reset(TextInputCanvas1_4);Set(SFT2, false);Set(TIC1Visible,false);Set(R17_1, true);Set(LabelCheckGreen, RGBA(0,0,0,0));Set(LabelCheckRed, RGBA(0,0,0,0));Set(LabelCheckGreenIcon, RGBA(0,0,0,0));Set(LabelCheckRedIcon, RGBA(0,0,0,0));Set(LabelLoadingSpinner, false);Set(VarTimer6, false)
         //Set(VarTimer6, true); 
 
     DetailForm1_16 As formViewer:
@@ -484,9 +484,11 @@
 
     Timer6 As timer:
         AutoStart: =VarTimer6
-        Duration: =10000
+        Duration: =500
         Height: =70
-        OnTimerEnd: =If(varPrintTriggered1, Print()&Set(FormDesc1,"Label Printed but not scanned"));Set(VarT1_8, true)
+        OnTimerEnd: |-
+            =SubmitForm(Form1_4)
+            //If(varPrintTriggered1, Print()&Set(FormDesc1,"Label Printed but not scanned"));Set(VarT1_8, true)
         Start: =VarTimer6
         Visible: =false
         Width: =280
@@ -511,7 +513,7 @@
         Fill: =LabelCheckGreen
         Height: =197
         Icon: =Icon.Check
-        OnSelect: =Set(LabelLoadingSpinner, true);Set(FormDesc1,"Label Printed")&SubmitForm(Form1_4)
+        OnSelect: =Set(LabelLoadingSpinner, true);Set(FormDesc1,"Label Printed");Set(VarTimer6, true)
         Visible: =Not(Parent.Printing)
         Width: =320
         ZIndex: =18
@@ -521,7 +523,7 @@
         Fill: =LabelCheckRed
         Height: =197
         Icon: =Icon.Cancel
-        OnSelect: =Set(LabelLoadingSpinner, true);Set(FormDesc1,"Label Error")&SubmitForm(Form1_4)
+        OnSelect: =Set(LabelLoadingSpinner, true);Set(FormDesc1,"Label Error");Set(VarTimer6, true)
         Visible: =Not(Parent.Printing)
         Width: =320
         X: =320
