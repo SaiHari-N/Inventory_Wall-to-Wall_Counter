@@ -1411,28 +1411,11 @@
 
     Rectangle27 As rectangle:
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =264
+        Height: =135
         OnSelect: =SubmitForm(EditForm1)
         Width: =640
         Y: =455
         ZIndex: =37
-
-    Rectangle27_1 As rectangle:
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =324
-        OnSelect: =SubmitForm(EditForm1)
-        Width: =392
-        X: =248
-        Y: =736
-        ZIndex: =38
-
-    Rectangle27_2 As rectangle:
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =186
-        OnSelect: =SubmitForm(EditForm1)
-        Width: =248
-        Y: =874
-        ZIndex: =39
 
     Rectangle27_3 As rectangle:
         Fill: =RGBA(0, 0, 0, 0)
