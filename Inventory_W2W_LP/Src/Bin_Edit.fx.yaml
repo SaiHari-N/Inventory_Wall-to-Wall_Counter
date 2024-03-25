@@ -85,7 +85,9 @@ Bin_Edit As screen:
         Default: =Barcode1.Text
         Height: =70
         HintText: ="Scan Bin Barcode"
-        OnChange: =Refresh(PieChart1.SeriesLabels);Set(BP,true)
+        OnChange: |-
+            =If(IsBlank(TextInput4_1.Text),SetFocus(TextInput4_1),Navigate(EditScreen1,ScreenTransition.None)); NewForm(EditForm1); Reset(TextInput5);
+            //Refresh(PieChart1.SeriesLabels);Set(BP,true)
         Size: =21
         Width: =313
         X: =198
