@@ -522,8 +522,8 @@
         Icon: =Icon.Check
         OnSelect: =Set(FormDesc1,"Label Printed")&SubmitForm(Form1_4)
         Visible: =Not(Parent.Printing)
-        Width: =70
-        X: =502
+        Width: =72
+        X: =496
         Y: =172
         ZIndex: =19
 
@@ -534,8 +534,8 @@
         Icon: =Icon.Cancel
         OnSelect: =Set(FormDesc1,"Label Error")&SubmitForm(Form1_4)
         Visible: =Not(Parent.Printing)
-        Width: =70
-        X: =570
+        Width: =72
+        X: =568
         Y: =172
         ZIndex: =20
 
