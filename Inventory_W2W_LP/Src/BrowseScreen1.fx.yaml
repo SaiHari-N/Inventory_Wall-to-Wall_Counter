@@ -752,7 +752,7 @@
             Height: =70
             Icon: =Icon.Check
             OnSelect: |-
-                =If(TextInput7.Text="DBadmin@123", Launch("https://syrmatech-my.sharepoint.com/personal/saiharivignesh_n_syrmasgs_com/Documents/WISA%20Portal%20Report.xlsx")&Set(DBPW, false)& Set(BGvisible, true)& SetFocus (TextInput7) & Reset (TextInput7)&Set(DBLaunch,true)&Set(DBLaunch1,false)&Set(BrowseControl, true),Notify("Wrong password", NotificationType.Error)&SetFocus(TextInput7)&Reset((TextInput7)));
+                =If(TextInput7.Text="Admin@WISA", Launch("https://syrmatech-my.sharepoint.com/personal/saiharivignesh_n_syrmasgs_com/Documents/WISA%20Portal%20Report.xlsx")&Set(DBPW, false)& Set(BGvisible, true)& SetFocus (TextInput7) & Reset (TextInput7)&Set(DBLaunch,true)&Set(DBLaunch1,false)&Set(BrowseControl, true),Notify("Wrong password", NotificationType.Error)&SetFocus(TextInput7)&Reset((TextInput7)));
             PaddingBottom: =10
             PaddingLeft: =10
             PaddingRight: =10

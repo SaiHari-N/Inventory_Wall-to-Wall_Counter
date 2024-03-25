@@ -238,7 +238,7 @@ Settings As screen:
 
     TextInput1 As text:
         BorderColor: =RGBA(0, 94, 146, 1)
-        Default: ="ISadmin@123"
+        Default: ="User@WISA"
         DisplayMode: =VarTextInput1DisplayMode
         Height: =70
         Size: =21
@@ -476,7 +476,7 @@ Settings As screen:
         Size: =21
         Text: =CheckBoxOption
         Width: =280
-        X: =334
+        X: =360
         Y: =462
         ZIndex: =37
 

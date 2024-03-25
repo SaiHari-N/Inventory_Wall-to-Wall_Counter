@@ -1663,7 +1663,7 @@
         Icon21_1 As icon.Check:
             Color: =RGBA(0, 94, 146, 1)
             Icon: =Icon.Check
-            OnSelect: =If(TextInput9_1.Text = "DLadmin@123",Remove([@WISA_Pro_MDB], LastSubmittedRecord); If (IsEmpty(Errors([@WISA_Pro_MDB], LastSubmittedRecord)), Back()),Reset(TextInput9_1)&Notify("Wrong Password",NotificationType.Error));If(TextInput9_1.Text = "DLadmin@123", Notify("Stock deleted successfully",NotificationType.Success))
+            OnSelect: =If(TextInput9_1.Text = "Admin@WISA",Remove([@WISA_Pro_MDB], LastSubmittedRecord); If (IsEmpty(Errors([@WISA_Pro_MDB], LastSubmittedRecord)), Back()),Reset(TextInput9_1)&Notify("Wrong Password",NotificationType.Error));If(TextInput9_1.Text = "Admin@WISA", Notify("Stock deleted successfully",NotificationType.Success))
             PaddingBottom: =12
             PaddingLeft: =12
             PaddingRight: =12

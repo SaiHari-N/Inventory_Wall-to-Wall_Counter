@@ -485,13 +485,34 @@
         Y: =80
         ZIndex: =15
 
+    Icon23_4 As icon.CheckBadge:
+        Color: =LabelCheckGreenIcon
+        Fill: =LabelCheckGreen
+        Height: =197
+        Icon: =Icon.Check
+        OnSelect: =Set(LabelLoadingSpinner, true);Set(FormDesc1,"Label Printed");Set(VarTimer5, true)
+        Visible: =Not(Parent.Printing)
+        Width: =320
+        ZIndex: =16
+
+    Icon23_5 As icon.CheckBadge:
+        Color: =LabelCheckRedIcon
+        Fill: =LabelCheckRed
+        Height: =197
+        Icon: =Icon.Cancel
+        OnSelect: =Set(LabelLoadingSpinner, true);Set(FormDesc1,"Label Error");Set(VarTimer5, true)
+        Visible: =Not(Parent.Printing)
+        Width: =320
+        X: =320
+        ZIndex: =17
+
     Rectangle6_9 As rectangle:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =197
         OnSelect: =If(TextInputCanvas1_2.Value = If(IsBlank(BrowseGallery1.Selected.UID),"No Data Found",BrowseGallery1.Selected.UID), Set(FormDesc2, "Label Printed & Scanned")&Set(SFT2, true), If(Len(TextInputCanvas1_2.Value)=14,Notify("Wrong UID"),Notify("Manual Entry not allowed")&Reset(TextInputCanvas1_2)))
         Visible: =TIC1Visible
         Width: =640
-        ZIndex: =16
+        ZIndex: =18
 
     "TextInputCanvas1_2 As 'Text input'":
         BasePaletteColor: =
@@ -506,34 +527,13 @@
         Width: =360
         X: =140
         Y: =58
-        ZIndex: =17
-
-    Icon23_4 As icon.CheckBadge:
-        Color: =LabelCheckGreenIcon
-        Fill: =LabelCheckGreen
-        Height: =197
-        Icon: =Icon.Check
-        OnSelect: =Set(LabelLoadingSpinner, true);Set(FormDesc1,"Label Printed");Set(VarTimer5, true)
-        Visible: =Not(Parent.Printing)
-        Width: =320
-        ZIndex: =18
-
-    Icon23_5 As icon.CheckBadge:
-        Color: =LabelCheckRedIcon
-        Fill: =LabelCheckRed
-        Height: =197
-        Icon: =Icon.Cancel
-        OnSelect: =Set(LabelLoadingSpinner, true);Set(FormDesc1,"Label Error");Set(VarTimer5, true)
-        Visible: =Not(Parent.Printing)
-        Width: =320
-        X: =320
         ZIndex: =19
 
     Rectangle20 As rectangle:
         BorderStyle: =BorderStyle.None
         Fill: =RGBA(0, 0, 0, 0)
         Height: =197
-        OnSelect: =If(Checkbox1.Text = "Manual",Set(LabelCheckGreen, RGBA(54, 176, 75, 1))&Set(LabelCheckRed, RGBA(255,0,0,1))&Set(LabelCheckGreenIcon, RGBA(255,255,255,1))&Set(LabelCheckRedIcon, RGBA(255,255,255,1))&Set(R20, false),Set(TIC1Visible, true))
+        OnSelect: =If(Checkbox1.Text = "Manual",Set(LabelCheckGreen, RGBA(54, 176, 75, 1))&Set(LabelCheckRed, RGBA(255,0,0,1))&Set(LabelCheckGreenIcon, RGBA(255,255,255,1))&Set(LabelCheckRedIcon, RGBA(255,255,255,1))&Set(R20, false),Set(TIC1Visible, true)&Set(R20, false))
         Visible: =R20
         Width: =640
         ZIndex: =20

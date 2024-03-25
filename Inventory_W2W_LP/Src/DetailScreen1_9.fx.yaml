@@ -447,13 +447,72 @@
                 Y: =DataCardValue1_5.Y + DataCardValue1_5.Height
                 ZIndex: =3
 
+    Timer4_2 As timer:
+        AutoStart: =SFT2
+        Duration: =1000
+        Height: =23
+        OnTimerEnd: =SubmitForm(Form1_5)
+        Start: =SFT2
+        Visible: =false
+        Width: =43
+        X: =40
+        Y: =40
+        ZIndex: =13
+
+    Timer6 As timer:
+        AutoStart: =VarTimer6
+        Duration: =500
+        Height: =70
+        OnTimerEnd: |-
+            =SubmitForm(Form1_4)
+            //If(varPrintTriggered1, Print()&Set(FormDesc1,"Label Printed but not scanned"));Set(VarT1_8, true)
+        Start: =VarTimer6
+        Visible: =false
+        Width: =280
+        X: =60
+        Y: =60
+        ZIndex: =14
+
+    Timer7 As timer:
+        AutoStart: =SetfocusTIC1_4
+        Duration: =100
+        Height: =70
+        OnTimerEnd: =SetFocus(TextInputCanvas1_4)
+        Start: =SetfocusTIC1_4
+        Visible: =false
+        Width: =280
+        X: =80
+        Y: =80
+        ZIndex: =15
+
+    Icon23_2 As icon.CheckBadge:
+        Color: =LabelCheckGreenIcon
+        Fill: =LabelCheckGreen
+        Height: =197
+        Icon: =Icon.Check
+        OnSelect: =Set(LabelLoadingSpinner, true);Set(FormDesc1,"Label Printed");Set(VarTimer6, true)
+        Visible: =Not(Parent.Printing)
+        Width: =320
+        ZIndex: =16
+
+    Icon23_3 As icon.CheckBadge:
+        Color: =LabelCheckRedIcon
+        Fill: =LabelCheckRed
+        Height: =197
+        Icon: =Icon.Cancel
+        OnSelect: =Set(LabelLoadingSpinner, true);Set(FormDesc1,"Label Error");Set(VarTimer6, true)
+        Visible: =Not(Parent.Printing)
+        Width: =320
+        X: =320
+        ZIndex: =17
+
     Rectangle6_11 As rectangle:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =197
         OnSelect: =If(TextInputCanvas1_4.Value = If(IsBlank(LastSubmittedRecord.UID),"No Data Found",LastSubmittedRecord.UID), Set(FormDesc2, "Label Printed & Scanned")&Set(SFT2, true), If(Len(TextInputCanvas1_4.Value)=14,Notify("Wrong UID"),Notify("Manual Entry not allowed")&Reset(TextInputCanvas1_4)))
         Visible: =TIC1Visible
         Width: =640
-        ZIndex: =13
+        ZIndex: =18
 
     "TextInputCanvas1_4 As 'Text input'":
         BasePaletteColor: =
@@ -468,72 +527,13 @@
         Width: =360
         X: =140
         Y: =58
-        ZIndex: =14
-
-    Timer4_2 As timer:
-        AutoStart: =SFT2
-        Duration: =1000
-        Height: =23
-        OnTimerEnd: =SubmitForm(Form1_5)
-        Start: =SFT2
-        Visible: =false
-        Width: =43
-        X: =40
-        Y: =40
-        ZIndex: =15
-
-    Timer6 As timer:
-        AutoStart: =VarTimer6
-        Duration: =500
-        Height: =70
-        OnTimerEnd: |-
-            =SubmitForm(Form1_4)
-            //If(varPrintTriggered1, Print()&Set(FormDesc1,"Label Printed but not scanned"));Set(VarT1_8, true)
-        Start: =VarTimer6
-        Visible: =false
-        Width: =280
-        X: =60
-        Y: =60
-        ZIndex: =16
-
-    Timer7 As timer:
-        AutoStart: =SetfocusTIC1_4
-        Duration: =100
-        Height: =70
-        OnTimerEnd: =SetFocus(TextInputCanvas1_4)
-        Start: =SetfocusTIC1_4
-        Visible: =false
-        Width: =280
-        X: =80
-        Y: =80
-        ZIndex: =17
-
-    Icon23_2 As icon.CheckBadge:
-        Color: =LabelCheckGreenIcon
-        Fill: =LabelCheckGreen
-        Height: =197
-        Icon: =Icon.Check
-        OnSelect: =Set(LabelLoadingSpinner, true);Set(FormDesc1,"Label Printed");Set(VarTimer6, true)
-        Visible: =Not(Parent.Printing)
-        Width: =320
-        ZIndex: =18
-
-    Icon23_3 As icon.CheckBadge:
-        Color: =LabelCheckRedIcon
-        Fill: =LabelCheckRed
-        Height: =197
-        Icon: =Icon.Cancel
-        OnSelect: =Set(LabelLoadingSpinner, true);Set(FormDesc1,"Label Error");Set(VarTimer6, true)
-        Visible: =Not(Parent.Printing)
-        Width: =320
-        X: =320
         ZIndex: =19
 
     Rectangle19 As rectangle:
         BorderStyle: =BorderStyle.None
         Fill: =RGBA(0, 0, 0, 0)
         Height: =197
-        OnSelect: =If(Checkbox1.Text = "Manual",Set(LabelCheckGreen, RGBA(54, 176, 75, 1))&Set(LabelCheckRed, RGBA(255,0,0,1))&Set(LabelCheckGreenIcon, RGBA(255,255,255,1))&Set(LabelCheckRedIcon, RGBA(255,255,255,1))&Set(R19, false),Set(TIC1Visible, true))
+        OnSelect: =If(Checkbox1.Text = "Manual",Set(LabelCheckGreen, RGBA(54, 176, 75, 1))&Set(LabelCheckRed, RGBA(255,0,0,1))&Set(LabelCheckGreenIcon, RGBA(255,255,255,1))&Set(LabelCheckRedIcon, RGBA(255,255,255,1))&Set(R19, false),Set(TIC1Visible, true)&Set(R19, false))
         Visible: =R19
         Width: =640
         ZIndex: =20
