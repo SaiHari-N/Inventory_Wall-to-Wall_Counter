@@ -511,7 +511,7 @@
         Fill: =LabelCheckGreen
         Height: =197
         Icon: =Icon.Check
-        OnSelect: =Set(LabelLoadingSpinner, true);Set(FormDesc1,"Label Printed")&SubmitForm(Form1)
+        OnSelect: =Set(LabelLoadingSpinner, true);Set(FormDesc1,"Label Printed");SubmitForm(Form1)
         Visible: =Not(Parent.Printing)
         Width: =320
         ZIndex: =18
@@ -521,7 +521,7 @@
         Fill: =LabelCheckRed
         Height: =197
         Icon: =Icon.Cancel
-        OnSelect: =Set(LabelLoadingSpinner, true);Set(FormDesc1,"Label Error")&SubmitForm(Form1)
+        OnSelect: =Set(LabelLoadingSpinner, true);Set(FormDesc1,"Label Error");SubmitForm(Form1)
         Visible: =Not(Parent.Printing)
         Width: =320
         X: =320
