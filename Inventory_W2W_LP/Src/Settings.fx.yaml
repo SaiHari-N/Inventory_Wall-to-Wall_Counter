@@ -291,7 +291,7 @@ Settings As screen:
         ZIndex: =22
 
     Slider1_1 As slider:
-        Default: =2
+        Default: =
         FocusedBorderThickness: =0
         HandleSize: =30
         Height: =150
