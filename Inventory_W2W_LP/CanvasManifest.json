@@ -53,7 +53,7 @@
       "enablerulespanel": false,
       "enablesaveloadcleardataonweb": true,
       "enableupdateifdelegation": false,
-      "errorhandling": true,
+      "errorhandling": false,
       "expandedsavedatasupport": true,
       "exportimportcomponents2": true,
       "externalmessage": false,
