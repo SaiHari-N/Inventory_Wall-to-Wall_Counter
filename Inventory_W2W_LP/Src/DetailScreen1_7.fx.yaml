@@ -508,7 +508,7 @@
 
     Rectangle20 As rectangle:
         BorderStyle: =BorderStyle.None
-        Fill: =RGBA(54, 176, 75, 1)
+        Fill: =RGBA(0, 0, 0, 0)
         Height: =197
         OnSelect: =SubmitForm(Form1)
         Visible: =R20
