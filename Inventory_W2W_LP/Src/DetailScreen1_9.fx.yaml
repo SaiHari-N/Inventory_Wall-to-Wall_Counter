@@ -506,23 +506,23 @@
         Y: =80
         ZIndex: =17
 
-    Rectangle17_1 As rectangle:
-        BorderStyle: =BorderStyle.None
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =197
-        OnSelect: |-
-            =If(varPrintTriggered1, Print()&Set(FormDesc1,"Label Printed"));Set(R19, true)
-            //Set(VarT1_8, true);
-        Visible: =R17_1
-        Width: =640
-        ZIndex: =18
-
     Rectangle19 As rectangle:
         BorderStyle: =BorderStyle.None
         Fill: =RGBA(0, 0, 0, 0)
         Height: =197
         OnSelect: =SubmitForm(Form1_4)
         Visible: =R19
+        Width: =640
+        ZIndex: =18
+
+    Rectangle17_1 As rectangle:
+        BorderStyle: =BorderStyle.None
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =197
+        OnSelect: |-
+            =If(varPrintTriggered1, Print()&Set(FormDesc1,"Label Printed"));Set(R19, true); Set(R17_1, false)
+            //Set(VarT1_8, true);
+        Visible: =R17_1
         Width: =640
         ZIndex: =19
 

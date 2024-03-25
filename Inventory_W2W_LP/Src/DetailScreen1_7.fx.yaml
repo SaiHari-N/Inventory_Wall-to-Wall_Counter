@@ -483,24 +483,13 @@
         Y: =80
         ZIndex: =15
 
-    Rectangle17 As rectangle:
-        BorderStyle: =BorderStyle.None
-        Fill: =RGBA(0, 0, 0, 0)
-        Height: =197
-        OnSelect: |-
-            =If(varPrintTriggered, Print()&Set(FormDesc1,"Label Printed"));Set(R20, true)
-            //Set(VarT1_6, true)
-        Visible: =R17
-        Width: =640
-        ZIndex: =16
-
     Rectangle6_9 As rectangle:
         Fill: =RGBA(255, 255, 255, 1)
         Height: =197
         OnSelect: =If(TextInputCanvas1_2.Value = If(IsBlank(BrowseGallery1.Selected.UID),"No Data Found",BrowseGallery1.Selected.UID), Set(FormDesc2, "Label Printed & Scanned")&Set(SFT2, true), If(Len(TextInputCanvas1_2.Value)=14,Notify("Wrong UID"),Notify("Manual Entry not allowed")&Reset(TextInputCanvas1_2)))
         Visible: =TIC1Visible
         Width: =640
-        ZIndex: =17
+        ZIndex: =16
 
     "TextInputCanvas1_2 As 'Text input'":
         BasePaletteColor: =
@@ -515,7 +504,7 @@
         Width: =360
         X: =140
         Y: =58
-        ZIndex: =18
+        ZIndex: =17
 
     Rectangle20 As rectangle:
         BorderStyle: =BorderStyle.None
@@ -523,6 +512,17 @@
         Height: =197
         OnSelect: =SubmitForm(Form1)
         Visible: =R20
+        Width: =640
+        ZIndex: =18
+
+    Rectangle17 As rectangle:
+        BorderStyle: =BorderStyle.None
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =197
+        OnSelect: |-
+            =If(varPrintTriggered, Print()&Set(FormDesc1,"Label Printed"));Set(R20, true); Set(R17, false)
+            //Set(VarT1_6, true)
+        Visible: =R17
         Width: =640
         ZIndex: =19
 
