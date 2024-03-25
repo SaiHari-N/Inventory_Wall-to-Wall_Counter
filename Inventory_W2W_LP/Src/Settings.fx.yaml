@@ -169,7 +169,7 @@ Settings As screen:
         ValueFill: =RGBA(0, 96, 146, 1)
         Width: =250
         X: =340
-        Y: =365
+        Y: =383
         ZIndex: =12
 
     Label3_7 As label:
@@ -179,7 +179,7 @@ Settings As screen:
         Text: ="Scanner Intensity"
         Width: =268
         X: =38
-        Y: =365
+        Y: =383
         ZIndex: =13
 
     Label3_8 As label:
@@ -189,7 +189,7 @@ Settings As screen:
         Text: ="Label Darkness"
         Width: =268
         X: =38
-        Y: =577
+        Y: =613
         ZIndex: =14
 
     Rectangle23_2 As rectangle:
@@ -200,7 +200,7 @@ Settings As screen:
         OnSelect: =Set(varPrintTriggered4, true);Navigate(Label_test)
         Width: =444
         X: =146
-        Y: =676
+        Y: =712
         ZIndex: =15
 
     Rectangle23_3 As rectangle:
@@ -211,7 +211,7 @@ Settings As screen:
         OnSelect: =Set(varPrintTriggered4, true);Navigate(Label_test)
         Width: =424
         X: =156
-        Y: =686
+        Y: =722
         ZIndex: =16
 
     Label3_9 As label:
@@ -223,7 +223,7 @@ Settings As screen:
         Text: ="TEST"
         Width: =350
         X: =193
-        Y: =686
+        Y: =722
         ZIndex: =17
 
     Label3_10 As label:
@@ -233,7 +233,7 @@ Settings As screen:
         Text: ="Password"
         Width: =268
         X: =38
-        Y: =907
+        Y: =934
         ZIndex: =18
 
     TextInput1 As text:
@@ -244,7 +244,7 @@ Settings As screen:
         Size: =21
         Width: =377
         X: =213
-        Y: =907
+        Y: =934
         ZIndex: =19
 
     Rectangle5_1 As rectangle:
@@ -252,7 +252,7 @@ Settings As screen:
         Height: =70
         Width: =76
         X: =514
-        Y: =907
+        Y: =934
         ZIndex: =20
 
     Icon12_1 As icon.Check:
@@ -269,7 +269,7 @@ Settings As screen:
         Visible: =VarIcon12_1Visible
         Width: =75
         X: =515
-        Y: =907
+        Y: =934
         ZIndex: =21
 
     Icon12_2 As icon.Check:
@@ -286,7 +286,7 @@ Settings As screen:
         Visible: =VarIcon12_2Visible
         Width: =75
         X: =515
-        Y: =907
+        Y: =934
         ZIndex: =22
 
     Slider1_1 As slider:
@@ -299,7 +299,7 @@ Settings As screen:
         Min: =1
         ValueFill: =RGBA(0, 96, 146, 1)
         Width: =162
-        Y: =676
+        Y: =712
         ZIndex: =23
 
     Menu_8 As group:
@@ -464,11 +464,12 @@ Settings As screen:
         Text: ="Print Confirmation"
         Width: =290
         X: =38
-        Y: =471
+        Y: =498
         ZIndex: =36
 
     Checkbox1 As checkbox:
         CheckboxBorderColor: =RGBA(0, 94, 146, 1)
+        CheckboxSize: =80
         FocusedBorderThickness: =0
         Height: =85
         OnCheck: =Set(CheckBoxOption, "UID")
@@ -477,6 +478,6 @@ Settings As screen:
         Text: =CheckBoxOption
         Width: =280
         X: =360
-        Y: =462
+        Y: =489
         ZIndex: =37
 
