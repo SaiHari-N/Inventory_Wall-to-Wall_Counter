@@ -365,7 +365,9 @@
         AccessibleLabel: =Self.Tooltip
         Height: =50
         Icon: =Icon.Download
-        OnSelect: =Reset(TextInput7);Set(DBPW,true);Set(BGvisible,false);SetFocus(TextInput7);Set(DBLaunch,false);Set(DBLaunch1,true);Set(Table3Visible, false);Set(BrowseControl, false)
+        OnSelect: |-
+            =If(TextInput2_1.Text = "Admin@WISA",Launch("https://syrmatech-my.sharepoint.com/personal/saiharivignesh_n_syrmasgs_com/Documents/WISA%20Portal%20Report.xlsx")&Set(VarRect25, false)&Set(VarRect25_1, false)&Set(VarRect25_2, false)&Set(VarRect25_3, true),Notify("Only Admin can access",NotificationType.Warning, 3000))
+            //Reset(TextInput7);Set(DBPW,true);Set(BGvisible,false);SetFocus(TextInput7);Set(DBLaunch,false);Set(DBLaunch1,true);Set(Table3Visible, false);Set(BrowseControl, false)
         TabIndex: =0
         Tooltip: ="Refresh list"
         Visible: =DBLaunch

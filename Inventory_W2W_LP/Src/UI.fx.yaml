@@ -5,7 +5,7 @@ UI As screen:
     Rectangle26_3 As rectangle:
         Fill: =RGBA(0, 0, 0, 0)
         OnSelect: |-
-            =Launch("https://syrmatech-my.sharepoint.com/personal/saiharivignesh_n_syrmasgs_com/Documents/WISA%20Portal%20Report.xlsx");Set(VarRect25, false);Set(VarRect25_1, false);Set(VarRect25_2, false);Set(VarRect25_3, true)
+            =If(TextInput2_1.Text = "Admin@WISA",Launch("https://syrmatech-my.sharepoint.com/personal/saiharivignesh_n_syrmasgs_com/Documents/WISA%20Portal%20Report.xlsx")&Set(VarRect25, false)&Set(VarRect25_1, false)&Set(VarRect25_2, false)&Set(VarRect25_3, true),Notify("Only Admin can access",NotificationType.Warning, 3000))
         Width: =160
         Y: =920
         ZIndex: =1
@@ -30,7 +30,7 @@ UI As screen:
     Rectangle26 As rectangle:
         Fill: =RGBA(0, 0, 0, 0)
         Height: =120
-        OnSelect: =Navigate(MailQuery);Set(VarRect25, true);Set(VarRect25_1, false);Set(VarRect25_2, false);Set(VarRect25_3, false)
+        OnSelect: =If(TextInput2_1.Text = "Admin@WISA",Navigate(MailQuery)&Set(VarRect25, true)&Set(VarRect25_1, false)&Set(VarRect25_2, false)&Set(VarRect25_3, false),Notify("Only Admin can access",NotificationType.Warning, 3000))
         Width: =160
         Y: =560
         ZIndex: =4
@@ -58,7 +58,9 @@ UI As screen:
         AutoDisableOnSelect: =false
         Height: =50
         Icon: =Icon.Settings
-        OnSelect: =Set(VarRect28, true);Set(SettingsBadge, false)
+        OnSelect: |-
+            =If(TextInput2_1.Text = "Admin@WISA",Navigate(Settings),Notify("Only Admin can access",NotificationType.Warning, 3000))
+            //Set(VarRect28, true);Set(SettingsBadge, false)
         TabIndex: =0
         Tooltip: ="Submit item"
         Visible: =SettingsBadge
@@ -114,7 +116,7 @@ UI As screen:
         Color: =RGBA(0, 94, 146, 1)
         Height: =50
         Icon: =Icon.Mail
-        OnSelect: =Navigate(MailQuery);Set(VarRect25, true);Set(VarRect25_1, false);Set(VarRect25_2, false);Set(VarRect25_3, false)
+        OnSelect: =If(TextInput2_1.Text = "Admin@WISA",Navigate(MailQuery)&Set(VarRect25, true)&Set(VarRect25_1, false)&Set(VarRect25_2, false)&Set(VarRect25_3, false),Notify("Only Admin can access",NotificationType.Warning, 3000))
         TabIndex: =
         Visible: =QueryMail2
         Width: =50
@@ -158,7 +160,7 @@ UI As screen:
         Height: =50
         Icon: =Icon.Download
         OnSelect: |-
-            =Launch("https://syrmatech-my.sharepoint.com/personal/saiharivignesh_n_syrmasgs_com/Documents/WISA%20Portal%20Report.xlsx");Set(VarRect25, false);Set(VarRect25_1, false);Set(VarRect25_2, false);Set(VarRect25_3, true)
+            =If(TextInput2_1.Text = "Admin@WISA",Launch("https://syrmatech-my.sharepoint.com/personal/saiharivignesh_n_syrmasgs_com/Documents/WISA%20Portal%20Report.xlsx")&Set(VarRect25, false)&Set(VarRect25_1, false)&Set(VarRect25_2, false)&Set(VarRect25_3, true),Notify("Only Admin can access",NotificationType.Warning, 3000))
         TabIndex: =
         Visible: =QueryMail2
         Width: =50
@@ -202,7 +204,7 @@ UI As screen:
     Label7 As label:
         Align: =Align.Center
         Height: =30
-        OnSelect: =Navigate(MailQuery);Set(VarRect25, true);Set(VarRect25_1, false);Set(VarRect25_2, false);Set(VarRect25_3, false)
+        OnSelect: =If(TextInput2_1.Text = "Admin@WISA",Navigate(MailQuery)&Set(VarRect25, true)&Set(VarRect25_1, false)&Set(VarRect25_2, false)&Set(VarRect25_3, false),Notify("Only Admin can access",NotificationType.Warning, 3000))
         Size: =16
         Text: ="Mail"
         Width: =100
@@ -237,7 +239,7 @@ UI As screen:
         Align: =Align.Center
         Height: =30
         OnSelect: |-
-            =Launch("https://syrmatech-my.sharepoint.com/personal/saiharivignesh_n_syrmasgs_com/Documents/WISA%20Portal%20Report.xlsx");Set(VarRect25, false);Set(VarRect25_1, false);Set(VarRect25_2, false);Set(VarRect25_3, true)
+            =If(TextInput2_1.Text = "Admin@WISA",Launch("https://syrmatech-my.sharepoint.com/personal/saiharivignesh_n_syrmasgs_com/Documents/WISA%20Portal%20Report.xlsx")&Set(VarRect25, false)&Set(VarRect25_1, false)&Set(VarRect25_2, false)&Set(VarRect25_3, true),Notify("Only Admin can access",NotificationType.Warning, 3000))
         Size: =16
         Text: ="Download"
         Width: =120
@@ -292,7 +294,7 @@ UI As screen:
         Height: =144
         HoverColor: =RGBA(0, 96, 146, 1)
         HoverFill: =RGBA(0, 96, 146, 1)
-        OnSelect: =Navigate(Dashboard,ScreenTransition.None)
+        OnSelect: =If(TextInput2_1.Text = "Admin@WISA",Navigate(Dashboard,ScreenTransition.None),Notify("Only Admin can access",NotificationType.Warning, 3000))
         PressedColor: =RGBA(0, 96, 146, 1)
         PressedFill: =RGBA(0, 96, 146, 1)
         Size: =24
@@ -350,7 +352,7 @@ UI As screen:
         Color: =RGBA(255, 255, 255, 1)
         Height: =80
         Icon: =Icon.Trending
-        OnSelect: =Navigate(Dashboard,ScreenTransition.None)
+        OnSelect: =If(TextInput2_1.Text = "Admin@WISA",Navigate(Dashboard,ScreenTransition.None),Notify("Only Admin can access",NotificationType.Warning, 3000))
         TabIndex: =
         Width: =80
         X: =230
@@ -400,7 +402,7 @@ UI As screen:
         Color: =RGBA(255, 255, 255, 1)
         FontWeight: =FontWeight.Semibold
         Height: =38
-        OnSelect: =Navigate(Bin_Edit,ScreenTransition.None)
+        OnSelect: =If(TextInput2_1.Text = "Admin@WISA",Navigate(Dashboard,ScreenTransition.None),Notify("Only Admin can access",NotificationType.Warning, 3000))
         Size: =18
         Text: ="Dashboard"
         Width: =140
