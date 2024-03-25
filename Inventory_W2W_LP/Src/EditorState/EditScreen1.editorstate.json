@@ -9843,7 +9843,7 @@
       "MetaDataIDKey": "%DetailEditContainer.ID%",
       "Name": "EditForm1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 13,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19618,7 +19618,7 @@
       "MetaDataIDKey": "",
       "Name": "Label7_25",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 11,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19984,7 +19984,7 @@
       "MetaDataIDKey": "",
       "Name": "Label7_26",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 14,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -20350,7 +20350,7 @@
       "MetaDataIDKey": "",
       "Name": "Label7_27",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 15,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -23340,7 +23340,7 @@
       "MetaDataIDKey": "",
       "Name": "Rectangle27_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 9,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -23472,7 +23472,7 @@
       "MetaDataIDKey": "",
       "Name": "Rectangle27_4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 12,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -23964,7 +23964,7 @@
       "MetaDataIDKey": "",
       "Name": "Rectangle9_4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 10,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
