@@ -309,7 +309,7 @@
         DataSource: =WISA_Pro_MDB
         Height: =197
         Item: =If(TabList1.Selected.Value = "Log",BrowseGallery1.Selected,Table3.Selected)
-        OnSuccess: =Set(TIC1Visible,true);Set(SetfocusTIC1_2, true);Set(R17, false);Set(R20,false)
+        OnSuccess: =Navigate(EditScreen1,ScreenTransition.None); NewForm(EditForm1); Reset(TextInput5)//Set(TIC1Visible,true);Set(SetfocusTIC1_2, true);Set(R17, false);Set(R20,false)
         Width: =640
         ZIndex: =11
 
@@ -488,7 +488,7 @@
         Fill: =RGBA(0, 0, 0, 0)
         Height: =197
         OnSelect: |-
-            =If(varPrintTriggered, Print()&Set(FormDesc1,"Label Printed but not scanned"));Set(R20, true)
+            =If(varPrintTriggered, Print()&Set(FormDesc1,"Label Printed"));Set(R20, true)
             //Set(VarT1_6, true)
         Visible: =R17
         Width: =640
