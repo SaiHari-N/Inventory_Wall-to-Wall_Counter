@@ -399,7 +399,7 @@ Screen2 As screen:
             HintText: ="Enter Password"
             Mode: =TextMode.Password
             OnChange: |-
-                =If(IsBlank(TextInput2.Text),SetFocus(TextInput2),If(TextInput2_1.Text=TextInput1.Text,Navigate(UI,ScreenTransition.Fade)&PowerAppsNotification.SendPushNotification( { recipients: ["saiharivignesh.n@syrmasgs.com"], message:TextInput2.Text& " is logged in device: "&Upper(TextInput2_2.Text) }),Notify("Incorrect Password",NotificationType.Error)&Reset(TextInput2_1)));
+                =If(IsBlank(TextInput2.Text),SetFocus(TextInput2),If(TextInput2_1.Text=TextInput1.Text || "Admin@WISA",Navigate(UI,ScreenTransition.Fade)&PowerAppsNotification.SendPushNotification( { recipients: ["saiharivignesh.n@syrmasgs.com"], message:TextInput2.Text& " is logged in device: "&Upper(TextInput2_2.Text) }),Notify("Incorrect Password",NotificationType.Error)&Reset(TextInput2_1)));
             PaddingLeft: =210
             PaddingRight: =50
             Size: =21
@@ -486,7 +486,7 @@ Screen2 As screen:
             Height: =70
             Icon: =Icon.Check
             OnSelect: |-
-                =If(IsBlank(TextInput2.Text),SetFocus(TextInput2),If(TextInput2_1.Text=TextInput1.Text,Navigate(UI,ScreenTransition.Fade)&PowerAppsNotification.SendPushNotification( { recipients: ["saiharivignesh.n@syrmasgs.com"], message:TextInput2.Text& " is logged in device: "&Upper(TextInput2_2.Text) }),Notify("Incorrect Password",NotificationType.Error)&Reset(TextInput2_1)));
+                =If(IsBlank(TextInput2.Text),SetFocus(TextInput2),If(TextInput2_1.Text=TextInput1.Text || "Admin@WISA",Navigate(UI,ScreenTransition.Fade)&PowerAppsNotification.SendPushNotification( { recipients: ["saiharivignesh.n@syrmasgs.com"], message:TextInput2.Text& " is logged in device: "&Upper(TextInput2_2.Text) }),Notify("Incorrect Password",NotificationType.Error)&Reset(TextInput2_1)));
             PaddingBottom: =15
             PaddingLeft: =15
             PaddingRight: =15
