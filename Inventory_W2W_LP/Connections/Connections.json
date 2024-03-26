@@ -5,8 +5,8 @@
       "executionRestrictions": {
         "apiId": "/providers/microsoft.powerapps/apis/shared_powerappsnotification",
         "appVer": "3.24032.26",
-        "modifiedOn": "2024-03-26 04:22:38",
-        "policy": "{\"type\":\"unused\"}",
+        "modifiedOn": "2024-03-26 05:56:46",
+        "policy": "{\"type\":\"action\",\"dataSources\":{\"actions\":[\"sendpushnotification\"]}}",
         "version": 1
       },
       "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/version-mismatches-special-train/1.0.1670.3520/powerappsnotification/icon.png",
@@ -181,7 +181,7 @@
       "executionRestrictions": {
         "apiId": "/providers/microsoft.powerapps/apis/shared_powerappsnotificationv2",
         "appVer": "3.24032.26",
-        "modifiedOn": "2024-03-26 04:22:38",
+        "modifiedOn": "2024-03-26 05:56:46",
         "policy": "{\"type\":\"unused\"}",
         "version": 1
       },
