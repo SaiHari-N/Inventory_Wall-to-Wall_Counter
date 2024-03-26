@@ -471,7 +471,6 @@ Settings As screen:
     Checkbox1 As checkbox:
         CheckboxBorderColor: =RGBA(0, 94, 146, 1)
         CheckboxSize: =80
-        Default: =
         FocusedBorderThickness: =0
         Height: =85
         OnCheck: =Set(CheckBoxOption, "UID")
