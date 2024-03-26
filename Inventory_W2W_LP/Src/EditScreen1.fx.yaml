@@ -1145,7 +1145,9 @@
 
     Spinner2 As Spinner:
         Appearance: ='Spinner.Appearance'.Primary
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =980
         Label: ="Loading..."
         LabelPosition: ='Spinner.LabelPosition'.Below

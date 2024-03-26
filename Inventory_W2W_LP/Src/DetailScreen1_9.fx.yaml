@@ -550,7 +550,9 @@
         ZIndex: =21
 
     Spinner3 As Spinner:
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =197
         Label: ="Loading..."
         SpinnerSize: ='Spinner.SpinnerSize'.Huge

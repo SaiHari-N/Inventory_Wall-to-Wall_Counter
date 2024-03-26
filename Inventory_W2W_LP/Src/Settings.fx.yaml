@@ -291,7 +291,7 @@ Settings As screen:
         ZIndex: =22
 
     Slider1_1 As slider:
-        Default: =
+        Default: =2
         FocusedBorderThickness: =0
         HandleSize: =30
         Height: =150
@@ -471,10 +471,12 @@ Settings As screen:
     Checkbox1 As checkbox:
         CheckboxBorderColor: =RGBA(0, 94, 146, 1)
         CheckboxSize: =80
+        Default: =
         FocusedBorderThickness: =0
         Height: =85
         OnCheck: =Set(CheckBoxOption, "UID")
         OnUncheck: =Set(CheckBoxOption, "Manual")
+        Reset: =
         Size: =21
         Text: =CheckBoxOption
         Width: =280
