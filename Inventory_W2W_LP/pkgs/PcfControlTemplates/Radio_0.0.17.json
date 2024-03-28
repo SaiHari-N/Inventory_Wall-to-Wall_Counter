@@ -1052,323 +1052,330 @@
       "Type": 2
     },
     {
-      "IsControlSpecific": true,
+      "IsControlSpecific": false,
       "LoadingOrder": 13,
+      "ModifiedPath": "",
+      "Path": "{\"Id\":\"FormattingData\",\"Data\":{\"timeZoneUtcOffsetMinutes\":0,\"dateTimeFormatInfo\":{\"AMDesignator\":\"AM\",\"Calendar\":{\"MinSupportedDateTime\":\"0001-01-01T00:00:00\",\"MaxSupportedDateTime\":\"9999-12-31T23:59:59.9999999\",\"AlgorithmType\":1,\"CalendarType\":1,\"Eras\":[1],\"TwoDigitYearMax\":2049,\"IsReadOnly\":false},\"DateSeparator\":\"/\",\"FirstDayOfWeek\":0,\"CalendarWeekRule\":0,\"FullDateTimePattern\":\"dddd, MMMM d, yyyy h:mm:ss tt\",\"LongDatePattern\":\"dddd, MMMM d, yyyy\",\"LongTimePattern\":\"h:mm:ss tt\",\"MonthDayPattern\":\"MMMM d\",\"PMDesignator\":\"PM\",\"RFC1123Pattern\":\"ddd, dd MMM yyyy HH':'mm':'ss 'GMT'\",\"ShortDatePattern\":\"M/d/yyyy\",\"ShortTimePattern\":\"h:mm tt\",\"SortableDateTimePattern\":\"yyyy'-'MM'-'dd'T'HH':'mm':'ss\",\"TimeSeparator\":\":\",\"UniversalSortableDateTimePattern\":\"yyyy'-'MM'-'dd HH':'mm':'ss'Z'\",\"YearMonthPattern\":\"MMMM yyyy\",\"AbbreviatedDayNames\":[\"Sun\",\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\"],\"ShortestDayNames\":[\"Su\",\"Mo\",\"Tu\",\"We\",\"Th\",\"Fr\",\"Sa\"],\"DayNames\":[\"Sunday\",\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\",\"Saturday\"],\"AbbreviatedMonthNames\":[\"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sep\",\"Oct\",\"Nov\",\"Dec\",\"\"],\"MonthNames\":[\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\",\"\"],\"IsReadOnly\":false,\"NativeCalendarName\":\"Gregorian Calendar\",\"AbbreviatedMonthGenitiveNames\":[\"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sep\",\"Oct\",\"Nov\",\"Dec\",\"\"],\"MonthGenitiveNames\":[\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\",\"\"]},\"numberFormatInfo\":{\"CurrencyDecimalDigits\":2,\"CurrencyDecimalSeparator\":\".\",\"IsReadOnly\":false,\"CurrencyGroupSizes\":[3],\"NumberGroupSizes\":[3],\"PercentGroupSizes\":[3],\"CurrencyGroupSeparator\":\",\",\"CurrencySymbol\":\"$\",\"NaNSymbol\":\"NaN\",\"CurrencyNegativePattern\":0,\"NumberNegativePattern\":1,\"PercentPositivePattern\":1,\"PercentNegativePattern\":1,\"NegativeInfinitySymbol\":\"-∞\",\"NegativeSign\":\"-\",\"NumberDecimalDigits\":2,\"NumberDecimalSeparator\":\".\",\"NumberGroupSeparator\":\",\",\"CurrencyPositivePattern\":0,\"PositiveInfinitySymbol\":\"∞\",\"PositiveSign\":\"+\",\"PercentDecimalDigits\":2,\"PercentDecimalSeparator\":\".\",\"PercentGroupSeparator\":\",\",\"PercentSymbol\":\"%\",\"PerMilleSymbol\":\"‰\",\"NativeDigits\":[\"0\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\"],\"DigitSubstitution\":1},\"timeZoneAdjusters\":[],\"formatInfoCultureName\":\"en-US\",\"formatter\":null,\"languagesByCode\":{\"1033\":\"English (United States)\",\"-1\":\"All Languages\"}}}",
+      "Type": 3
+    },
+    {
+      "IsControlSpecific": true,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1025.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1026.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1027.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1028.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1029.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1030.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1031.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1032.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1033.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1035.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1036.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1037.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1038.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1040.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1041.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1042.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1043.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1044.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1045.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1046.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1048.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1049.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1050.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1051.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1053.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1054.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1055.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1057.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1058.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1060.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1061.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1062.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1063.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1066.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1069.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1081.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1086.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1087.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.1110.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.2052.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.2070.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.2074.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.3076.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.3082.json",
       "Type": 5
     },
     {
       "IsControlSpecific": true,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "/PCFControls/PowerApps_CoreControls_RadioGroupCanvas/strings/RadioGroupCanvas.3098.json",
       "Type": 5
     },
     {
       "IsControlSpecific": false,
-      "LoadingOrder": 13,
+      "LoadingOrder": 14,
       "ModifiedPath": "",
       "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"RadioGroupCanvas\":\"Radio\",\"RadioGroupCanvas_Desc\":\"Let users select one item from a list of items.\",\"RadioGroupCanvas_Items\":\"Items\",\"RadioGroupCanvas_Items_Desc\":\"The items to display in the radio list.\",\"RadioGroupCanvas_Label_Desc_Key\":\"Label for the field or value.\",\"RadioGroupCanvas_LabelFontSize_Desc_Key\":\"Font size (in points) to use for label.\",\"RadioGroupCanvas_ItemFontSize_Display_Key\":\"Item font size\",\"RadioGroupCanvas_ItemFontSize_Desc_Key\":\"Font size (in points) to use for items.\",\"RadioGroupCanvas_Layout\":\"Layout\",\"RadioGroupCanvas_Layout_Desc\":\"Direction in which the radio buttons and labels will be arranged.\",\"RadioGroupCanvas_Layout_Vertical\":\"Vertical\",\"RadioGroupCanvas_Layout_Horizontal\":\"Horizontal\",\"RadioGroupCanvas_Layout_Horizontal_Stacked\":\"Horizontal Stacked\",\"RadioGroupCanvas_TabIndex_Display_Key\":\"Tab index\",\"RadioGroupCanvas_TabIndex_Desc_Key\":\"Defines the order in which the control should get focus.\",\"RadioGroupCanvas_AcceptsFocus_Display_Key\":\"Accepts focus\",\"RadioGroupCanvas_AcceptsFocus_Desc_Key\":\"Whether this field should receive the focus or not.\",\"RadioGroupCanvas_Font_Display_Key\":\"Font\",\"RadioGroupCanvas_Font_Desc_Key\":\"The font to use for option text.\",\"RadioGroupCanvas_AccessibleLabel\":\"Accessible label\",\"RadioGroupCanvas_AccessibleLabel_Desc\":\"Label read out by screen readers.\",\"RadioGroupCanvas_Required\":\"Required\",\"RadioGroupCanvas_Required_Desc\":\"Require a selection in this group.\",\"RadioGroupCanvas_PaddingTop_Display_Key\":\"Top padding\",\"RadioGroupCanvas_PaddingTop_Desc_Key\":\"The value in pixels of the top padding of the radio buttons in the group.\",\"RadioGroupCanvas_PaddingEnd_Display_Key\":\"End padding\",\"RadioGroupCanvas_PaddingEnd_Desc_Key\":\"The value in pixels of the end padding of the radio buttons in the group.\",\"RadioGroupCanvas_PaddingBottom_Display_Key\":\"Bottom padding\",\"RadioGroupCanvas_PaddingBottom_Desc_Key\":\"The value in pixels of the bottom padding of the radio buttons in the group.\",\"RadioGroupCanvas_PaddingStart_Display_Key\":\"Start padding\",\"RadioGroupCanvas_PaddingStart_Desc_Key\":\"The value in pixels of the start padding of the radio buttons in the group.\",\"Radio_BorderColor_Display_Key\":\"Radio border color\",\"Radio_BorderColor_Desc_Key\":\"The color of the circle for each option in a radio-button control\",\"Radio_FillColor_Display_Key\":\"Radio fill color\",\"Radio_FillColor_Desc_Key\":\"The color that appears inside the circle of the selected option in a radio-button control\",\"Radio_HoverColor_Display_Key\":\"Radio hover color\",\"Radio_HoverColor_Desc_Key\":\"The background color for each option in a radio-button control when the user keeps the mouse pointer on it\",\"Base_Palette_Color\":\"Color palette\",\"Base_Palette_Color_description\":\"Choose a color palette that's different from the theme.\",\"Font_Size\":\"Font size\",\"Font_Size_description\":\"Set the font size for displayed text.\",\"Font\":\"Font\",\"Font_description\":\"The name of the family of fonts in which text appears\",\"Font_Color\":\"Font color\",\"Font_Color_description\":\"The color of text in the control\",\"Font_Weight\":\"Font weight\",\"Font_Weight_description\":\"The weight of the text in a control\",\"Italic\":\"Italic\",\"Underline\":\"Underline\",\"Strikethrough\":\"Strikethrough\"}}}",
       "Type": 3

@@ -4,8 +4,8 @@
       "displayName": "Power Apps Notification",
       "executionRestrictions": {
         "apiId": "/providers/microsoft.powerapps/apis/shared_powerappsnotification",
-        "appVer": "3.24032.26",
-        "modifiedOn": "2024-03-26 07:38:13",
+        "appVer": "3.24024.5",
+        "modifiedOn": "2024-03-28 07:22:39",
         "policy": "{\"type\":\"action\",\"dataSources\":{\"actions\":[\"sendpushnotification\"]}}",
         "version": 1
       },
@@ -180,8 +180,8 @@
       "displayName": "Power Apps Notification V2",
       "executionRestrictions": {
         "apiId": "/providers/microsoft.powerapps/apis/shared_powerappsnotificationv2",
-        "appVer": "3.24032.26",
-        "modifiedOn": "2024-03-26 07:38:13",
+        "appVer": "3.24024.5",
+        "modifiedOn": "2024-03-28 07:22:39",
         "policy": "{\"type\":\"unused\"}",
         "version": 1
       },

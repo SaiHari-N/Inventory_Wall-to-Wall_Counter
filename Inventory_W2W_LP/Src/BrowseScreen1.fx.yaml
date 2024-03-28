@@ -407,9 +407,7 @@
 
     Table3 As Table.pcfdataset:
         BasePaletteColor: =
-        DisableChildItemsEditing: ="no"
         DisplayMode: =DisplayMode.Edit
-        EnableColumnMoving: ="no"
         FontSize: =20
         HeaderFontSize: =25
         Height: =560
@@ -601,7 +599,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =2
-            Text: =ThisItem.User_x0020_ID
+            Text: =ThisItem.'User ID'
             Width: =200
             X: =0
             Y: =0
@@ -615,7 +613,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =5
-            Text: =ThisItem.Part_x0020_Number
+            Text: =ThisItem.'Part Number'
             Width: =100
             X: =0
             Y: =0
@@ -629,7 +627,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =6
-            Text: =ThisItem.Manufacturing_x0020_Date
+            Text: =ThisItem.'Manufacturing Date'
             Width: =100
             X: =0
             Y: =0
@@ -643,7 +641,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =7
-            Text: =ThisItem.Expiry_x0020_Date
+            Text: =ThisItem.'Expiry Date'
             Width: =100
             X: =0
             Y: =0
@@ -699,7 +697,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =3
-            Text: =ThisItem.Container_x0020_Type
+            Text: =ThisItem.'Container Type'
             Width: =200
             X: =0
             Y: =0
@@ -713,7 +711,7 @@
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =4
-            Text: =ThisItem.Item_x0020_Type
+            Text: =ThisItem.'Item Type'
             Width: =100
             X: =0
             Y: =0

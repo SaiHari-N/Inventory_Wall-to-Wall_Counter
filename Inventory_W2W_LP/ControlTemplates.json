@@ -59,7 +59,7 @@
             }
           ]
         },
-        "Version": "1.338"
+        "Version": "1.337"
       }
     },
     "PCFDynamicSchemaForIRRetrieval": {
@@ -262,7 +262,7 @@
     "Name": "Header",
     "OverridableProperties": {},
     "TemplateDisplayName": "Header",
-    "Version": "0.0.29"
+    "Version": "0.0.27"
   },
   "Host": {
     "CustomGroupControlTemplateName": "",
@@ -319,7 +319,7 @@
     "LastModifiedTimestamp": "0",
     "Name": "image",
     "OverridableProperties": {},
-    "Version": "2.2.3"
+    "Version": "2.2.2"
   },
   "label": {
     "CustomGroupControlTemplateName": "",
@@ -463,7 +463,7 @@
     "Name": "PowerAppsOneGrid",
     "OverridableProperties": {},
     "TemplateDisplayName": "Table",
-    "Version": "1.0.175"
+    "Version": "1.0.159"
   },
   "text": {
     "CustomGroupControlTemplateName": "",
